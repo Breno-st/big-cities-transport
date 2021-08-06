@@ -55,9 +55,13 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 #### Overleaf
 
   Find template
+  
   Structure report
+  
   List references
+  
   Write
+  
   Slides
 
 #### Introductions
