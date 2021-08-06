@@ -30,12 +30,13 @@ My thesis project. Database design, statistical inferences, algorithm for data e
     
   #### Pattern mining 
   
-    
+    - Graph mining
+    - Baysian
   
 ### Theorem
 
   - Urban Transportation Network.([Urban Transportation Networks](http://web.mit.edu/sheffi/www/selectedMedia/sheffi_urban_trans_networks.pdf))
-
+  - Markov process. Probabilities for currents
   - Fluctuation Theorem.([NonLinear Response coeficients](https://arxiv.org/pdf/0704.3318.pdf))
 
 ### Models
