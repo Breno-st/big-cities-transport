@@ -1,8 +1,44 @@
+:raised_back_of_hand:
+:speech_balloon:
+
 # big-cities-transport
 My thesis project. Database design, statistical inferences, algorithm for data exploration, modeling and visualization.
 
+## Idea
+
+### Analytcal (Statisctics)
+     
+  #### Operational perspective
+    - Compare train load in different areas
+    
+  #### Customer perspective
+    - Go-sitted regions & Go-Standing regions against time
+    - Faster trains by regions & Go-Standing regions against time
+    
+### Forecasting (Machine Learning & Data mining)
+    - Clustering stations nodes to (N) regions (unsupervised learning)
+    - Use graph minining  
+    - Shortest path (time, comfort, cost) (reinforcement learning) 
+    
 
 ## Plan
+
+### Collect and store data
+
+  #### MIV-STIB
+    - APIs
+    - Data explorations 
+    - pipelines & storage
+    
+  #### TFL
+    - APIs
+    - Data explorations 
+    - pipelines & storage    
+    
+  #### Weather
+    - Source
+    - Storage
+
 
 ### Build transport system
 
@@ -19,7 +55,6 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 
       - Import journey segments.
       -  
-
 
 ### Data Analysis (Climate / Journey) 
 
@@ -55,15 +90,15 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 
 #### Overleaf
 
-  Find template
+  Find template :heavy_check_mark:
   
-  Structure report
+  Structure report :wrench:
   
-  List references
+  List references :wrench:
   
-  Write
+  Write :wrench:
   
-  Slides
+  Slides :hand:
 
 #### Introductions
   Breaking the ice (video)
