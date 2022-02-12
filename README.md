@@ -70,16 +70,16 @@ My thesis project. Database design, statistical inferences, algorithm for data e
   - Reinforcement learning
 
 ## Visualization
-  - Visualize the Crowdedness of Trains with Kepler (https://towardsdatascience.com/visualization-of-crowdedness-for-dutch-trains-with-kepler-f55057a3ba24)
-  - Visualization of travel times with OTP and QGIS (https://towardsdatascience.com/visualization-of-travel-times-with-otp-and-qgis-3947d36980420)
+- Visualize the Crowdedness of Trains with Kepler (https://towardsdatascience.com/visualization-of-crowdedness-for-dutch-trains-with-kepler-f55057a3ba24)
+- Visualization of travel times with OTP and QGIS (https://towardsdatascience.com/visualization-of-travel-times-with-otp-and-qgis-3947d36980420)
 
 ## Reporting & Presenting
 
 ### Overleaf
-    - Find template :heavy_check_mark:
-    - Structure report :speech_balloon:
-    - List references :speech_balloon:
-    - Write (Abstract, Chapters):wrench: :raised_back_of_hand:     
+     - Find template :heavy_check_mark:
+- Structure report :speech_balloon:
+- List references :speech_balloon:
+- Write (Abstract, Chapters):wrench: :raised_back_of_hand:     
 
 ### Presentation   
      Slides :hand: :raised_back_of_hand:
