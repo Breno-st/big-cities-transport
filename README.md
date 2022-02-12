@@ -16,7 +16,21 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 ### Forecasting (Machine Learning & Data mining)
 - Clustering stations nodes to (N) regions (unsupervised learning)
 - Use graph minining  
-- Shortest path (time, comfort, cost) (reinforcement learning)     
+- Shortest path (time, comfort, cost) (reinforcement learning)    
+
+## Theorem
+- Urban Transportation Network.([Urban Transportation Networks](http://web.mit.edu/sheffi/www/selectedMedia/sheffi_urban_trans_networks.pdf))
+- Markov process. Probabilities for currents
+- Fluctuation Theorem.([NonLinear Response coeficients](https://arxiv.org/pdf/0704.3318.pdf))
+
+## Models
+- Dynamic Traffic Prediction([Predicting traffic flow using Bayesian networks](https://ideas.repec.org/a/eee/transb/v42y2008i5p482-509.html))
+- Nash equilibrium ([Modeling Network Traffic using Game Theory](https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch08.pdf))
+- Reinforcement learning
+
+## Visualization
+- Visualize the Crowdedness of Trains with Kepler (https://towardsdatascience.com/visualization-of-crowdedness-for-dutch-trains-with-kepler-f55057a3ba24)
+- Visualization of travel times with OTP and QGIS (https://towardsdatascience.com/visualization-of-travel-times-with-otp-and-qgis-3947d36980420)
 
 ## Implementation
 
@@ -57,21 +71,7 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 
 #### Pattern mining   
 - Graph mining
-- Baysian
-
-## Theorem
-- Urban Transportation Network.([Urban Transportation Networks](http://web.mit.edu/sheffi/www/selectedMedia/sheffi_urban_trans_networks.pdf))
-- Markov process. Probabilities for currents
-- Fluctuation Theorem.([NonLinear Response coeficients](https://arxiv.org/pdf/0704.3318.pdf))
-
-## Models
-- Dynamic Traffic Prediction([Predicting traffic flow using Bayesian networks](https://ideas.repec.org/a/eee/transb/v42y2008i5p482-509.html))
-- Nash equilibrium ([Modeling Network Traffic using Game Theory](https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch08.pdf))
-- Reinforcement learning
-
-## Visualization
-- Visualize the Crowdedness of Trains with Kepler (https://towardsdatascience.com/visualization-of-crowdedness-for-dutch-trains-with-kepler-f55057a3ba24)
-- Visualization of travel times with OTP and QGIS (https://towardsdatascience.com/visualization-of-travel-times-with-otp-and-qgis-3947d36980420)
+- Bayesian
 
 ## Reporting & Presenting
 
