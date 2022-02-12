@@ -4,12 +4,12 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 
 ## Ideas
 
-     ### Analytical (Statisctics) 
+### Analytical (Statisctics) 
      
-       #### Operational perspective
+#### Operational perspective
          - Compare train load in different areas
          
-       #### Customer perspective
+#### Customer perspective
          - Go-sitted regions & Go-Standing regions against time
          - Faster trains by regions & Go-Standing regions against time
          
