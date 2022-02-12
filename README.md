@@ -84,9 +84,3 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 ### Presentation   
 - Slides :hand: :raised_back_of_hand:
 - Breaking the ice :heavy_check_mark:
-
-       
-
-     
-
-
