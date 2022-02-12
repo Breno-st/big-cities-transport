@@ -82,8 +82,8 @@ My thesis project. Database design, statistical inferences, algorithm for data e
     - Write (Abstract, Chapters):wrench: :raised_back_of_hand:     
 
 ### Presentation   
-    - Slides :hand: :raised_back_of_hand:
-    - Breaking the ice :heavy_check_mark:
+     Slides :hand: :raised_back_of_hand:
+     Breaking the ice :heavy_check_mark:
 
        
 
