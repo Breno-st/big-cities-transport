@@ -4,32 +4,40 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 
 ## Ideas
 
-     ### Analytical (Statisctics)     
+     ### Analytical (Statisctics) 
+     
        #### Operational perspective
          - Compare train load in different areas
+         
        #### Customer perspective
          - Go-sitted regions & Go-Standing regions against time
          - Faster trains by regions & Go-Standing regions against time
+         
      ### Forecasting (Machine Learning & Data mining)
          - Clustering stations nodes to (N) regions (unsupervised learning)
          - Use graph minining  
          - Shortest path (time, comfort, cost) (reinforcement learning)     
 
 ## Implementation
+
      ### Collect and store data
+     
        #### MIV-STIB
          - APIs :heavy_check_mark:
          - Data explorations  
          - pipelines & storage    
+         
        #### TFL
          - APIs :heavy_check_mark:
          - Data explorations :wrench:
-         - pipelines & storage        
+         - pipelines & storage     
+         
        #### Weather
          - Source
          - Storage
 
      ### Build transport system
+     
        #### Neo4j 
          - Get stations (nodes)
          - stations types (mean labels)
@@ -37,13 +45,16 @@ My thesis project. Database design, statistical inferences, algorithm for data e
          - stations class (1 -> 8 labels)
          - stations connections (edges)
          - connections types (intra/inter labels)
+         
        #### Networkx
            - Import journey segments.
            
      ### Data Analysis (Climate / Journey) 
+     
        #### Statistical     
          - Use ANOVA to indentify journeys relevant statistical independence to among: 
-             Ticket type / Season of the year / Day of week / Time of the day / Meteo condition / Temperature     
+             Ticket type / Season of the year / Day of week / Time of the day / Meteo condition / Temperature   
+             
        #### Pattern mining   
          - Graph mining
          - Baysian
