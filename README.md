@@ -3,6 +3,7 @@
 My thesis project. Database design, statistical inferences, algorithm for data exploration, modeling and visualization.
 
 ## Ideas
+
      ### Analytical (Statisctics)     
        #### Operational perspective
          - Compare train load in different areas
