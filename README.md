@@ -24,8 +24,9 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 - Fluctuation Theorem.([NonLinear Response coeficients](https://arxiv.org/pdf/0704.3318.pdf))
 
 ## Models
-- Dynamic Traffic Prediction([Predicting traffic flow using Bayesian networks](https://ideas.repec.org/a/eee/transb/v42y2008i5p482-509.html))
-- Nash equilibrium ([Modeling Network Traffic using Game Theory](https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch08.pdf))
+- Dynamic Traffic Prediction [Predicting traffic flow using Bayesian networks](https://ideas.repec.org/a/eee/transb/v42y2008i5p482-509.html)
+- Nash equilibrium [Modeling Network Traffic using Game Theory](https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch08.pdf
+- Backbone
 - Reinforcement learning
 
 ## Visualization
@@ -39,12 +40,7 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 #### TFL
 - APIs :heavy_check_mark:
 - Data explorations :wrench:
-- pipelines & storage     
          
-#### Weather
-- Source
-- Storage
-
 ### Build transport system
 
 #### Neo4j 
@@ -62,7 +58,7 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 
 #### Statistical     
 - Use ANOVA to indentify journeys relevant statistical independence to among: 
-- Ticket type / Season of the year / Day of week / Time of the day / Meteo condition / Temperature   
+- Day of week / Time of the day  
 
 #### Pattern mining   
 - Graph mining
@@ -83,10 +79,10 @@ My thesis project. Database design, statistical inferences, algorithm for data e
      - Sub chap 2.2- Explain each category: (Data origing, data limitation, indicators formulation) 
      
 - Chap 3 - Model/Network ?
-     - Sub chap 3.1 - TFL INfra structure: stations (structure)
-     - Sub chap 3.2 - TFL Transport systems: tube, DLR, ... (arrivals/traffic
-     - Sub chap 3.3 - Arrivals Days Categories (Mon to Friday / SAT & Holidays / SUN)
-     - Sub chap 3.3 - Traffic Days Categories (MTT / FRI / SAT / SUN)
+     - Sub chap 3.1 - TFL INfra structure: stations (structure) / Links / walkable distances
+     - Sub chap 3.2 - TFL Transport systems: tube, DLR, ... (arrivals/traffic)
+     - Sub chap 3.3 - 3 Operation Days Categories (Mon to Friday / SAT & Holidays / SUN)
+     - Sub chap 3.4 - 4 Traffic Days Categories (MTT / FRI / SAT / SUN)
      
 - Chap 4 - Methodology/ Central Question ?
      - Sub chap 4.1 - Backbone (identify lines importance levels)
@@ -95,9 +91,17 @@ My thesis project. Database design, statistical inferences, algorithm for data e
      
 - Chap 5 - Central Question ? Do we have three different networks?
      - Sub chap 5.1 -  each day type (MTT/FRI/SAT/SUN) compares to each other
-     -
-          
-- Chap 6 - Central Question ? Do we have three different networks?     
+
+- Chap 6 - Others quastion ?
+     - Sub chap 6.1 - Applications 
+     - Sub chap 6.2 - Following step (model to predict disruption)
+     - Sub chap 6.3 - What could be done with more data (weather, dates in DD/MM/YY format)
+     - Sub chap 6.4 - Following step (model to predict passengers)
+     - Sub chap 6.5 - Following step (Predict impact from disruption/passengers predictions)
+   
+     * Time impact = delay_time * number of passenger
+                
+- Chap 7 - Conlcusion     
      
 - List references :speech_balloon:
 - Write (Abstract, Chapters):wrench: :raised_back_of_hand:   
