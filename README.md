@@ -86,12 +86,12 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 
 - Chap 7 - Conlcusion  
      
-- Chap 8 - Others quastion ?
+- Chap 8 - Following steps ?
      - Sub chap 8.1 - Applications 
-     - Sub chap 8.2 - Following step (model to predict disruption)
+     - Sub chap 8.2 - Model to predict disruption
      - Sub chap 8.3 - What could be done with more data (weather, dates in DD/MM/YY format)
-     - Sub chap 8.4 - Following step (model to predict passengers)
-     - Sub chap 8.5 - Following step (Predict impact from disruption/passengers predictions)
+     - Sub chap 8.4 - Model to predict passengers)
+     - Sub chap 8.5 - Predict impact from disruption/passengers predictions)
    
      * Time impact = delay_time * number of passenger
                 
