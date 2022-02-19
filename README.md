@@ -2,7 +2,7 @@
 # big-cities-transport
 My thesis project. Database design, statistical inferences, algorithm for data exploration, modeling and visualization.
 
-## Analysis
+## Objectives
      
 #### Operational 
 - Segments importance rank by time (maintenace windows)
@@ -21,8 +21,7 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 ## Models
 - Dynamic Traffic Prediction [Predicting traffic flow using Bayesian networks](https://ideas.repec.org/a/eee/transb/v42y2008i5p482-509.html)
 - Nash equilibrium [Modeling Network Traffic using Game Theory](https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch08.pdf
-- Ranking segments importance (Backbone algorithm)
-- Clustering stations nodes to (N) regions (unsupervised learning)
+- Backbone [Extracting the multiscale backbone of complex weighted networks]
 
 ## Visualization
 - Visualize the Crowdedness of Trains with Kepler (https://towardsdatascience.com/visualization-of-crowdedness-for-dutch-trains-with-kepler-f55057a3ba24)
