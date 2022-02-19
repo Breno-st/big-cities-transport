@@ -84,24 +84,28 @@ My thesis project. Database design, statistical inferences, algorithm for data e
      - Sub chap 3.3 - 3 Operation Days Categories (Mon to Friday / SAT & Holidays / SUN)
      - Sub chap 3.4 - 4 Traffic Days Categories (MTT / FRI / SAT / SUN)
      
-- Chap 4 - Methodology/ Central Question ?
-     - Sub chap 4.1 - Backbone (identify lines importance levels)
-     - Sub chap 4.2 - How to Rank segments based on chosen indicator
-     - Sub chap 4.3 - How to Classy fault severity based on segments affected
-     
-- Chap 5 - Central Question ? Do we have three different networks?
-     - Sub chap 5.1 -  each day type (MTT/FRI/SAT/SUN) compares to each other
+- Chap 4 - Central Question = Do we have three different networks?
+     - Sub chap 4.1 -  each day type (MTT/FRI/SAT/SUN) compares to each other
 
-- Chap 6 - Others quastion ?
-     - Sub chap 6.1 - Applications 
-     - Sub chap 6.2 - Following step (model to predict disruption)
-     - Sub chap 6.3 - What could be done with more data (weather, dates in DD/MM/YY format)
-     - Sub chap 6.4 - Following step (model to predict passengers)
-     - Sub chap 6.5 - Following step (Predict impact from disruption/passengers predictions)
+- Chap 5 - Methodology
+     - Sub chap 5.1 - Backbone (identify lines importance levels)
+     - Sub chap 5.2 - How to Rank segments based on chosen indicator
+     - Sub chap 5.3 - How to Classy fault severity based on segments affected
+
+- Chap 6 - Results
+
+- Chap 7 - Conlcusion  
+     - 
+- Chap 8 - Others quastion ?
+     - Sub chap 8.1 - Applications 
+     - Sub chap 8.2 - Following step (model to predict disruption)
+     - Sub chap 8.3 - What could be done with more data (weather, dates in DD/MM/YY format)
+     - Sub chap 8.4 - Following step (model to predict passengers)
+     - Sub chap 8.5 - Following step (Predict impact from disruption/passengers predictions)
    
      * Time impact = delay_time * number of passenger
                 
-- Chap 7 - Conlcusion     
+   
      
 - List references :speech_balloon:
 - Write (Abstract, Chapters):wrench: :raised_back_of_hand:   
