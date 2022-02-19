@@ -2,21 +2,16 @@
 # big-cities-transport
 My thesis project. Database design, statistical inferences, algorithm for data exploration, modeling and visualization.
 
-## Ideas
-
-### Analytical (Statisctics) 
+## Analysis
      
-#### Operational perspective
-- Compare train load in different areas
+#### Operational 
+- Segments importance rank by time (maintenace windows)
+- Stations mobility index (avg trip speed,  tips frequency)
          
-#### Customer perspective
-- Go-sitted regions & Go-Standing regions against time
-- Faster trains by regions & Go-Standing regions against time
-         
-### Forecasting (Machine Learning & Data mining)
-- Clustering stations nodes to (N) regions (unsupervised learning)
-- Use graph minining  
-- Shortest path (time, comfort, cost) (reinforcement learning)    
+#### Customer 
+- Shortest path (time, comfort) (network algorithm)    
+- Study "Go-sitted  & Go-Standing" by regions against time (less priviledge regions?)
+- Region mobility index (cluster aggregation)
 
 ## Theorem
 - Urban Transportation Network.([Urban Transportation Networks](http://web.mit.edu/sheffi/www/selectedMedia/sheffi_urban_trans_networks.pdf))
@@ -26,8 +21,8 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 ## Models
 - Dynamic Traffic Prediction [Predicting traffic flow using Bayesian networks](https://ideas.repec.org/a/eee/transb/v42y2008i5p482-509.html)
 - Nash equilibrium [Modeling Network Traffic using Game Theory](https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch08.pdf
-- Backbone
-- Reinforcement learning
+- Ranking segments importance (Backbone algorithm)
+- Clustering stations nodes to (N) regions (unsupervised learning)
 
 ## Visualization
 - Visualize the Crowdedness of Trains with Kepler (https://towardsdatascience.com/visualization-of-crowdedness-for-dutch-trains-with-kepler-f55057a3ba24)
@@ -35,34 +30,35 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 
 ## Implementation
 
-### Collect and store data
+### Data Collection
               
 #### TFL
 - APIs :heavy_check_mark:
 - Data explorations :wrench:
          
-### Build transport system
+### Modeling the system 
 
 #### Neo4j 
-- Get stations (nodes)
-- stations types (mean labels)
-- stations area (1 -> 8 labels)
-- stations class (1 -> 8 labels)
-- stations connections (edges)
-- connections types (intra/inter labels)
+- Node: stations 
+- Stations attributes (mode, lines)
+- Edges: connections 
+- connections attributes (intra/inter, traffic, speed, hour)
 
 #### Networkx
 - Import journey segments.
 
-### Data Analysis (Climate / Journey) 
-
-#### Statistical     
+### Statistics
 - Use ANOVA to indentify journeys relevant statistical independence to among: 
 - Day of week / Time of the day  
 
-#### Pattern mining   
-- Graph mining
-- Bayesian
+#### Algorithms 
+- Clustering
+- Shortest path
+- Backbone
+
+#### Machine Learning 
+- Disruptions (when it will be the next disruption)
+- Reinforcement learning (day + weather = passenger prediction)
 
 ## Reporting & Presenting
 
