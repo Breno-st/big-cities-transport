@@ -10,7 +10,7 @@ My thesis project. Database design, statistical inferences, algorithm for data e
          
 #### Customer 
 - Shortest path (time, comfort) (network algorithm)    
-- Study "Go-sitted  & Go-Standing" by regions against time (less priviledge regions?)
+- Study "Go-sitted  & Go-Standing" by regions against time (less priviledged regions?)
 - Region mobility index (cluster aggregation)
 
 ## References
