@@ -88,7 +88,7 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 - Chap 6 - Results
 
 - Chap 7 - Conlcusion  
-     - 
+     
 - Chap 8 - Others quastion ?
      - Sub chap 8.1 - Applications 
      - Sub chap 8.2 - Following step (model to predict disruption)
