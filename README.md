@@ -35,12 +35,7 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 ## Implementation
 
 ### Collect and store data
-     
-#### MIV-STIB
-- APIs :heavy_check_mark:
-- Data explorations  
-- pipelines & storage    
-         
+              
 #### TFL
 - APIs :heavy_check_mark:
 - Data explorations :wrench:
