@@ -73,30 +73,30 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 ### Overleaf
 - Find template :heavy_check_mark:
 - Structure report :speech_balloon:
-     - Abstract
+- Abstract
      
-     - Chap 1 - Introduction
+- Chap 1 - Introduction
      
-     - Chap 2 - Data ?  
-     - Explaning data sources: API / NUMBAT
-     - Present Network divided by data categories (Structural / Functional / Operational / Traffic)
-     - Explain each category: (Data origing, data limitation, indicators formulation) 
+- Chap 2 - Data collection  
+     - Sub chap 2.1- Explaning data sources: API / NUMBAT
+     - Sub chap 2.2- Present Network divided by data categories (Structural / Functional / Operational / Traffic)
+     - Sub chap 2.2- Explain each category: (Data origing, data limitation, indicators formulation) 
      
-     - Chap 3 - Model/Network ?
+- Chap 3 - Model/Network ?
      - Sub chap 3.1 - TFL INfra structure: stations
      - Sub chap 3.2 - TFL Transport systems: tube, DLR, ... (traffic/
      - Sub chap 3.3 - Day time categories 
      
-     - Chap 4 - Methodology/ Central Question ?
-     - Backbone (identify lines importance levels)
-     - How to Rank segments based on chosen indicator
-     - How to Classy fault severity based on segments affected
+- Chap 4 - Methodology/ Central Question ?
+     - Sub chap 4.1 - Backbone (identify lines importance levels)
+     - Sub chap 4.2 - How to Rank segments based on chosen indicator
+     - Sub chap 4.3 - How to Classy fault severity based on segments affected
      
-     - Chap 5 - Central Question ? Do we have three different networks?
-     - How each day type (MTT/FRI/SAT/SUN) compares to each other
+- Chap 5 - Central Question ? Do we have three different networks?
+     - Sub chap 5.1 -  each day type (MTT/FRI/SAT/SUN) compares to each other
      -
           
-     - Chap 6 - Central Question ? Do we have three different networks?
+- Chap 6 - Central Question ? Do we have three different networks?     
      
 - List references :speech_balloon:
 - Write (Abstract, Chapters):wrench: :raised_back_of_hand:   
