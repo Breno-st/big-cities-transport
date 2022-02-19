@@ -38,14 +38,11 @@ My thesis project. Database design, statistical inferences, algorithm for data e
          
 ### Modeling the system 
 
-#### Neo4j 
+#### Neo4j and/or Networkx
 - Node: stations 
 - Stations attributes (mode, lines)
 - Edges: connections 
 - connections attributes (intra/inter, traffic, speed, hour)
-
-#### Networkx
-- Import journey segments.
 
 ### Statistics
 - Use ANOVA to indentify journeys relevant statistical independence to among: 
@@ -101,8 +98,7 @@ My thesis project. Database design, statistical inferences, algorithm for data e
    
      * Time impact = delay_time * number of passenger
                 
-   
-     
+    
 - List references :speech_balloon:
 - Write (Abstract, Chapters):wrench: :raised_back_of_hand:   
   
