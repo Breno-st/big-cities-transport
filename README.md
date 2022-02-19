@@ -83,9 +83,10 @@ My thesis project. Database design, statistical inferences, algorithm for data e
      - Sub chap 2.2- Explain each category: (Data origing, data limitation, indicators formulation) 
      
 - Chap 3 - Model/Network ?
-     - Sub chap 3.1 - TFL INfra structure: stations
-     - Sub chap 3.2 - TFL Transport systems: tube, DLR, ... (traffic/
-     - Sub chap 3.3 - Day time categories 
+     - Sub chap 3.1 - TFL INfra structure: stations (structure)
+     - Sub chap 3.2 - TFL Transport systems: tube, DLR, ... (arrivals/traffic
+     - Sub chap 3.3 - Arrivals Days Categories (Mon to Friday / SAT & Holidays / SUN)
+     - Sub chap 3.3 - Traffic Days Categories (MTT / FRI / SAT / SUN)
      
 - Chap 4 - Methodology/ Central Question ?
      - Sub chap 4.1 - Backbone (identify lines importance levels)
