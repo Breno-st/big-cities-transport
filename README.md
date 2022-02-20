@@ -56,7 +56,7 @@ My thesis project. Database design, statistical inferences, algorithm for data e
 - Chap 2 - Methodology
      - Sub chap 2.1 - Backbone (identify lines importance levels)
      - Sub chap 2.2 - How to Rank segments based on chosen indicator
-     - Sub chap 2.3 - How to Classy fault severity based on segments affected
+     - Sub chap 2.3 - How to classify fault severity based on segments affected
      
 - Chap 3 - Data collection  
      - Sub chap 3.1- Explaning data sources: API / NUMBAT
