@@ -53,40 +53,40 @@ My thesis project. Database design, statistical inferences, algorithm for data e
      - Sub chap 1.1 - Central Question = Do we have three different networks?
      - Sub chap 1.2 - Each day type (MTT/FRI/SAT/SUN) compares to each other in term of functioning and traffic
 
-- Chap 3 - Methodology
-     - Sub chap 3.1 - Backbone (identify lines importance levels)
-     - Sub chap 3.2 - How to Rank segments based on chosen indicator
-     - Sub chap 3.3 - How to Classy fault severity based on segments affected
+- Chap 2 - Methodology
+     - Sub chap 2.1 - Backbone (identify lines importance levels)
+     - Sub chap 2.2 - How to Rank segments based on chosen indicator
+     - Sub chap 2.3 - How to Classy fault severity based on segments affected
      
-- Chap 4 - Data collection  
-     - Sub chap 4.1- Explaning data sources: API / NUMBAT
-     - Sub chap 4.2- Present Network divided by data categories (Structural / Functional / Operational / Traffic)
-     - Sub chap 4.2- Explain each category: (Data origing, data limitation, indicators formulation) 
+- Chap 3 - Data collection  
+     - Sub chap 3.1- Explaning data sources: API / NUMBAT
+     - Sub chap 3.2- Present Network divided by data categories (Structural / Functional / Operational / Traffic)
+     - Sub chap 3.2- Explain each category: (Data origing, data limitation, indicators formulation) 
      
-- Chap 5 - Model/Network ?
-     - Sub chap 5.1 - TFL INfra structure: stations (structure) / Links / walkable distances
-     - Sub chap 5.2 - TFL Transport systems: tube, DLR, ... (arrivals/traffic)
-     - Sub chap 5.3 - 3 Operation Days Categories (Mon to Friday / SAT & Holidays / SUN)
-     - Sub chap 5.4 - 4 Traffic Days Categories (MTT / FRI / SAT / SUN)    
-     - Sub chap 5.5 - Indicators creation (mobility index, Avg. speed, Rank, clustering)    
+- Chap 4 - Model/Network ?
+     - Sub chap 4.1 - TFL INfra structure: stations (structure) / Links / walkable distances
+     - Sub chap 4.2 - TFL Transport systems: tube, DLR, ... (arrivals/traffic)
+     - Sub chap 4.3 - 3 Operation Days Categories (Mon to Friday / SAT & Holidays / SUN)
+     - Sub chap 4.4 - 4 Traffic Days Categories (MTT / FRI / SAT / SUN)    
+     - Sub chap 4.5 - Indicators creation (mobility index, Avg. speed, Rank, clustering)    
 
-- Chap 6 - Results
-     - Sub chap 6.1 - Statistical methods  
-     - Sub chap 6.2 - Compares operation (MTT/FRI/SAT/SUN) 
-     - Sub chap 6.3 - Compares traffic (MTT/FRI/SAT/SUN) 
-     - Sub chap 6.4 - Compares operational response (MTT/FRI/SAT/SUN) in terms of  traffic
+- Chap 5 - Results
+     - Sub chap 5.1 - Statistical methods  
+     - Sub chap 5.2 - Compares operation (MTT/FRI/SAT/SUN) 
+     - Sub chap 5.3 - Compares traffic (MTT/FRI/SAT/SUN) 
+     - Sub chap 5.4 - Compares operational response (MTT/FRI/SAT/SUN) in terms of  traffic
 
-- Chap 7 - Following steps ?
-     - Sub chap 7.1 - Applications 
-     - Sub chap 7.2 - Model to predict disruption
-     - Sub chap 7.3 - What could be done with more data (weather, dates in DD/MM/YY format)
-     - Sub chap 7.4 - Model to predict passengers)
-     - Sub chap 7.5 - Predict impact from disruption/passengers predictions)
-     - Sub chap 7.6 - Dynamic route timetable (tailored to passangers predictions)
+- Chap 6 - Following steps ?
+     - Sub chap 6.1 - Applications 
+     - Sub chap 6.2 - Model to predict disruption
+     - Sub chap 6.3 - What could be done with more data (weather, dates in DD/MM/YY format)
+     - Sub chap 6.4 - Model to predict passengers)
+     - Sub chap 6.5 - Predict impact from disruption/passengers predictions)
+     - Sub chap 6.6 - Dynamic route timetable (tailored to passangers predictions)
    
      * Time impact = delay_time * number of passenger
 
-- Chap 8 - Conlcusion 
+- Chap 7 - Conlcusion 
 
 ### Presentation   
 - Slides :heavy_check_mark:
