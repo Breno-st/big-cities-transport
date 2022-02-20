@@ -76,17 +76,17 @@ My thesis project. Database design, statistical inferences, algorithm for data e
      - Sub chap 6.3 - Compares traffic (MTT/FRI/SAT/SUN) 
      - Sub chap 6.4 - Compares operational response (MTT/FRI/SAT/SUN) in terms of  traffic
 
-- Chap 7 - Conlcusion  
-     
-- Chap 8 - Following steps ?
-     - Sub chap 8.1 - Applications 
-     - Sub chap 8.2 - Model to predict disruption
-     - Sub chap 8.3 - What could be done with more data (weather, dates in DD/MM/YY format)
-     - Sub chap 8.4 - Model to predict passengers)
-     - Sub chap 8.5 - Predict impact from disruption/passengers predictions)
-     - Sub chap 8.6 - Dynamic route timetable (tailored to passangers predictions)
+- Chap 7 - Following steps ?
+     - Sub chap 7.1 - Applications 
+     - Sub chap 7.2 - Model to predict disruption
+     - Sub chap 7.3 - What could be done with more data (weather, dates in DD/MM/YY format)
+     - Sub chap 7.4 - Model to predict passengers)
+     - Sub chap 7.5 - Predict impact from disruption/passengers predictions)
+     - Sub chap 7.6 - Dynamic route timetable (tailored to passangers predictions)
    
      * Time impact = delay_time * number of passenger
+
+- Chap 8 - Conlcusion 
 
 ### Presentation   
 - Slides :heavy_check_mark:
