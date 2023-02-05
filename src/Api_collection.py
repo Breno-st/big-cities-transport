@@ -65,40 +65,13 @@ def get_time_by_id(origin, destiny, mode):
     data = response.json()
     return data
 
+### TABLES ###
 
-if __name__ == '__main__':
-
-    # Credentials TFL
-    app_id = 'ae744e0a05c74ef5b2bbfac2a7ea5f06'
-    app_key = '00024e328b23438496db36a939fe090b'
-
-    # API TFL (https://github.com/dhilmathy/TfL-python-api)
-    base_url = 'https://api.tfl.gov.uk/'
-    endpoints = {'stopPointByline': 'Line/{0}/Route/Sequence/all',
-                'crowndingBynaptan': 'crowding/{0}/Live',
-                'crowndingByline': 'StopPoint/{0}/Crowding/{1}?direction={2}&',
-                'timetable': 'Line/{0}/Timetable/{1}/to/{2}',
-                'timetable_s': 'Line/{0}/Timetable/{1}',
-                'latLonByline': 'Line/{0}/StopPoints',
-                'stoptid': '/StopPoint/{0}/Crowding/{1}?direction={2}&',
-                'time': '/Journey/JourneyResults/{0}/to/{1}?mode={2}&'}
-
-    # API Client
-    token = ApiToken(app_id, app_key)
-    client = Client(token)
-    api_token = { app_id: token.app_id, app_key: token.app_key }
-
-    # DataFrames: 7
+def modes():
+    '''StepTable'''
+    # DataFrames
     df_mode = pd.DataFrame(columns=['modeName', 'isTflService', 'isFarePaying', 'isScheduledService' ])
-    df_line = pd.DataFrame(columns=['lineId',  'modeName', 'created', 'modified', 'Services'])
-    df_route = pd.DataFrame(columns=['lineId','modeName','name', 'direction','origination_name', 'destination_name', 'orig_naptan','dest_naptan'])
-    df_coord= pd.DataFrame(columns=['naptanid', 'stopType', 'commonName', 'line', 'lat', 'lon'])
-    df_route_seq= pd.DataFrame(columns=['lineId','direction','isOutboundOnly','mode','routeName','serviceType','naptanIds'])
-    df_orig_dest_time_by_intervalid = pd.DataFrame(columns=['lineId', 'orig', 'dest', 'stationInterval_id', 'time'])
-    df_orig_intervalId = pd.DataFrame(columns=['lineId','orig','day','start','end','Interval_0','Interval_1','Interval_2','Interval_3','Interval_4','Interval_5','Interval_6','Interval_7','Interval_8','Interval_9','Interval_10','Interval_11','Interval_12','Interval_13'])
-
     # Collection
-    ##  Modes (StepTable)
     for mode in client.get_line_meta_modes():
         if mode.is_tfs_service:
             df_mode = df_mode.append({'modeName': mode.mode_name,
@@ -106,8 +79,14 @@ if __name__ == '__main__':
                                     'isFarePaying': mode.is_fare_paying,
                                     'isScheduledService': mode.is_scheduled_service},ignore_index = True)
     modes = df_mode['modeName'].unique()
+    # Export
+    df_mode.to_csv(path+'/tbl_mode.csv', index=False)
 
-    ## Lines (StepTable: uses unique Modes)
+def lines():
+    '''StepTable: uses unique Modes'''
+    # DataFrames
+    df_line = pd.DataFrame(columns=['lineId',  'modeName', 'created', 'modified', 'Services'])
+    # Collection
     errors_line = []
     for mode in modes:
             mode_lines = client.get_route_by_mode(mode)
@@ -121,9 +100,14 @@ if __name__ == '__main__':
                 except:
                     errors_line.append((mode,mode_line))
     lines = df_line['lineId' ].unique()
+    # Export
+    df_line.to_csv(path+'/tbl_line.csv', index=False)
 
-
-    ##  Routes (StepTable: uses unique Modes)
+def routes():
+    '''StepTable: uses unique Modes'''
+    # DataFrames
+    df_route = pd.DataFrame(columns=['lineId','modeName','name', 'direction','origination_name', 'destination_name', 'orig_naptan','dest_naptan'])
+    # Collection
     errors_route = []
     for mode in modes:
             mode_routes = client.get_route_by_mode(mode)
@@ -140,8 +124,14 @@ if __name__ == '__main__':
                                                         'dest_naptan':route_section.destination},ignore_index = True)
                     except:
                         errors_route.append((mode,mode_route, route_section))
+    # Export
+    df_route.to_csv(path+'/tbl_route.csv', index=False)
 
-    ## Station Coordenates (EndTable: uses unique Modes)
+def coordenates():
+    '''EndTable: uses unique Modes '''
+    # DataFrames
+    df_coord= pd.DataFrame(columns=['naptanid', 'stopType', 'commonName', 'line', 'lat', 'lon'])
+    #Collection
     errors_coord = []
     for line in lines:
         for i in get_stop_points_by_lineid2(line):
@@ -154,8 +144,14 @@ if __name__ == '__main__':
                                             'lon':i['lon']} ,ignore_index = True)
             except:
                 errors_coord.append((line,i))
+    # Export
+    df_coord.to_csv(path+'/tbl_coord.csv', index=False)
 
-    ## Route Sequence (EndTable: uses unique Lines)
+def routes_seq():
+    '''EndTable: uses unique Lines'''
+    # DataFrames
+    df_route_seq= pd.DataFrame(columns=['lineId','direction','isOutboundOnly','mode','routeName','serviceType','naptanIds'])
+    # Collection
     errors_seq = []
     for line in lines:
         stop_points = get_stop_points_by_lineid(line)
@@ -170,11 +166,18 @@ if __name__ == '__main__':
                                             'naptanIds':routes['naptanIds']},ignore_index = True)
             except:
                 errors_seq.append((line, routes))
+    # Export
+    df_route_seq.to_csv(path+'/tbl_route_seq.csv', index=False)
+    return df_route_seq
 
-
+def od_intervalid(df_route_seq):
+    '''EndTable: uses unique Lines'''
+    # DataFrames
+    df_orig_dest_time_by_intervalid = pd.DataFrame(columns=['lineId', 'orig', 'dest', 'stationInterval_id', 'time'])
+    df_orig_intervalId = pd.DataFrame(columns=['lineId','orig','day','start','end','Interval_0','Interval_1','Interval_2','Interval_3','Interval_4','Interval_5','Interval_6','Interval_7','Interval_8','Interval_9','Interval_10','Interval_11','Interval_12','Interval_13'])
+    # Collection
     segments = []
     error_segments = []
-    ## O&D IntervalId and Orig IntervalId (EndTable: uses unique Lines)
     for index, row in df_route_seq.iterrows(): # change samples for eveything
         line, naptanIds = row['lineId'], literal_eval(row['naptanIds'])
         for i in range(1, len(naptanIds)):
@@ -239,22 +242,58 @@ if __name__ == '__main__':
                     error_segments.append((line, orig, dest))
                     next
 
-
-    # Export: 7 tables
-    path = r'/home/soaresbr/data_projects/big-cities-transport/1.BaseGraph/API'
-
-    df_mode.to_csv(path+'/tbl_mode.csv', index=False)
-
-    df_line.to_csv(path+'/tbl_line.csv', index=False)
-
-    df_route.to_csv(path+'/tbl_route.csv', index=False)
-
-    df_coord.to_csv(path+'/tbl_coord.csv', index=False)
-
-    df_route_seq.to_csv(path+'/tbl_route_seq.csv', index=False)
-
+    # Export
     cols = ['Interval_0','Interval_1','Interval_2','Interval_3','Interval_4','Interval_5','Interval_6', 'Interval_7','Interval_8','Interval_9','Interval_10','Interval_11','Interval_12','Interval_13']
     df_orig_intervalId[cols] = df_orig_intervalId[cols].div(df_orig_intervalId[cols].sum(axis=1), axis=0)
+    # Export
     df_orig_intervalId.to_csv(path+'/tbl_df_orig_intervalId.csv', index=False)
-
     df_orig_dest_time_by_intervalid.to_csv(path+'/tbl_orig_dest_time_by_intervalid.csv', index=False)
+
+
+if __name__ == '__main__':
+
+    # Credentials TFL
+    app_id = 'ae744e0a05c74ef5b2bbfac2a7ea5f06'
+    app_key = '00024e328b23438496db36a939fe090b'
+
+    # API TFL (https://github.com/dhilmathy/TfL-python-api)
+    base_url = 'https://api.tfl.gov.uk/'
+    endpoints = {'stopPointByline': 'Line/{0}/Route/Sequence/all',
+                'crowndingBynaptan': 'crowding/{0}/Live',
+                'crowndingByline': 'StopPoint/{0}/Crowding/{1}?direction={2}&',
+                'timetable': 'Line/{0}/Timetable/{1}/to/{2}',
+                'timetable_s': 'Line/{0}/Timetable/{1}',
+                'latLonByline': 'Line/{0}/StopPoints',
+                'stoptid': '/StopPoint/{0}/Crowding/{1}?direction={2}&',
+                'time': '/Journey/JourneyResults/{0}/to/{1}?mode={2}&'}
+
+    # API Client
+    token = ApiToken(app_id, app_key)
+    client = Client(token)
+    api_token = { app_id: token.app_id, app_key: token.app_key }
+
+    path = r'/home/soaresbr/data_projects/big-cities-transport/1.BaseGraph/API'
+
+    modes
+    lines
+    routes
+    coordenates
+    df_route_seq = routes_seq
+    od_intervalid(df_route_seq)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
