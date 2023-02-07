@@ -36,7 +36,7 @@ def percentage_dict(kpi):
     return kpi
 
 
-def shortest_path(passenger):
+def shortest_path(passenger, db):
     ''' Input:
             - Passenger is a dictionary with the number of passengers by OD
         Output:
@@ -44,10 +44,8 @@ def shortest_path(passenger):
             - List of OD by travel time
     '''
 
-    shortest_paths_mode_segments_od = {'tube':{}, 'dlr':{}, 'overground':{}}
-
-    driver = GraphDatabase.driver("bolt://localhost:7687", auth=("neo4j", "TFLbst1608."))
-    with driver.session() as session: # default database
+    driver = GraphDatabase.driver("bolt://localhost:7687", auth=('neo4j', "TFLbst1608."))
+    with driver.session(database=db) as session:
 
         # IMPORT Find Segments and respectives OD's time before
         for start_end in passenger.keys():
@@ -132,73 +130,76 @@ if __name__ == '__main__':
 
     global 	days
     global periods
+    ods = ['dlr', 'overground', 'tube']
     days = ['MTT', 'SUN'] #,
     periods = ['Total'] #, 'Early', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late'] -> remove in ***
 
     # input a csv with all origin and destiny => OD has two columns s.t. key is start_end
-    path = '/mnt/c/Users/b_tib/coding/Python/gMsc/big-cities-transport/input/'
+    path = '/home/soaresbr/data_projects/big-cities-transport/2.Distress/1.Input/'
+
 
     # import od table (formated by hand)
-    for mode in
-    df = pd.read_csv(path+mode+'.csv')
-    df['o_d'] = df.apply (lambda row: row['name_o']+'_'+row['name_d']+'_'+row['mode'], axis=1)
-    df.set_index(['o_d'], inplace=True) # set o_d index
-    df.drop(columns=['name_o', 'name_d', 'Early', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late', 'mode'], inplace=True) # *** drop uncessary columns
+    for mode in ods:
+        db = mode+'-basegraph'
+        df = pd.read_csv(path+'od_'+mode+'.csv')
+        df['o_d'] = df.apply (lambda row: row['name_o']+'_'+row['name_d']+'_'+row['mode'], axis=1)
+        df.set_index(['o_d'], inplace=True) # set o_d index
+        df.drop(columns=['name_o', 'name_d', 'Early', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late'], inplace=True) # *** drop uncessary columns
 
-    for day in days:
-        od = df[df['day']==day].to_dict('dict')
-        for period in periods: # maybe one day really loop through periords ;)
-            # takes time, import **
-            od_passengers = od[period]
-            shortest_paths_mode_segments_od = shortest_path(od_passengers)
+        for day in days:
+            od = df[df['day']==day].to_dict('dict')
+            for period in periods: # maybe one day really loop through periords ;)
+                # takes time, import **
+                od_passengers = od[period]
+                shortest_paths_mode_segments_od = shortest_path(od_passengers, db)
 
-            # saves time, import **
-            # with open('shortest_paths_mode_segments_od_'+day+'_'+period+'.pickle', 'rb') as handle:
-            #     shortest_paths_mode_segments_od = pickle.load(handle)
+                # saves time, import **
+                # with open('shortest_paths_mode_segments_od_'+mode+'_'+day+'_'+period+'.pickle', 'rb') as handle:
+                #     shortest_paths_mode_segments_od = pickle.load(handle)
 
-            # Weighted distress time for segments
-            weighted_time_by_segment= weigthed_time(shortest_paths_mode_segments_od)
+                # Weighted distress time for segments
+                weighted_time_by_segment= weigthed_time(shortest_paths_mode_segments_od)
 
-            # EXPORT weighted_time_by_segment to Pickle
-            with open('weighted_time_by_segment_'+day+'_'+period+'.pickle', 'wb') as handle:
-                pickle.dump(weighted_time_by_segment, handle, protocol=pickle.HIGHEST_PROTOCOL)
+                # EXPORT weighted_time_by_segment to Pickle
+                with open('weighted_time_by_segment_'+mode+'_'+day+'_'+period+'.pickle', 'wb') as handle:
+                    pickle.dump(weighted_time_by_segment, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-            # EXPORT weighted_time_by_segment to CSV
-            csv_columns = ['Mode','Segment','Distress']
-            csv_file = 'weighted_time_by_segment_'+day+'_'+period+'.csv'
-            try:
-                with open(csv_file, 'w') as csvfile:
-                    writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
-                    writer.writeheader()
-                    for mode in weighted_time_by_segment:
-                        for segment in weighted_time_by_segment[mode]:
-                            line = {'Mode':mode,'Segment': segment, 'Distress': weighted_time_by_segment[mode][segment]}
-                            writer.writerow(line)
-            except IOError:
-                print("I/O error")
+                # EXPORT weighted_time_by_segment to CSV
+                csv_columns = ['Mode','Segment','Distress']
+                csv_file = 'weighted_time_by_segment_'+mode+'_'+day+'_'+period+'.csv'
+                try:
+                    with open(csv_file, 'w') as csvfile:
+                        writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
+                        writer.writeheader()
+                        for mode in weighted_time_by_segment:
+                            for segment in weighted_time_by_segment[mode]:
+                                line = {'Mode':mode,'Segment': segment, 'Distress': weighted_time_by_segment[mode][segment]}
+                                writer.writerow(line)
+                except IOError:
+                    print("I/O error")
 
-            # NORMALIZE values
-            for mode in weighted_time_by_segment:
-                minmax_dict(weighted_time_by_segment[mode])
+                # NORMALIZE values
+                for mode in weighted_time_by_segment:
+                    minmax_dict(weighted_time_by_segment[mode])
 
 
-            # EXPORT NORMALIZED weighted_time_by_segment to Pickle
-            with open('norm_weighted_time_by_segment_'+day+'_'+period+'.pickle', 'wb') as handle:
-                pickle.dump(weighted_time_by_segment, handle, protocol=pickle.HIGHEST_PROTOCOL)
+                # EXPORT NORMALIZED weighted_time_by_segment to Pickle
+                with open('norm_weighted_time_by_segment_'+mode+'_'+day+'_'+period+'.pickle', 'wb') as handle:
+                    pickle.dump(weighted_time_by_segment, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-            # EXPORT NORMALIZED weighted_time_by_segment to CSV
-            csv_columns = ['Mode','Segment','Distress']
-            csv_file = 'norm_weighted_time_by_segment_'+day+'_'+period+'.csv'
-            try:
-                with open(csv_file, 'w') as csvfile:
-                    writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
-                    writer.writeheader()
-                    for mode in weighted_time_by_segment:
-                        for segment in weighted_time_by_segment[mode]:
-                            line = {'Mode':mode,'Segment': segment, 'Distress': weighted_time_by_segment[mode][segment]}
-                            writer.writerow(line)
-            except IOError:
-                print("I/O error")
+                # EXPORT NORMALIZED weighted_time_by_segment to CSV
+                csv_columns = ['Mode','Segment','Distress']
+                csv_file = 'norm_weighted_time_by_segment_'+mode+'_'+day+'_'+period+'.csv'
+                try:
+                    with open(csv_file, 'w') as csvfile:
+                        writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
+                        writer.writeheader()
+                        for mode in weighted_time_by_segment:
+                            for segment in weighted_time_by_segment[mode]:
+                                line = {'Mode':mode,'Segment': segment, 'Distress': weighted_time_by_segment[mode][segment]}
+                                writer.writerow(line)
+                except IOError:
+                    print("I/O error")
 
 
             # evaluate a->b == b->a, if not, why? Although the walk_speed, distance anternatives to bridge the disruption are the same,
