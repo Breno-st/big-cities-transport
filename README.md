@@ -1,6 +1,7 @@
 
 # big-cities-transport
-My thesis project. Database design, statistical inferences, algorithm for data exploration, modeling and visualization.
+The aim of this project is to model a public transport sytem to evaluate its dynamic along different moments of the week. Eventually, this projoect relies on assumption and indicators that hipothetically can reflect the network operators to rank, compare and evaluate the variance of the importance of the infra-structure branches along the time.
+In summary, this project model uses network science techiniques to outcome valuable information to decision takers for goal-oriented and optimized system operation. 
 
 ## Objectives
      
