@@ -1,6 +1,6 @@
 
 # big-cities-transport
-The aim of this project is to model a public transport sytem to evaluate its dynamic along different moments of the week. Eventually, this projoect relies on assumption and indicators that hipothetically can reflect the network operators to rank, compare and evaluate the variance of the importance of the infra-structure branches along the time.
+The aim of this project is to model a public transport sytem to evaluate its dynamic along different moments of the week. Eventually, this project relies on assumptions and indicators that hipothetically reflects the network operators interest in order to rank, compare and evaluate the variance of the infra-structure branches importance along the time.
 In summary, this project model uses network science techiniques to outcome valuable information to decision takers for a goal-oriented and optimized system operation. 
 
 ## Objectives
