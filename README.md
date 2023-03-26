@@ -65,7 +65,7 @@ In summary, this project model uses network science techiniques to outcome valua
      - Sub chap 3.2- Explain each category: (Data origing, data limitation, indicators formulation)
 
 - Chap 4 - Model/Network ?
-     - Sub chap 4.1 - TFL INfra structure: stations (structure) / Links / walkable distances
+     - Sub chap 4.1 - TFL Infra structure: stations (structure) / Links / walkable distances
      - Sub chap 4.2 - TFL Transport systems: tube, DLR, ... (arrivals/traffic)
      - Sub chap 4.3 - 3 Operation Days Categories (Mon to Friday / SAT & Holidays / SUN)
      - Sub chap 4.4 - 4 Traffic Days Categories (MTT / FRI / SAT / SUN)
