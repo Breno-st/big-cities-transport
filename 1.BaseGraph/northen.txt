@@ -1,0 +1,206 @@
+//Rel northern
+match 
+(ANGu:tubeStation),
+(ARCu:tubeStation),
+(BALu:tubeStation),
+(BNKu:tubeStation),
+(BORu:tubeStation),
+(BPKu:tubeStation),
+(BTXu:tubeStation),
+(BURu:tubeStation),
+(CHFu:tubeStation),
+(CHXu:tubeStation),
+(CLWu:tubeStation),
+(COLu:tubeStation),
+(CPCu:tubeStation),
+(CPNu:tubeStation),
+(CPSu:tubeStation),
+(CTNu:tubeStation),
+(EDGu:tubeStation),
+(EFYu:tubeStation),
+(ELEu:tubeStation),
+(EMBu:tubeStation),
+(EUSu:tubeStation),
+(FYCu:tubeStation),
+(GGRu:tubeStation),
+(GSTu:tubeStation),
+(HBTu:tubeStation),
+(HIGu:tubeStation),
+(HMPu:tubeStation),
+(HNDu:tubeStation),
+(KENu:tubeStation),
+(KTNu:tubeStation),
+(KXXu:tubeStation),
+(LONu:tubeStation),
+(LSQu:tubeStation),
+(MCRu:tubeStation),
+(MGTu:tubeStation),
+(MHEu:tubeStation),
+(MORu:tubeStation),
+(OLDu:tubeStation),
+(OVLu:tubeStation),
+(STKu:tubeStation),
+(SWMu:tubeStation),
+(TBEu:tubeStation),
+(TBYu:tubeStation),
+(TCRu:tubeStation),
+(TOTu:tubeStation),
+(TPKu:tubeStation),
+(WFYu:tubeStation),
+(WLOu:tubeStation),
+(WSPu:tubeStation),
+(WSTu:tubeStation)
+where
+ANGu.naptanid = '940GZZLUAGL' AND
+ARCu.naptanid = '940GZZLUACY' AND
+BALu.naptanid = '940GZZLUBLM' AND
+BNKu.naptanid = '940GZZLUBNK' AND
+BORu.naptanid = '940GZZLUBOR' AND
+BPKu.naptanid = '940GZZLUBZP' AND
+BTXu.naptanid = '940GZZLUBTX' AND
+BURu.naptanid = '940GZZLUBTK' AND
+CHFu.naptanid = '940GZZLUCFM' AND
+CHXu.naptanid = '940GZZLUCHX' AND
+CLWu.naptanid = '940GZZLUCSD' AND
+COLu.naptanid = '940GZZLUCND' AND
+CPCu.naptanid = '940GZZLUCPC' AND
+CPNu.naptanid = '940GZZLUCPN' AND
+CPSu.naptanid = '940GZZLUCPS' AND
+CTNu.naptanid = '940GZZLUCTN' AND
+EDGu.naptanid = '940GZZLUEGW' AND
+EFYu.naptanid = '940GZZLUEFY' AND
+ELEu.naptanid = '940GZZLUEAC' AND
+EMBu.naptanid = '940GZZLUEMB' AND
+EUSu.naptanid = '940GZZLUEUS' AND
+FYCu.naptanid = '940GZZLUFYC' AND
+GGRu.naptanid = '940GZZLUGGN' AND
+GSTu.naptanid = '940GZZLUGDG' AND
+HBTu.naptanid = '940GZZLUHBT' AND
+HIGu.naptanid = '940GZZLUHGT' AND
+HMPu.naptanid = '940GZZLUHTD' AND
+HNDu.naptanid = '940GZZLUHCL' AND
+KENu.naptanid = '940GZZLUKNG' AND
+KTNu.naptanid = '940GZZLUKSH' AND
+KXXu.naptanid = '940GZZLUKSX' AND
+LONu.naptanid = '940GZZLULNB' AND
+LSQu.naptanid = '940GZZLULSQ' AND
+MCRu.naptanid = '940GZZLUMTC' AND
+MGTu.naptanid = '940GZZLUMGT' AND
+MHEu.naptanid = '940GZZLUMHL' AND
+MORu.naptanid = '940GZZLUMDN' AND
+OLDu.naptanid = '940GZZLUODS' AND
+OVLu.naptanid = '940GZZLUOVL' AND
+STKu.naptanid = '940GZZLUSKW' AND
+SWMu.naptanid = '940GZZLUSWN' AND
+TBEu.naptanid = '940GZZLUTBC' AND
+TBYu.naptanid = '940GZZLUTBY' AND
+TCRu.naptanid = '940GZZLUTCR' AND
+TOTu.naptanid = '940GZZLUTAW' AND
+TPKu.naptanid = '940GZZLUTFP' AND
+WFYu.naptanid = '940GZZLUWFN' AND
+WLOu.naptanid = '940GZZLUWLO' AND
+WSPu.naptanid = '940GZZLUWOP' AND
+WSTu.naptanid = '940GZZLUWRR' 
+create
+(ANGu)-[ANGu_KXXu_northern:TO{mode:'tube',line:'northern',distance:1.21988057322997,time:2,speed:36.6,frequency_MTT:[14,69,121,67,62,46],traffic_MTT:[2182,16648,26786,34642,15752,6286],frequency_SUN:[0,42,120,60,60,28],traffic_SUN:[0,5212,28318,14415,7947,2681]}]->(KXXu),
+(ANGu)-[ANGu_OLDu_northern:TO{mode:'tube',line:'northern',distance:1.46569383199571,time:2,speed:43.97,frequency_MTT:[16,65,120,69,61,45],traffic_MTT:[3232,34238,27724,24612,11605,5195],frequency_SUN:[0,43,120,60,60,27],traffic_SUN:[21,4102,24436,15508,10317,3815]}]->(OLDu),
+(ARCu)-[ARCu_HIGu_northern:TO{mode:'tube',line:'northern',distance:1.54410447714728,time:2,speed:46.32,frequency_MTT:[13,64,120,66,62,61],traffic_MTT:[250,4922,8415,19772,12500,5455],frequency_SUN:[8,40,119,60,60,38],traffic_SUN:[138,958,7007,7214,4837,2139]}]->(HIGu),
+(ARCu)-[ARCu_TPKu_northern:TO{mode:'tube',line:'northern',distance:0.995134127379651,time:1,speed:59.71,frequency_MTT:[20,64,120,68,60,54],traffic_MTT:[3741,30384,16177,9635,2980,758],frequency_SUN:[8,47,120,60,60,30],traffic_SUN:[285,3616,15441,5104,2261,505]}]->(TPKu),
+(BALu)-[BALu_CPSu_northern:TO{mode:'tube',line:'northern',distance:1.1079454795401,time:2,speed:33.24,frequency_MTT:[33,81,120,85,63,62],traffic_MTT:[6543,38208,15908,11536,4147,1200],frequency_SUN:[18,59,120,60,60,35],traffic_SUN:[944,5695,20815,7060,3410,805]}]->(CPSu),
+(BALu)-[BALu_TBEu_northern:TO{mode:'tube',line:'northern',distance:0.967680317385815,time:1,speed:58.06,frequency_MTT:[10,79,120,80,70,87],traffic_MTT:[817,7573,9874,21002,13442,6460],frequency_SUN:[16,42,119,60,60,52],traffic_SUN:[524,2045,10096,8873,6727,3110]}]->(TBEu),
+(BNKu)-[BNKu_LONu_northern:TO{mode:'tube',line:'northern',distance:0.847192269353935,time:22,speed:2.31,frequency_MTT:[14,64,121,68,62,47],traffic_MTT:[2134,19353,26508,37413,20483,8557],frequency_SUN:[0,41,120,60,60,29],traffic_SUN:[0,3816,23180,15740,10851,4117]}]->(LONu),
+(BNKu)-[BNKu_MGTu_northern:TO{mode:'tube',line:'northern',distance:0.539280589620561,time:7,speed:4.62,frequency_MTT:[16,69,121,68,61,44],traffic_MTT:[4033,36197,29901,27875,11783,4634],frequency_SUN:[0,44,120,60,60,26],traffic_SUN:[25,5749,27765,13460,7332,2147]}]->(MGTu),
+(BORu)-[BORu_ELEu_northern:TO{mode:'tube',line:'northern',distance:0.895568404620403,time:11,speed:4.88,frequency_MTT:[13,64,121,68,62,48],traffic_MTT:[1490,11574,15421,28493,16684,7376],frequency_SUN:[0,40,120,60,60,30],traffic_SUN:[0,2478,14961,11366,7670,2972]}]->(ELEu),
+(BORu)-[BORu_LONu_northern:TO{mode:'tube',line:'northern',distance:0.592130195529162,time:9,speed:3.95,frequency_MTT:[17,70,120,68,61,43],traffic_MTT:[4329,38651,20602,16864,6641,2636],frequency_SUN:[0,45,120,60,60,25],traffic_SUN:[42,4614,21346,8778,5049,1492]}]->(LONu),
+(BPKu)-[BPKu_CHFu_northern:TO{mode:'tube',line:'northern',distance:1.06470042592271,time:1,speed:63.88,frequency_MTT:[22,64,120,72,59,54],traffic_MTT:[3811,23264,16797,11428,3810,1090],frequency_SUN:[8,48,120,60,60,32],traffic_SUN:[392,3943,15425,6159,2902,773]}]->(CHFu),
+(BPKu)-[BPKu_HMPu_northern:TO{mode:'tube',line:'northern',distance:1.08498485145712,time:2,speed:32.55,frequency_MTT:[11,64,122,66,63,63],traffic_MTT:[712,6938,10950,17742,10066,4398],frequency_SUN:[8,44,120,60,60,39],traffic_SUN:[308,1665,9287,7265,5034,2230]}]->(HMPu),
+(BTXu)-[BTXu_GGRu_northern:TO{mode:'tube',line:'northern',distance:1.442861107288,time:3,speed:28.86,frequency_MTT:[18,60,120,60,59,56],traffic_MTT:[3872,16210,10256,6487,2151,563],frequency_SUN:[8,42,120,60,60,37],traffic_SUN:[446,3096,9577,3204,1549,394]}]->(GGRu),
+(BTXu)-[BTXu_HNDu_northern:TO{mode:'tube',line:'northern',distance:1.15546300976399,time:2,speed:34.66,frequency_MTT:[14,59,120,59,60,61],traffic_MTT:[345,4579,7100,11952,7154,3029],frequency_SUN:[8,43,120,60,60,37],traffic_SUN:[212,1045,4873,4554,3516,1654]}]->(HNDu),
+(BURu)-[BURu_COLu_northern:TO{mode:'tube',line:'northern',distance:1.2756027719669,time:2,speed:38.27,frequency_MTT:[19,61,120,59,60,53],traffic_MTT:[1964,6497,3543,2015,652,172],frequency_SUN:[9,44,120,60,59,35],traffic_SUN:[248,1219,3704,1231,600,158]}]->(COLu),
+(BURu)-[BURu_EDGu_northern:TO{mode:'tube',line:'northern',distance:1.42588804275506,time:2,speed:42.78,frequency_MTT:[13,58,120,59,60,63],traffic_MTT:[88,852,1842,2893,1572,646],frequency_SUN:[8,42,120,60,60,38],traffic_SUN:[44,276,1543,1121,743,339]}]->(EDGu),
+(CHFu)-[CHFu_BPKu_northern:TO{mode:'tube',line:'northern',distance:1.06470042592271,time:1,speed:63.88,frequency_MTT:[11,65,121,67,62,63],traffic_MTT:[867,8353,12190,19164,10746,4944],frequency_SUN:[8,45,119,60,60,39],traffic_SUN:[332,1981,10515,8119,5558,2444]}]->(BPKu),
+(CHFu)-[CHFu_CTNu_northern:TO{mode:'tube',line:'northern',distance:0.913245146338695,time:2,speed:27.4,frequency_MTT:[21,65,120,71,60,54],traffic_MTT:[3746,25485,18593,12897,4653,2051],frequency_SUN:[8,48,120,60,60,32],traffic_SUN:[376,4226,17597,7363,3394,1497]}]->(CTNu),
+(CHXu)-[CHXu_EMBu_northern:TO{mode:'tube',line:'northern',distance:0.322526035397247,time:1,speed:19.35,frequency_MTT:[16,65,120,67,62,71],traffic_MTT:[1688,12194,15992,23000,13421,7616],frequency_SUN:[16,47,120,60,60,40],traffic_SUN:[854,2384,15718,13016,8047,3781]}]->(EMBu),
+(CHXu)-[CHXu_LSQu_northern:TO{mode:'tube',line:'northern',distance:0.449496814232452,time:1,speed:26.97,frequency_MTT:[18,62,120,67,61,68],traffic_MTT:[2185,23170,20928,20640,7689,3152],frequency_SUN:[16,49,120,60,60,41],traffic_SUN:[768,3634,22922,10992,5441,1797]}]->(LSQu),
+(CLWu)-[CLWu_SWMu_northern:TO{mode:'tube',line:'northern',distance:1.01893118853568,time:2,speed:30.57,frequency_MTT:[9,77,121,79,71,89],traffic_MTT:[305,2865,3865,7833,4524,2145],frequency_SUN:[16,41,119,60,60,53],traffic_SUN:[212,921,3818,3028,2340,1137]}]->(SWMu),
+(CLWu)-[CLWu_TBYu_northern:TO{mode:'tube',line:'northern',distance:1.25157000692811,time:2,speed:37.55,frequency_MTT:[35,81,120,86,62,60],traffic_MTT:[3654,16884,7040,4645,1617,450],frequency_SUN:[18,60,119,60,59,35],traffic_SUN:[610,2905,8956,3081,1458,342]}]->(TBYu),
+(COLu)-[COLu_BURu_northern:TO{mode:'tube',line:'northern',distance:1.2756027719669,time:2,speed:38.27,frequency_MTT:[13,59,119,60,59,63],traffic_MTT:[178,1518,2832,5580,2836,1139],frequency_SUN:[8,43,119,60,60,38],traffic_SUN:[73,566,2395,1899,1343,617]}]->(BURu),
+(COLu)-[COLu_HNDu_northern:TO{mode:'tube',line:'northern',distance:2.11439364529432,time:2,speed:63.43,frequency_MTT:[19,61,120,60,59,54],traffic_MTT:[2926,11579,6538,3910,1196,344],frequency_SUN:[8,44,120,60,60,35],traffic_SUN:[355,2165,6595,2131,1024,265]}]->(HNDu),
+(CPCu)-[CPCu_CPNu_northern:TO{mode:'tube',line:'northern',distance:0.689420942846338,time:1,speed:41.37,frequency_MTT:[31,82,120,85,63,63],traffic_MTT:[7798,48124,20519,14410,5342,1599],frequency_SUN:[17,59,120,60,59,37],traffic_SUN:[1008,6928,26750,8975,4391,1186]}]->(CPNu),
+(CPCu)-[CPCu_CPSu_northern:TO{mode:'tube',line:'northern',distance:1.19876048864704,time:2,speed:35.96,frequency_MTT:[12,78,121,81,69,85],traffic_MTT:[1128,9819,13049,30190,19825,9155],frequency_SUN:[16,42,120,60,60,51],traffic_SUN:[648,2567,14211,12956,9265,3985]}]->(CPSu),
+(CPNu)-[CPNu_CPCu_northern:TO{mode:'tube',line:'northern',distance:0.689420942846338,time:1,speed:41.37,frequency_MTT:[12,79,120,81,69,85],traffic_MTT:[1288,10978,14701,34584,22554,10457],frequency_SUN:[16,43,119,60,60,51],traffic_SUN:[702,2865,16386,14884,10445,4425]}]->(CPCu),
+(CPNu)-[CPNu_STKu_northern:TO{mode:'tube',line:'northern',distance:0.936732931757371,time:1,speed:56.2,frequency_MTT:[30,82,120,85,63,64],traffic_MTT:[7865,50257,21886,15480,5792,1782],frequency_SUN:[17,59,120,60,60,36],traffic_SUN:[1087,7416,28692,9587,4778,1440]}]->(STKu),
+(CPSu)-[CPSu_BALu_northern:TO{mode:'tube',line:'northern',distance:1.1079454795401,time:2,speed:33.24,frequency_MTT:[11,79,120,80,70,86],traffic_MTT:[960,8916,11585,26249,17049,7901],frequency_SUN:[16,43,119,60,60,51],traffic_SUN:[579,2362,12449,11137,8126,3594]}]->(BALu),
+(CPSu)-[CPSu_CPCu_northern:TO{mode:'tube',line:'northern',distance:1.19876048864704,time:1,speed:71.93,frequency_MTT:[32,82,119,86,62,63],traffic_MTT:[7431,44039,18183,12858,4664,1369],frequency_SUN:[17,59,120,60,60,36],traffic_SUN:[974,6397,23683,7944,3865,950]}]->(CPCu),
+(CTNu)-[CTNu_CHFu_northern:TO{mode:'tube',line:'northern',distance:0.913245146338695,time:1,speed:54.79,frequency_MTT:[11,65,122,66,63,62],traffic_MTT:[916,9314,13609,20660,12296,5234],frequency_SUN:[8,45,120,60,60,38],traffic_SUN:[351,2214,12072,9111,6313,2537]}]->(CHFu),
+(CTNu)-[CTNu_EUSu_northern:TO{mode:'tube',line:'northern',distance:1.44988409882695,time:3,speed:29,frequency_MTT:[18,65,120,70,60,43],traffic_MTT:[3769,30062,20518,16718,6036,3190],frequency_SUN:[0,45,120,60,60,25],traffic_SUN:[76,4282,21436,11050,5275,2228]}]->(EUSu),
+(CTNu)-[CTNu_KTNu_northern:TO{mode:'tube',line:'northern',distance:1.23395080162957,time:1,speed:74.04,frequency_MTT:[15,64,120,66,62,59],traffic_MTT:[549,7924,13697,26888,17161,7591],frequency_SUN:[8,41,120,60,60,36],traffic_SUN:[230,1706,11672,11353,7599,3102]}]->(KTNu),
+(CTNu)-[CTNu_MCRu_northern:TO{mode:'tube',line:'northern',distance:0.581860903715844,time:1,speed:34.91,frequency_MTT:[19,65,120,69,60,68],traffic_MTT:[3253,28056,21956,13530,4563,2210],frequency_SUN:[16,48,120,60,60,39],traffic_SUN:[578,4139,23413,9424,3849,1536]}]->(MCRu),
+(EDGu)-[EDGu_BURu_northern:TO{mode:'tube',line:'northern',distance:1.42588804275506,time:2,speed:42.78,frequency_MTT:[20,61,120,59,60,52],traffic_MTT:[827,3469,2223,1187,401,117],frequency_SUN:[9,45,120,60,59,34],traffic_SUN:[98,648,2162,748,362,102]}]->(BURu),
+(EFYu)-[EFYu_FYCu_northern:TO{mode:'tube',line:'northern',distance:2.44736028839437,time:3,speed:48.95,frequency_MTT:[23,69,120,66,63,62],traffic_MTT:[178,3712,5531,12738,8360,3559],frequency_SUN:[11,52,120,60,60,38],traffic_SUN:[87,674,4219,4505,3082,1461]}]->(FYCu),
+(EFYu)-[EFYu_HIGu_northern:TO{mode:'tube',line:'northern',distance:1.70395410674042,time:2,speed:51.12,frequency_MTT:[21,65,120,68,60,52],traffic_MTT:[2987,21981,10453,6737,1872,451],frequency_SUN:[9,48,120,60,59,29],traffic_SUN:[236,2496,9844,3136,1364,316]}]->(HIGu),
+(ELEu)-[ELEu_BORu_northern:TO{mode:'tube',line:'northern',distance:0.895568404620403,time:11,speed:4.88,frequency_MTT:[18,69,120,69,60,43],traffic_MTT:[4580,38739,19661,15213,6038,2491],frequency_SUN:[0,45,120,60,60,25],traffic_SUN:[40,4545,20704,8520,4955,1448]}]->(BORu),
+(ELEu)-[ELEu_KENu_northern:TO{mode:'tube',line:'northern',distance:0.783643883471816,time:15,speed:3.13,frequency_MTT:[12,65,120,68,62,49],traffic_MTT:[1347,9860,13351,26955,16421,6996],frequency_SUN:[0,39,120,60,60,31],traffic_SUN:[0,2340,13559,10694,7257,2616]}]->(KENu),
+(EMBu)-[EMBu_CHXu_northern:TO{mode:'tube',line:'northern',distance:0.322526035397247,time:1,speed:19.35,frequency_MTT:[18,62,120,67,61,68],traffic_MTT:[2020,21196,19490,18913,6623,2337],frequency_SUN:[16,49,120,60,60,41],traffic_SUN:[778,3829,21764,9509,4661,1537]}]->(CHXu),
+(EMBu)-[EMBu_WLOu_northern:TO{mode:'tube',line:'northern',distance:0.688994361025052,time:2,speed:20.67,frequency_MTT:[16,64,120,68,61,72],traffic_MTT:[1549,7714,12245,23823,13010,7515],frequency_SUN:[16,46,120,60,60,41],traffic_SUN:[914,2013,11811,10762,6911,3495]}]->(WLOu),
+(EUSu)-[EUSu_CTNu_northern:TO{mode:'tube',line:'northern',distance:1.44988409882695,time:3,speed:29,frequency_MTT:[13,68,121,67,62,48],traffic_MTT:[1064,11870,16407,24831,14334,5598],frequency_SUN:[0,40,120,60,60,30],traffic_SUN:[0,2859,19353,10520,6745,2489]}]->(CTNu),
+(EUSu)-[EUSu_KXXu_northern:TO{mode:'tube',line:'northern',distance:0.6790250347822,time:1,speed:40.74,frequency_MTT:[17,65,120,70,60,44],traffic_MTT:[3137,31770,23171,18465,7607,3373],frequency_SUN:[0,44,120,60,60,26],traffic_SUN:[39,3561,20866,12422,7032,2608]}]->(KXXu),
+(EUSu)-[EUSu_MCRu_northern:TO{mode:'tube',line:'northern',distance:0.869034139592743,time:2,speed:26.07,frequency_MTT:[16,61,120,67,61,71],traffic_MTT:[762,9239,17642,25658,15332,7143],frequency_SUN:[16,48,119,60,60,43],traffic_SUN:[611,2278,20180,13746,8284,3101]}]->(MCRu),
+(EUSu)-[EUSu_WSTu_northern:TO{mode:'tube',line:'northern',distance:0.557074643154993,time:1,speed:33.42,frequency_MTT:[18,65,120,68,61,69],traffic_MTT:[3100,29085,25695,17098,6163,2485],frequency_SUN:[16,48,120,60,60,39],traffic_SUN:[592,4229,26456,10819,5197,1912]}]->(WSTu),
+(FYCu)-[FYCu_EFYu_northern:TO{mode:'tube',line:'northern',distance:2.44736028839437,time:3,speed:48.95,frequency_MTT:[22,67,120,68,60,65],traffic_MTT:[2471,16748,7898,5429,1441,351],frequency_SUN:[9,49,120,60,59,44],traffic_SUN:[191,1926,7235,2315,1055,255]}]->(EFYu),
+(FYCu)-[FYCu_MHEu_northern:TO{mode:'tube',line:'northern',distance:1.45746590865142,time:2,speed:43.72,frequency_MTT:[8,15,24,14,12,13],traffic_MTT:[49,753,246,793,463,155],frequency_SUN:[1,12,24,12,12,9],traffic_SUN:[1,89,215,153,158,116]}]->(MHEu),
+(FYCu)-[FYCu_WFYu_northern:TO{mode:'tube',line:'northern',distance:0.989282812749258,time:2,speed:29.68,frequency_MTT:[15,52,120,50,57,61],traffic_MTT:[72,1900,3130,7420,5133,2284],frequency_SUN:[9,50,119,60,60,39],traffic_SUN:[60,378,2561,2867,2019,922]}]->(WFYu),
+(GGRu)-[GGRu_BTXu_northern:TO{mode:'tube',line:'northern',distance:1.442861107288,time:2,speed:43.29,frequency_MTT:[15,59,119,60,59,61],traffic_MTT:[427,4704,7619,13186,7468,3349],frequency_SUN:[8,44,119,60,60,37],traffic_SUN:[229,1088,5291,4933,3796,1806]}]->(BTXu),
+(GGRu)-[GGRu_HMPu_northern:TO{mode:'tube',line:'northern',distance:2.1208172564585,time:3,speed:42.42,frequency_MTT:[20,62,120,65,60,52],traffic_MTT:[4080,20134,13138,8022,2713,706],frequency_SUN:[8,43,120,60,60,30],traffic_SUN:[422,3651,12348,4211,2037,479]}]->(HMPu),
+(GSTu)-[GSTu_TCRu_northern:TO{mode:'tube',line:'northern',distance:0.539229486655359,time:1,speed:32.35,frequency_MTT:[17,65,120,68,61,70],traffic_MTT:[2702,25017,24910,22546,8269,2952],frequency_SUN:[16,47,120,60,60,40],traffic_SUN:[573,3684,25928,11308,5521,1997]}]->(TCRu),
+(GSTu)-[GSTu_WSTu_northern:TO{mode:'tube',line:'northern',distance:0.556764603567969,time:1,speed:33.41,frequency_MTT:[16,62,120,67,61,70],traffic_MTT:[1034,11014,17148,25971,14388,7352],frequency_SUN:[16,48,120,60,60,42],traffic_SUN:[670,2344,18190,14038,8413,3138]}]->(WSTu),
+(HBTu)-[HBTu_TOTu_northern:TO{mode:'tube',line:'northern',distance:2.45251601830844,time:3,speed:49.05,frequency_MTT:[19,51,120,50,57,58],traffic_MTT:[572,3286,1657,1103,269,75],frequency_SUN:[10,48,120,60,60,39],traffic_SUN:[48,458,1487,509,231,48]}]->(TOTu),
+(HIGu)-[HIGu_ARCu_northern:TO{mode:'tube',line:'northern',distance:1.54410447714728,time:2,speed:46.32,frequency_MTT:[21,64,120,68,60,53],traffic_MTT:[3458,25914,12637,7800,2261,564],frequency_SUN:[9,47,120,60,60,29],traffic_SUN:[268,2898,12083,3935,1681,379]}]->(ARCu),
+(HIGu)-[HIGu_EFYu_northern:TO{mode:'tube',line:'northern',distance:1.70395410674042,time:2,speed:51.12,frequency_MTT:[12,64,120,66,62,62],traffic_MTT:[210,4428,7003,16604,10556,4627],frequency_SUN:[8,40,119,60,60,38],traffic_SUN:[107,838,5506,5946,4064,1862]}]->(EFYu),
+(HMPu)-[HMPu_BPKu_northern:TO{mode:'tube',line:'northern',distance:1.08498485145712,time:2,speed:32.55,frequency_MTT:[23,64,120,71,60,53],traffic_MTT:[3949,21204,14636,9335,3207,905],frequency_SUN:[8,49,120,60,60,31],traffic_SUN:[383,3704,13731,5296,2477,644]}]->(BPKu),
+(HMPu)-[HMPu_GGRu_northern:TO{mode:'tube',line:'northern',distance:2.1208172564585,time:4,speed:31.81,frequency_MTT:[10,64,122,66,63,64],traffic_MTT:[578,5671,9496,16448,9330,4190],frequency_SUN:[8,44,119,60,60,40],traffic_SUN:[292,1397,6951,6492,4716,2177]}]->(GGRu),
+(HNDu)-[HNDu_BTXu_northern:TO{mode:'tube',line:'northern',distance:1.15546300976399,time:2,speed:34.66,frequency_MTT:[19,60,120,60,59,55],traffic_MTT:[3799,15046,9391,6132,1933,519],frequency_SUN:[8,43,120,60,60,36],traffic_SUN:[461,2910,8855,2890,1404,362]}]->(BTXu),
+(HNDu)-[HNDu_COLu_northern:TO{mode:'tube',line:'northern',distance:2.11439364529432,time:2,speed:63.43,frequency_MTT:[14,59,119,60,59,62],traffic_MTT:[331,3387,4537,9132,5359,2231],frequency_SUN:[8,44,119,60,60,37],traffic_SUN:[138,853,3757,3368,2593,1199]}]->(COLu),
+(KENu)-[KENu_ELEu_northern:TO{mode:'tube',line:'northern',distance:0.783643883471816,time:16,speed:2.94,frequency_MTT:[18,70,120,69,60,42],traffic_MTT:[4334,37757,17427,12503,5255,2250],frequency_SUN:[0,46,120,60,60,24],traffic_SUN:[31,4157,19312,7640,4260,1261]}]->(ELEu),
+(KENu)-[KENu_OVLu_northern:TO{mode:'tube',line:'northern',distance:0.850441092974549,time:1,speed:51.03,frequency_MTT:[14,79,120,82,68,83],traffic_MTT:[1432,11290,14203,34787,21653,10632],frequency_SUN:[16,43,120,60,60,50],traffic_SUN:[637,2775,14481,13146,9121,4453]}]->(OVLu),
+(KENu)-[KENu_WLOu_northern:TO{mode:'tube',line:'northern',distance:1.77368223217567,time:2,speed:53.21,frequency_MTT:[20,62,120,67,61,66],traffic_MTT:[1921,14158,6482,6174,1824,454],frequency_SUN:[16,50,120,60,59,41],traffic_SUN:[977,2987,7335,2294,1090,808]}]->(WLOu),
+(KTNu)-[KTNu_CTNu_northern:TO{mode:'tube',line:'northern',distance:1.23395080162957,time:3,speed:24.68,frequency_MTT:[19,64,120,68,60,55],traffic_MTT:[3946,33455,19882,12503,4079,1618],frequency_SUN:[9,46,120,60,60,30],traffic_SUN:[283,4401,19477,6619,3041,952]}]->(CTNu),
+(KTNu)-[KTNu_TPKu_northern:TO{mode:'tube',line:'northern',distance:0.741654886255338,time:1,speed:44.5,frequency_MTT:[14,64,121,66,62,59],traffic_MTT:[412,6292,11849,25584,15961,6953],frequency_SUN:[8,41,120,60,60,36],traffic_SUN:[187,1407,10159,10087,6722,2842]}]->(TPKu),
+(KXXu)-[KXXu_ANGu_northern:TO{mode:'tube',line:'northern',distance:1.21988057322997,time:2,speed:36.6,frequency_MTT:[17,64,120,70,60,45],traffic_MTT:[3449,35349,28941,23291,10681,4518],frequency_SUN:[0,43,120,60,60,27],traffic_SUN:[35,4172,25639,15846,10384,3538]}]->(ANGu),
+(KXXu)-[KXXu_EUSu_northern:TO{mode:'tube',line:'northern',distance:0.6790250347822,time:2,speed:20.37,frequency_MTT:[13,69,121,67,62,47],traffic_MTT:[1471,12921,20899,27949,14040,5278],frequency_SUN:[0,41,120,60,60,29],traffic_SUN:[0,3637,23173,11529,6826,2334]}]->(EUSu),
+(LONu)-[LONu_BNKu_northern:TO{mode:'tube',line:'northern',distance:0.847192269353935,time:22,speed:2.31,frequency_MTT:[17,69,120,68,61,44],traffic_MTT:[5160,43818,31377,25181,10569,4584],frequency_SUN:[0,44,120,60,60,26],traffic_SUN:[30,6271,30085,14203,8053,2379]}]->(BNKu),
+(LONu)-[LONu_BORu_northern:TO{mode:'tube',line:'northern',distance:0.592130195529162,time:9,speed:3.95,frequency_MTT:[13,65,120,69,61,48],traffic_MTT:[1582,13115,16546,28477,16421,7509],frequency_SUN:[0,40,120,60,60,30],traffic_SUN:[0,2608,15307,11689,7990,3103]}]->(BORu),
+(LSQu)-[LSQu_CHXu_northern:TO{mode:'tube',line:'northern',distance:0.449496814232452,time:1,speed:26.97,frequency_MTT:[17,64,120,68,61,71],traffic_MTT:[2033,14317,17830,25702,13481,7255],frequency_SUN:[16,46,120,60,60,41],traffic_SUN:[818,2711,16972,12783,7827,3562]}]->(CHXu),
+(LSQu)-[LSQu_TCRu_northern:TO{mode:'tube',line:'northern',distance:0.577407379842201,time:1,speed:34.64,frequency_MTT:[17,62,120,67,61,69],traffic_MTT:[1758,20044,20543,21907,10746,5906],frequency_SUN:[16,48,120,60,60,42],traffic_SUN:[710,2761,20339,12964,8087,2999]}]->(TCRu),
+(MCRu)-[MCRu_CTNu_northern:TO{mode:'tube',line:'northern',distance:0.581860903715844,time:2,speed:17.46,frequency_MTT:[15,62,120,66,62,71],traffic_MTT:[670,7423,16916,25480,15529,7033],frequency_SUN:[16,47,120,60,60,43],traffic_SUN:[589,2181,19846,13482,8071,3056]}]->(CTNu),
+(MCRu)-[MCRu_EUSu_northern:TO{mode:'tube',line:'northern',distance:0.869034139592743,time:1,speed:52.14,frequency_MTT:[19,65,120,68,61,68],traffic_MTT:[3191,27774,22774,15688,5201,2390],frequency_SUN:[16,48,120,60,59,40],traffic_SUN:[586,4222,24433,9900,4040,1633]}]->(EUSu),
+(MGTu)-[MGTu_BNKu_northern:TO{mode:'tube',line:'northern',distance:0.539280589620561,time:6,speed:5.39,frequency_MTT:[15,64,120,69,61,47],traffic_MTT:[2714,25245,27076,36614,17242,7562],frequency_SUN:[0,41,120,60,60,29],traffic_SUN:[21,3697,22740,15193,10246,4157]}]->(BNKu),
+(MGTu)-[MGTu_OLDu_northern:TO{mode:'tube',line:'northern',distance:0.856211068699961,time:1,speed:51.37,frequency_MTT:[15,69,121,68,61,45],traffic_MTT:[2640,25408,27646,29868,13349,5049],frequency_SUN:[0,43,120,60,60,27],traffic_SUN:[22,5095,26902,13567,7608,2233]}]->(OLDu),
+(MHEu)-[MHEu_FYCu_northern:TO{mode:'tube',line:'northern',distance:1.45746590865142,time:3,speed:29.15,frequency_MTT:[7,16,24,13,13,13],traffic_MTT:[211,1307,430,560,87,35],frequency_SUN:[1,12,24,12,12,9],traffic_SUN:[9,135,323,114,53,27]}]->(FYCu),
+(MORu)-[MORu_SWMu_northern:TO{mode:'tube',line:'northern',distance:1.47812079349662,time:2,speed:44.34,frequency_MTT:[37,81,119,86,62,59],traffic_MTT:[2263,7947,3520,2109,703,179],frequency_SUN:[20,59,119,60,60,33],traffic_SUN:[379,1552,4288,1477,704,134]}]->(SWMu),
+(OLDu)-[OLDu_ANGu_northern:TO{mode:'tube',line:'northern',distance:1.46569383199571,time:2,speed:43.97,frequency_MTT:[15,69,121,67,62,45],traffic_MTT:[2419,18859,27052,33281,14909,5592],frequency_SUN:[0,43,120,60,60,27],traffic_SUN:[0,5302,28254,14008,7612,2346]}]->(ANGu),
+(OLDu)-[OLDu_MGTu_northern:TO{mode:'tube',line:'northern',distance:0.856211068699961,time:1,speed:51.37,frequency_MTT:[15,65,120,69,61,46],traffic_MTT:[3032,31035,27063,30698,13679,6264],frequency_SUN:[0,42,120,60,60,28],traffic_SUN:[23,4034,23808,15068,9887,3891]}]->(MGTu),
+(OVLu)-[OVLu_KENu_northern:TO{mode:'tube',line:'northern',distance:0.850441092974549,time:2,speed:25.51,frequency_MTT:[29,82,120,84,64,65],traffic_MTT:[6214,48145,19853,16096,5662,2126],frequency_SUN:[17,58,120,60,60,37],traffic_SUN:[1035,6631,22820,8117,4264,1747]}]->(KENu),
+(OVLu)-[OVLu_STKu_northern:TO{mode:'tube',line:'northern',distance:1.28809617160293,time:2,speed:38.64,frequency_MTT:[13,79,121,82,68,83],traffic_MTT:[1363,10400,13633,33102,20791,9837],frequency_SUN:[16,44,120,60,60,49],traffic_SUN:[613,2698,14186,12589,8677,3834]}]->(STKu),
+(STKu)-[STKu_CPNu_northern:TO{mode:'tube',line:'northern',distance:0.936732931757371,time:1,speed:56.2,frequency_MTT:[12,80,120,81,69,84],traffic_MTT:[1383,11464,15829,37323,24469,11257],frequency_SUN:[16,43,120,60,60,50],traffic_SUN:[748,3013,17716,16287,11256,4674]}]->(CPNu),
+(STKu)-[STKu_OVLu_northern:TO{mode:'tube',line:'northern',distance:1.28809617160293,time:2,speed:38.64,frequency_MTT:[30,82,120,84,64,64],traffic_MTT:[6252,46109,18500,14151,5379,2067],frequency_SUN:[17,59,120,60,59,37],traffic_SUN:[929,6005,21893,7880,4108,1525]}]->(OVLu),
+(SWMu)-[SWMu_CLWu_northern:TO{mode:'tube',line:'northern',distance:1.01893118853568,time:2,speed:30.57,frequency_MTT:[36,81,120,85,63,59],traffic_MTT:[2730,11586,4910,3426,1164,325],frequency_SUN:[19,60,119,60,59,34],traffic_SUN:[465,2021,6000,2149,1038,239]}]->(CLWu),
+(SWMu)-[SWMu_MORu_northern:TO{mode:'tube',line:'northern',distance:1.47812079349662,time:2,speed:44.34,frequency_MTT:[8,77,121,79,72,89],traffic_MTT:[189,1623,2698,5813,3193,1521],frequency_SUN:[16,40,120,60,59,54],traffic_SUN:[134,599,2641,2178,1696,843]}]->(MORu),
+(TBEu)-[TBEu_BALu_northern:TO{mode:'tube',line:'northern',distance:0.967680317385815,time:1,speed:58.06,frequency_MTT:[33,82,120,85,63,61],traffic_MTT:[5681,31153,13443,9662,3582,984],frequency_SUN:[18,60,120,60,59,35],traffic_SUN:[873,5012,16935,5757,2814,653]}]->(BALu),
+(TBEu)-[TBEu_TBYu_northern:TO{mode:'tube',line:'northern',distance:1.07823793874263,time:2,speed:32.35,frequency_MTT:[10,78,121,80,70,87],traffic_MTT:[727,6908,8807,17688,10859,5180],frequency_SUN:[16,41,120,60,60,52],traffic_SUN:[446,1810,8893,7338,5596,2615]}]->(TBYu),
+(TBYu)-[TBYu_CLWu_northern:TO{mode:'tube',line:'northern',distance:1.25157000692811,time:2,speed:37.55,frequency_MTT:[9,78,121,79,71,88],traffic_MTT:[419,3610,5333,11449,6747,3199],frequency_SUN:[16,41,119,60,60,53],traffic_SUN:[312,1160,5614,4473,3460,1659]}]->(CLWu),
+(TBYu)-[TBYu_TBEu_northern:TO{mode:'tube',line:'northern',distance:1.07823793874263,time:1,speed:64.69,frequency_MTT:[34,82,119,86,62,61],traffic_MTT:[5129,25040,11400,8489,3119,882],frequency_SUN:[18,59,120,60,60,35],traffic_SUN:[858,4343,14229,4958,2434,552]}]->(TBEu),
+(TCRu)-[TCRu_GSTu_northern:TO{mode:'tube',line:'northern',distance:0.539229486655359,time:1,speed:32.35,frequency_MTT:[17,62,120,67,61,69],traffic_MTT:[1380,15042,18952,25005,13515,6945],frequency_SUN:[17,48,120,60,60,41],traffic_SUN:[687,2653,18890,13976,8298,3054]}]->(GSTu),
+(TCRu)-[TCRu_LSQu_northern:TO{mode:'tube',line:'northern',distance:0.577407379842201,time:1,speed:34.64,frequency_MTT:[17,65,120,68,61,70],traffic_MTT:[2300,18378,21940,25968,10870,4320],frequency_SUN:[16,47,120,60,60,40],traffic_SUN:[717,3430,23415,12472,5744,2131]}]->(LSQu),
+(TOTu)-[TOTu_HBTu_northern:TO{mode:'tube',line:'northern',distance:2.45251601830844,time:3,speed:49.05,frequency_MTT:[13,52,120,51,56,63],traffic_MTT:[23,991,1102,2152,1515,665],frequency_SUN:[9,47,120,60,60,41],traffic_SUN:[24,144,897,817,597,272]}]->(HBTu),
+(TOTu)-[TOTu_WSPu_northern:TO{mode:'tube',line:'northern',distance:1.46455054028229,time:2,speed:43.94,frequency_MTT:[18,51,120,51,56,59],traffic_MTT:[913,5575,2561,1646,405,115],frequency_SUN:[9,48,120,60,60,40],traffic_SUN:[73,703,2413,795,351,83]}]->(WSPu),
+(TPKu)-[TPKu_ARCu_northern:TO{mode:'tube',line:'northern',distance:0.995134127379651,time:1,speed:59.71,frequency_MTT:[13,65,120,66,62,60],traffic_MTT:[364,6035,10932,23575,14761,6501],frequency_SUN:[8,40,120,60,60,37],traffic_SUN:[175,1274,9115,9068,6095,2615]}]->(ARCu),
+(TPKu)-[TPKu_KTNu_northern:TO{mode:'tube',line:'northern',distance:0.741654886255338,time:1,speed:44.5,frequency_MTT:[19,64,120,69,59,55],traffic_MTT:[3708,32961,17921,10522,3267,1015],frequency_SUN:[9,46,120,60,60,30],traffic_SUN:[295,3983,17309,5765,2596,634]}]->(KTNu),
+(WFYu)-[WFYu_FYCu_northern:TO{mode:'tube',line:'northern',distance:0.989282812749258,time:2,speed:29.68,frequency_MTT:[17,51,120,51,56,60],traffic_MTT:[1445,10043,4515,2796,758,196],frequency_SUN:[9,48,120,60,59,41],traffic_SUN:[111,1246,4486,1451,631,147]}]->(FYCu),
+(WFYu)-[WFYu_WSPu_northern:TO{mode:'tube',line:'northern',distance:0.976990460201241,time:1,speed:58.62,frequency_MTT:[14,52,121,50,56,62],traffic_MTT:[66,1883,2788,6363,4501,2037],frequency_SUN:[9,49,119,60,60,40],traffic_SUN:[46,344,2276,2513,1801,838]}]->(WSPu),
+(WLOu)-[WLOu_EMBu_northern:TO{mode:'tube',line:'northern',distance:0.688994361025052,time:1,speed:41.34,frequency_MTT:[19,62,120,67,61,67],traffic_MTT:[2330,24612,17089,14638,4998,1673],frequency_SUN:[17,49,120,60,60,40],traffic_SUN:[806,3799,17792,7239,3492,1233]}]->(EMBu),
+(WLOu)-[WLOu_KENu_northern:TO{mode:'tube',line:'northern',distance:1.77368223217567,time:3,speed:35.47,frequency_MTT:[15,65,120,67,62,72],traffic_MTT:[337,2983,4313,11522,7027,4398],frequency_SUN:[16,46,120,60,60,41],traffic_SUN:[644,757,4094,4774,3203,2247]}]->(KENu),
+(WSPu)-[WSPu_TOTu_northern:TO{mode:'tube',line:'northern',distance:1.46455054028229,time:2,speed:43.94,frequency_MTT:[14,52,120,50,57,62],traffic_MTT:[36,1273,1744,3649,2486,1081],frequency_SUN:[9,48,120,60,60,40],traffic_SUN:[30,199,1402,1328,934,420]}]->(TOTu),
+(WSPu)-[WSPu_WFYu_northern:TO{mode:'tube',line:'northern',distance:0.976990460201241,time:1,speed:58.62,frequency_MTT:[17,51,120,51,56,60],traffic_MTT:[1328,8517,3937,2566,681,187],frequency_SUN:[9,48,120,60,60,40],traffic_SUN:[101,1068,3879,1292,573,135]}]->(WFYu),
+(WSTu)-[WSTu_EUSu_northern:TO{mode:'tube',line:'northern',distance:0.557074643154993,time:1,speed:33.42,frequency_MTT:[16,62,120,67,61,70],traffic_MTT:[916,8953,17570,27640,15546,7585],frequency_SUN:[16,48,120,60,60,42],traffic_SUN:[614,2349,19230,14494,8603,3183]}]->(EUSu),
+(WSTu)-[WSTu_GSTu_northern:TO{mode:'tube',line:'northern',distance:0.556764603567969,time:1,speed:33.41,frequency_MTT:[18,64,120,69,60,70],traffic_MTT:[2962,26591,24762,18668,6399,2484],frequency_SUN:[16,47,120,60,60,40],traffic_SUN:[563,3751,25859,10847,5270,1883]}]->(GSTu)
