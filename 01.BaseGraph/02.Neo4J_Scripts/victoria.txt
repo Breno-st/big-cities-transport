@@ -1,0 +1,65 @@
+//Rel victoria
+match (BHRu:tubeStation),
+(BRXu:tubeStation),
+(EUSu:tubeStation),
+(FPKu:tubeStation),
+(GPKu:tubeStation),
+(HBYu:tubeStation),
+(KXXu:tubeStation),
+(OXCu:tubeStation),
+(PIMu:tubeStation),
+(STKu:tubeStation),
+(SVSu:tubeStation),
+(TTHu:tubeStation),
+(VICu:tubeStation),
+(VUXu:tubeStation),
+(WALu:tubeStation),
+(WSTu:tubeStation)
+where
+BHRu.naptanid = '940GZZLUBLR' AND
+BRXu.naptanid = '940GZZLUBXN' AND
+EUSu.naptanid = '940GZZLUEUS' AND
+FPKu.naptanid = '940GZZLUFPK' AND
+GPKu.naptanid = '940GZZLUGPK' AND
+HBYu.naptanid = '940GZZLUHAI' AND
+KXXu.naptanid = '940GZZLUKSX' AND
+OXCu.naptanid = '940GZZLUOXC' AND
+PIMu.naptanid = '940GZZLUPCO' AND
+STKu.naptanid = '940GZZLUSKW' AND
+SVSu.naptanid = '940GZZLUSVS' AND
+TTHu.naptanid = '940GZZLUTMH' AND
+VICu.naptanid = '940GZZLUVIC' AND
+VUXu.naptanid = '940GZZLUVXL' AND
+WALu.naptanid = '940GZZLUWWL' AND
+WSTu.naptanid = '940GZZLUWRR'
+create
+(BHRu)-[BHRu_TTHu_victoria:TO{mode:'tube',line:'victoria',distance:1.32974494724559,time:1,speed:79.78,frequency_MTT:[18,95,160,100,81,58],traffic_MTT:[5984,22449,10775,5943,2110,638],frequency_SUN:[12,52,151,79,75,39],traffic_SUN:[1108,4611,13073,4248,2006,504]}]->(TTHu),
+(BHRu)-[BHRu_WALu_victoria:TO{mode:'tube',line:'victoria',distance:1.53815742561224,time:1,speed:92.29,frequency_MTT:[18,96,160,100,81,60],traffic_MTT:[480,2521,5236,12642,6553,2823],frequency_SUN:[12,53,151,79,75,35],traffic_SUN:[246,1063,5763,5024,3466,1452]}]->(WALu),
+(BRXu)-[BRXu_STKu_victoria:TO{mode:'tube',line:'victoria',distance:1.19297475605373,time:2,speed:35.79,frequency_MTT:[27,104,164,106,84,69],traffic_MTT:[3323,23129,10990,7417,3328,4389],frequency_SUN:[12,60,160,80,77,43],traffic_SUN:[1011,3932,14550,5214,2730,1642]}]->(STKu),
+(EUSu)-[EUSu_KXXu_victoria:TO{mode:'tube',line:'victoria',distance:0.6790250347822,time:1,speed:40.74,frequency_MTT:[22,102,165,104,87,75],traffic_MTT:[3608,23630,37931,59487,29896,13685],frequency_SUN:[13,56,159,80,78,47],traffic_SUN:[1174,6872,39694,31408,19111,7244]}]->(KXXu),
+(EUSu)-[EUSu_WSTu_victoria:TO{mode:'tube',line:'victoria',distance:0.557074643154993,time:1,speed:33.42,frequency_MTT:[33,105,164,106,82,64],traffic_MTT:[11957,70260,57916,42147,18782,7197],frequency_SUN:[14,64,160,80,76,39],traffic_SUN:[2071,14223,63325,28060,17700,5185]}]->(WSTu),
+(FPKu)-[FPKu_HBYu_victoria:TO{mode:'tube',line:'victoria',distance:1.99612199057227,time:2,speed:59.88,frequency_MTT:[36,105,165,105,82,61],traffic_MTT:[13927,68269,40274,23770,9692,3436],frequency_SUN:[14,66,160,80,76,36],traffic_SUN:[2304,13139,42541,16007,8740,2428]}]->(HBYu),
+(FPKu)-[FPKu_SVSu_victoria:TO{mode:'tube',line:'victoria',distance:3.1914305360796,time:3,speed:63.83,frequency_MTT:[19,101,166,103,88,78],traffic_MTT:[1933,9873,17957,39087,19407,8881],frequency_SUN:[12,54,158,80,78,50],traffic_SUN:[838,3540,17660,15449,10662,4509]}]->(SVSu),
+(GPKu)-[GPKu_OXCu_victoria:TO{mode:'tube',line:'victoria',distance:0.922925536032805,time:2,speed:27.69,frequency_MTT:[24,103,165,104,86,73],traffic_MTT:[7061,58453,60142,57186,22597,10753],frequency_SUN:[13,57,159,80,78,46],traffic_SUN:[1384,12367,63223,30388,16659,5901]}]->(OXCu),
+(GPKu)-[GPKu_VICu_victoria:TO{mode:'tube',line:'victoria',distance:1.17820132674405,time:2,speed:35.35,frequency_MTT:[30,105,164,106,83,66],traffic_MTT:[8050,49457,53837,68808,37584,15372],frequency_SUN:[14,63,160,80,76,40],traffic_SUN:[1912,12626,53884,37812,23255,7939]}]->(VICu),
+(HBYu)-[HBYu_FPKu_victoria:TO{mode:'tube',line:'victoria',distance:1.99612199057227,time:2,speed:59.88,frequency_MTT:[20,101,166,104,87,77],traffic_MTT:[2415,13200,25646,53171,27222,12719],frequency_SUN:[12,55,158,80,78,49],traffic_SUN:[990,4673,25747,22808,15425,6327]}]->(FPKu),
+(HBYu)-[HBYu_KXXu_victoria:TO{mode:'tube',line:'victoria',distance:2.22412028978123,time:2,speed:66.72,frequency_MTT:[35,105,164,106,82,62],traffic_MTT:[13781,70702,45282,28038,11075,4582],frequency_SUN:[14,65,160,80,76,37],traffic_SUN:[2335,13718,48338,18401,10000,2906]}]->(KXXu),
+(KXXu)-[KXXu_EUSu_victoria:TO{mode:'tube',line:'victoria',distance:0.6790250347822,time:1,speed:40.74,frequency_MTT:[33,106,164,105,83,63],traffic_MTT:[11919,63652,49288,34791,15136,5912],frequency_SUN:[14,65,160,80,76,38],traffic_SUN:[2269,13723,53778,22755,13870,4080]}]->(EUSu),
+(KXXu)-[KXXu_HBYu_victoria:TO{mode:'tube',line:'victoria',distance:2.22412028978123,time:2,speed:66.72,frequency_MTT:[21,102,165,104,87,76],traffic_MTT:[2614,16148,28959,57680,31594,14035],frequency_SUN:[12,56,158,80,78,48],traffic_SUN:[1100,4982,30728,27128,17968,7247]}]->(HBYu),
+(OXCu)-[OXCu_GPKu_victoria:TO{mode:'tube',line:'victoria',distance:0.922925536032805,time:1,speed:55.38,frequency_MTT:[31,105,164,106,83,65],traffic_MTT:[8994,53566,55723,62821,32905,12893],frequency_SUN:[13,64,160,80,76,40],traffic_SUN:[1966,12950,55129,34742,21788,7114]}]->(GPKu),
+(OXCu)-[OXCu_WSTu_victoria:TO{mode:'tube',line:'victoria',distance:1.11040118263626,time:1,speed:66.62,frequency_MTT:[23,103,165,104,86,74],traffic_MTT:[5072,38563,51578,65907,31883,14185],frequency_SUN:[13,57,158,80,78,47],traffic_SUN:[1235,9922,51765,36941,20703,7404]}]->(WSTu),
+(PIMu)-[PIMu_VICu_victoria:TO{mode:'tube',line:'victoria',distance:1.03617635894168,time:2,speed:31.09,frequency_MTT:[25,103,165,105,85,71],traffic_MTT:[6944,51756,34299,30203,10063,5554],frequency_SUN:[12,59,159,80,77,45],traffic_SUN:[1568,9788,42974,15555,7413,2722]}]->(VICu),
+(PIMu)-[PIMu_VUXu_victoria:TO{mode:'tube',line:'victoria',distance:0.761519165405424,time:1,speed:45.69,frequency_MTT:[28,105,164,105,84,68],traffic_MTT:[3849,21615,22006,37711,24553,10574],frequency_SUN:[12,62,160,80,77,41],traffic_SUN:[918,5190,25305,21387,14394,5256]}]->(VUXu),
+(STKu)-[STKu_BRXu_victoria:TO{mode:'tube',line:'victoria',distance:1.19297475605373,time:1,speed:71.58,frequency_MTT:[26,105,164,105,85,69],traffic_MTT:[594,5189,8621,15972,11553,5361],frequency_SUN:[12,61,160,80,76,43],traffic_SUN:[438,1626,9372,8417,5945,2343]}]->(BRXu),
+(STKu)-[STKu_VUXu_victoria:TO{mode:'tube',line:'victoria',distance:1.51242754725958,time:2,speed:45.37,frequency_MTT:[26,104,164,106,85,69],traffic_MTT:[5670,38480,19359,12455,5328,4574],frequency_SUN:[12,59,160,80,77,44],traffic_SUN:[1308,6894,26970,8949,4533,2053]}]->(VUXu),
+(SVSu)-[SVSu_FPKu_victoria:TO{mode:'tube',line:'victoria',distance:3.1914305360796,time:3,speed:63.83,frequency_MTT:[38,105,165,105,82,59],traffic_MTT:[11390,45043,25757,14401,5385,1628],frequency_SUN:[14,67,160,80,75,36],traffic_SUN:[2059,9516,28240,10539,5820,1520]}]->(FPKu),
+(SVSu)-[SVSu_TTHu_victoria:TO{mode:'tube',line:'victoria',distance:1.00720833897875,time:1,speed:60.43,frequency_MTT:[20,95,161,100,80,59],traffic_MTT:[1321,6725,11390,26280,12902,5781],frequency_SUN:[12,54,151,79,75,34],traffic_SUN:[568,2318,11954,10267,6881,2893]}]->(TTHu),
+(TTHu)-[TTHu_BHRu_victoria:TO{mode:'tube',line:'victoria',distance:1.32974494724559,time:1,speed:79.78,frequency_MTT:[19,96,160,100,80,60],traffic_MTT:[689,4070,7474,18891,9826,4355],frequency_SUN:[12,53,151,79,76,34],traffic_SUN:[385,1460,8003,7413,5154,2189]}]->(BHRu),
+(TTHu)-[TTHu_SVSu_victoria:TO{mode:'tube',line:'victoria',distance:1.00720833897875,time:2,speed:30.22,frequency_MTT:[17,95,160,100,81,59],traffic_MTT:[6932,30419,16130,9148,3482,1022],frequency_SUN:[12,51,151,79,75,40],traffic_SUN:[1357,5980,18396,6869,3827,999]}]->(SVSu),
+(VICu)-[VICu_GPKu_victoria:TO{mode:'tube',line:'victoria',distance:1.17820132674405,time:1,speed:70.69,frequency_MTT:[25,103,165,105,85,72],traffic_MTT:[8598,67949,62454,54260,20551,9519],frequency_SUN:[13,58,159,80,77,46],traffic_SUN:[1701,13816,67304,28742,15725,5591]}]->(GPKu),
+(VICu)-[VICu_PIMu_victoria:TO{mode:'tube',line:'victoria',distance:1.03617635894168,time:1,speed:62.17,frequency_MTT:[29,105,164,105,84,67],traffic_MTT:[4378,25419,25819,39720,25683,11202],frequency_SUN:[12,63,160,80,77,40],traffic_SUN:[988,5707,28491,22975,15381,5646]}]->(PIMu),
+(VUXu)-[VUXu_PIMu_victoria:TO{mode:'tube',line:'victoria',distance:0.761519165405424,time:1,speed:45.69,frequency_MTT:[25,104,164,105,86,70],traffic_MTT:[6792,49534,30192,25196,8595,5264],frequency_SUN:[12,59,160,80,77,44],traffic_SUN:[1528,9062,39488,13821,6796,2564]}]->(PIMu),
+(VUXu)-[VUXu_STKu_victoria:TO{mode:'tube',line:'victoria',distance:1.51242754725958,time:2,speed:45.37,frequency_MTT:[27,105,164,105,85,68],traffic_MTT:[1191,8583,14740,27117,18342,7992],frequency_SUN:[12,62,160,80,76,42],traffic_SUN:[666,2657,16772,15263,10355,3879]}]->(STKu),
+(WALu)-[WALu_BHRu_victoria:TO{mode:'tube',line:'victoria',distance:1.53815742561224,time:2,speed:46.14,frequency_MTT:[19,95,160,100,80,58],traffic_MTT:[4227,15070,6967,3882,1381,438],frequency_SUN:[12,53,151,79,75,38],traffic_SUN:[709,3169,8760,2885,1351,357]}]->(BHRu),
+(WSTu)-[WSTu_EUSu_victoria:TO{mode:'tube',line:'victoria',distance:0.557074643154993,time:1,speed:33.42,frequency_MTT:[22,103,165,104,87,74],traffic_MTT:[4325,31266,48072,67835,33161,14667],frequency_SUN:[13,57,159,80,77,47],traffic_SUN:[1217,9111,49323,36388,20574,7487]}]->(EUSu),
+(WSTu)-[WSTu_OXCu_victoria:TO{mode:'tube',line:'victoria',distance:1.11040118263626,time:1,speed:66.62,frequency_MTT:[32,105,164,106,82,65],traffic_MTT:[11103,66908,59978,49554,22249,8322],frequency_SUN:[13,64,160,80,77,39],traffic_SUN:[1969,14264,64260,29079,18568,5582]}]->(OXCu)

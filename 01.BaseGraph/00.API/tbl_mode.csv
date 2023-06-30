@@ -1,0 +1,12 @@
+modeName,isTflService,isFarePaying,isScheduledService
+bus,True,True,True
+cable-car,True,True,True
+cycle-hire,True,True,False
+dlr,True,True,True
+elizabeth-line,True,True,True
+overground,True,True,True
+replacement-bus,True,True,True
+river-bus,True,True,True
+river-tour,True,True,True
+tram,True,True,True
+tube,True,True,True
