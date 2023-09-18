@@ -3,7 +3,6 @@ import numpy as np
 from neo4j import GraphDatabase, basic_auth
 from pip import main
 import csv
-import networkx
 
 
 def _directed_pairs():
@@ -16,8 +15,6 @@ def _directed_pairs():
 
     result = session.run('MATCH (n)-[r:TO]->(m) RETURN DISTINCT n.naptanid as orig, m.naptanid as dest, r.mode as mode')
     pairs = [(record['orig'],record['dest'],record['mode']) for record in result]
-
-    # Export csv
 
     return pairs
 
@@ -84,7 +81,6 @@ def _unique_rel_kpis(mode, pairs):
             o_d = o_d_tup[0]+'_'+o_d_tup[1]
             distress['SUN'][0][o_d] = float(row["Distress"])
 
-
     output = {'distance':distance,
         'speed':speeds,
         'traffic':traffics,
@@ -138,9 +134,7 @@ def _merge_lines(relations):
 
     # Lines Avg. Speed Weighted by Traffic
     speed = sum(x * y for x, y in zip(line_speeds, line_traffic)) / sum(line_traffic) if relations[i]['r']._properties['line'] != 'Out-of-Station' else 0
-
     return from_id, traffics, frequencies, speed, distance, to_id
-
 
 
 BS="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -172,7 +166,6 @@ def generate_nodes(db, mode):
         result = session.run(create_nodes_cypher)
     session.close()
     driver.close()
-
     return
 
 
@@ -212,7 +205,6 @@ def minmax_dict(kpi):
 if __name__ == '__main__':
     '''
     Convert Base-Graph relation to list of dict(UDR) Kpis
-
     '''
     global 	days
     global periods
@@ -225,8 +217,6 @@ if __name__ == '__main__':
     # hours = ['00', '01']
 
     # Connect to base-graph
-    # driver = GraphDatabase.driver("bolt://localhost:7687", auth=("neo4j", "TFLbst1608."))
-    # with driver.session() as session:
     for mode in ods:
         driver = GraphDatabase.driver("bolt://localhost:7687", auth=('neo4j', "TFLbst1608."))
         with driver.session(database=mode+'-basegraph') as session:
@@ -238,7 +228,7 @@ if __name__ == '__main__':
         session.close()
         driver.close()
 
-        # Reproduce a Graph for each KPI
+        # Create a Graph for each KPI
         for kpi in UDR.keys():
             if isinstance(list(UDR[kpi].values())[0], float): # regardless of day
                 db = mode+"-"+kpi
