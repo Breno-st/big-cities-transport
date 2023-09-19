@@ -14,10 +14,12 @@ from neo4j import GraphDatabase
 import networkx as nx
 import matplotlib.pyplot as plt
 
-G = nx.Graph()
+G = nx.DiGraph()
+
 
 def load_data_to_networkx(tx):
-    kpi = 'distress'
+    kpi = 'toy'
+
     cypher_query = "MATCH (n)-[r]->(m) RETURN n, r, m"
     result = tx.run(cypher_query)
     for record in result:
@@ -29,12 +31,24 @@ def load_data_to_networkx(tx):
        G.add_node(node2._properties['naptanid'], **node2._properties )
        # Add edges with attributes
        G.add_edge(node1._properties['naptanid'], node2._properties['naptanid'], kpi = relationship._properties[kpi])
-    nx.draw(G, with_labels=True, node_color='lightblue', font_weight='bold')
+
+    # Normal Ranking
+    print("\n kpi rank")
+    sorted_edges = sorted(G.edges(data=True), key=lambda x: x[2]['kpi'], reverse=True)
+    for edge in sorted_edges:
+        print(f"Edge: {edge[0]} - {edge[1]}, kpi: {edge[2]['kpi']}")
+
+
+    # Printing the map (improvements with network)
+    pos = {}
+    for node in G.nodes():
+        pos[node] = (G.nodes[node]['long'], G.nodes[node]['lat'])
+    nx.draw(G, pos, node_size=20, node_color='lightblue', font_weight='bold')
     plt.show()
 
 
 driver = GraphDatabase.driver("bolt://localhost:7687/", auth=('neo4j', "TFLbst1608."))
-with driver.session(database='dlr-mtt-distress') as session:
+with driver.session(database='toy') as session:
     result = session.execute_read(load_data_to_networkx)
 
 
@@ -60,14 +74,9 @@ driver.close()
 # proj,lang, read,
 # cook, clea, clot, mrkt
 
-## (12-Jul) Mecredi:    5h: ----, 8h: work, 12h: work, 14h: work, 18h: cook, 20h: cst,  21h: ru12,  22h: read		>>> mrkt, cook, gym, eat, sleep
-## (13-JuL) Jeudi:      5h: bike, 8h: work, 12h: work, 14h: work, 18h: beer, 20h: proj, 21h: proj, 22h: read		>>> Coffee in leuven
-## (14-JuL) Vendredi:   5h: ru12, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: back, 21h: ----, 22h: read		>>> Coffee in leuven
-## (22-JuL) Samedi:     5h: bike, 8h: room, 12h: mrkt, 14h: proj, 18h: proj, 20h: ----, 21h: ----, 22h: ----   		>>> Morning Bike, Afternoon Run
-## (23-Jul) Dimache:    5h: ru21, 8h: clot, 12h: cook, 14h: proj, 18h: proj, 20h: ----, 21h: ----, 22h: ----		>>> Morning Bike, Afternoon Run
 
-## (17-Jul) Lundi:      5h: legs, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: lang, 21h: lang, 22h: read		>>> Morning Legs
-## (18-Jul) Mardi:      5h: ru16, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: proj, 21h: proj, 22h: read		>>> Morning Run/Core
+## (17-Jul) Lundi:      5h: ----, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: legs, 21h: lang, 22h: read		>>> Night Legs
+## (18-Jul) Mardi:      5h: ru16, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: core, 21h: proj, 22h: read		>>> Morning Run/Core
 ## (19-Jul) Mecredi:    5h: bike, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: chst, 21h: ----, 22h: read		>>> Morning Bike/Run, Night Chst
 ## (20-JuL) Jeudi:      5h: ru12, 8h: Work, 12h:lunch, 14h: Work, 18h: cook, 20h: proj, 21h: proj, 22h: read		>>> Morning Run/Core, London
 ## (21-JuL) Vendredi:   5h: bike, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: back, 21h: ----, 22h: read		>>> London
@@ -84,7 +93,18 @@ driver.close()
 ## TODO PLAN
 
 ## Thesis:
-### Adjust Disparity Algo to Neo4J and prepare: Ranks, Percentiles
+### Make the toys charts and apply rank in the networkx
+### MATCH (startNode)-[*1..4]-(subgraphNode)
+### RETURN startNode, subgraphNode
+### LIMIT 7
+### Apply disparity(s) the toys charts rank in the networkx
+### Compare using Kendall algorithm
+### Prepare email about dispariy proof
+
+### Apply it to the whole study
+### Generate nice charts, graphs,
+
+
 ### Write Modeling KPIs part 4
 ### Write Methodology Distress part 2
 ### Write Methodology Disparity part 2
