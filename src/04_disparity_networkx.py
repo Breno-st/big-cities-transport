@@ -13,8 +13,6 @@ import pandas as pd
 from neo4j import GraphDatabase
 import networkx as nx
 import matplotlib.pyplot as plt
-import os
-import shutil
 from scipy.stats import kendalltau
 
 
@@ -232,7 +230,6 @@ def draw_grid(G, node_att, edge_att, node_colors_kpi, edge_colors_kpi):
     plt.show()
 
 
-
 def color_map(G, edge_att="weight", node_att="degree"):
 
     cmap = plt.get_cmap("RdYlGn")
@@ -250,19 +247,6 @@ def color_map(G, edge_att="weight", node_att="degree"):
 
 
 if __name__ == "__main__":
-
-    #### INPUT FOR DISPARITY  ####
-
-    # # connect to neo4J and get graphs
-    # dbs = ['tube-mtt-distress']
-    # driver = GraphDatabase.driver("bolt://localhost:7687/", auth=('neo4j', "TFLbst1608."))
-    # for db in dbs:
-    #     with driver.session(database=db) as session:
-    #         result = session.execute_read(load_data_to_networkx)
-    #         # rename temp
-    #         shutil.move("temp.json", db+".json", copy_function=shutil.copy2)
-    #     session.close()
-    # driver.close()
 
     #### LOAD JSON DISPARITY  ####
     graph = load_graph("C:/buildbr/big-cities-transport/04.Disparity/toy.json")

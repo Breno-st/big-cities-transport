@@ -1,8 +1,8 @@
+from pip import main
 import pandas as pd
 import numpy as np
-from neo4j import GraphDatabase, basic_auth
-from pip import main
 import csv
+from neo4j import GraphDatabase, basic_auth
 
 
 def _directed_pairs():
@@ -202,6 +202,7 @@ def minmax_dict(kpi):
     return kpi
 
 
+
 if __name__ == '__main__':
     '''
     Convert Base-Graph relation to list of dict(UDR) Kpis
@@ -210,7 +211,7 @@ if __name__ == '__main__':
     global periods
     global UDR
     # Granularity
-    ods = [ 'overground', 'tube'] # 'dlr',
+    ods = [ 'overground', 'tube', 'dlr'] # ,
     days = ['MTT', 'SUN']
     # periods = ['Early', 'Morining']
     periods_hours = [2, 3, 6, 3, 3, 3] #number of hours in each period
@@ -252,6 +253,12 @@ if __name__ == '__main__':
                         generate_edges(db, kpi, UDR[kpi][day][0]) # for each KPI an Db // inside create database
 
     # export graph in CSV for NetworkX
+
+
+
+
+
+
     print('==> Done! Now disparity ranks')
 
 
