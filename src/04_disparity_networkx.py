@@ -51,7 +51,7 @@ def load_graph (graph_path):
 
 #### DISPARITY FUNCTIONS ####
 
-def disparity_filter (graph):
+def disparity_filter (graph, kpi):
     """
     implements a disparity filter, based on multiscale backbone networks
     https://arxiv.org/pdf/0904.2389.pdf
@@ -65,15 +65,16 @@ def disparity_filter (graph):
 
         for id0, id1 in graph.edges(nbunch=[node_id]):
             edge = graph[id0][id1]
-            strength += edge["weight"]
+            strength += edge[kpi]
 
         node["strength"] = strength
 
         for id0, id1 in graph.edges(nbunch=[node_id]):
             edge = graph[id0][id1]
 
-            norm_weight = edge["weight"] / strength
-            edge["norm_weight"] = norm_weight
+            norm_weight = edge[kpi] / strength
+            aux = 'norm_'+kpi
+            edge[aux] = norm_weight ####
 
             if degree > 1:
                 try:
@@ -129,26 +130,36 @@ def report_error (cause_string, logger=None, fatal=False):
 
 #### RANKS #####
 
-def edge_rank(G):
+def edge_rank(G, kpi):
 
     # Combining two ranks: alpha and weight
-    combined_edges = sorted(G.edges(data=True), key=lambda x: (x[2]['alpha_ptile'], x[2]['weight']), reverse=True)
+    combined_edges = sorted(G.edges(data=True), key=lambda x: (x[2]['alpha_ptile'], x[2][kpi]), reverse=True)
 
-
-    # getting ranks positions
+    # Getting ranks positions
     alpha_sorted_edges = sorted(G.edges(data=True), key=lambda x: x[2]['alpha_ptile'], reverse=True) # should be the same as the combined
-    weight_sorted_edges = sorted(G.edges(data=True), key=lambda x: x[2]['weight'], reverse=True)
+    kpi_sorted_edges = sorted(G.edges(data=True), key=lambda x: x[2][kpi], reverse=True)
 
     # Output Table
     for edge in combined_edges:
-        print(f"alpha: ({alpha_sorted_edges.index(edge)+1}) {round(edge[2]['alpha_ptile'],3):.3f} | ({weight_sorted_edges.index(edge)+1}) weight: {round(edge[2]['weight'],3):.3f}  | ({edge[0]} - {int(edge[1])}) ")
+        print(f"alpha: ({alpha_sorted_edges.index(edge)+1}) {round(edge[2]['alpha_ptile'],3):.3f} | ({kpi_sorted_edges.index(edge)+1}) {kpi}: {round(edge[2][kpi],3):.3f}  | ({edge[0]} - {int(edge[1])}) ")
+
+    # Store inside edge as attribute: 'pos_kpi'
+    kpi_sorted_edges_ = [(x[0], x[1]) for x in kpi_sorted_edges]
+    alpha_sorted_edges_ = [(x[0], x[1]) for x in alpha_sorted_edges]
+
+    for id0, id1 in G.edges():
+        edge = graph[id0][id1]
+        aux = kpi +'_pos'
+        edge[aux] = kpi_sorted_edges_.index((id0, id1))+1
+        edge['alpha_pos'] = alpha_sorted_edges_.index((id0, id1))+1
+
 
     # Calculate Kendall ranking metric
-    weight_rank = [weight_sorted_edges.index(edge)+1 for edge in combined_edges]
+    kpi_rank = [kpi_sorted_edges.index(edge)+1 for edge in combined_edges]
     alpha_rank = [alpha_sorted_edges.index(edge)+1 for edge in combined_edges]
 
-    tau, p_value = kendalltau(weight_rank, alpha_rank)
-    correlation = spearman_rank_correlation(weight_rank, alpha_rank)
+    tau, p_value = kendalltau(kpi_rank, alpha_rank)
+    correlation = spearman_rank_correlation(kpi_rank, alpha_rank)
 
     # Output Kendall ranking
     print(f"Kendall Ranking Metric: tau: {tau} and P-value: {p_value}")
@@ -207,15 +218,21 @@ def draw_grid(G, node_att, edge_att, node_colors_kpi, edge_colors_kpi):
 
     fig, ax = plt.subplots()
 
-    # Nodes and label
+    # Draw Nodes
     nx.draw_networkx_nodes(G, pos, ax=ax)
+    # Draw Nodes Label
     nx.draw_networkx_labels(G, pos, ax=ax, font_size= 6)
-    # Edges and ...
+    # Draw Edges
     curved_edges = [edge for edge in G.edges() if reversed(edge) in G.edges()]
     straight_edges = list(set(G.edges()) - set(curved_edges))
     nx.draw_networkx_edges(G, pos, ax=ax, edgelist=straight_edges)
-    arc_rad = 0.08
-    nx.draw_networkx_edges(G, pos, ax=ax, edgelist=curved_edges, edge_color=edge_colors_kpi, width=1.0, connectionstyle=f'arc3, rad = {arc_rad}')
+    # Draw Edges
+    nx.draw_networkx_edges(G, pos, ax=ax, edgelist=curved_edges, edge_color=edge_colors_kpi, width=1.0, connectionstyle=f'arc3, rad = 0.08')
+    # Draw Edges Labels
+    aux = edge_att+'_pos'
+    edge_labels = dict([((u, v,), f'{round(d[aux],2)}\n\n{G.edges[(v,u)][aux]}') for u, v, d in G.edges(data=True) if pos[u][0] > pos[v][0]])
+    nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size= 5, font_color='black')
+
 
     # Create a colorbar
     norm = plt.Normalize(vmin=0, vmax=1)
@@ -228,9 +245,10 @@ def draw_grid(G, node_att, edge_att, node_colors_kpi, edge_colors_kpi):
     # Show the plot
     plt.title("Edges Ranks by " + edge_att)
     plt.show()
+    print("hold variables")
 
 
-def color_map(G, edge_att="weight", node_att="degree"):
+def color_map(G, edge_att="alpha_ptile", node_att="degree"):
 
     cmap = plt.get_cmap("RdYlGn")
 
@@ -241,6 +259,9 @@ def color_map(G, edge_att="weight", node_att="degree"):
     values = [G.nodes[node][node_att] for node in G.nodes()]
     node_colors_kpi = [cmap(value) for value in values]
 
+    if edge_att == "alpha_ptile":
+        edge_att="alpha"
+
     draw_grid( G, node_att, edge_att, node_colors_kpi, edge_colors_kpi)
 
     return node_colors_kpi
@@ -248,25 +269,29 @@ def color_map(G, edge_att="weight", node_att="degree"):
 
 if __name__ == "__main__":
 
-    #### LOAD JSON DISPARITY  ####
-    graph = load_graph("C:/buildbr/big-cities-transport/04.Disparity/toy.json")
+    #### LOOP through KPIs  ####
+    kpis = ['weight']
+
+    for kpi in kpis:
+        #### LOAD JSON DISPARITY  ####
+        graph = load_graph("C:/buildbr/big-cities-transport/04.Disparity/weight.json")
 
 
-    #### APPLY DISPARITY  ####
+        #### APPLY DISPARITY  ####
 
-    alpha_measures = disparity_filter(graph)
-
-
-    #### APPLY TABLE  ####
-    edge_rank(graph)
-    #node_view(graph)
+        alpha_measures = disparity_filter(graph, kpi)
 
 
+        #### APPLY TABLE  ####
+        edge_rank(graph, kpi)
+        #node_view(graph)
 
-    #### PLOT DISPARITY COLORING EDGES ####
-    ' based on edges attributes [kpi], based on nodes attributes^[entries, exist, strength], how many graphs? '
-    alpha_edge = color_map(graph, 'alpha_ptile')
-    weight_edge = color_map(graph, 'weight')
+
+
+        #### PLOT DISPARITY COLORING EDGES ####
+        ' based on edges attributes [kpi], based on nodes attributes^[entries, exist, strength], how many graphs? '
+        alpha_edge = color_map(graph)
+        kpi_edge = color_map(graph, kpi)
 
 
 
