@@ -14,6 +14,7 @@ from neo4j import GraphDatabase
 import networkx as nx
 import matplotlib.pyplot as plt
 from scipy.stats import kendalltau
+import shutil
 
 
 #### INPUT FOR DISPARITY FUNCTIONS ####
@@ -72,7 +73,7 @@ def disparity_filter (graph, kpi):
         for id0, id1 in graph.edges(nbunch=[node_id]):
             edge = graph[id0][id1]
 
-            norm_weight = edge[kpi] / strength
+            norm_weight = edge[kpi] / strength # divide
             aux = 'norm_'+kpi
             edge[aux] = norm_weight ####
 
@@ -141,7 +142,7 @@ def edge_rank(G, kpi):
 
     # Output Table
     for edge in combined_edges:
-        print(f"alpha: ({alpha_sorted_edges.index(edge)+1}) {round(edge[2]['alpha_ptile'],3):.3f} | ({kpi_sorted_edges.index(edge)+1}) {kpi}: {round(edge[2][kpi],3):.3f}  | ({edge[0]} - {int(edge[1])}) ")
+        print(f"alpha: ({combined_edges.index(edge)+1}) {round(edge[2]['alpha_ptile'],3):.3f} | ({kpi_sorted_edges.index(edge)+1}) {kpi}: {round(edge[2][kpi],3):.3f}  | ({edge[0]} - {edge[1]}) ")
 
     # Store inside edge as attribute: 'pos_kpi'
     kpi_sorted_edges_ = [(x[0], x[1]) for x in kpi_sorted_edges]
@@ -216,27 +217,31 @@ def draw_grid(G, node_att, edge_att, node_colors_kpi, edge_colors_kpi):
     for node in G.nodes():
         pos[node] = (G.nodes[node]['long'], G.nodes[node]['lat'])
 
-    fig, ax = plt.subplots()
+    plt.figure(figsize=(16, 8))
+
 
     # Draw Nodes
-    nx.draw_networkx_nodes(G, pos, ax=ax)
+    #draw_networkx_nodes(G, pos, nodelist=None, node_size=300, node_color='r', node_shape='o', alpha=1.0, cmap=None, vmin=None, vmax=None, ax=None, linewidths=None, label=None, **kwds)[source]
+
+    nx.draw_networkx_nodes(G, pos, node_size=20, node_color='black')
     # Draw Nodes Label
-    nx.draw_networkx_labels(G, pos, ax=ax, font_size= 6)
+    #nx.draw_networkx_labels(G, pos, font_size= 4)
     # Draw Edges
     curved_edges = [edge for edge in G.edges() if reversed(edge) in G.edges()]
     straight_edges = list(set(G.edges()) - set(curved_edges))
-    nx.draw_networkx_edges(G, pos, ax=ax, edgelist=straight_edges)
+    nx.draw_networkx_edges(G, pos,  edgelist=straight_edges)
     # Draw Edges
-    nx.draw_networkx_edges(G, pos, ax=ax, edgelist=curved_edges, edge_color=edge_colors_kpi, width=1.0, connectionstyle=f'arc3, rad = 0.08')
+    nx.draw_networkx_edges(G, pos,  edgelist=curved_edges, edge_color=edge_colors_kpi,
+                           arrowsize=6,  node_size = 20,
+                           width=0.8, connectionstyle=f'arc3, rad = 0.10')
     # Draw Edges Labels
     aux = edge_att+'_pos'
-    edge_labels = dict([((u, v,), f'{round(d[aux],2)}\n\n{G.edges[(v,u)][aux]}') for u, v, d in G.edges(data=True) if pos[u][0] > pos[v][0]])
-    nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size= 5, font_color='black')
-
+    # edge_labels = dict([((u, v,), f'{round(d[aux],2)}\n\n{G.edges[(v,u)][aux]}') for u, v, d in G.edges(data=True) if pos[u][0] > pos[v][0]])
+    #nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size= 5, font_color='black')
 
     # Create a colorbar
     norm = plt.Normalize(vmin=0, vmax=1)
-    cmap = plt.get_cmap("RdYlGn")
+    cmap = plt.get_cmap("Reds")
     sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
     sm.set_array([])
     cbar = plt.colorbar(sm, orientation='vertical')
@@ -244,13 +249,16 @@ def draw_grid(G, node_att, edge_att, node_colors_kpi, edge_colors_kpi):
 
     # Show the plot
     plt.title("Edges Ranks by " + edge_att)
-    plt.show()
-    print("hold variables")
+
+    # plt.axis([-0.405, 0.258, 51.37, 51.71]) #overgroung
+    plt.tight_layout()
+    plt.savefig("temp.png")
 
 
-def color_map(G, edge_att="alpha_ptile", node_att="degree"):
 
-    cmap = plt.get_cmap("RdYlGn")
+def color_map(G, edge_att="alpha_ptile", node_att="strength"):
+
+    cmap = plt.get_cmap("Reds")
 
     values = [G.edges[edge][edge_att] for edge in G.edges()]
     edge_colors_kpi = [cmap(value) for value in values]
@@ -270,28 +278,40 @@ def color_map(G, edge_att="alpha_ptile", node_att="degree"):
 if __name__ == "__main__":
 
     #### LOOP through KPIs  ####
-    kpis = ['weight']
+    ods = [ 'overground', 'tube', 'dlr'] # ,
+    days = ['mtt', 'sun']
+    period = ['Total', 'Early', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
+    kpis = ['distancetraffic', 'efficiency', 'loads', 'traffic', 'speed', 'distance'] # 'distress' review distress graphs
+    # od-day-period-kpi
+    # od-kpi
 
-    for kpi in kpis:
-        #### LOAD JSON DISPARITY  ####
-        graph = load_graph("C:/buildbr/big-cities-transport/04.Disparity/weight.json")
+    for od in ods:
+        for kpi in kpis:
+            if kpi not in ['speed', 'distance', 'basegraph']:
+                for day in days:
+                    db = od+'-'+day+'-'+kpi
+            else:
+                db = od+'-'+kpi
 
+            #### LOAD JSON DISPARITY  ####
+            path = "C:/buildbr/big-cities-transport/03.GraphModels"
+            graph = load_graph(f'{path}/{od}/{db}.json')
 
-        #### APPLY DISPARITY  ####
+            #### APPLY DISPARITY  ####
+            alpha_measures = disparity_filter(graph, kpi)
 
-        alpha_measures = disparity_filter(graph, kpi)
+            #### APPLY TABLE  ####
+            edge_rank(graph, kpi)
+            #node_view(graph)
 
-
-        #### APPLY TABLE  ####
-        edge_rank(graph, kpi)
-        #node_view(graph)
-
-
-
-        #### PLOT DISPARITY COLORING EDGES ####
-        ' based on edges attributes [kpi], based on nodes attributes^[entries, exist, strength], how many graphs? '
-        alpha_edge = color_map(graph)
-        kpi_edge = color_map(graph, kpi)
+            #### PLOT DISPARITY COLORING EDGES ####
+            ' based on edges attributes [kpi], based on nodes attributes^[entries, exist, strength], how many graphs? '
+            alpha_edge = color_map(graph)
+            path = "C:/buildbr/big-cities-transport/04.Disparity"
+            shutil.move('temp.png', f'{path}/{od}/alpha_{db}.png', copy_function=shutil.copy2)
+            kpi_edge = color_map(graph, kpi)
+            path = "C:/buildbr/big-cities-transport/04.Disparity"
+            shutil.move('temp.png', f'{path}/{od}/{db}.png', copy_function=shutil.copy2)
 
 
 
@@ -331,23 +351,31 @@ if __name__ == "__main__":
 
 # ## Thesis:
 
-# ### Improve graphs
-# ### Prepare email about dispariy proof
-# ### Apply it to the whole study
-# ### Generate nice charts, graphs
+#1### check strength zero in DLR
+#1### check long edge in the tube station
+#1### Fix distress graphs
+#1## Recreate graphs for periods
+#2### Compare diff periods within a day, resulting in 3 correlation matrix
+#2### Compare same period through out days, resultion table periods (6) x days (3)
+#2### Cut off the most interesting graphs comparissons
+#3### Write Results part 5
+#3### Write Modeling KPIs part 4
+#4### Write Methodology Distress part 2
+#4### Write Methodology Disparity part 2
+#5### Write Data Collections part 3
+#5### Generate all results vizualizations
+#6### Write Conclusion part 7
+#6### Write Following Steps part 6
+#7### Re-Write Introduction part 1
+
+# ### Create code for GloSS
+# ### Improve data visualisations
+# ### Turn big-citis-transpot into App:
+# ### Connect and improve codes to build an app (example 2)
+# ### Example 2: Application Development (Databases, Django)
 
 
-# ### Write Modeling KPIs part 4
-# ### Write Methodology Distress part 2
-# ### Write Methodology Disparity part 2
-# ### Write Data Collections part 3
-# ### Generate all results vizualizations
-# ### Write Results part 5
-# ### Write Conclusion part 7
-# ### Write Following Steps part 6
-# ### Re-Write Introduction part 1
-
-
+# ### Desing Finance Application
 
 
 

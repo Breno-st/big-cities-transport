@@ -15,10 +15,10 @@ def load_data_to_networkx(tx):
        relationship = record["r"]
        node2 = record["m"]
        # Add nodes with attributes
-       G.add_node(node1._properties['naptanid'], **node1._properties)
-       G.add_node(node2._properties['naptanid'], **node2._properties )
+       G.add_node(node1.id, **node1._properties)
+       G.add_node(node2.id, **node2._properties )
        # Add edges with attributes
-       G.add_edge(node1._properties['naptanid'], node2._properties['naptanid'], **relationship._relationships[0]._properties)
+       G.add_edge(node1.id, node2.id, **relationship._relationships[0]._properties)
     save_graph (G, "temp.json")
 
 def save_graph (graph, graph_path):
@@ -33,37 +33,29 @@ if __name__ == '__main__':
     Convert Base-Graph relation to list of dict(UDR) Kpis
     '''
     # export graph in CSV for NetworkX
-     # connect to neo4J and get graphs
+    # connect to neo4J and get graphs
 
     ods = [ 'overground', 'tube', 'dlr'] # ,
     days = ['mtt', 'sun']
-    time = ['distancetraffic', 'distress', 'efficiency', 'loads', 'traffic']
-    timeless = ['basegraph', 'speed']
-
-    dbs =[]
-    for od in ods:
-        for t in time:
-            for day in days:
-                dbs.append(od+'-'+day+'-'+t)
-        for ts in timeless:
-            for day in days:
-                dbs.append(od+'-'+ts)
+    period = ['Total', 'Early', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
+    kpis = ['distancetraffic', 'distress', 'efficiency', 'loads', 'traffic', 'basegraph', 'speed', 'distance']
 
 
     driver = GraphDatabase.driver("bolt://localhost:7687/", auth=('neo4j', "TFLbst1608."))
-    for db in dbs:
-        with driver.session(database=db) as session:
-            result = session.execute_read(load_data_to_networkx)
-            # rename temp
-            path = "C:/buildbr/big-cities-transport/03.GraphModels/"
-            shutil.move("temp.json", db+".json", copy_function=shutil.copy2)
-        session.close()
+    for od in ods:
+        for kpi in kpis:
+            if kpi not in ['speed', 'distance', 'basegraph']:
+                for day in days:
+                    db = od+'-'+day+'-'+kpi
+            else:
+                db = od+'-'+kpi
+            with driver.session(database=db) as session:
+                result = session.execute_read(load_data_to_networkx)
+                # rename temp
+                path = "C:/buildbr/big-cities-transport/03.GraphModels"
+                shutil.move('temp.json', f'{path}/{od}/{db}.json', copy_function=shutil.copy2)
+            session.close()
     driver.close()
-
-
-
-
-
 
     print('==> Done! Now disparity ranks')
 
