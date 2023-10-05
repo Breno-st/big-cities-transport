@@ -49,7 +49,6 @@ def shortest_path(passenger, db):
     with driver.session(database=db+'-basegraph') as session:
         shortest_paths_mode_segments_od[db] = {}
 
-
         # CALL gds.graph.list() YIELD graphName
 
         session.run("CALL gds.graph.drop('"+db+"') YIELD graphName")
@@ -59,7 +58,7 @@ def shortest_path(passenger, db):
 
         # IMPORT Find Segments and respectives OD's time before
         for start_end in passenger.keys():
-            x, y, mode = start_end.split('_')[0], start_end.split('_')[1], start_end.split('_')[2]
+            mode, x, y = start_end.split('_')[0], start_end.split('_')[1], start_end.split('_')[2]
 
             #shortestPath_cypher = "MATCH (source:{0}Station), (target:{0}Station) WHERE source.naptanid='{1}' AND target.naptanid='{2}' CALL gds.shortestPath.dijkstra.stream({{graphName: '{0}', nodeProjection: '{0}Station', relationshipProjection:'TO', relationshipProperties: ['time'], sourceNode: source, targetNode: target, relationshipWeightProperty: 'time'}}) YIELD index, sourceNode, targetNode, totalCost, nodeIds, costs, path RETURN index, sourceNode, targetNode, totalCost, nodeIds, costs, path".format(mode, x, y, db) # wait for Neo4j
             shortestPath_cypher = "MATCH (source:{0}Station), (target:{0}Station) WHERE source.naptanid='{1}' AND target.naptanid='{2}' CALL gds.shortestPath.dijkstra.stream('{3}',{{sourceNode: source, targetNode: target, relationshipWeightProperty: 'time'}}) YIELD index, sourceNode, targetNode, totalCost, nodeIds, costs, path RETURN index, sourceNode, targetNode, totalCost, nodeIds, costs, path".format(mode, x, y, db)
@@ -71,6 +70,7 @@ def shortest_path(passenger, db):
             segments = list(zip(via[:-1], via[1:])) # list of sequential pair of nodes
             o_d = str(via[0])+"_"+str(via[-1]) # key values
             # transverse O_D dictionary into Segments' dictionary
+
             for segment in segments:
                 if segment not in shortest_paths_mode_segments_od[mode].keys():
                     shortest_paths_mode_segments_od[mode][segment] = {}
@@ -79,6 +79,10 @@ def shortest_path(passenger, db):
                 else:
                     shortest_paths_mode_segments_od[mode][segment][o_d] = {}
                     shortest_paths_mode_segments_od[mode][segment][o_d]['time'] = time
+
+
+        # df = pd.DataFrame(shortest_paths_mode_segments_od)
+        # df.to_csv('shortest_paths_mode_segments_od.csv', index=False)
 
         # for Disrupt Segments in shortest_paths_mode_segments_od[mode]
         walk_speed = 6
@@ -115,8 +119,6 @@ def shortest_path(passenger, db):
     session.close()
     driver.close()
 
-
-
     return  shortest_paths_mode_segments_od
 
 
@@ -138,46 +140,52 @@ if __name__ == '__main__':
     global 	days
     global periods
 
-    ods = ['overground', 'tube'] #'dlr',
-    days = ['MTT', 'SUN'] #,
-    periods = ['Total'] #, 'Early', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late'] -> remove in ***
+    ods = [ 'dlr'] #'tube', 'overground',
+    days = [ 'SUN', 'FRI', 'SAT', 'SUN'] #, 'MTT',
+    periods = ['Early', 'Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late', 'Night', 'Total'] #, 'Early', 'Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late', 'Night', 'Total'] -> remove in ***
 
     # input a csv with all origin and destiny => OD has two columns s.t. key is start_end
-    path = "C:/buildbr/big-cities-transport/2.Distress/1.Input/"
+    path = "C:/buildbr/big-cities-transport/02.Distress/01.Input/"
 
     for mode in ods:
 
         # IF cost (time) independ from day and period, the delta time matrix is calculated once
         ##  import od table (formated by hand)
-        df = pd.read_csv(path+'od_'+mode+'.csv')
-        df['o_d'] = df.apply (lambda row: row['name_o']+'_'+row['name_d']+'_'+row['mode'], axis=1)
+        df = pd.read_csv(path+'od_'+mode+'.csv',delimiter=';')
+        df['o_d'] = df.apply (lambda row: row['Mode']+'_'+row['naptanid_o']+'_'+row['naptanid_d'], axis=1)
         df.set_index(['o_d'], inplace=True) # set o_d index
 
-        ori_dest_traf = df.to_dict('dict') # TODO re-create dictionaire to input the shortest_path
+        df = df.drop(['Mode', 'name_o', 'name_d', 'naptanid_o', 'naptanid_d'], axis=1) # set o_d index
+        # Initialize an empty dictionary
+        od_dict = {}
+        for index, row in df.iterrows():
+            row_data = {}
+            for column in df.columns:
+                if column != 'index_col':
+                    row_data[column] = row[column]
+            od_dict[index] = row_data
 
-        shortest_paths_mode_segments_od = shortest_path(ori_dest_traf, mode) # [mode][segment][o_d]['time'/'dtime']
+        shortest_paths_mode_segments_od = shortest_path(od_dict, mode) # [mode][segment][o_d]['time'/'dtime']
 
         # THE traffic depends on day and period, so it needs to loop
+
+        df = pd.read_csv(path+'od_'+mode+'_traf.csv',delimiter=';')
+        df['od_day'] = df.apply (lambda row: row['Day']+'_'+row['naptanid_o']+'_'+row['naptanid_d'], axis=1)
+        df.set_index(['od_day'], inplace=True)
+        df = df.drop(['Mode', 'name_o', 'name_d', 'naptanid_o', 'naptanid_d'], axis=1)
+
         for day in days:
-            ### TODO: create a dictionary for o_d traffic values per day/period
-            traffic_mode_od_day_period = df[df['day']==day].to_dict('dict')
+            traffic_mode_od_day = df[df['Day']==day].to_dict('dict')
 
-            for period in periods: # maybe one day really loop through periords ;)
-                # create a dictionary for the perid
-                ## od = df[df['day']==day].to_dict('dict')
-                od_passengers = ori_dest_traf[period]
-
-                # TODO:
-                # 1: Acess "shortest_paths_mode_segments_od" and retrive ['time'/'dtime'] using [mode][segment][o_d]
-                # 2: Acess "traffic_mode_od_day_period" and retrive ['traffic'] using [mode][o_d]
-                # 3: For each segments, it normalize its OD's weigths accordint to Day/Period
-
+            for period in periods:
+                od_passengers = traffic_mode_od_day[period]
+                # HERE!!!!!! Naptanid vs Id | percentage in the weight
                 for mode in shortest_paths_mode_segments_od:
                     for segment in shortest_paths_mode_segments_od[mode].keys():
                         percentage_dict(shortest_paths_mode_segments_od[mode][segment]) # OD_i_passenger_percent // never change
 
-                # with open('shortest_paths_mode_segments_od_'+day+'_'+period+'.pickle', 'wb') as handle:
-                #             pickle.dump(shortest_paths_mode_segments_od, handle, protocol=pickle.HIGHEST_PROTOCOL)
+                with open('shortest_paths_mode_segments_od_'+day+'_'+period+'.pickle', 'wb') as handle:
+                            pickle.dump(shortest_paths_mode_segments_od, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
                 # saves time, import **
                 # with open('shortest_paths_mode_segments_od_'+mode+'_'+day+'_'+period+'.pickle', 'rb') as handle:

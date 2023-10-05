@@ -72,8 +72,8 @@ def disparity_filter (graph, kpi):
 
         for id0, id1 in graph.edges(nbunch=[node_id]):
             edge = graph[id0][id1]
-
-            norm_weight = edge[kpi] / strength # divide
+            norm_weight = 0.0001 if edge[kpi] == 0 else edge[kpi] / strength
+            #norm_weight = edge[kpi] / strength # divide
             aux = 'norm_'+kpi
             edge[aux] = norm_weight ####
 
@@ -140,9 +140,11 @@ def edge_rank(G, kpi):
     alpha_sorted_edges = sorted(G.edges(data=True), key=lambda x: x[2]['alpha_ptile'], reverse=True) # should be the same as the combined
     kpi_sorted_edges = sorted(G.edges(data=True), key=lambda x: x[2][kpi], reverse=True)
 
-    # Output Table
-    for edge in combined_edges:
-        print(f"alpha: ({combined_edges.index(edge)+1}) {round(edge[2]['alpha_ptile'],3):.3f} | ({kpi_sorted_edges.index(edge)+1}) {kpi}: {round(edge[2][kpi],3):.3f}  | ({edge[0]} - {edge[1]}) ")
+
+    with open('temp.txt', 'w') as file:
+        for edge in combined_edges:
+            print(f"alpha: ({combined_edges.index(edge)+1}) {round(edge[2]['alpha_ptile'],3):.3f} | ({kpi_sorted_edges.index(edge)+1}) {kpi}: {round(edge[2][kpi],3):.3f}  | ({edge[0]} - {edge[1]}) ")
+            file.write(f"alpha: ({combined_edges.index(edge)+1}) {round(edge[2]['alpha_ptile'],3):.3f} | ({kpi_sorted_edges.index(edge)+1}) {kpi}: {round(edge[2][kpi],3):.3f}  | ({edge[0]} - {edge[1]}) \n")
 
     # Store inside edge as attribute: 'pos_kpi'
     kpi_sorted_edges_ = [(x[0], x[1]) for x in kpi_sorted_edges]
@@ -223,9 +225,9 @@ def draw_grid(G, node_att, edge_att, node_colors_kpi, edge_colors_kpi):
     # Draw Nodes
     #draw_networkx_nodes(G, pos, nodelist=None, node_size=300, node_color='r', node_shape='o', alpha=1.0, cmap=None, vmin=None, vmax=None, ax=None, linewidths=None, label=None, **kwds)[source]
 
-    nx.draw_networkx_nodes(G, pos, node_size=20, node_color='black')
+    nx.draw_networkx_nodes(G, pos, node_size=20, node_color='white')
     # Draw Nodes Label
-    #nx.draw_networkx_labels(G, pos, font_size= 4)
+    nx.draw_networkx_labels(G, pos, font_size= 15)
     # Draw Edges
     curved_edges = [edge for edge in G.edges() if reversed(edge) in G.edges()]
     straight_edges = list(set(G.edges()) - set(curved_edges))
@@ -252,8 +254,8 @@ def draw_grid(G, node_att, edge_att, node_colors_kpi, edge_colors_kpi):
 
     # plt.axis([-0.405, 0.258, 51.37, 51.71]) #overgroung
     plt.tight_layout()
+    plt.show()
     plt.savefig("temp.png")
-
 
 
 def color_map(G, edge_att="alpha_ptile", node_att="strength"):
@@ -277,8 +279,10 @@ def color_map(G, edge_att="alpha_ptile", node_att="strength"):
 
 if __name__ == "__main__":
 
+
+
     #### LOOP through KPIs  ####
-    ods = [ 'overground', 'tube', 'dlr'] # ,
+    ods = [ 'tube'] # 'overground', 'dlr',
     days = ['mtt', 'sun']
     period = ['Total', 'Early', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
     kpis = ['distancetraffic', 'efficiency', 'loads', 'traffic', 'speed', 'distance'] # 'distress' review distress graphs
@@ -301,16 +305,17 @@ if __name__ == "__main__":
             alpha_measures = disparity_filter(graph, kpi)
 
             #### APPLY TABLE  ####
+            path = "C:/buildbr/big-cities-transport/04.Disparity"
             edge_rank(graph, kpi)
             #node_view(graph)
+            shutil.move('temp.txt', f'{path}/{od}/{db}_rank.txt', copy_function=shutil.copy2)
 
             #### PLOT DISPARITY COLORING EDGES ####
             ' based on edges attributes [kpi], based on nodes attributes^[entries, exist, strength], how many graphs? '
             alpha_edge = color_map(graph)
-            path = "C:/buildbr/big-cities-transport/04.Disparity"
             shutil.move('temp.png', f'{path}/{od}/alpha_{db}.png', copy_function=shutil.copy2)
+
             kpi_edge = color_map(graph, kpi)
-            path = "C:/buildbr/big-cities-transport/04.Disparity"
             shutil.move('temp.png', f'{path}/{od}/{db}.png', copy_function=shutil.copy2)
 
 
@@ -351,22 +356,21 @@ if __name__ == "__main__":
 
 # ## Thesis:
 
-#1### check strength zero in DLR
-#1### check long edge in the tube station
-#1### Fix distress graphs
-#1## Recreate graphs for periods
-#2### Compare diff periods within a day, resulting in 3 correlation matrix
-#2### Compare same period through out days, resultion table periods (6) x days (3)
-#2### Cut off the most interesting graphs comparissons
-#3### Write Results part 5
-#3### Write Modeling KPIs part 4
-#4### Write Methodology Distress part 2
-#4### Write Methodology Disparity part 2
-#5### Write Data Collections part 3
-#5### Generate all results vizualizations
-#6### Write Conclusion part 7
-#6### Write Following Steps part 6
-#7### Re-Write Introduction part 1
+
+#5### Recreate distress graphsfor periods
+#6### Recreate kpis graphs for periods
+#6### Compare diff periods within a day, resulting in 3 correlation matrix
+#6### Compare same period through out days, resultion table periods (6) x days (3)
+#6### Cut off the most interesting graphs comparissons
+#7### Write Results part 5
+#7### Write Modeling KPIs part 4
+#11### Write Methodology Distress part 2
+#11### Write Methodology Disparity part 2
+#12### Write Data Collections part 3
+#12### Generate all results vizualizations
+#13### Write Conclusion part 7
+#13### Write Following Steps part 6
+#14### Re-Write Introduction part 1
 
 # ### Create code for GloSS
 # ### Improve data visualisations

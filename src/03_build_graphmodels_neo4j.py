@@ -13,9 +13,9 @@ def _directed_pairs():
     Output:  List of tuples [(Origins, Destination, Mode),...]
     '''
 
-    result = session.run('MATCH (n)-[r:TO]->(m) RETURN DISTINCT n.naptanid as orig, m.naptanid as dest, r.mode as mode')
-    pairs = [(record['orig'],record['dest'],record['mode']) for record in result]
-
+    result = session.run('MATCH (n)-[r:TO]->(m) RETURN DISTINCT n.naptanid as orig, id(n) as id_orig, m.naptanid as dest, id(m) as id_dest, r.mode as mode')
+    pairs = [(record['id_orig'],record['id_dest'],record['mode']) for record in result]
+    #pairs = [(record['orig'],record['dest'],record['mode']) for record in result]
     return pairs
 
 
@@ -211,7 +211,7 @@ if __name__ == '__main__':
     global periods
     global UDR
     # Granularity
-    ods = [ 'overground', 'tube', 'dlr'] # ,
+    ods = [ 'tube'] # , 'overground', 'dlr'
     days = ['MTT', 'SUN']
     # periods = ['Early', 'Morining']
     periods_hours = [2, 3, 6, 3, 3, 3] #number of hours in each period
