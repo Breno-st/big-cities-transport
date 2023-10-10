@@ -319,9 +319,6 @@ if __name__ == "__main__":
             shutil.move('temp.png', f'{path}/{od}/{db}.png', copy_function=shutil.copy2)
 
 
-
-
-
 # # Run 5h/3, Bike 10h/4, Gym 5h (back, chest, leg, core, core)
 # # 23-sep week:45   12-12-21 free
 # # 30-sep week:52   16-12-24 free
@@ -356,21 +353,20 @@ if __name__ == "__main__":
 
 # ## Thesis:
 
-
-#5### Recreate distress graphsfor periods
-#6### Recreate kpis graphs for periods
-#6### Compare diff periods within a day, resulting in 3 correlation matrix
-#6### Compare same period through out days, resultion table periods (6) x days (3)
-#6### Cut off the most interesting graphs comparissons
-#7### Write Results part 5
-#7### Write Modeling KPIs part 4
-#11### Write Methodology Distress part 2
-#11### Write Methodology Disparity part 2
-#12### Write Data Collections part 3
-#12### Generate all results vizualizations
-#13### Write Conclusion part 7
-#13### Write Following Steps part 6
-#14### Re-Write Introduction part 1
+#4h### Recreate other kpis for periods
+#4h### Run disparity for all periods
+#4h### Compare diff periods within a day, resulting in 3 correlation matrix
+#4h### Compare same period through out days, resultion table periods (6) x days (3)
+#4h### Cut off the most interesting graphs comparissons
+#8h### Write Results part 5
+#8h### Write Modeling KPIs part 4
+#4h### Write Methodology Distress part 2
+#4h### Write Methodology Disparity part 2
+#4h### Write Data Collections part 3
+#8h### Generate all results vizualizations
+#4h### Write Conclusion part 7
+#4h### Write Following Steps part 6
+#4h### Re-Write Introduction part 1  #68 hours !!!
 
 # ### Create code for GloSS
 # ### Improve data visualisations

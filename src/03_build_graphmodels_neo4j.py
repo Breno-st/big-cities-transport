@@ -13,8 +13,10 @@ def _directed_pairs():
     Output:  List of tuples [(Origins, Destination, Mode),...]
     '''
 
-    result = session.run('MATCH (n)-[r:TO]->(m) RETURN DISTINCT n.naptanid as orig, id(n) as id_orig, m.naptanid as dest, id(m) as id_dest, r.mode as mode')
-    pairs = [(record['id_orig'],record['id_dest'],record['mode']) for record in result]
+    #result = session.run('MATCH (n)-[r:TO]->(m) RETURN DISTINCT n.naptanid as orig, id(n) as id_orig, m.naptanid as dest, id(m) as id_dest, r.mode as mode')
+    #pairs = [(record['id_orig'],record['id_dest'],record['mode']) for record in result]
+    result = session.run('MATCH (n) RETURN DISTINCT n.naptanid as naptanid, id(n) as id')
+    pairs = [(record['naptanid'],record['id']) for record in result]
     #pairs = [(record['orig'],record['dest'],record['mode']) for record in result]
     return pairs
 
@@ -223,7 +225,8 @@ if __name__ == '__main__':
         with driver.session(database=mode+'-basegraph') as session:
             # get all directed pairs:
             pairs = _directed_pairs()
-
+            df = pd.DataFrame(pairs)
+            df.to_csv(f"{mode}_pairs.csv", index=False)
             # Normalized UDR
             UDR = _unique_rel_kpis(mode, pairs)
         session.close()
@@ -247,12 +250,12 @@ if __name__ == '__main__':
                         create_db(db)
                         generate_nodes(db, mode) # day independent
                         generate_edges(db, kpi, UDR[kpi][day][0]) # generate for the day sum p=0
-                    if kpi == 'distress':
+                    if kpi == 'distress': # to be removed and distress will be normalized with other KPIs
                         create_db(db)
                         generate_nodes(db, mode) # day independent
                         generate_edges(db, kpi, UDR[kpi][day][0]) # for each KPI an Db // inside create database
 
-    # export graph in CSV for NetworkX
+  
 
 
 
