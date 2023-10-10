@@ -333,17 +333,16 @@ if __name__ == "__main__":
 # # proj,lang, read,
 # # cook, clea, clot, mrkt
 
+# ## (11-Oct) Mecredi:    5h: bike, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: chst, 21h: ----, 22h: read		>>> Morning Bike/Run, AWS, Night Chst
+# ## (12-Oct) Jeudi:      5h: ru12, 8h: Work, 12h:lunch, 14h: Work, 18h: cook, 20h: proj, 21h: proj, 22h: read		>>> Morning Run/Core, AWS, Prep
+# ## (13-Oct) Vendredi:   5h: bike, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: back, 21h: ----, 22h: read		>>> Night Back, AWS, Giulia
+# ## (14-Oct) Samedi:     5h: bike, 8h: room, 12h: mrkt, 14h: proj, 18h: proj, 20h: ----, 21h: ----, 22h: ----   	>>> Giulia, Mock interview
+# ## (15-Oct) Dimache:    5h: bike, 8h: clot, 12h: cook, 14h: proj, 18h: ru24, 20h: ----, 21h: ----, 22h: ----		>>> Giulia
+# ## (16-Oct) Lundi:      5h: ----, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: legs, 21h: lang, 22h: read		>>> Interview, Night Legs
+# ## (17-Oct) Mardi:      5h: ru16, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: core, 21h: proj, 22h: read		>>> Morning Run/Core
 
-# ## (17-Jul) Lundi:      5h: ----, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: legs, 21h: lang, 22h: read		>>> Night Legs
-# ## (18-Jul) Mardi:      5h: ru16, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: core, 21h: proj, 22h: read		>>> Morning Run/Core
-# ## (19-Jul) Mecredi:    5h: bike, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: chst, 21h: ----, 22h: read		>>> Morning Bike/Run, Night Chst
-# ## (20-JuL) Jeudi:      5h: ru12, 8h: Work, 12h:lunch, 14h: Work, 18h: cook, 20h: proj, 21h: proj, 22h: read		>>> Morning Run/Core, London
-# ## (21-JuL) Vendredi:   5h: bike, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: back, 21h: ----, 22h: read		>>> London
-# ## (22-JuL) Samedi:     5h: bike, 8h: room, 12h: mrkt, 14h: proj, 18h: proj, 20h: ----, 21h: ----, 22h: ----   		>>> London Run
-# ## (23-Jul) Dimache:    5h: bike, 8h: clot, 12h: cook, 14h: proj, 18h: ru24, 20h: ----, 21h: ----, 22h: ----		>>> London
-
-
-# ## (23-Jul) Dimache:    5h: ----, 8h: ----, 12h: ----, 14h: ----, 18h: ----, 20h: ----, 21h: ----, 22h:----			>>> London
+# ## (22-Oct) Dimache:    5h: ----, 8h: ----, 12h: ----, 14h: ----, 18h: ----, 20h: ----, 21h: ----, 22h:----		>>> 4h proj
+# ## (23-Oct) Dimache:    5h: ----, 8h: ----, 12h: ----, 14h: ----, 18h: ----, 20h: ----, 21h: ----, 22h:----		>>> 4h proj
 
 # ## TODO SHORT
 
@@ -353,20 +352,21 @@ if __name__ == "__main__":
 
 # ## Thesis:
 
-#4h### Recreate other kpis for periods
+#4h### Generate Graph for periods by 16/10
 #4h### Run disparity for all periods
-#4h### Compare diff periods within a day, resulting in 3 correlation matrix
+#4h### Compare diff periods within a day, resulting in 3 correlation matrix 23/10
 #4h### Compare same period through out days, resultion table periods (6) x days (3)
-#4h### Cut off the most interesting graphs comparissons
-#8h### Write Results part 5
-#8h### Write Modeling KPIs part 4
+#4h### Cut off the most interesting graphs comparissons by 30/10
+#8h### Write Results part 5 06/11
+#8h### Write Modeling KPIs part 4 13/11
 #4h### Write Methodology Distress part 2
-#4h### Write Methodology Disparity part 2
-#4h### Write Data Collections part 3
-#8h### Generate all results vizualizations
-#4h### Write Conclusion part 7
+#4h### Write Methodology Disparity part 2 20/11
+#4h### Write Data Collections part
+#4h### Write Conclusion part 7  by 27/11
+#8h### Generate all results vizualizations by 04/12
 #4h### Write Following Steps part 6
-#4h### Re-Write Introduction part 1  #68 hours !!!
+#4h### Re-Write Introduction part 1  11/12
+#68###
 
 # ### Create code for GloSS
 # ### Improve data visualisations

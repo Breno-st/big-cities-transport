@@ -20,6 +20,18 @@ def _directed_pairs():
     #pairs = [(record['orig'],record['dest'],record['mode']) for record in result]
     return pairs
 
+def reverse_keys(original_dict):
+    new_dict = {}
+    for key, inner_dict in original_dict.items():
+        for day, period_dict in inner_dict.items():
+            for period, value in period_dict.items():
+                if day not in new_dict:
+                    new_dict[day] = {}
+                if period not in new_dict[day]:
+                    new_dict[day][period] = {}
+                new_dict[day][period][key] = value
+
+    return new_dict
 
 def _unique_rel_kpis(mode, pairs):
     '''
@@ -33,6 +45,7 @@ def _unique_rel_kpis(mode, pairs):
 
     distance = {}
     speeds = {}
+
     traffics={'MTT':{0:{}, 1:{}, 2:{} , 3:{}, 4:{}, 5:{}, 6:{}}, 'SUN':{0:{}, 1:{}, 2:{} , 3:{}, 4:{}, 5:{}, 6:{}}}
     traffic_distances = {'MTT':{0:{}, 1:{}, 2:{} , 3:{}, 4:{}, 5:{}, 6:{}}, 'SUN':{0:{}, 1:{}, 2:{} , 3:{}, 4:{}, 5:{}, 6:{}}}
     efficiencies = {'MTT':{0:{}, 1:{}, 2:{} , 3:{}, 4:{}, 5:{}, 6:{}}, 'SUN':{0:{}, 1:{}, 2:{} , 3:{}, 4:{}, 5:{}, 6:{}}}
@@ -45,7 +58,6 @@ def _unique_rel_kpis(mode, pairs):
         # extract pair and assemble cypher
         origin, destiny, mode = pair[0], pair[1], pair[2]
         rel_by_pairs = "MATCH (n)-[r:TO]->(m) WHERE n.naptanid='{}' and m.naptanid='{}' RETURN r".format(origin, destiny)
-        # consult Neo4j
         result = session.run(rel_by_pairs)
         relations = [record for record in result]
         lines_cnt += len(relations)
@@ -53,35 +65,55 @@ def _unique_rel_kpis(mode, pairs):
         from_id, traffics_edge, frequencies_edge, speed_edge, distance_edge, to_id = _merge_lines(relations)
         # store in dictionaires with same key
         key = str(from_id) +'_'+ str(to_id)
+
+
+        # First Layer Invariable
         distance[key] = round(distance_edge,2) # Dict kpi 1
         speeds[key] = speed_edge # Dict kpi 2
+
         for day in days:
-            for period in range(len(periods_hours)+1):
+            for period in periods: # range(len(periods_hours)+1): "save with period name instead" check how it goes later to generate the graphs
+
+                # First Layer variable
                 traffics[day][period][key] = round(traffics_edge[day][period],2) # Dict kpi 3
+
+                # Second Layer variable
                 traffic_distances[day][period][key] = round(traffics_edge[day][period] * distance_edge,2) # Dict kpi 4
 
                 if frequencies_edge[day][period] != 0: # Dict kpi 5
                     loads[day][period][key] = round((traffics_edge[day][period])*(speed_edge/frequencies_edge[day][period]),2)
                 else:
                     loads[day][period][key] = round((traffics_edge[day][period])*(speed_edge),2)
+
+                # Third Layer variable
                 if frequencies_edge[day][period] != 0: # Dict kpi 6
                     efficiencies[day][period][key] = round((traffics_edge[day][period])*(distance_edge)*(speed_edge/frequencies_edge[day][period]),2)
                 else:
                     efficiencies[day][period][key] = round((traffics_edge[day][period])*(distance_edge)*(speed_edge),2)
 
 
-    mtt_path = 'C:/buildbr/big-cities-transport/2.Distress/2.Output/norm_weighted_time_by_segment_'+mode+'_MTT_Total.csv'
-    with open(mtt_path, mode='r') as infile:
-        for row in csv.DictReader(infile):
-            o_d_tup = row["Segment"].replace("(", "").replace(")", "").replace(" ", "").split(',')
-            o_d = o_d_tup[0]+'_'+o_d_tup[1]
-            distress['MTT'][0][o_d] = float(row["Distress"])
-    sun_path = 'C:/buildbr/big-cities-transport/2.Distress/2.Output/norm_weighted_time_by_segment_'+mode+'_SUN_Total.csv'
-    with open(sun_path, mode='r') as infile:
-        for row in csv.DictReader(infile):
-            o_d_tup = row["Segment"].replace("(", "").replace(")", "").replace(" ", "").split(',')
-            o_d = o_d_tup[0]+'_'+o_d_tup[1]
-            distress['SUN'][0][o_d] = float(row["Distress"])
+   # Import file from pickle
+    path = 'C:/buildbr/big-cities-transport/2.Distress/2.Output/'
+    distress = load_pickle(f'{path}distress_segments_{mode}.pickle') # reverse [key][day][period] to [day][period][key] TOTEST
+    distress = reverse_keys(distress)
+    # kpi[day][period]
+    # eu_periods = ['Early', 'Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late', 'Night', 'Total']
+    # op_periods = ['Total', 'Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
+
+
+    # with open(mtt_path, mode='r') as infile:
+    #     for row in csv.DictReader(infile):
+    #         o_d_tup = row["Segment"].replace("(", "").replace(")", "").replace(" ", "").split(',')
+    #         o_d = o_d_tup[0]+'_'+o_d_tup[1]
+    #         distress['MTT'][0][o_d] = float(row["Distress"])
+    # sun_path = 'C:/buildbr/big-cities-transport/2.Distress/2.Output/norm_weighted_time_by_segment_'+mode+'_SUN_Total.csv'
+    # with open(sun_path, mode='r') as infile:
+    #     for row in csv.DictReader(infile):
+    #         o_d_tup = row["Segment"].replace("(", "").replace(")", "").replace(" ", "").split(',')
+    #         o_d = o_d_tup[0]+'_'+o_d_tup[1]
+    #         distress['SUN'][0][o_d] = float(row["Distress"])
+
+
 
     output = {'distance':distance,
         'speed':speeds,
@@ -138,8 +170,6 @@ def _merge_lines(relations):
     speed = sum(x * y for x, y in zip(line_speeds, line_traffic)) / sum(line_traffic) if relations[i]['r']._properties['line'] != 'Out-of-Station' else 0
     return from_id, traffics, frequencies, speed, distance, to_id
 
-
-BS="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 def to_base(n, b):
     ''' Convert strint to number '''
     res = ""
@@ -157,7 +187,6 @@ def create_db(db):
     driver.close()
     return
 
-
 def generate_nodes(db, mode):
     path = "C:/buildbr/big-cities-transport/1.BaseGraph/"
     create_nodes_cypher = open(path+mode+'_nodes.txt', 'r')
@@ -169,7 +198,6 @@ def generate_nodes(db, mode):
     session.close()
     driver.close()
     return
-
 
 def generate_edges(db, kpi, dict):
     ''' Generate relation to pre-existing nodes graph database '''
@@ -191,7 +219,6 @@ def generate_edges(db, kpi, dict):
     driver.close()
     return
 
-
 def minmax_dict(kpi):
     '''
     It normalizes dictionaire values or takes the percentag: https://developers.google.com/machine-learning/data-prep/transform/normalization
@@ -203,21 +230,30 @@ def minmax_dict(kpi):
         kpi[pair] = (kpi[pair]-minimum)*factor
     return kpi
 
+def load_pickle(filename):
+    with open(filename, 'rb') as handle:
+        loadedfile = pickle.load(handle)
+    return loadedfile
+
 
 
 if __name__ == '__main__':
     '''
     Convert Base-Graph relation to list of dict(UDR) Kpis
     '''
-    global 	days
+    global days
     global periods
+    global kpis
     global UDR
+    BS="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
     # Granularity
-    ods = [ 'tube'] # , 'overground', 'dlr'
-    days = ['MTT', 'SUN']
-    # periods = ['Early', 'Morining']
-    periods_hours = [2, 3, 6, 3, 3, 3] #number of hours in each period
-    # hours = ['00', '01']
+    ods = [ 'dlr'] # , 'overground', 'dlr', 'tube'
+    days = ['FRI', 'SAT', 'MTT', 'SUN']
+    periods = ['Total', 'Early', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
+    kpis = ['distance', 'speeds', 'traffic_distances', 'loads', 'efficiencies']
+
+    periods_hours = [8, 2, 3, 6, 3, 3, 3] #number of hours in each period
 
     # Connect to base-graph
     for mode in ods:
@@ -255,7 +291,7 @@ if __name__ == '__main__':
                         generate_nodes(db, mode) # day independent
                         generate_edges(db, kpi, UDR[kpi][day][0]) # for each KPI an Db // inside create database
 
-  
+
 
 
 

@@ -179,7 +179,8 @@ if __name__ == '__main__':
 
     modes = ['overground'] #'overground', 'dlr', 'tube'
     days = [ 'SUN', 'FRI', 'SAT', 'MTT']
-    periods = ['Early', 'Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late', 'Night', 'Total'] #, 'Early', 'Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late', 'Night', 'Total'] -> remove in ***
+    periods = ['Early', 'Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late', 'Night', 'Total']
+    #periods = ['Total', 'Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
 
     # input a csv with all origin and destiny => OD has two columns s.t. key is start_end
     path = "C:/buildbr/big-cities-transport/02.Distress/01.Input/"
