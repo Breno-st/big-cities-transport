@@ -27,7 +27,6 @@ def save_graph (graph, graph_path):
         data = json_graph.node_link_data(graph)
         json.dump(data, f)
 
-
 if __name__ == '__main__':
     '''
     Convert Base-Graph relation to list of dict(UDR) Kpis
@@ -35,11 +34,10 @@ if __name__ == '__main__':
     # export graph in CSV for NetworkX
     # connect to neo4J and get graphs
 
-    ods = [ 'overground', 'tube', 'dlr'] # ,
+    ods = ['tube'] # ,'overground', 'tube',
     days = ['fri', 'sat', 'mtt', 'sun']
-    periods = ['Early', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
-    kpis = ['distancetraffic', 'distress', 'efficiency', 'loads', 'traffic', 'basegraph', 'speed', 'distance']
-
+    periods = ['Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
+    kpis = ['trafficdistances', 'distress', 'efficiencies', 'loads', 'traffic', 'basegraph', 'speed', 'distance']
 
     driver = GraphDatabase.driver("bolt://localhost:7687/", auth=('neo4j', "TFLbst1608."))
     for od in ods:
@@ -50,6 +48,12 @@ if __name__ == '__main__':
                         auxp = period.replace(' ', '-')
                         auxk = kpi.replace('_', '')
                         db = od+"-"+auxk+"-"+day.lower()+"-"+auxp.lower()
+                        with driver.session(database=db) as session:
+                            result = session.execute_read(load_data_to_networkx)
+                            # rename temp
+                            path = "C:/buildbr/big-cities-transport/03.GraphModels"
+                            shutil.move('temp.json', f'{path}/{od}/{db}.json', copy_function=shutil.copy2)
+                        session.close()
             else:
                 db = od+'-'+kpi
             with driver.session(database=db) as session:

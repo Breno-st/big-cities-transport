@@ -4,7 +4,6 @@ import numpy as np
 import pickle
 from neo4j import GraphDatabase, basic_auth
 
-
 def _directed_pairs():
     '''
     With the open seesion, it connect to NEO4J and extracts a list of
@@ -211,7 +210,6 @@ def load_pickle(filename):
         loadedfile = pickle.load(handle)
     return loadedfile
 
-
 if __name__ == '__main__':
     '''
     Convert Base-Graph relation to list of dict(UDR) Kpis
@@ -222,8 +220,7 @@ if __name__ == '__main__':
     global UDR
     BS="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-    # Granularity
-    ods = [ 'overground'] # , 'overground', 'dlr', 'tube'
+    ods = [ 'tube'] # , 'overground', 'dlr', 'tube'
     days = ['SUN', 'FRI', 'SAT', 'MTT']
     kpis = ['distance', 'speed', 'traffic', 'traffic_distances', 'loads', 'efficiencies'] #
     periods = {0:'Early', 1:'Morning', 2:'AM Peak', 3:'Midday', 4:'PM Peak', 5:'Evening', 6:'Late', 7:'Night', 8:'Total'}
@@ -244,23 +241,25 @@ if __name__ == '__main__':
 
         # Create a Graph for each KPI
         for kpi in UDR.keys():
-            if isinstance(list(UDR[kpi].values())[0], float): # regardless of day
-                db = mode+"-"+kpi
-                minmax_dict(UDR[kpi])
-                create_db(db)
-                generate_nodes(db, mode) # day independent
-                generate_edges(db, kpi, UDR[kpi]) # db, kpi_name, dictionaire
-            else:
-                for day in UDR[kpi].keys():
-                    for period in UDR[kpi][day].keys():
-                        if period not in ['Early', 'Night', 'Total']:
-                            auxp = period.replace(' ', '-')
-                            auxk = kpi.replace('_', '')
-                            db = mode+"-"+auxk+"-"+day.lower()+"-"+auxp.lower()
-                            minmax_dict(UDR[kpi][day][period])
-                            create_db(db)
-                            generate_nodes(db, mode) # day independent
-                            generate_edges(db, kpi, UDR[kpi][day][period]) # generate for the day sum p=0
+            if kpi == 'loads':
+                if isinstance(list(UDR[kpi].values())[0], float): # regardless of day
+                    db = mode+"-"+kpi
+                    minmax_dict(UDR[kpi])
+                    create_db(db)
+                    generate_nodes(db, mode) # day independent
+                    generate_edges(db, kpi, UDR[kpi]) # db, kpi_name, dictionaire
+                else:
+                    for day in UDR[kpi].keys():
+                        if day in ['MTT']:
+                            for period in UDR[kpi][day].keys():
+                                if period not in ['Early', 'Night', 'Total']:
+                                    auxp = period.replace(' ', '-')
+                                    auxk = kpi.replace('_', '')
+                                    db = mode+"-"+auxk+"-"+day.lower()+"-"+auxp.lower()
+                                    minmax_dict(UDR[kpi][day][period])
+                                    create_db(db)
+                                    generate_nodes(db, mode) # day independent
+                                    generate_edges(db, kpi, UDR[kpi][day][period]) # generate for the day sum p=0
 
     print('==> Done! Now disparity ranks')
 

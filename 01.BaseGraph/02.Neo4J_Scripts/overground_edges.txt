@@ -1,441 +1,450 @@
-// Rel overground
-match
+//edges
+match (ACCr:overgroundStation),
 (ANYr:overgroundStation),
-(BCYr:overgroundStation),
-(CLJr:overgroundStation),
-(CLPr:overgroundStation),
-(CNNr:overgroundStation),
-(CWRu:overgroundStation),
-(CYPr:overgroundStation),
-(DLJr:overgroundStation),
-(DMKr:overgroundStation),
-(FOHr:overgroundStation),
-(HBYu:overgroundStation),
-(HGGr:overgroundStation),
-(HOXr:overgroundStation),
-(HPAr:overgroundStation),
-(NWDr:overgroundStation),
-(NWXr:overgroundStation),
-(NXGr:overgroundStation),
-(PMRr:overgroundStation),
-(PNWr:overgroundStation),
-(QRPr:overgroundStation),
-(ROEr:overgroundStation),
-(SDCr:overgroundStation),
-(SDEr:overgroundStation),
-(SQEr:overgroundStation),
-(SYDr:overgroundStation),
-(WCLu:overgroundStation),
-(WCYr:overgroundStation),
-(WPEr:overgroundStation),
-(WWRr:overgroundStation),
-(BHRu:overgroundStation),
-(BKGu:overgroundStation),
-(CRHr:overgroundStation),
-(GPOr:overgroundStation),
-(HRYr:overgroundStation),
-(LEMr:overgroundStation),
-(LERr:overgroundStation),
-(STOr:overgroundStation),
-(UHLr:overgroundStation),
-(WGRr:overgroundStation),
-(WMWr:overgroundStation),
-(WNPr:overgroundStation),
-(ACCr:overgroundStation),
-(BSPr:overgroundStation),
-(BSYr:overgroundStation),
-(CIRr:overgroundStation),
-(CMDr:overgroundStation),
-(DLKr:overgroundStation),
-(FNYr:overgroundStation),
-(GUNu:overgroundStation),
-(HDHr:overgroundStation),
-(HKCr:overgroundStation),
-(HKWr:overgroundStation),
-(HMNr:overgroundStation),
-(IMWr:overgroundStation),
-(KEWu:overgroundStation),
-(KNRr:overgroundStation),
-(KTWr:overgroundStation),
-(OLYu:overgroundStation),
-(RMDu:overgroundStation),
-(SATr:overgroundStation),
-(SFDu:overgroundStation),
-(SPBr:overgroundStation),
-(WBTu:overgroundStation),
-(WHDr:overgroundStation),
-(WJNu:overgroundStation),
-(EMPr:overgroundStation),
-(RMFr:overgroundStation),
-(UPMu:overgroundStation),
-(BSHr:overgroundStation),
-(CPKr:overgroundStation),
-(EUSr:overgroundStation),
-(HARu:overgroundStation),
-(HAWu:overgroundStation),
-(HDLr:overgroundStation),
-(HTEr:overgroundStation),
-(KBNr:overgroundStation),
-(KETu:overgroundStation),
-(KGNu:overgroundStation),
-(NWBu:overgroundStation),
-(QPKu:overgroundStation),
-(SKTu:overgroundStation),
-(SOHr:overgroundStation),
-(SPKu:overgroundStation),
-(WEMu:overgroundStation),
-(WFHr:overgroundStation),
-(WFJr:overgroundStation),
 (BCVr:overgroundStation),
+(BCYr:overgroundStation),
 (BETr:overgroundStation),
 (BHKr:overgroundStation),
+(BHRu:overgroundStation),
+(BKGu:overgroundStation),
+(BSHr:overgroundStation),
+(BSPr:overgroundStation),
+(BSYr:overgroundStation),
 (CBHr:overgroundStation),
 (CHIr:overgroundStation),
 (CHNr:overgroundStation),
+(CIRr:overgroundStation),
+(CLJr:overgroundStation),
+(CLPr:overgroundStation),
+(CMDr:overgroundStation),
+(CNNr:overgroundStation),
+(CPKr:overgroundStation),
 (CPTr:overgroundStation),
+(CRHr:overgroundStation),
+(CWRu:overgroundStation),
+(CYPr:overgroundStation),
+(DLJr:overgroundStation),
+(DLKr:overgroundStation),
+(DMKr:overgroundStation),
 (EDRr:overgroundStation),
+(EMPr:overgroundStation),
 (ENFr:overgroundStation),
+(EUSr:overgroundStation),
+(FNYr:overgroundStation),
+(FOHr:overgroundStation),
+(GPOr:overgroundStation),
+(GUNu:overgroundStation),
 (HACr:overgroundStation),
+(HARu:overgroundStation),
+(HAWu:overgroundStation),
+(HBYu:overgroundStation),
+(HDHr:overgroundStation),
+(HDLr:overgroundStation),
+(HGGr:overgroundStation),
 (HIPr:overgroundStation),
+(HKCr:overgroundStation),
+(HKWr:overgroundStation),
+(HMNr:overgroundStation),
+(HOXr:overgroundStation),
+(HPAr:overgroundStation),
+(HRYr:overgroundStation),
+(HTEr:overgroundStation),
+(IMWr:overgroundStation),
+(KBNr:overgroundStation),
+(KETu:overgroundStation),
+(KEWu:overgroundStation),
+(KGNu:overgroundStation),
+(KNRr:overgroundStation),
+(KTWr:overgroundStation),
+(LEMr:overgroundStation),
+(LERr:overgroundStation),
 (LOFr:overgroundStation),
 (LSTr:overgroundStation),
+(NWBu:overgroundStation),
+(NWDr:overgroundStation),
+(NWXr:overgroundStation),
+(NXGr:overgroundStation),
+(OLYu:overgroundStation),
+(PMRr:overgroundStation),
+(PNWr:overgroundStation),
+(QPKu:overgroundStation),
+(QRPr:overgroundStation),
 (RECr:overgroundStation),
+(RMDu:overgroundStation),
+(RMFr:overgroundStation),
+(ROEr:overgroundStation),
+(SATr:overgroundStation),
 (SBUr:overgroundStation),
+(SDCr:overgroundStation),
+(SDEr:overgroundStation),
+(SFDu:overgroundStation),
 (SJSr:overgroundStation),
+(SKTu:overgroundStation),
 (SKWr:overgroundStation),
 (SLVr:overgroundStation),
 (SMHr:overgroundStation),
+(SOHr:overgroundStation),
+(SPBr:overgroundStation),
+(SPKu:overgroundStation),
+(SQEr:overgroundStation),
+(STOr:overgroundStation),
 (SVSu:overgroundStation),
+(SYDr:overgroundStation),
 (TEOr:overgroundStation),
 (TURr:overgroundStation),
+(UHLr:overgroundStation),
+(UPMu:overgroundStation),
 (WALu:overgroundStation),
+(WBTu:overgroundStation),
+(WCLu:overgroundStation),
+(WCYr:overgroundStation),
+(WEMu:overgroundStation),
+(WFHr:overgroundStation),
+(WFJr:overgroundStation),
+(WGRr:overgroundStation),
+(WHDr:overgroundStation),
 (WHLr:overgroundStation),
-(WSTr:overgroundStation)
-where
-ACCr.naptanid='910GACTNCTL' AND
-ANYr.naptanid='910GANERLEY' AND
-BCVr.naptanid='910GBRUCGRV' AND
-BCYr.naptanid='910GBROCKLY' AND
-BETr.naptanid='910GBTHNLGR' AND
-BHKr.naptanid='910GBHILLPK' AND
-BHRu.naptanid='910GBLCHSRD' AND
-BKGu.naptanid='910GBARKING' AND
-BSPr.naptanid='910GBRBYPK' AND
-BSYr.naptanid='910GBRBY' AND
-CBHr.naptanid='910GCAMHTH' AND
-CHIr.naptanid='910GCHINGFD' AND
-CHNr.naptanid='910GCHESHNT' AND
-CIRr.naptanid='910GCLDNNRB' AND
-CLJr.naptanid='910GCLPHMJC' AND
-CLPr.naptanid='910GCLPHHS' AND
-CMDr.naptanid='910GCMDNRD' AND
-CNNr.naptanid='910GCNNB' AND
-CPKr.naptanid='910GCRPNDPK' AND
-CPTr.naptanid='910GCLAPTON' AND
-CRHr.naptanid='910GCROUCHH' AND
-CWRu.naptanid='910GCNDAW' AND
-CYPr.naptanid='910GCRYSTLP' AND
-DLJr.naptanid='910GDALS' AND
-DLKr.naptanid='910GDALSKLD' AND
-DMKr.naptanid='910GDENMRKH' AND
-EDRr.naptanid='910GEDMNGRN' AND
-EMPr.naptanid='910GEMRSPKH' AND
-ENFr.naptanid='910GENFLDTN' AND
-EUSr.naptanid='910GEUSTON' AND
-FNYr.naptanid='910GFNCHLYR' AND
-FOHr.naptanid='910GFORESTH' AND
-GPOr.naptanid='910GGOSPLOK' AND
-GUNu.naptanid='910GGNRSBRY' AND
-HACr.naptanid='910GHAKNYNM' AND
-HARu.naptanid='910GHARLSDN' AND
-HAWu.naptanid='910GHROW' AND
-HBYu.naptanid='910GHGHI' AND
-HDHr.naptanid='910GHMPSTDH' AND
-HDLr.naptanid='910GHEDSTNL' AND
-HGGr.naptanid='910GHAGGERS' AND
-HIPr.naptanid='910GHGHMSPK' AND
-HKCr.naptanid='910GHACKNYC' AND
-HKWr.naptanid='910GHACKNYW' AND
-HMNr.naptanid='910GHOMRTON' AND
-HOXr.naptanid='910GHOXTON' AND
-HPAr.naptanid='910GHONROPK' AND
-HRYr.naptanid='910GHRGYGL' AND
-HTEr.naptanid='910GHTCHEND' AND
-IMWr.naptanid='910GCSEAH' AND
-KBNr.naptanid='910GKLBRNHR' AND
-KETu.naptanid='910GKTON' AND
-KEWu.naptanid='910GKEWGRDN' AND
-KGNu.naptanid='910GKENSLG' AND
-KNRr.naptanid='910GKENR' AND
-KTWr.naptanid='910GKNTSHTW' AND
-LEMr.naptanid='910GLEYTNMR' AND
-LERr.naptanid='910GLYTNSHR' AND
-LOFr.naptanid='910GLONFLDS' AND
-LSTr.naptanid='910GLIVST' AND
-NWBu.naptanid='910GNWEMBLY' AND
-NWDr.naptanid='910GNORWDJ' AND
-NWXr.naptanid='910GNWCRELL' AND
-NXGr.naptanid='910GNEWXGTE' AND
-OLYu.naptanid='910GKENOLYM' AND
-PMRr.naptanid='910GPCKHMRY' AND
-PNWr.naptanid='910GPENEW' AND
-QPKu.naptanid='910GQPRK' AND
-QRPr.naptanid='910GPCKHMQD' AND
-RECr.naptanid='910GRCTRYRD' AND
-RMDu.naptanid='910GRICHMND' AND
-RMFr.naptanid='910GROMFORD' AND
-ROEr.naptanid='910GRTHERHI' AND
-SATr.naptanid='910GSACTON' AND
-SBUr.naptanid='910GSBURY' AND
-SDCr.naptanid='910GSHRDHST' AND
-SDEr.naptanid='910GSHADWEL' AND
-SJSr.naptanid='910GSTJMSST' AND
-SKTu.naptanid='910GSKENTON' AND
-SKWr.naptanid='910GSTKNWNG' AND
-SLVr.naptanid='910GSIVRST' AND
-SMHr.naptanid='910GSTMFDHL' AND
-SOHr.naptanid='910GSHMPSTD' AND
-SPBr.naptanid='910GSHPDSB' AND
-SPKu.naptanid='910GSTNBGPK' AND
-SQEr.naptanid='910GSURREYQ' AND
-STOr.naptanid='910GSTOTNHM' AND
-SVSu.naptanid='910GSEVNSIS' AND
-SYDr.naptanid='910GSYDENHM' AND
-TEOr.naptanid='910GTHBLDSG' AND
-TURr.naptanid='910GTURKYST' AND
-UHLr.naptanid='910GUPRHLWY' AND
-UPMu.naptanid='910GUPMNSTR' AND
-WALu.naptanid='910GWLTWCEN' AND
-WBTu.naptanid='910GWBRMPTN' AND
-WCLu.naptanid='910GWCHAPEL' AND
-WCYr.naptanid='910GWCROYDN' AND
-WEMu.naptanid='910GWMBY' AND
-WFHr.naptanid='910GWATFDHS' AND
-WFJr.naptanid='910GWATFDJ' AND
-WGRr.naptanid='910GWDGRNPK' AND
-WHDr.naptanid='910GWHMDSTD' AND
-WHLr.naptanid='910GWHHRTLA' AND
-WJNu.naptanid='910GWLSDJHL' AND
-WMWr.naptanid='910GWLTHQRD' AND
-WNPr.naptanid='910GWNSTDPK' AND
-WPEr.naptanid='910GWAPPING' AND
-WSTr.naptanid='910GWDST' AND
-WWRr.naptanid='910GWNDSWRD' AND
-BSHr.naptanid='910GBUSHYDC' AND
-SFDu.naptanid='910GSTFD'
+(WJNu:overgroundStation),
+(WMWr:overgroundStation),
+(WNPr:overgroundStation),
+(WPEr:overgroundStation),
+(WSTr:overgroundStation),
+(WWRr:overgroundStation)
+where ACCr.naptanid = '910GACTNCTL' AND 
+ANYr.naptanid = '910GANERLEY' AND 
+BCVr.naptanid = '910GBRUCGRV' AND 
+BCYr.naptanid = '910GBROCKLY' AND 
+BETr.naptanid = '910GBTHNLGR' AND 
+BHKr.naptanid = '910GBHILLPK' AND 
+BHRu.naptanid = '910GBLCHSRD' AND 
+BKGu.naptanid = '910GBARKING' AND 
+BSHr.naptanid = '910GBUSHYDC' AND 
+BSPr.naptanid = '910GBRBYPK' AND 
+BSYr.naptanid = '910GBRBY' AND 
+CBHr.naptanid = '910GCAMHTH' AND 
+CHIr.naptanid = '910GCHINGFD' AND 
+CHNr.naptanid = '910GCHESHNT' AND 
+CIRr.naptanid = '910GCLDNNRB' AND 
+CLJr.naptanid = '910GCLPHMJC' AND 
+CLPr.naptanid = '910GCLPHHS' AND 
+CMDr.naptanid = '910GCMDNRD' AND 
+CNNr.naptanid = '910GCNNB' AND 
+CPKr.naptanid = '910GCRPNDPK' AND 
+CPTr.naptanid = '910GCLAPTON' AND 
+CRHr.naptanid = '910GCROUCHH' AND 
+CWRu.naptanid = '910GCNDAW' AND 
+CYPr.naptanid = '910GCRYSTLP' AND 
+DLJr.naptanid = '910GDALS' AND 
+DLKr.naptanid = '910GDALSKLD' AND 
+DMKr.naptanid = '910GDENMRKH' AND 
+EDRr.naptanid = '910GEDMNGRN' AND 
+EMPr.naptanid = '910GEMRSPKH' AND 
+ENFr.naptanid = '910GENFLDTN' AND 
+EUSr.naptanid = '910GEUSTON' AND 
+FNYr.naptanid = '910GFNCHLYR' AND 
+FOHr.naptanid = '910GFORESTH' AND 
+GPOr.naptanid = '910GGOSPLOK' AND 
+GUNu.naptanid = '910GGNRSBRY' AND 
+HACr.naptanid = '910GHAKNYNM' AND 
+HARu.naptanid = '910GHARLSDN' AND 
+HAWu.naptanid = '910GHROW' AND 
+HBYu.naptanid = '910GHGHI' AND 
+HDHr.naptanid = '910GHMPSTDH' AND 
+HDLr.naptanid = '910GHEDSTNL' AND 
+HGGr.naptanid = '910GHAGGERS' AND 
+HIPr.naptanid = '910GHGHMSPK' AND 
+HKCr.naptanid = '910GHACKNYC' AND 
+HKWr.naptanid = '910GHACKNYW' AND 
+HMNr.naptanid = '910GHOMRTON' AND 
+HOXr.naptanid = '910GHOXTON' AND 
+HPAr.naptanid = '910GHONROPK' AND 
+HRYr.naptanid = '910GHRGYGL' AND 
+HTEr.naptanid = '910GHTCHEND' AND 
+IMWr.naptanid = '910GCSEAH' AND 
+KBNr.naptanid = '910GKLBRNHR' AND 
+KETu.naptanid = '910GKTON' AND 
+KEWu.naptanid = '910GKEWGRDN' AND 
+KGNu.naptanid = '910GKENSLG' AND 
+KNRr.naptanid = '910GKENR' AND 
+KTWr.naptanid = '910GKNTSHTW' AND 
+LEMr.naptanid = '910GLEYTNMR' AND 
+LERr.naptanid = '910GLYTNSHR' AND 
+LOFr.naptanid = '910GLONFLDS' AND 
+LSTr.naptanid = '910GLIVST' AND 
+NWBu.naptanid = '910GNWEMBLY' AND 
+NWDr.naptanid = '910GNORWDJ' AND 
+NWXr.naptanid = '910GNWCRELL' AND 
+NXGr.naptanid = '910GNEWXGTE' AND 
+OLYu.naptanid = '910GKENOLYM' AND 
+PMRr.naptanid = '910GPCKHMRY' AND 
+PNWr.naptanid = '910GPENEW' AND 
+QPKu.naptanid = '910GQPRK' AND 
+QRPr.naptanid = '910GPCKHMQD' AND 
+RECr.naptanid = '910GRCTRYRD' AND 
+RMDu.naptanid = '910GRICHMND' AND 
+RMFr.naptanid = '910GROMFORD' AND 
+ROEr.naptanid = '910GRTHERHI' AND 
+SATr.naptanid = '910GSACTON' AND 
+SBUr.naptanid = '910GSBURY' AND 
+SDCr.naptanid = '910GSHRDHST' AND 
+SDEr.naptanid = '910GSHADWEL' AND 
+SFDu.naptanid = '910GSTFD' AND 
+SJSr.naptanid = '910GSTJMSST' AND 
+SKTu.naptanid = '910GSKENTON' AND 
+SKWr.naptanid = '910GSTKNWNG' AND 
+SLVr.naptanid = '910GSIVRST' AND 
+SMHr.naptanid = '910GSTMFDHL' AND 
+SOHr.naptanid = '910GSHMPSTD' AND 
+SPBr.naptanid = '910GSHPDSB' AND 
+SPKu.naptanid = '910GSTNBGPK' AND 
+SQEr.naptanid = '910GSURREYQ' AND 
+STOr.naptanid = '910GSTOTNHM' AND 
+SVSu.naptanid = '910GSEVNSIS' AND 
+SYDr.naptanid = '910GSYDENHM' AND 
+TEOr.naptanid = '910GTHBLDSG' AND 
+TURr.naptanid = '910GTURKYST' AND 
+UHLr.naptanid = '910GUPRHLWY' AND 
+UPMu.naptanid = '910GUPMNSTR' AND 
+WALu.naptanid = '910GWLTWCEN' AND 
+WBTu.naptanid = '910GWBRMPTN' AND 
+WCLu.naptanid = '910GWCHAPEL' AND 
+WCYr.naptanid = '910GWCROYDN' AND 
+WEMu.naptanid = '910GWMBY' AND 
+WFHr.naptanid = '910GWATFDHS' AND 
+WFJr.naptanid = '910GWATFDJ' AND 
+WGRr.naptanid = '910GWDGRNPK' AND 
+WHDr.naptanid = '910GWHMDSTD' AND 
+WHLr.naptanid = '910GWHHRTLA' AND 
+WJNu.naptanid = '910GWLSDJHL' AND 
+WMWr.naptanid = '910GWLTHQRD' AND 
+WNPr.naptanid = '910GWNSTDPK' AND 
+WPEr.naptanid = '910GWAPPING' AND 
+WSTr.naptanid = '910GWDST' AND 
+WWRr.naptanid = '910GWNDSWRD' 
 create
-(ANYr)-[ANYr_NWDr_lo:TO{mode:'overground',line:'LO East London',distance:1.80470579426002,time:3,speed:36.09,frequency_MTT:[4,12,24,12,12,10],traffic_MTT:[149, 2338, 1604, 1638, 1047, 447],frequency_SUN:[0,6,19,12,12,9],traffic_SUN:[4,268,1493,785,569,248]}]->(NWDr),
-(ANYr)-[ANYr_PNWr_lo:TO{mode:'overground',line:'LO East London',distance:0.696020062679787,time:1,speed:41.76,frequency_MTT:[6,12,24,12,12,7],traffic_MTT:[788, 2350, 2009, 2572, 838, 190],frequency_SUN:[1,6,18,12,12,5],traffic_SUN:[47,512,1783,992,504,101]}]->(PNWr),
-(BCYr)-[BCYr_HPAr_lo:TO{mode:'overground',line:'LO East London',distance:1.72248865276315,time:3,speed:34.45,frequency_MTT:[10,24,48,24,24,18],traffic_MTT:[272, 3390, 4004, 7787, 5543, 2282],frequency_SUN:[0,12,40,24,24,13],traffic_SUN:[16,551,4041,3164,2101,767]}]->(HPAr),
-(BCYr)-[BCYr_NXGr_lo:TO{mode:'overground',line:'LO East London',distance:1.18270449818994,time:2,speed:35.48,frequency_MTT:[11,24,48,24,24,16],traffic_MTT:[2614, 11566, 6697, 4999, 1743, 418],frequency_SUN:[1,12,38,24,24,11],traffic_SUN:[104,1733,7019,2648,1184,246]}]->(NXGr),
-(CLJr)-[CLJr_WWRr_lo:TO{mode:'overground',line:'LO East London',distance:2.3027722287798,time:6,speed:23.03,frequency_MTT:[3,12,24,12,12,7],traffic_MTT:[232,2680,2587,3088,1821,422],frequency_SUN:[0,10,24,12,12,6],traffic_SUN:[0,339,2184,1532,852,229]}]->(WWRr),
-(CLPr)-[CLPr_DMKr_lo:TO{mode:'overground',line:'LO East London',distance:3.01454682161057,time:5,speed:36.17,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[374, 3422, 2715, 3308, 1746, 491],frequency_SUN:[0,11,24,12,12,6],traffic_SUN:[0,481,2638,1698,985,246]}]->(DMKr),
-(CLPr)-[CLPr_WWRr_lo:TO{mode:'overground',line:'LO East London',distance:0.671744931383655,time:2,speed:20.15,frequency_MTT:[2,12,24,12,12,11],traffic_MTT:[456, 3588, 2329, 2809, 1280, 427],frequency_SUN:[0,9,25,12,12,8],traffic_SUN:[0,454,2368,1107,635,201]}]->(WWRr),
-(CNNr)-[CNNr_DLJr_lo:TO{mode:'overground',line:'LO East London',distance:1.21828661165418,time:2,speed:36.55,frequency_MTT:[12,24,48,24,24,17],traffic_MTT:[362, 4665, 3910, 4610, 2729, 1095],frequency_SUN:[8,22,47,24,24,31],traffic_SUN:[88,720,5090,2753,1623,408]}]->(DLJr),
-(CNNr)-[CNNr_HBYu_lo:TO{mode:'overground',line:'LO East London',distance:0.851642767716228,time:2,speed:25.55,frequency_MTT:[7,24,48,24,24,20],traffic_MTT:[426, 3939, 3032, 3661, 1706, 665],frequency_SUN:[8,19,47,24,24,33],traffic_SUN:[114,743,3777,1883,958,269]}]->(HBYu),
-(CWRu)-[CWRu_ROEr_lo:TO{mode:'overground',line:'LO East London',distance:0.353638736224966,time:2,speed:10.61,frequency_MTT:[17,48,96,48,48,34],traffic_MTT:[1583, 13423, 8527, 8683, 3891, 1625],frequency_SUN:[8,25,92,48,48,43],traffic_SUN:[216,1875,10501,4858,2664,870]}]->(ROEr),
-(CWRu)-[CWRu_SQEr_lo:TO{mode:'overground',line:'LO East London',distance:0.554839906274865,time:2,speed:16.65,frequency_MTT:[16,48,96,48,48,37],traffic_MTT:[797, 9013, 11143, 18188, 11849, 5057],frequency_SUN:[9,28,89,48,48,43],traffic_SUN:[263,1780,11873,9184,5955,2072]}]->(SQEr),
-(CYPr)-[CYPr_SYDr_lo:TO{mode:'overground',line:'LO East London',distance:1.63273846445236,time:4,speed:24.49,frequency_MTT:[6,12,24,12,12,8],traffic_MTT:[399, 1905, 826, 584, 201, 60],frequency_SUN:[1,6,20,12,12,5],traffic_SUN:[17,167,829,345,133,25]}]->(SYDr),
-(DLJr)-[DLJr_CNNr_lo:TO{mode:'overground',line:'LO East London',distance:1.21828661165418,time:3,speed:24.37,frequency_MTT:[7,24,48,24,24,20],traffic_MTT:[391, 3756, 3152, 4083, 2029, 850],frequency_SUN:[8,19,48,24,24,32],traffic_SUN:[121,762,4200,2194,1097,304]}]->(CNNr),
-(DLJr)-[DLJr_HGGr_lo:TO{mode:'overground',line:'LO East London',distance:0.825354147496753,time:2,speed:24.76,frequency_MTT:[20,48,96,48,48,33],traffic_MTT:[556, 7235, 4878, 4871, 2848, 1365],frequency_SUN:[9,30,90,48,48,40],traffic_SUN:[128,946,6638,3204,1848,603]}]->(HGGr),
-(DMKr)-[DMKr_CLPr_lo:TO{mode:'overground',line:'LO East London',distance:3.01454682161057,time:4,speed:45.22,frequency_MTT:[2,12,24,12,12,11],traffic_MTT:[426, 3808, 2511, 3062, 1500, 485],frequency_SUN:[0,10,24,12,12,8],traffic_SUN:[0,599,2826,1443,894,281]}]->(CLPr),
-(DMKr)-[DMKr_PMRr_lo:TO{mode:'overground',line:'LO East London',distance:1.40095583019969,time:2,speed:42.03,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[432, 2861, 2665, 3702, 1663, 447],frequency_SUN:[0,10,24,12,12,7],traffic_SUN:[0,458,2720,1692,1001,274]}]->(PMRr),
-(FOHr)-[FOHr_HPAr_lo:TO{mode:'overground',line:'LO East London',distance:1.30482828832166,time:2,speed:39.14,frequency_MTT:[11,24,48,24,24,16],traffic_MTT:[1843, 8205, 5007, 4165, 1506, 362],frequency_SUN:[2,12,38,24,24,10],traffic_SUN:[133,1197,4397,1906,866,165]}]->(HPAr),
-(FOHr)-[FOHr_SYDr_lo:TO{mode:'overground',line:'LO East London',distance:1.34077154844852,time:3,speed:26.82,frequency_MTT:[9,24,48,24,24,19],traffic_MTT:[253, 3079, 2877, 4967, 3577, 1474],frequency_SUN:[0,12,39,24,24,14],traffic_SUN:[16,467,3011,2118,1470,537]}]->(SYDr),
-(HBYu)-[HBYu_CNNr_lo:TO{mode:'overground',line:'LO East London',distance:0.851642767716228,time:1,speed:51.1,frequency_MTT:[12,24,48,24,24,17],traffic_MTT:[270, 3552, 3245, 3926, 2590, 1034],frequency_SUN:[8,22,48,24,24,30],traffic_SUN:[83,594,4108,2338,1385,338]}]->(CNNr),
-(HGGr)-[HGGr_DLJr_lo:TO{mode:'overground',line:'LO East London',distance:0.825354147496753,time:2,speed:24.76,frequency_MTT:[13,48,96,48,48,38],traffic_MTT:[432, 3778, 3923, 5653, 3119, 1257],frequency_SUN:[8,23,91,48,48,46],traffic_SUN:[118,810,5306,3041,1714,569]}]->(DLJr),
-(HGGr)-[HGGr_HOXr_lo:TO{mode:'overground',line:'LO East London',distance:0.800283091262562,time:2,speed:24.01,frequency_MTT:[20,48,96,48,48,33],traffic_MTT:[682, 8122, 5014, 5042, 2678, 1290],frequency_SUN:[9,30,90,48,48,40],traffic_SUN:[140,1056,7028,3145,1779,603]}]->(HOXr),
-(HOXr)-[HOXr_HGGr_lo:TO{mode:'overground',line:'LO East London',distance:0.800283091262562,time:2,speed:24.01,frequency_MTT:[13,48,96,48,48,38],traffic_MTT:[354, 3743, 4065, 5892, 3496, 1440],frequency_SUN:[8,24,91,48,48,45],traffic_SUN:[114,776,5435,3320,1908,655]}]->(HGGr),
-(HOXr)-[HOXr_SDCr_lo:TO{mode:'overground',line:'LO East London',distance:0.905812445316129,time:2,speed:27.17,frequency_MTT:[19,48,96,48,48,34],traffic_MTT:[717, 8294, 5489, 6096, 3038, 1450],frequency_SUN:[9,30,89,48,48,41],traffic_SUN:[145,1090,7213,3446,1907,684]}]->(SDCr),
-(HPAr)-[HPAr_BCYr_lo:TO{mode:'overground',line:'LO East London',distance:1.72248865276315,time:3,speed:34.45,frequency_MTT:[11,24,48,24,24,16],traffic_MTT:[2152, 9601, 5584, 4436, 1587, 378],frequency_SUN:[1,12,39,24,24,10],traffic_SUN:[81,1306,5491,2145,947,181]}]->(BCYr),
-(HPAr)-[HPAr_FOHr_lo:TO{mode:'overground',line:'LO East London',distance:1.30482828832166,time:2,speed:39.14,frequency_MTT:[10,24,48,24,24,18],traffic_MTT:[280, 3357, 3619, 6683, 4681, 1908],frequency_SUN:[0,12,39,24,24,14],traffic_SUN:[16,511,3520,2625,1839,677]}]->(FOHr),
-(NWDr)-[NWDr_ANYr_lo:TO{mode:'overground',line:'LO East London',distance:1.80470579426002,time:3,speed:36.09,frequency_MTT:[6,12,24,12,12,7],traffic_MTT:[593, 1895, 1803, 2541, 840, 197],frequency_SUN:[1,6,18,12,12,5],traffic_SUN:[42,402,1449,876,448,86]}]->(ANYr),
-(NWDr)-[NWDr_WCYr_lo:TO{mode:'overground',line:'LO East London',distance:2.81184794857984,time:10,speed:16.87,frequency_MTT:[4,12,24,12,12,10],traffic_MTT:[118, 2016, 1421, 1245, 710, 285],frequency_SUN:[0,6,19,12,12,9],traffic_SUN:[2,232,1258,647,457,187]}]->(WCYr),
-(NWXr)-[NWXr_SQEr_lo:TO{mode:'overground',line:'LO East London',distance:2.14762326694995,time:4,speed:32.21,frequency_MTT:[5,12,24,12,12,7],traffic_MTT:[309, 1412, 1063, 1093, 553, 252],frequency_SUN:[0,5,24,12,12,5],traffic_SUN:[0,181,1172,436,361,133]}]->(SQEr),
-(NXGr)-[NXGr_BCYr_lo:TO{mode:'overground',line:'LO East London',distance:1.18270449818994,time:2,speed:35.48,frequency_MTT:[10,24,48,24,24,18],traffic_MTT:[271, 3526, 4604, 9208, 6831, 2769],frequency_SUN:[0,12,40,24,24,13],traffic_SUN:[14,593,4668,4071,2764,987]}]->(BCYr),
-(NXGr)-[NXGr_SQEr_lo:TO{mode:'overground',line:'LO East London',distance:2.0701510778833,time:4,speed:31.05,frequency_MTT:[10,24,48,24,24,17],traffic_MTT:[2547, 12721, 8116, 6100, 2272, 565],frequency_SUN:[8,12,38,24,24,29],traffic_SUN:[244,2254,8948,3351,1520,341]}]->(SQEr),
-(PMRr)-[PMRr_DMKr_lo:TO{mode:'overground',line:'LO East London',distance:1.40095583019969,time:3,speed:28.02,frequency_MTT:[2,12,24,12,12,11],traffic_MTT:[321, 3943, 2428, 2315, 1542, 614],frequency_SUN:[0,10,24,12,12,8],traffic_SUN:[0,589,2905,1698,1064,361]}]->(DMKr),
-(PMRr)-[PMRr_QRPr_lo:TO{mode:'overground',line:'LO East London',distance:0.928112800112583,time:2,speed:27.84,frequency_MTT:[3,12,24,12,12,9],traffic_MTT:[440, 3803, 2931, 3650, 1632, 545],frequency_SUN:[0,10,24,12,12,7],traffic_SUN:[0,615,3363,1893,1080,301]}]->(QRPr),
-(PNWr)-[PNWr_ANYr_lo:TO{mode:'overground',line:'LO East London',distance:0.696020062679787,time:2,speed:20.88,frequency_MTT:[5,12,24,12,12,9],traffic_MTT:[248, 2336, 1736, 2140, 1266, 488],frequency_SUN:[0,6,19,12,12,9],traffic_SUN:[4,278,1628,1033,769,319]}]->(ANYr),
-(PNWr)-[PNWr_SYDr_lo:TO{mode:'overground',line:'LO East London',distance:1.17195023582343,time:2,speed:35.16,frequency_MTT:[6,12,24,12,12,7],traffic_MTT:[884, 2608, 2201, 2660, 895, 213],frequency_SUN:[1,6,18,12,12,5],traffic_SUN:[66,622,1992,1074,548,103]}]->(SYDr),
-(QRPr)-[QRPr_PMRr_lo:TO{mode:'overground',line:'LO East London',distance:0.928112800112583,time:2,speed:27.84,frequency_MTT:[3,12,24,12,12,10],traffic_MTT:[356, 3573, 2599, 3030, 1951, 823],frequency_SUN:[0,10,24,12,12,8],traffic_SUN:[0,591,3421,2108,1323,455]}]->(PMRr),
-(QRPr)-[QRPr_SQEr_lo:TO{mode:'overground',line:'LO East London',distance:2.28750163422289,time:6,speed:22.88,frequency_MTT:[3,12,24,12,12,9],traffic_MTT:[649, 5014, 3506, 3992, 1584, 545],frequency_SUN:[0,10,24,12,12,7],traffic_SUN:[0,751,3989,2086,1115,307]}]->(SQEr),
-(ROEr)-[ROEr_CWRu_lo:TO{mode:'overground',line:'LO East London',distance:0.353638736224966,time:2,speed:10.61,frequency_MTT:[16,48,96,48,48,37],traffic_MTT:[750, 7740, 7520, 11986, 7098, 2974],frequency_SUN:[8,28,89,48,48,44],traffic_SUN:[226,1418,9211,5798,3556,1319]}]->(CWRu),
-(ROEr)-[ROEr_WPEr_lo:TO{mode:'overground',line:'LO East London',distance:0.480150928797437,time:1,speed:28.81,frequency_MTT:[16,48,96,48,48,35],traffic_MTT:[1509, 14224, 8745, 8473, 3897, 1633],frequency_SUN:[8,25,92,48,48,43],traffic_SUN:[220,1926,10741,4820,2628,847]}]->(WPEr),
-(SDCr)-[SDCr_HOXr_lo:TO{mode:'overground',line:'LO East London',distance:0.905812445316129,time:2,speed:27.17,frequency_MTT:[14,48,96,48,48,37],traffic_MTT:[398, 5010, 4567, 6186, 3715, 1506],frequency_SUN:[8,25,91,48,48,44],traffic_SUN:[120,928,6478,3558,2028,691]}]->(HOXr),
-(SDCr)-[SDCr_WCLu_lo:TO{mode:'overground',line:'LO East London',distance:1.15957269509137,time:2,speed:34.79,frequency_MTT:[19,48,96,48,48,34],traffic_MTT:[754, 7593, 6413, 10922, 5682, 2549],frequency_SUN:[8,30,89,48,48,42],traffic_SUN:[163,1107,8266,5381,3011,1160]}]->(WCLu),
-(SDEr)-[SDEr_WCLu_lo:TO{mode:'overground',line:'LO East London',distance:0.931494222080645,time:2,speed:27.94,frequency_MTT:[15,48,96,48,48,36],traffic_MTT:[1311, 14344, 9270, 8981, 4139, 1588],frequency_SUN:[7,25,92,48,48,44],traffic_SUN:[187,1873,11531,4721,2561,786]}]->(WCLu),
-(SDEr)-[SDEr_WPEr_lo:TO{mode:'overground',line:'LO East London',distance:0.770388811847541,time:2,speed:23.11,frequency_MTT:[17,48,96,48,48,36],traffic_MTT:[678, 7133, 7193, 12180, 7120, 2972],frequency_SUN:[8,29,89,48,48,43],traffic_SUN:[231,1344,8699,5821,3555,1299]}]->(WPEr),
-(SQEr)-[SQEr_CWRu_lo:TO{mode:'overground',line:'LO East London',distance:0.554839906274865,time:2,speed:16.65,frequency_MTT:[17,48,96,48,48,34],traffic_MTT:[3811, 21790, 14332, 12134, 4834, 1556],frequency_SUN:[8,26,92,48,48,42],traffic_SUN:[317,3591,16110,6655,3369,904]}]->(CWRu),
-(SQEr)-[SQEr_NWXr_lo:TO{mode:'overground',line:'LO East London',distance:2.14762326694995,time:4,speed:32.21,frequency_MTT:[3,12,24,12,12,9],traffic_MTT:[49, 971, 1259, 1650, 784, 261],frequency_SUN:[0,6,24,12,12,6],traffic_SUN:[0,119,1083,760,384,105]}]->(NWXr),
-(SQEr)-[SQEr_NXGr_lo:TO{mode:'overground',line:'LO East London',distance:2.0701510778833,time:4,speed:31.05,frequency_MTT:[9,24,48,24,24,19],traffic_MTT:[413, 4158, 6008, 10866, 7519, 3158],frequency_SUN:[9,11,40,24,24,31],traffic_SUN:[211,853,5714,5088,3541,1279]}]->(NXGr),
-(SQEr)-[SQEr_QRPr_lo:TO{mode:'overground',line:'LO East London',distance:2.28750163422289,time:6,speed:22.88,frequency_MTT:[3,12,24,12,12,10],traffic_MTT:[310, 3634, 2785, 3665, 2353, 1010],frequency_SUN:[0,10,25,12,12,7],traffic_SUN:[0,608,3814,2383,1477,472]}]->(QRPr),
-(SYDr)-[SYDr_CYPr_lo:TO{mode:'overground',line:'LO East London',distance:1.63273846445236,time:5,speed:19.59,frequency_MTT:[4,12,24,12,12,10],traffic_MTT:[15, 490, 537, 1322, 1116, 427],frequency_SUN:[0,6,19,12,12,6],traffic_SUN:[0,59,750,533,379,108]}]->(CYPr),
-(SYDr)-[SYDr_FOHr_lo:TO{mode:'overground',line:'LO East London',distance:1.34077154844852,time:3,speed:26.82,frequency_MTT:[12,24,48,24,24,15],traffic_MTT:[1713, 6012, 3841, 3681, 1222, 288],frequency_SUN:[2,12,38,24,24,10],traffic_SUN:[108,950,3388,1606,758,140]}]->(FOHr),
-(SYDr)-[SYDr_PNWr_lo:TO{mode:'overground',line:'LO East London',distance:1.17195023582343,time:2,speed:35.16,frequency_MTT:[5,12,24,12,12,9],traffic_MTT:[257, 2386, 1848, 2359, 1422, 570],frequency_SUN:[0,6,19,12,12,9],traffic_SUN:[8,332,1824,1157,824,348]}]->(PNWr),
-(WCLu)-[WCLu_SDCr_lo:TO{mode:'overground',line:'LO East London',distance:1.15957269509137,time:2,speed:34.79,frequency_MTT:[15,48,96,48,48,36],traffic_MTT:[725, 10646, 7190, 7108, 3805, 1378],frequency_SUN:[8,25,91,48,48,44],traffic_SUN:[149,1435,10164,4224,2309,698]}]->(SDCr),
-(WCLu)-[WCLu_SDEr_lo:TO{mode:'overground',line:'LO East London',distance:0.931494222080645,time:2,speed:27.94,frequency_MTT:[18,48,96,48,48,35],traffic_MTT:[829, 7977, 7492, 12710, 7142, 3034],frequency_SUN:[8,29,89,48,48,43],traffic_SUN:[211,1346,9027,6117,3658,1364]}]->(SDEr),
-(WCYr)-[WCYr_NWDr_lo:TO{mode:'overground',line:'LO East London',distance:2.81184794857984,time:5,speed:33.74,frequency_MTT:[6,12,24,12,12,7],traffic_MTT:[335, 1318, 1523, 2344, 762, 175],frequency_SUN:[1,6,19,12,12,4],traffic_SUN:[43,277,1151,642,311,54]}]->(NWDr),
-(WPEr)-[WPEr_ROEr_lo:TO{mode:'overground',line:'LO East London',distance:0.480150928797437,time:1,speed:28.81,frequency_MTT:[17,48,96,48,48,36],traffic_MTT:[734, 7408, 7465, 12526, 7149, 2965],frequency_SUN:[8,29,88,48,48,44],traffic_SUN:[239,1465,9120,5895,3618,1349]}]->(ROEr),
-(WPEr)-[WPEr_SDEr_lo:TO{mode:'overground',line:'LO East London',distance:0.770388811847541,time:2,speed:23.11,frequency_MTT:[16,48,96,48,48,35],traffic_MTT:[1504, 14143, 8646, 8332, 3638, 1506],frequency_SUN:[8,24,92,48,48,44],traffic_SUN:[220,1856,10573,4536,2504,823]}]->(SDEr),
-(WWRr)-[WWRr_CLJr_lo:TO{mode:'overground',line:'LO East London',distance:2.3027722287798,time:9,speed:15.35,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[304, 3012, 2688, 3259, 1856, 481],frequency_SUN:[0,11,24,12,12,6],traffic_SUN:[13,422,2378,1608,895,242]}]->(CLJr),
-(WWRr)-[WWRr_CLPr_lo:TO{mode:'overground',line:'LO East London',distance:0.671744931383655,time:2,speed:20.15,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[304, 3012, 2688, 3259, 1856, 481],frequency_SUN:[0,11,24,12,12,6],traffic_SUN:[13,422,2378,1608,895,242]}]->(CLPr),
-(BHRu)-[BHRu_STOr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:2.24908483617146,time:3,speed:44.98,frequency_MTT:[3,12,24,12,12,8],traffic_MTT:[343, 2555, 1373, 1087, 498, 180],frequency_SUN:[0,4,24,12,12,7],traffic_SUN:[0,180,1822,824,488,142]}]->(STOr),
-(BHRu)-[BHRu_WMWr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:1.33232325842113,time:2,speed:39.97,frequency_MTT:[2,12,24,12,12,7],traffic_MTT:[225, 1438, 1829, 3424, 1474, 411],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,227,1852,1290,846,226]}]->(WMWr),
-(BKGu)-[BKGu_WGRr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:2.75425310791032,time:3,speed:55.09,frequency_MTT:[4,12,24,12,12,7],traffic_MTT:[626, 2033, 1312, 1198, 459, 122],frequency_SUN:[0,5,24,12,12,6],traffic_SUN:[0,337,1661,753,457,118]}]->(WGRr),
-(CRHr)-[CRHr_HRYr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:1.47104673236831,time:3,speed:29.42,frequency_MTT:[3,12,24,12,12,6],traffic_MTT:[102, 676, 1235, 2066, 825, 227],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,90,1075,764,448,141]}]->(HRYr),
-(CRHr)-[CRHr_UHLr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:1.20969514591973,time:2,speed:36.29,frequency_MTT:[2,12,24,12,12,9],traffic_MTT:[202, 2037, 1019, 547, 277, 108],frequency_SUN:[0,3,24,12,12,8],traffic_SUN:[0,64,1164,485,302,81]}]->(UHLr),
-(GPOr)-[GPOr_UHLr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:1.73928957265207,time:3,speed:34.79,frequency_MTT:[3,12,24,12,12,6],traffic_MTT:[49, 466, 859, 1479, 618, 136],frequency_SUN:[0,5,24,12,12,4],traffic_SUN:[0,57,801,564,288,76]}]->(UHLr),
-(HRYr)-[HRYr_CRHr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:1.47104673236831,time:4,speed:22.07,frequency_MTT:[3,12,24,12,12,8],traffic_MTT:[325, 2109, 1076, 638, 300, 124],frequency_SUN:[0,3,24,12,12,8],traffic_SUN:[0,69,1287,561,365,100]}]->(CRHr),
-(HRYr)-[HRYr_STOr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:1.8397406269989,time:4,speed:27.6,frequency_MTT:[3,12,23,13,11,7],traffic_MTT:[148, 812, 1245, 2193, 850, 278],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,138,1139,865,546,151]}]->(STOr),
-(LEMr)-[LEMr_LERr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:1.33233585490237,time:3,speed:26.65,frequency_MTT:[2,12,24,12,12,7],traffic_MTT:[371, 1812, 2180, 3353, 1357, 357],frequency_SUN:[0,3,24,12,12,6],traffic_SUN:[0,230,1952,1261,861,291]}]->(LERr),
-(LEMr)-[LEMr_WMWr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:1.707687725846,time:3,speed:34.15,frequency_MTT:[3,12,24,12,12,8],traffic_MTT:[823, 4059, 2413, 1850, 770, 201],frequency_SUN:[0,4,24,12,12,7],traffic_SUN:[0,405,2690,1162,697,186]}]->(WMWr),
-(LERr)-[LERr_LEMr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:1.33233585490237,time:2,speed:39.97,frequency_MTT:[4,12,24,12,12,7],traffic_MTT:[1030, 3513, 2249, 1802, 690, 165],frequency_SUN:[0,4,24,12,12,7],traffic_SUN:[0,377,2519,1141,693,185]}]->(LEMr),
-(LERr)-[LERr_WNPr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:1.80689989899281,time:2,speed:54.21,frequency_MTT:[2,12,24,12,11,8],traffic_MTT:[380, 1671, 1858, 2985, 1155, 348],frequency_SUN:[0,3,24,12,12,6],traffic_SUN:[0,225,1769,1117,772,261]}]->(WNPr),
-(STOr)-[STOr_BHRu_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:2.24908483617146,time:3,speed:44.98,frequency_MTT:[2,12,24,12,12,7],traffic_MTT:[155, 996, 1413, 2374, 1069, 311],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,175,1374,1004,643,180]}]->(BHRu),
-(STOr)-[STOr_HRYr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:1.8397406269989,time:3,speed:36.79,frequency_MTT:[3,12,24,12,12,8],traffic_MTT:[344, 2294, 1221, 848, 406, 158],frequency_SUN:[0,4,24,12,12,7],traffic_SUN:[0,134,1586,699,413,114]}]->(HRYr),
-(UHLr)-[UHLr_CRHr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:1.20969514591973,time:3,speed:24.19,frequency_MTT:[3,12,24,12,12,6],traffic_MTT:[81, 588, 1154, 1995, 789, 194],frequency_SUN:[0,5,24,12,12,4],traffic_SUN:[0,101,1047,704,384,105]}]->(CRHr),
-(UHLr)-[UHLr_GPOr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:1.73928957265207,time:7,speed:14.91,frequency_MTT:[2,12,24,12,12,9],traffic_MTT:[153, 1364, 715, 363, 162, 62],frequency_SUN:[0,3,24,12,12,8],traffic_SUN:[0,38,858,309,165,41]}]->(GPOr),
-(WGRr)-[WGRr_BKGu_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:2.75425310791032,time:5,speed:33.05,frequency_MTT:[1,12,24,12,12,8],traffic_MTT:[233, 1326, 1324, 1929, 876, 253],frequency_SUN:[0,3,24,12,12,6],traffic_SUN:[0,205,1340,788,552,178]}]->(BKGu),
-(WGRr)-[WGRr_WNPr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:1.29170110957146,time:3,speed:25.83,frequency_MTT:[4,12,24,12,12,7],traffic_MTT:[784, 2482, 1646, 1409, 533, 135],frequency_SUN:[0,5,24,12,12,6],traffic_SUN:[0,372,1971,892,529,128]}]->(WNPr),
-(WMWr)-[WMWr_BHRu_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:1.33232325842113,time:2,speed:39.97,frequency_MTT:[3,12,24,12,12,8],traffic_MTT:[609, 3402, 1957, 1483, 654, 206],frequency_SUN:[0,4,24,12,12,7],traffic_SUN:[0,271,2306,1069,626,157]}]->(BHRu),
-(WMWr)-[WMWr_LEMr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:1.707687725846,time:2,speed:51.23,frequency_MTT:[2,12,24,12,12,7],traffic_MTT:[313, 1777, 2236, 3707, 1561, 412],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,274,2039,1370,895,259]}]->(LEMr),
-(WNPr)-[WNPr_LERr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:1.80689989899281,time:3,speed:36.14,frequency_MTT:[4,12,24,12,12,7],traffic_MTT:[927, 3067, 1960, 1643, 630, 147],frequency_SUN:[0,4,24,12,12,7],traffic_SUN:[0,340,2258,1050,637,170]}]->(LERr),
-(WNPr)-[WNPr_WGRr_lo:TO{mode:'overground',line:'LO Gospel Oak-Barking',distance:1.29170110957146,time:3,speed:25.83,frequency_MTT:[1,12,24,12,12,8],traffic_MTT:[234, 1497, 1556, 2363, 1102, 310],frequency_SUN:[0,3,24,12,12,6],traffic_SUN:[0,220,1548,942,663,220]}]->(WGRr),
-(ACCr)-[ACCr_SATr_lo:TO{mode:'overground',line:'LO North London',distance:1.1208404781862,time:3,speed:22.42,frequency_MTT:[3,13,24,12,11,8],traffic_MTT:[263, 4148, 2332, 2077, 1057, 333],frequency_SUN:[0,3,24,12,12,6],traffic_SUN:[0,130,2534,1048,648,192]}]->(SATr),
-(ACCr)-[ACCr_WJNu_lo:TO{mode:'overground',line:'LO North London',distance:2.93863326891045,time:4,speed:44.08,frequency_MTT:[4,12,25,12,11,7],traffic_MTT:[601, 3066, 2253, 4197, 1332, 275],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,192,2168,1500,664,150]}]->(WJNu),
-(BSPr)-[BSPr_BSYr_lo:TO{mode:'overground',line:'LO North London',distance:0.735695682830388,time:1,speed:44.14,frequency_MTT:[7,24,48,24,23,11],traffic_MTT:[655, 5828, 4718, 6955, 2654, 563],frequency_SUN:[0,7,48,24,21,7],traffic_SUN:[0,299,4364,2751,1284,262]}]->(BSYr),
-(BSPr)-[BSPr_KNRr_lo:TO{mode:'overground',line:'LO North London',distance:0.965662877021397,time:2,speed:28.97,frequency_MTT:[5,24,48,23,26,15],traffic_MTT:[841, 6985, 4937, 5346, 2439, 756],frequency_SUN:[0,2,48,24,23,9],traffic_SUN:[0,185,4557,2323,1317,390]}]->(KNRr),
-(BSYr)-[BSYr_BSPr_lo:TO{mode:'overground',line:'LO North London',distance:0.735695682830388,time:1,speed:44.14,frequency_MTT:[6,23,48,24,25,15],traffic_MTT:[890, 7180, 5021, 5426, 2507, 847],frequency_SUN:[0,2,48,24,23,9],traffic_SUN:[0,183,4638,2435,1368,413]}]->(BSPr),
-(BSYr)-[BSYr_WHDr_lo:TO{mode:'overground',line:'LO North London',distance:0.813065512990906,time:2,speed:24.39,frequency_MTT:[6,25,48,24,23,11],traffic_MTT:[654, 6330, 4634, 6237, 2519, 557],frequency_SUN:[0,7,48,24,21,7],traffic_SUN:[0,329,4608,2711,1308,270]}]->(WHDr),
-(CIRr)-[CIRr_CMDr_lo:TO{mode:'overground',line:'LO North London',distance:1.53066139116757,time:6,speed:15.31,frequency_MTT:[7,24,49,24,24,13],traffic_MTT:[1266, 9763, 5860, 5074, 2351, 897],frequency_SUN:[0,5,48,24,22,8],traffic_SUN:[0,394,6069,2548,1427,379]}]->(CMDr),
-(CIRr)-[CIRr_HBYu_lo:TO{mode:'overground',line:'LO North London',distance:0.964721403933291,time:3,speed:19.29,frequency_MTT:[6,24,47,25,23,13],traffic_MTT:[545, 4391, 5789, 8669, 4060, 1138],frequency_SUN:[0,4,48,24,22,9],traffic_SUN:[0,248,4722,3403,1959,471]}]->(HBYu),
-(CLJr)-[CLJr_IMWr_lo:TO{mode:'overground',line:'LO North London',distance:1.48035349095575,time:6,speed:14.8,frequency_MTT:[4,12,24,12,13,7],traffic_MTT:[723,5100,3647,3197,1552,416],frequency_SUN:[0,6,25,12,11,8],traffic_SUN:[0,414,4487,1871,965,290]}]->(IMWr),
-(CMDr)-[CMDr_CIRr_lo:TO{mode:'overground',line:'LO North London',distance:1.53066139116757,time:3,speed:30.61,frequency_MTT:[6,24,48,24,23,13],traffic_MTT:[548, 4542, 5493, 8179, 3783, 1068],frequency_SUN:[0,4,49,24,21,9],traffic_SUN:[0,238,4701,3352,1823,450]}]->(CIRr),
-(CMDr)-[CMDr_KTWr_lo:TO{mode:'overground',line:'LO North London',distance:0.764586248892881,time:2,speed:22.94,frequency_MTT:[7,24,48,24,24,14],traffic_MTT:[987, 7408, 4863, 5228, 2310, 877],frequency_SUN:[0,4,48,24,23,7],traffic_SUN:[0,255,4967,2330,1349,374]}]->(KTWr),
-(CNNr)-[CNNr_DLKr_lo:TO{mode:'overground',line:'LO North London',distance:1.14570373718922,time:3,speed:22.91,frequency_MTT:[5,23,49,24,24,13],traffic_MTT:[596, 5906, 7703, 10299, 6156, 2119],frequency_SUN:[0,4,48,24,22,9],traffic_SUN:[0,294,7397,5194,3372,1039]}]->(DLKr),
-(DLKr)-[DLKr_CNNr_lo:TO{mode:'overground',line:'LO North London',distance:1.14570373718922,time:2,speed:34.37,frequency_MTT:[8,24,48,24,25,12],traffic_MTT:[2065, 12922, 9142, 7713, 3536, 1295],frequency_SUN:[0,5,48,24,23,7],traffic_SUN:[0,771,9787,4690,2636,532]}]->(CNNr),
-(DLKr)-[DLKr_HKCr_lo:TO{mode:'overground',line:'LO North London',distance:1.36753023560543,time:2,speed:41.03,frequency_MTT:[5,23,49,24,24,13],traffic_MTT:[661, 5735, 7541, 9639, 5441, 1892],frequency_SUN:[0,4,48,24,22,9],traffic_SUN:[0,296,7243,4727,2972,990]}]->(HKCr),
-(FNYr)-[FNYr_HDHr_lo:TO{mode:'overground',line:'LO North London',distance:1.32858511990854,time:2,speed:39.86,frequency_MTT:[6,25,47,24,23,12],traffic_MTT:[923, 7040, 5291, 6596, 2892, 670],frequency_SUN:[0,6,48,24,21,8],traffic_SUN:[0,333,5253,2929,1545,359]}]->(HDHr),
-(FNYr)-[FNYr_WHDr_lo:TO{mode:'overground',line:'LO North London',distance:0.638946635001751,time:2,speed:19.17,frequency_MTT:[6,24,48,24,24,15],traffic_MTT:[783, 7044, 5614, 6502, 2747, 956],frequency_SUN:[0,3,48,24,23,8],traffic_SUN:[0,238,5101,2848,1540,420]}]->(WHDr),
-(GPOr)-[GPOr_HDHr_lo:TO{mode:'overground',line:'LO North London',distance:1.03593249583058,time:2,speed:31.08,frequency_MTT:[6,25,47,24,24,15],traffic_MTT:[953, 8443, 5780, 6021, 2639, 1010],frequency_SUN:[0,3,48,24,23,8],traffic_SUN:[0,239,5552,2620,1521,432]}]->(HDHr),
-(GPOr)-[GPOr_KTWr_lo:TO{mode:'overground',line:'LO North London',distance:1.01844604783368,time:2,speed:30.55,frequency_MTT:[5,25,48,24,22,13],traffic_MTT:[703, 5636, 5320, 6404, 2762, 632],frequency_SUN:[0,5,49,24,21,8],traffic_SUN:[0,279,4661,2856,1412,310]}]->(KTWr),
-(GUNu)-[GUNu_KEWu_lo:TO{mode:'overground',line:'LO North London',distance:1.76089514419355,time:3,speed:35.22,frequency_MTT:[3,12,21,12,12,8],traffic_MTT:[155, 2110, 1490, 1661, 773, 207],frequency_SUN:[0,3,24,12,12,6],traffic_SUN:[0,118,2244,691,393,102]}]->(KEWu),
-(GUNu)-[GUNu_SATr_lo:TO{mode:'overground',line:'LO North London',distance:0.960445230318223,time:3,speed:19.21,frequency_MTT:[4,12,22,12,12,6],traffic_MTT:[364, 2125, 1740, 3697, 1090, 234],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,108,1639,1444,554,125]}]->(SATr),
-(HBYu)-[HBYu_CIRr_lo:TO{mode:'overground',line:'LO North London',distance:0.964721403933291,time:1,speed:57.88,frequency_MTT:[7,24,49,24,24,13],traffic_MTT:[1448, 10878, 6149, 5310, 2416, 944],frequency_SUN:[0,5,48,24,23,7],traffic_SUN:[0,403,6207,2654,1550,355]}]->(CIRr),
-(HDHr)-[HDHr_FNYr_lo:TO{mode:'overground',line:'LO North London',distance:1.32858511990854,time:2,speed:39.86,frequency_MTT:[6,24,48,24,24,15],traffic_MTT:[800, 7558, 5824, 6812, 2715, 1003],frequency_SUN:[0,3,48,24,23,8],traffic_SUN:[0,242,5256,2898,1571,436]}]->(FNYr),
-(HDHr)-[HDHr_GPOr_lo:TO{mode:'overground',line:'LO North London',distance:1.03593249583058,time:3,speed:20.72,frequency_MTT:[6,24,48,24,22,13],traffic_MTT:[827, 6182, 5431, 7191, 3209, 734],frequency_SUN:[0,6,48,24,21,8],traffic_SUN:[0,314,4927,3155,1625,368]}]->(GPOr),
-(HKCr)-[HKCr_DLKr_lo:TO{mode:'overground',line:'LO North London',distance:1.36753023560543,time:2,speed:41.03,frequency_MTT:[8,24,48,24,25,12],traffic_MTT:[2041, 11975, 8709, 7386, 3344, 1063],frequency_SUN:[0,6,48,24,22,7],traffic_SUN:[0,802,9260,4585,2419,440]}]->(DLKr),
-(HKCr)-[HKCr_HMNr_lo:TO{mode:'overground',line:'LO North London',distance:0.950272608173599,time:2,speed:28.51,frequency_MTT:[5,23,49,24,24,13],traffic_MTT:[623, 5459, 7365, 9228, 4699, 1579],frequency_SUN:[0,3,48,24,22,10],traffic_SUN:[0,273,7129,4097,2499,896]}]->(HMNr),
-(HKWr)-[HKWr_HMNr_lo:TO{mode:'overground',line:'LO North London',distance:1.27449052647228,time:3,speed:25.49,frequency_MTT:[9,24,48,24,24,12],traffic_MTT:[1608, 9180, 6832, 6018, 3140, 1001],frequency_SUN:[0,6,48,24,22,7],traffic_SUN:[0,479,6788,4053,2136,394]}]->(HMNr),
-(HMNr)-[HMNr_HKCr_lo:TO{mode:'overground',line:'LO North London',distance:0.950272608173599,time:2,speed:28.51,frequency_MTT:[9,24,47,25,24,12],traffic_MTT:[1892, 10516, 7652, 6446, 3005, 951],frequency_SUN:[0,6,48,24,22,7],traffic_SUN:[0,648,7937,4230,2278,388]}]->(HKCr),
-(HMNr)-[HMNr_HKWr_lo:TO{mode:'overground',line:'LO North London',distance:1.27449052647228,time:3,speed:25.49,frequency_MTT:[4,24,48,24,25,13],traffic_MTT:[653, 5624, 7063, 8640, 3932, 1224],frequency_SUN:[0,3,48,24,22,10],traffic_SUN:[0,251,6947,3395,1993,668]}]->(HKWr),
-(IMWr)-[IMWr_CLJr_lo:TO{mode:'overground',line:'LO North London',distance:1.48035349095575,time:6,speed:14.8,frequency_MTT:[3,12,24,12,12,10],traffic_MTT:[474, 2796, 3232, 4207, 2127, 650],frequency_SUN:[0,5,24,12,12,11],traffic_SUN:[0,316,3020,2199,1154,320]}]->(CLJr),
-(IMWr)-[IMWr_WBTu_lo:TO{mode:'overground',line:'LO North London',distance:1.6133447397928,time:3,speed:32.27,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[577, 4940, 4137, 4131, 1631, 522],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[0,436,4751,2032,1081,325]}]->(WBTu),
-(KEWu)-[KEWu_GUNu_lo:TO{mode:'overground',line:'LO North London',distance:1.76089514419355,time:3,speed:35.22,frequency_MTT:[4,12,22,12,12,6],traffic_MTT:[254, 1737, 1356, 2144, 727, 167],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,94,1422,1282,442,89]}]->(GUNu),
-(KEWu)-[KEWu_RMDu_lo:TO{mode:'overground',line:'LO North London',distance:1.93531053157401,time:4,speed:29.03,frequency_MTT:[3,12,21,12,12,8],traffic_MTT:[119, 2033, 1335, 1528, 697, 180],frequency_SUN:[0,3,24,12,12,6],traffic_SUN:[0,111,1901,634,356,93]}]->(RMDu),
-(KNRr)-[KNRr_BSPr_lo:TO{mode:'overground',line:'LO North London',distance:0.965662877021397,time:2,speed:28.97,frequency_MTT:[7,24,49,23,24,10],traffic_MTT:[642, 5817, 4532, 6761, 2621, 574],frequency_SUN:[0,7,48,24,21,7],traffic_SUN:[0,284,4193,2784,1298,261]}]->(BSPr),
-(KNRr)-[KNRr_WJNu_lo:TO{mode:'overground',line:'LO North London',distance:1.72163756054338,time:4,speed:25.82,frequency_MTT:[5,24,47,24,25,16],traffic_MTT:[812, 7088, 4766, 4864, 2256, 651],frequency_SUN:[0,2,48,24,23,9],traffic_SUN:[0,195,4563,2155,1183,295]}]->(WJNu),
-(KTWr)-[KTWr_CMDr_lo:TO{mode:'overground',line:'LO North London',distance:0.764586248892881,time:2,speed:22.94,frequency_MTT:[5,24,48,25,22,13],traffic_MTT:[572, 4770, 5138, 6510, 2839, 748],frequency_SUN:[0,5,48,24,21,9],traffic_SUN:[0,242,4343,2795,1452,357]}]->(CMDr),
-(KTWr)-[KTWr_GPOr_lo:TO{mode:'overground',line:'LO North London',distance:1.01844604783368,time:2,speed:30.55,frequency_MTT:[7,24,48,24,24,14],traffic_MTT:[935, 7875, 5223, 5751, 2603, 996],frequency_SUN:[0,4,48,24,23,7],traffic_SUN:[0,269,5231,2428,1399,398]}]->(GPOr),
-(OLYu)-[OLYu_SPBr_lo:TO{mode:'overground',line:'LO North London',distance:0.965150887095332,time:2,speed:28.95,frequency_MTT:[4,12,23,12,13,8],traffic_MTT:[473, 4083, 4259, 5195, 1982, 499],frequency_SUN:[0,5,25,12,12,8],traffic_SUN:[0,316,4772,2183,1021,325]}]->(SPBr),
-(OLYu)-[OLYu_WBTu_lo:TO{mode:'overground',line:'LO North London',distance:1.58316095330258,time:3,speed:31.66,frequency_MTT:[4,12,24,12,12,9],traffic_MTT:[657, 4152, 3697, 4036, 2296, 615],frequency_SUN:[0,6,24,12,12,10],traffic_SUN:[0,423,3485,2567,1142,292]}]->(WBTu),
-(RMDu)-[RMDu_KEWu_lo:TO{mode:'overground',line:'LO North London',distance:1.93531053157401,time:3,speed:38.71,frequency_MTT:[5,12,21,12,12,6],traffic_MTT:[240, 1482, 1159, 1930, 707, 155],frequency_SUN:[0,5,24,12,12,4],traffic_SUN:[0,96,1279,1039,393,75]}]->(KEWu),
-(SATr)-[SATr_ACCr_lo:TO{mode:'overground',line:'LO North London',distance:1.1208404781862,time:2,speed:33.63,frequency_MTT:[4,12,25,12,11,7],traffic_MTT:[442, 2410, 1894, 4131, 1195, 270],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,147,1819,1441,631,147]}]->(ACCr),
-(SATr)-[SATr_GUNu_lo:TO{mode:'overground',line:'LO North London',distance:0.960445230318223,time:3,speed:19.21,frequency_MTT:[3,12,21,12,12,8],traffic_MTT:[257, 3471, 2019, 1798, 851, 258],frequency_SUN:[0,3,24,12,12,6],traffic_SUN:[0,139,2463,852,492,134]}]->(GUNu),
-(SFDu)-[SFDu_HKWr_lo:TO{mode:'overground',line:'LO North London',distance:1.50265638997677,time:4,speed:22.54,frequency_MTT:[10,24,48,24,24,11],traffic_MTT:[1608, 8592, 6465, 5453, 2982, 906],frequency_SUN:[0,7,48,24,22,6],traffic_SUN:[0,480,6394,3827,1903,290]}]->(HKWr),
-(SPBr)-[SPBr_OLYu_lo:TO{mode:'overground',line:'LO North London',distance:0.965150887095332,time:2,speed:28.95,frequency_MTT:[4,12,24,12,12,9],traffic_MTT:[677, 4893, 3982, 3495, 2124, 599],frequency_SUN:[0,6,24,12,12,10],traffic_SUN:[0,441,3733,2449,1125,276]}]->(OLYu),
-(SPBr)-[SPBr_WJNu_lo:TO{mode:'overground',line:'LO North London',distance:3.55681089946443,time:7,speed:30.49,frequency_MTT:[4,12,23,12,12,8],traffic_MTT:[363, 2004, 2646, 4244, 1639, 429],frequency_SUN:[0,5,25,12,12,8],traffic_SUN:[0,163,2244,1841,782,150]}]->(WJNu),
-(WBTu)-[WBTu_IMWr_lo:TO{mode:'overground',line:'LO North London',distance:1.6133447397928,time:2,speed:48.4,frequency_MTT:[4,11,25,12,12,9],traffic_MTT:[544, 3604, 3570, 4073, 2382, 602],frequency_SUN:[0,6,24,12,12,10],traffic_SUN:[0,399,3319,2374,1176,307]}]->(IMWr),
-(WBTu)-[WBTu_OLYu_lo:TO{mode:'overground',line:'LO North London',distance:1.58316095330258,time:3,speed:31.66,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[550, 5060, 4614, 4648, 1759, 511],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[0,423,5048,2052,1049,322]}]->(OLYu),
-(WHDr)-[WHDr_BSYr_lo:TO{mode:'overground',line:'LO North London',distance:0.813065512990906,time:2,speed:24.39,frequency_MTT:[6,23,48,24,25,15],traffic_MTT:[738, 6343, 4997, 5654, 2553, 868],frequency_SUN:[0,2,48,24,23,9],traffic_SUN:[0,160,4550,2562,1418,422]}]->(BSYr),
-(WHDr)-[WHDr_FNYr_lo:TO{mode:'overground',line:'LO North London',distance:0.638946635001751,time:2,speed:19.17,frequency_MTT:[6,25,47,24,23,12],traffic_MTT:[906, 7024, 5209, 6344, 2824, 642],frequency_SUN:[0,6,49,24,21,7],traffic_SUN:[0,328,5276,2846,1414,325]}]->(FNYr),
-(WJNu)-[WJNu_ACCr_lo:TO{mode:'overground',line:'LO North London',distance:2.93863326891045,time:5,speed:35.26,frequency_MTT:[3,13,24,12,12,7],traffic_MTT:[255, 4392, 2460, 2615, 1318, 407],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,159,2560,1210,753,218]}]->(ACCr),
-(WJNu)-[WJNu_KNRr_lo:TO{mode:'overground',line:'LO North London',distance:1.72163756054338,time:3,speed:34.43,frequency_MTT:[8,23,49,24,23,10],traffic_MTT:[684, 5329, 4447, 7046, 2496, 584],frequency_SUN:[0,7,49,24,21,6],traffic_SUN:[0,258,3851,2760,1256,249]}]->(KNRr),
-(WJNu)-[WJNu_SPBr_lo:TO{mode:'overground',line:'LO North London',distance:3.55681089946443,time:7,speed:30.49,frequency_MTT:[5,12,23,12,12,9],traffic_MTT:[514, 4714, 3268, 2444, 1034, 287],frequency_SUN:[0,6,24,12,12,10],traffic_SUN:[0,258,3183,1313,686,152]}]->(SPBr),
-(EMPr)-[EMPr_RMFr_lo:TO{mode:'overground',line:'LO Romford–Upminster',distance:2.64771287566114,time:5,speed:31.77,frequency_MTT:[2,6,12,6,6,0],traffic_MTT:[48, 252, 179, 109, 31, 1],frequency_SUN:[0,3,12,6,2,0],traffic_SUN:[0,46,146,39,9,0]}]->(RMFr),
-(EMPr)-[EMPr_UPMu_lo:TO{mode:'overground',line:'LO Romford–Upminster',distance:2.3871118110273,time:4,speed:35.81,frequency_MTT:[2,6,12,6,6,0],traffic_MTT:[74, 319, 130, 135, 41, 1],frequency_SUN:[0,3,12,6,2,0],traffic_SUN:[0,28,68,18,4,0]}]->(UPMu),
-(RMFr)-[RMFr_EMPr_lo:TO{mode:'overground',line:'LO Romford–Upminster',distance:2.64771287566114,time:5,speed:31.77,frequency_MTT:[2,6,12,6,6,0],traffic_MTT:[41, 141, 149, 208, 78, 2],frequency_SUN:[0,3,12,6,2,0],traffic_SUN:[0,13,78,43,17,0]}]->(EMPr),
-(UPMu)-[UPMu_EMPr_lo:TO{mode:'overground',line:'LO Romford–Upminster',distance:2.3871118110273,time:4,speed:35.81,frequency_MTT:[2,6,12,6,6,0],traffic_MTT:[13, 119, 125, 182, 48, 1],frequency_SUN:[0,3,12,6,2,0],traffic_SUN:[0,11,64,38,13,0]}]->(EMPr),
-(BSHr)-[BSHr_CPKr_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.9293889614361,time:3,speed:38.59,frequency_MTT:[6,12,24,12,12,6],traffic_MTT:[328, 1034, 1496, 1805, 580, 117],frequency_SUN:[1,7,24,12,12,6],traffic_SUN:[30,285,1290,879,516,126]}]->(CPKr),
-(BSHr)-[BSHr_WFHr_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:0.882350189400694,time:2,speed:26.47,frequency_MTT:[3,12,24,12,12,9],traffic_MTT:[273, 2067, 1358, 789, 416, 107],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[10,408,1568,597,401,114]}]->(WFHr),
-(CPKr)-[CPKr_HTEr_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:2.42481712726801,time:3,speed:48.5,frequency_MTT:[6,12,24,12,12,6],traffic_MTT:[493, 1476, 1422, 1567, 476, 93],frequency_SUN:[1,7,24,12,12,6],traffic_SUN:[45,348,1319,783,459,97]}]->(HTEr),
-(EUSr)-[EUSr_SOHr_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:3.45225156727971,time:5,speed:41.43,frequency_MTT:[6,12,24,12,12,7],traffic_MTT:[288, 888, 1060, 1887, 1008, 477],frequency_SUN:[1,8,24,12,12,7],traffic_SUN:[22,210,1290,1076,871,360]}]->(SOHr),
-(HARu)-[HARu_SPKu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.53132600141358,time:2,speed:45.94,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[514, 1828, 1947, 3101, 1703, 545],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[8,296,1851,1361,1009,349]}]->(SPKu),
-(HARu)-[HARu_WJNu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.00331795457073,time:2,speed:30.1,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[869, 2902, 2423, 1621, 613, 151],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[28,647,2253,918,568,120]}]->(WJNu),
-(HAWu)-[HAWu_HDLr_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.9551434899477,time:3,speed:39.1,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[529, 1818, 1235, 1771, 851, 259],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[8,370,1471,832,583,166]}]->(HDLr),
-(HAWu)-[HAWu_KETu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.67829589655437,time:3,speed:33.57,frequency_MTT:[5,12,24,12,12,7],traffic_MTT:[672, 2079, 1638, 1498, 548, 130],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[40,502,1640,771,514,148]}]->(KETu),
-(HDLr)-[HDLr_HAWu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.9551434899477,time:3,speed:39.1,frequency_MTT:[6,11,24,12,12,7],traffic_MTT:[636, 2016, 1502, 1425, 502, 107],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[26,391,1394,742,474,114]}]->(HAWu),
-(HDLr)-[HDLr_HTEr_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.09027506291567,time:1,speed:32.81,frequency_MTT:[3,12,24,12,12,9],traffic_MTT:[426, 1825, 1197, 1514, 792, 236],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[8,350,1426,795,560,176]}]->(HTEr),
-(HTEr)-[HTEr_CPKr_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:2.42481712726801,time:3,speed:48.5,frequency_MTT:[3,12,24,12,12,9],traffic_MTT:[475, 2203, 1278, 1243, 648, 192],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[9,383,1489,743,520,161]}]->(CPKr),
-(HTEr)-[HTEr_HDLr_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.09027506291567,time:2,speed:32.71,frequency_MTT:[6,12,24,12,12,6],traffic_MTT:[558, 1849, 1395, 1378, 435, 89],frequency_SUN:[1,7,24,12,12,6],traffic_SUN:[49,377,1348,725,419,92]}]->(HDLr),
-(KBNr)-[KBNr_QPKu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:0.958179550407823,time:2,speed:28.75,frequency_MTT:[5,12,24,12,12,8],traffic_MTT:[222, 946, 1109, 1846, 1065, 517],frequency_SUN:[1,7,24,12,12,8],traffic_SUN:[25,224,1284,984,803,387]}]->(QPKu),
-(KBNr)-[KBNr_SOHr_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.03574397286941,time:2,speed:31.07,frequency_MTT:[5,12,24,12,12,7],traffic_MTT:[347, 1693, 1091, 807, 244, 59],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[22,391,1223,570,285,71]}]->(SOHr),
-(KETu)-[KETu_HAWu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.67829589655437,time:3,speed:33.57,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[619, 1762, 1377, 1686, 944, 289],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[18,407,1491,913,633,170]}]->(HAWu),
-(KETu)-[KETu_SKTu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.41809999067314,time:2,speed:42.54,frequency_MTT:[5,12,24,12,12,7],traffic_MTT:[794, 2127, 1693, 1487, 539, 127],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[44,531,1714,776,507,141]}]->(SKTu),
-(KGNu)-[KGNu_QPKu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.44611648975106,time:2,speed:43.38,frequency_MTT:[5,12,24,12,12,8],traffic_MTT:[802, 2255, 2292, 1323, 475, 123],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[30,656,2316,913,484,96]}]->(QPKu),
-(KGNu)-[KGNu_WJNu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.36782092929863,time:2,speed:41.03,frequency_MTT:[5,12,24,12,12,8],traffic_MTT:[427, 1679, 1635, 2206, 1411, 552],frequency_SUN:[1,7,24,12,12,8],traffic_SUN:[18,296,1746,1302,986,376]}]->(WJNu),
-(NWBu)-[NWBu_SKTu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:0.902657087435475,time:2,speed:27.08,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[531, 1696, 1530, 2224, 1231, 353],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[19,390,1597,1088,761,225]}]->(SKTu),
-(NWBu)-[NWBu_WEMu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.25702127673226,time:2,speed:37.71,frequency_MTT:[5,12,24,12,12,7],traffic_MTT:[1026, 2515, 1938, 1471, 526, 123],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[52,605,1998,823,511,136]}]->(WEMu),
-(QPKu)-[QPKu_KBNr_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:0.958179550407823,time:2,speed:28.75,frequency_MTT:[5,12,24,12,12,8],traffic_MTT:[688, 1803, 1024, 760, 227, 56],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[22,396,1166,526,274,70]}]->(KBNr),
-(QPKu)-[QPKu_KGNu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.44611648975106,time:2,speed:43.38,frequency_MTT:[5,12,24,12,12,8],traffic_MTT:[381, 1596, 1699, 2387, 1583, 634],frequency_SUN:[1,7,24,12,12,8],traffic_SUN:[20,295,1851,1431,1102,433]}]->(KGNu),
-(SKTu)-[SKTu_KETu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.41809999067314,time:2,speed:42.54,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[570, 1742, 1405, 1911, 1053, 313],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[20,406,1534,985,690,198]}]->(KETu),
-(SKTu)-[SKTu_NWBu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:0.902657087435475,time:2,speed:27.08,frequency_MTT:[5,12,24,12,12,7],traffic_MTT:[904, 2332, 1779, 1437, 516, 125],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[48,564,1852,786,499,140]}]->(NWBu),
-(SOHr)-[SOHr_EUSr_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:3.45225156727971,time:9,speed:23.02,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[302, 1636, 1125, 832, 261, 68],frequency_SUN:[0,5,24,12,12,9],traffic_SUN:[0,377,1272,583,307,87]}]->(EUSr),
-(SOHr)-[SOHr_KBNr_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.03574397286941,time:2,speed:31.07,frequency_MTT:[5,12,24,12,12,8],traffic_MTT:[256, 957, 1068, 1876, 1102, 532],frequency_SUN:[1,7,24,12,12,8],traffic_SUN:[23,214,1293,1022,861,400]}]->(KBNr),
-(SPKu)-[SPKu_HARu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.53132600141358,time:3,speed:30.63,frequency_MTT:[5,12,24,12,12,7],traffic_MTT:[1138, 2874, 2320, 1540, 581, 137],frequency_SUN:[0,7,23,12,13,7],traffic_SUN:[28,670,2148,925,584,115]}]->(HARu),
-(SPKu)-[SPKu_WEMu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.69649840515113,time:3,speed:33.93,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[486, 1831, 1847, 2910, 1648, 525],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[10,286,1762,1281,963,337]}]->(WEMu),
-(WEMu)-[WEMu_NWBu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.25702127673226,time:2,speed:37.71,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[522, 1696, 1608, 2448, 1382, 413],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[19,385,1662,1180,829,257]}]->(NWBu),
-(WEMu)-[WEMu_SPKu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.69649840515113,time:3,speed:33.93,frequency_MTT:[5,12,24,12,12,7],traffic_MTT:[1254, 2702, 2200, 1502, 555, 125],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[55,669,2106,910,530,113]}]->(SPKu),
-(WFHr)-[WFHr_WFJr_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.28552905749959,time:5,speed:15.43,frequency_MTT:[3,12,24,12,12,9],traffic_MTT:[188, 1370, 793, 438, 214, 47],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[8,307,991,468,287,77]}]->(WFJr),
-(WFJr)-[WFJr_WFHr_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.28552905749959,time:3,speed:25.71,frequency_MTT:[7,11,24,12,12,6],traffic_MTT:[215, 531, 446, 1037, 392, 63],frequency_SUN:[1,7,24,12,12,6],traffic_SUN:[14,163,730,411,414,122]}]->(WFHr),
-(WJNu)-[WJNu_HARu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.00331795457073,time:2,speed:30.1,frequency_MTT:[5,12,24,12,12,7],traffic_MTT:[683, 1867, 2003, 3157, 1674, 532],frequency_SUN:[1,7,24,12,11,7],traffic_SUN:[15,319,1912,1439,1022,350]}]->(HARu),
-(WJNu)-[WJNu_KGNu_lo:TO{mode:'overground',line:'LO Watford-Euston',distance:1.36782092929863,time:3,speed:27.36,frequency_MTT:[5,12,24,12,12,8],traffic_MTT:[759, 2007, 2108, 1299, 464, 120],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[30,635,2115,859,475,99]}]->(KGNu),
-(BCVr)-[BCVr_SVSu_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.35356350188097,time:2,speed:40.61,frequency_MTT:[6,18,24,16,13,8],traffic_MTT:[2624, 9454, 6492, 4155, 1326, 344],frequency_SUN:[0,9,24,12,12,8],traffic_SUN:[0,1151,5199,1882,926,230]}]->(SVSu),
-(BCVr)-[BCVr_WHLr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.23466844144941,time:2,speed:37.04,frequency_MTT:[5,17,24,17,13,10],traffic_MTT:[553, 3240, 4277, 7469, 4355, 1549],frequency_SUN:[0,9,24,12,12,9],traffic_SUN:[0,457,2816,2273,1722,651]}]->(WHLr),
-(BETr)-[BETr_CBHr_lo:TO{mode:'overground',line:'LO West Anglia',distance:0.910265361011488,time:13,speed:4.2,frequency_MTT:[10,28,48,29,25,22],traffic_MTT:[307, 1603, 4115, 9659, 5097, 1892],frequency_SUN:[0,19,48,24,24,21],traffic_SUN:[0,269,2724,2339,1442,599]}]->(CBHr),
-(BETr)-[BETr_LSTr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.65420542013967,time:7,speed:14.18,frequency_MTT:[10,31,48,27,26,17],traffic_MTT:[2004, 12157, 4955, 2543, 775, 281],frequency_SUN:[0,20,48,24,24,16],traffic_SUN:[28,807,3453,1114,561,195]}]->(LSTr),
-(BHKr)-[BHKr_EDRr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.92931051068657,time:2,speed:57.88,frequency_MTT:[4,11,12,10,7,3],traffic_MTT:[863, 3108, 1553, 1131, 240, 42],frequency_SUN:[0,5,12,6,6,3],traffic_SUN:[0,322,1334,486,174,31]}]->(EDRr),
-(BHKr)-[BHKr_ENFr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.36235362977172,time:5,speed:16.35,frequency_MTT:[2,11,12,11,7,5],traffic_MTT:[18, 754, 793, 1346, 638, 175],frequency_SUN:[0,5,12,6,6,5],traffic_SUN:[0,73,582,353,221,81]}]->(ENFr),
-(CBHr)-[CBHr_BETr_lo:TO{mode:'overground',line:'LO West Anglia',distance:0.910265361011488,time:2,speed:27.31,frequency_MTT:[10,31,48,28,25,17],traffic_MTT:[2154, 12933, 5514, 2941, 887, 328],frequency_SUN:[0,20,48,24,24,16],traffic_SUN:[28,827,3999,1353,683,250]}]->(BETr),
-(CBHr)-[CBHr_LOFr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.02188269647449,time:2,speed:30.66,frequency_MTT:[10,28,48,29,25,22],traffic_MTT:[353, 1784, 4442, 10002, 5288, 1952],frequency_SUN:[0,19,48,24,24,21],traffic_SUN:[0,301,3073,2518,1539,641]}]->(LOFr),
-(CHIr)-[CHIr_HIPr_lo:TO{mode:'overground',line:'LO West Anglia',distance:2.84006538594257,time:4,speed:42.6,frequency_MTT:[8,12,24,12,12,6],traffic_MTT:[519, 1994, 776, 357, 91, 21],frequency_SUN:[2,12,24,12,12,5],traffic_SUN:[10,118,880,289,68,10]}]->(HIPr),
-(CHNr)-[CHNr_TEOr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.38157671186467,time:3,speed:27.63,frequency_MTT:[4,6,12,6,6,4],traffic_MTT:[71, 196, 150, 135, 54, 14],frequency_SUN:[0,5,12,6,6,4],traffic_SUN:[0,76,330,69,36,6]}]->(TEOr),
-(CPTr)-[CPTr_HACr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.45773976968082,time:4,speed:21.87,frequency_MTT:[6,13,24,12,12,7],traffic_MTT:[1420, 7637, 2424, 1257, 350, 87],frequency_SUN:[1,12,24,12,12,6],traffic_SUN:[55,538,2335,687,259,74]}]->(HACr),
-(CPTr)-[CPTr_SJSr_lo:TO{mode:'overground',line:'LO West Anglia',distance:2.72436117930871,time:3,speed:54.49,frequency_MTT:[3,12,24,12,12,13],traffic_MTT:[96, 955, 2128, 5101, 2350, 879],frequency_SUN:[0,9,24,12,12,13],traffic_SUN:[0,177,1714,1251,655,309]}]->(SJSr),
-(EDRr)-[EDRr_BHKr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.92931051068657,time:3,speed:38.59,frequency_MTT:[2,11,12,11,7,5],traffic_MTT:[37, 912, 1070, 2172, 1145, 365],frequency_SUN:[0,5,12,6,6,5],traffic_SUN:[0,102,775,549,370,136]}]->(BHKr),
-(EDRr)-[EDRr_SBUr_lo:TO{mode:'overground',line:'LO West Anglia',distance:2.71265023266594,time:2,speed:81.38,frequency_MTT:[2,7,12,6,6,5],traffic_MTT:[348, 1243, 1239, 1655, 1019, 364],frequency_SUN:[0,4,12,6,6,4],traffic_SUN:[0,160,778,520,414,147]}]->(SBUr),
-(EDRr)-[EDRr_SLVr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.21589233993342,time:2,speed:36.48,frequency_MTT:[7,18,24,16,13,7],traffic_MTT:[2119, 6862, 4442, 2609, 749, 139],frequency_SUN:[0,10,24,12,12,7],traffic_SUN:[0,926,3648,1254,549,110]}]->(SLVr),
-(ENFr)-[ENFr_BHKr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.36235362977172,time:3,speed:27.25,frequency_MTT:[4,11,12,10,7,3],traffic_MTT:[511, 1779, 1079, 885, 167, 25],frequency_SUN:[0,5,12,6,6,3],traffic_SUN:[0,177,882,354,110,23]}]->(BHKr),
-(HACr)-[HACr_CPTr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.45773976968082,time:3,speed:29.15,frequency_MTT:[3,12,24,12,12,13],traffic_MTT:[71, 650, 2083, 5410, 2822, 976],frequency_SUN:[0,9,24,12,12,13],traffic_SUN:[0,119,1500,1306,757,325]}]->(CPTr),
-(HACr)-[HACr_LOFr_lo:TO{mode:'overground',line:'LO West Anglia',distance:0.872338216364156,time:2,speed:26.17,frequency_MTT:[11,31,48,28,25,16],traffic_MTT:[2337, 13054, 5965, 3308, 1024, 408],frequency_SUN:[1,20,48,24,24,15],traffic_SUN:[56,893,4772,1664,823,282]}]->(LOFr),
-(HACr)-[HACr_RECr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.20099480544652,time:3,speed:24.02,frequency_MTT:[6,17,24,17,13,9],traffic_MTT:[295, 1699, 2784, 5048, 2549, 942],frequency_SUN:[0,10,24,12,12,8],traffic_SUN:[0,284,2056,1434,911,330]}]->(RECr),
-(HIPr)-[HIPr_CHIr_lo:TO{mode:'overground',line:'LO West Anglia',distance:2.84006538594257,time:4,speed:42.6,frequency_MTT:[2,12,24,12,12,14],traffic_MTT:[10, 240, 606, 1544, 886, 261],frequency_SUN:[0,8,24,12,12,14],traffic_SUN:[0,31,688,335,204,74]}]->(CHIr),
-(HIPr)-[HIPr_WSTr_lo:TO{mode:'overground',line:'LO West Anglia',distance:2.4268422656824,time:2,speed:72.81,frequency_MTT:[7,13,24,12,12,6],traffic_MTT:[1078, 4984, 1777, 854, 205, 39],frequency_SUN:[2,12,24,12,12,5],traffic_SUN:[35,354,1854,536,147,24]}]->(WSTr),
-(LOFr)-[LOFr_CBHr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.02188269647449,time:2,speed:30.66,frequency_MTT:[10,32,48,27,26,16],traffic_MTT:[2261, 13303, 5862, 3135, 1045, 377],frequency_SUN:[0,21,48,24,24,15],traffic_SUN:[46,886,4482,1517,758,259]}]->(CBHr),
-(LOFr)-[LOFr_HACr_lo:TO{mode:'overground',line:'LO West Anglia',distance:0.872338216364156,time:2,speed:26.17,frequency_MTT:[10,28,48,29,25,22],traffic_MTT:[381, 1927, 4508, 9983, 5163, 1925],frequency_SUN:[0,19,48,24,24,21],traffic_SUN:[0,334,3252,2580,1575,649]}]->(HACr),
-(LSTr)-[LSTr_BETr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.65420542013967,time:3,speed:33.08,frequency_MTT:[10,28,48,29,25,22],traffic_MTT:[272, 1367, 3660, 8971, 4805, 1809],frequency_SUN:[0,19,48,24,24,21],traffic_SUN:[0,236,2251,2096,1307,554]}]->(BETr),
-(RECr)-[RECr_HACr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.20099480544652,time:3,speed:24.02,frequency_MTT:[5,19,24,15,14,8],traffic_MTT:[1149, 6108, 3593, 2095, 835, 301],frequency_SUN:[0,9,24,12,12,8],traffic_SUN:[0,469,2842,1130,594,192]}]->(HACr),
-(RECr)-[RECr_SKWr_lo:TO{mode:'overground',line:'LO West Anglia',distance:0.814537674786838,time:2,speed:24.44,frequency_MTT:[6,17,24,17,13,9],traffic_MTT:[330, 2063, 2844, 4893, 2385, 895],frequency_SUN:[0,10,24,12,12,8],traffic_SUN:[0,339,2206,1427,886,314]}]->(SKWr),
-(SBUr)-[SBUr_EDRr_lo:TO{mode:'overground',line:'LO West Anglia',distance:2.71265023266594,time:3,speed:54.25,frequency_MTT:[3,7,12,6,6,4],traffic_MTT:[643, 2061, 1581, 856, 307, 65],frequency_SUN:[0,5,12,6,6,4],traffic_SUN:[0,328,1263,388,197,46]}]->(EDRr),
-(SBUr)-[SBUr_TURr_lo:TO{mode:'overground',line:'LO West Anglia',distance:2.68609107134557,time:3,speed:53.72,frequency_MTT:[2,7,12,6,6,5],traffic_MTT:[95, 712, 877, 1215, 742, 248],frequency_SUN:[0,4,12,6,6,4],traffic_SUN:[0,114,521,344,263,95]}]->(TURr),
-(SJSr)-[SJSr_CPTr_lo:TO{mode:'overground',line:'LO West Anglia',distance:2.72436117930871,time:4,speed:40.87,frequency_MTT:[7,12,24,12,12,7],traffic_MTT:[1677, 6554, 2265, 1235, 505, 125],frequency_SUN:[1,12,24,12,12,6],traffic_SUN:[51,468,2229,750,324,75]}]->(CPTr),
-(SJSr)-[SJSr_WALu_lo:TO{mode:'overground',line:'LO West Anglia',distance:0.933490056823186,time:2,speed:28,frequency_MTT:[2,12,24,12,12,14],traffic_MTT:[60, 959, 1764, 4241, 2243, 844],frequency_SUN:[0,8,24,12,12,14],traffic_SUN:[0,138,1538,1098,599,291]}]->(WALu),
-(SKWr)-[SKWr_RECr_lo:TO{mode:'overground',line:'LO West Anglia',distance:0.814537674786838,time:1,speed:48.87,frequency_MTT:[6,18,24,15,14,8],traffic_MTT:[1169, 5707, 3532, 2253, 971, 330],frequency_SUN:[0,9,24,12,12,8],traffic_SUN:[0,460,2794,1194,662,213]}]->(RECr),
-(SKWr)-[SKWr_SMHr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.06052691081156,time:2,speed:31.82,frequency_MTT:[6,17,24,17,13,9],traffic_MTT:[360, 2377, 2922, 4870, 2287, 842],frequency_SUN:[0,10,24,12,12,8],traffic_SUN:[0,405,2265,1422,882,310]}]->(SMHr),
-(SLVr)-[SLVr_EDRr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.21589233993342,time:2,speed:36.48,frequency_MTT:[4,18,24,17,13,10],traffic_MTT:[399, 2516, 3174, 5310, 3313, 1115],frequency_SUN:[0,9,24,12,12,9],traffic_SUN:[0,328,2119,1643,1240,466]}]->(EDRr),
-(SLVr)-[SLVr_WHLr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.10352015432038,time:2,speed:33.11,frequency_MTT:[6,18,24,17,12,8],traffic_MTT:[2349, 7839, 5335, 3474, 919, 224],frequency_SUN:[0,9,24,12,12,8],traffic_SUN:[0,970,4285,1576,773,188]}]->(WHLr),
-(SMHr)-[SMHr_SKWr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.06052691081156,time:1,speed:32.81,frequency_MTT:[6,18,24,15,14,8],traffic_MTT:[1206, 5407, 3433, 2378, 1040, 350],frequency_SUN:[0,9,24,12,12,8],traffic_SUN:[0,465,2771,1222,703,222]}]->(SKWr),
-(SMHr)-[SMHr_SVSu_lo:TO{mode:'overground',line:'LO West Anglia',distance:0.87343591664596,time:2,speed:26.2,frequency_MTT:[6,16,24,17,13,10],traffic_MTT:[349, 2297, 2814, 4727, 2400, 923],frequency_SUN:[0,9,24,12,12,9],traffic_SUN:[0,353,2241,1402,926,349]}]->(SVSu),
-(SVSu)-[SVSu_BCVr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.35356350188097,time:2,speed:40.61,frequency_MTT:[5,17,24,17,13,10],traffic_MTT:[577, 3251, 4537, 8177, 4678, 1721],frequency_SUN:[0,9,24,12,12,9],traffic_SUN:[0,456,3004,2450,1845,705]}]->(BCVr),
-(SVSu)-[SVSu_SMHr_lo:TO{mode:'overground',line:'LO West Anglia',distance:0.87343591664596,time:2,speed:26.2,frequency_MTT:[6,18,24,16,13,8],traffic_MTT:[1236, 5298, 3335, 2354, 1032, 338],frequency_SUN:[0,9,24,12,12,8],traffic_SUN:[0,469,2670,1202,675,215]}]->(SMHr),
-(TEOr)-[TEOr_CHNr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.38157671186467,time:5,speed:16.58,frequency_MTT:[2,7,12,6,6,5],traffic_MTT:[30, 127, 115, 179, 60, 19],frequency_SUN:[0,4,12,6,6,4],traffic_SUN:[0,39,202,83,73,30]}]->(CHNr),
-(TEOr)-[TEOr_TURr_lo:TO{mode:'overground',line:'LO West Anglia',distance:2.36667910938284,time:2,speed:71,frequency_MTT:[4,6,12,6,6,4],traffic_MTT:[322, 738, 474, 268, 118, 24],frequency_SUN:[0,5,12,6,6,4],traffic_SUN:[0,151,515,131,73,12]}]->(TURr),
-(TURr)-[TURr_SBUr_lo:TO{mode:'overground',line:'LO West Anglia',distance:2.68609107134557,time:3,speed:53.72,frequency_MTT:[4,6,12,6,6,4],traffic_MTT:[603, 1538, 1120, 519, 206, 42],frequency_SUN:[0,5,12,6,6,4],traffic_SUN:[0,241,877,253,126,25]}]->(SBUr),
-(TURr)-[TURr_TEOr_lo:TO{mode:'overground',line:'LO West Anglia',distance:2.36667910938284,time:2,speed:71,frequency_MTT:[2,7,12,6,6,5],traffic_MTT:[58, 281, 354, 631, 329, 102],frequency_SUN:[0,4,12,6,6,4],traffic_SUN:[0,60,318,177,149,54]}]->(TEOr),
-(WALu)-[WALu_SJSr_lo:TO{mode:'overground',line:'LO West Anglia',distance:0.933490056823186,time:2,speed:28,frequency_MTT:[7,12,24,12,12,7],traffic_MTT:[1477, 5713, 1979, 1130, 474, 120],frequency_SUN:[1,12,24,12,12,6],traffic_SUN:[41,367,1884,663,288,70]}]->(SJSr),
-(WALu)-[WALu_WSTr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.27360639748703,time:2,speed:38.21,frequency_MTT:[2,12,24,12,12,14],traffic_MTT:[45, 855, 1779, 4439, 2511, 889],frequency_SUN:[0,8,24,12,12,14],traffic_SUN:[0,100,1615,1333,772,292]}]->(WSTr),
-(WHLr)-[WHLr_BCVr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.23466844144941,time:2,speed:37.04,frequency_MTT:[6,18,24,16,13,8],traffic_MTT:[2631, 8644, 6021, 3990, 1144, 251],frequency_SUN:[0,9,24,12,12,8],traffic_SUN:[0,1079,4858,1750,865,215]}]->(BCVr),
-(WHLr)-[WHLr_SLVr_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.10352015432038,time:2,speed:33.11,frequency_MTT:[5,17,24,17,13,10],traffic_MTT:[536, 2833, 3821, 6727, 3964, 1390],frequency_SUN:[0,9,24,12,12,9],traffic_SUN:[0,416,2524,2067,1548,583]}]->(SLVr),
-(WSTr)-[WSTr_HIPr_lo:TO{mode:'overground',line:'LO West Anglia',distance:2.4268422656824,time:3,speed:48.54,frequency_MTT:[2,12,24,12,12,14],traffic_MTT:[30, 583, 1329, 3478, 1906, 598],frequency_SUN:[0,8,24,12,12,14],traffic_SUN:[0,70,1232,861,512,188]}]->(HIPr),
-(WSTr)-[WSTr_WALu_lo:TO{mode:'overground',line:'LO West Anglia',distance:1.27360639748703,time:1,speed:76.42,frequency_MTT:[7,12,24,12,12,7],traffic_MTT:[1394, 6108, 2435, 1412, 342, 80],frequency_SUN:[1,12,24,12,12,6],traffic_SUN:[36,511,2587,761,266,51]}]->(WALu)
+(ACCr)-[ACCr_SATr_lo:TO{mode:'overground',line:'lo north london',distance:1.1208404781862,time:3,speed:22.42,frequency_MTT:[3,13,24,12,11,8],traffic_MTT:[263, 4148, 2332, 2077, 1057, 333],frequency_FRI:[3,13,24,12,11,8],traffic_FRI:[233,3784,2419,2042,1073,406],frequency_SAT:[3,12,24,12,12,9],traffic_SAT:[88,1193,3279,1380,805,403],frequency_SUN:[0,3,24,12,12,6],traffic_SUN:[0,130,2534,1048,648,192]}]->(SATr),
+(ACCr)-[ACCr_WJNu_lo:TO{mode:'overground',line:'lo north london',distance:2.93863326891045,time:4,speed:44.08,frequency_MTT:[4,12,25,12,11,7],traffic_MTT:[601, 3066, 2253, 4197, 1332, 275],frequency_FRI:[4,12,25,12,11,7],traffic_FRI:[516,2797,2419,3880,1288,384],frequency_SAT:[4,12,24,12,12,7],traffic_SAT:[174,927,3025,2210,1093,408],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,192,2168,1500,664,150]}]->(WJNu),
+(ANYr)-[ANYr_NWDr_lo:TO{mode:'overground',line:'lo east london',distance:1.80470579426002,time:3,speed:36.09,frequency_MTT:[4,12,24,12,12,10],traffic_MTT:[149, 2338, 1604, 1638, 1047, 447],frequency_FRI:[4,12,24,12,12,10],traffic_FRI:[138,2058,1671,1541,1023,563],frequency_SAT:[3,12,24,12,12,10],traffic_SAT:[39,694,2063,989,711,496],frequency_SUN:[0,6,19,12,12,9],traffic_SUN:[4,268,1493,785,569,248]}]->(NWDr),
+(ANYr)-[ANYr_PNWr_lo:TO{mode:'overground',line:'lo east london',distance:0.696020062679787,time:1,speed:41.76,frequency_MTT:[6,12,24,12,12,7],traffic_MTT:[788, 2350, 2009, 2572, 838, 190],frequency_FRI:[6,12,24,12,12,7],traffic_FRI:[744,2231,2063,2312,894,272],frequency_SAT:[6,12,24,12,12,7],traffic_SAT:[210,725,2263,1400,789,238],frequency_SUN:[1,6,18,12,12,5],traffic_SUN:[47,512,1783,992,504,101]}]->(PNWr),
+(BCVr)-[BCVr_SVSu_lo:TO{mode:'overground',line:'lo west anglia',distance:1.35356350188097,time:2,speed:40.61,frequency_MTT:[6,18,24,16,13,8],traffic_MTT:[2624, 9454, 6492, 4155, 1326, 344],frequency_FRI:[6,18,24,16,13,8],traffic_FRI:[2292,8715,6302,4065,1476,421],frequency_SAT:[4,12,24,12,12,9],traffic_SAT:[679,2784,6899,2667,1523,469],frequency_SUN:[0,9,24,12,12,8],traffic_SUN:[0,1151,5199,1882,926,230]}]->(SVSu),
+(BCVr)-[BCVr_WHLr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.23466844144941,time:2,speed:37.04,frequency_MTT:[5,17,24,17,13,10],traffic_MTT:[553, 3240, 4277, 7469, 4355, 1549],frequency_FRI:[5,17,24,17,13,10],traffic_FRI:[506,2943,4284,6877,4089,1828],frequency_SAT:[6,12,24,12,12,10],traffic_SAT:[178,1178,3796,3316,2299,1508],frequency_SUN:[0,9,24,12,12,9],traffic_SUN:[0,457,2816,2273,1722,651]}]->(WHLr),
+(BCYr)-[BCYr_HPAr_lo:TO{mode:'overground',line:'lo east london',distance:1.72248865276315,time:3,speed:34.45,frequency_MTT:[10,24,48,24,24,18],traffic_MTT:[272, 3390, 4004, 7787, 5543, 2282],frequency_FRI:[10,24,48,24,24,18],traffic_FRI:[247,3012,4317,6942,4884,2669],frequency_SAT:[9,24,48,24,24,18],traffic_SAT:[101,1241,4626,3422,2741,1955],frequency_SUN:[0,12,40,24,24,13],traffic_SUN:[16,551,4041,3164,2101,767]}]->(HPAr),
+(BCYr)-[BCYr_NXGr_lo:TO{mode:'overground',line:'lo east london',distance:1.18270449818994,time:2,speed:35.48,frequency_MTT:[11,24,48,24,24,16],traffic_MTT:[2614, 11566, 6697, 4999, 1743, 418],frequency_FRI:[11,24,48,24,24,17],traffic_FRI:[2288,10920,7341,5206,2227,754],frequency_SAT:[11,24,48,24,24,17],traffic_SAT:[598,2962,8931,4099,2297,893],frequency_SUN:[1,12,38,24,24,11],traffic_SUN:[104,1733,7019,2648,1184,246]}]->(NXGr),
+(BETr)-[BETr_CBHr_lo:TO{mode:'overground',line:'lo west anglia',distance:0.910265361011488,time:13,speed:4.2,frequency_MTT:[10,28,48,29,25,22],traffic_MTT:[307, 1603, 4115, 9659, 5097, 1892],frequency_FRI:[10,28,48,29,25,22],traffic_FRI:[280,1390,4423,8239,4505,2515],frequency_SAT:[10,24,48,24,24,22],traffic_SAT:[123,541,3191,2651,1917,1535],frequency_SUN:[0,19,48,24,24,21],traffic_SUN:[0,269,2724,2339,1442,599]}]->(CBHr),
+(BETr)-[BETr_LSTr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.65420542013967,time:7,speed:14.18,frequency_MTT:[10,31,48,27,26,17],traffic_MTT:[2004, 12157, 4955, 2543, 775, 281],frequency_FRI:[10,31,48,27,26,17],traffic_FRI:[1926,10537,5064,2629,1051,360],frequency_SAT:[9,24,48,24,24,18],traffic_SAT:[301,1536,4716,1718,1023,331],frequency_SUN:[0,20,48,24,24,16],traffic_SUN:[28,807,3453,1114,561,195]}]->(LSTr),
+(BHKr)-[BHKr_EDRr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.92931051068657,time:2,speed:57.88,frequency_MTT:[4,11,12,10,7,3],traffic_MTT:[863, 3108, 1553, 1131, 240, 42],frequency_FRI:[4,11,12,10,7,3],traffic_FRI:[706,2715,1506,1124,278,55],frequency_SAT:[2,6,12,6,6,4],traffic_SAT:[136,686,2260,817,354,91],frequency_SUN:[0,5,12,6,6,3],traffic_SUN:[0,322,1334,486,174,31]}]->(EDRr),
+(BHKr)-[BHKr_ENFr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.36235362977172,time:5,speed:16.35,frequency_MTT:[2,11,12,11,7,5],traffic_MTT:[18, 754, 793, 1346, 638, 175],frequency_FRI:[2,11,12,11,7,5],traffic_FRI:[18,724,789,1197,576,239],frequency_SAT:[3,6,12,6,6,5],traffic_SAT:[23,228,815,713,359,196],frequency_SUN:[0,5,12,6,6,5],traffic_SUN:[0,73,582,353,221,81]}]->(ENFr),
+(BHRu)-[BHRu_STOr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:2.24908483617146,time:3,speed:44.98,frequency_MTT:[3,12,24,12,12,8],traffic_MTT:[343, 2555, 1373, 1087, 498, 180],frequency_FRI:[3,12,24,12,12,8],traffic_FRI:[330,2534,1486,1134,592,254],frequency_SAT:[2,12,24,12,12,8],traffic_SAT:[109,1039,2053,979,607,326],frequency_SUN:[0,4,24,12,12,7],traffic_SUN:[0,180,1822,824,488,142]}]->(STOr),
+(BHRu)-[BHRu_WMWr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:1.33232325842113,time:2,speed:39.97,frequency_MTT:[2,12,24,12,12,7],traffic_MTT:[225, 1438, 1829, 3424, 1474, 411],frequency_FRI:[2,12,24,12,12,7],traffic_FRI:[204,1402,1961,3154,1377,451],frequency_SAT:[2,12,24,12,12,7],traffic_SAT:[96,724,2474,1545,1016,467],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,227,1852,1290,846,226]}]->(WMWr),
+(BKGu)-[BKGu_WGRr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:2.75425310791032,time:3,speed:55.09,frequency_MTT:[4,12,24,12,12,7],traffic_MTT:[626, 2033, 1312, 1198, 459, 122],frequency_FRI:[4,12,24,12,12,7],traffic_FRI:[696,2249,1530,1352,609,187],frequency_SAT:[3,12,24,12,12,7],traffic_SAT:[255,849,1729,860,503,195],frequency_SUN:[0,5,24,12,12,6],traffic_SUN:[0,337,1661,753,457,118]}]->(WGRr),
+(BSHr)-[BSHr_CPKr_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.9293889614361,time:3,speed:38.59,frequency_MTT:[6,12,24,12,12,6],traffic_MTT:[328, 1034, 1496, 1805, 580, 117],frequency_FRI:[6,12,24,12,12,6],traffic_FRI:[326,1022,1754,1734,654,175],frequency_SAT:[5,12,24,12,12,7],traffic_SAT:[196,645,2005,1529,920,265],frequency_SUN:[1,7,24,12,12,6],traffic_SUN:[30,285,1290,879,516,126]}]->(CPKr),
+(BSHr)-[BSHr_WFHr_lo:TO{mode:'overground',line:'lo watford-euston',distance:0.882350189400694,time:2,speed:26.47,frequency_MTT:[3,12,24,12,12,9],traffic_MTT:[273, 2067, 1358, 789, 416, 107],frequency_FRI:[3,12,24,12,12,9],traffic_FRI:[324,2015,1479,872,470,165],frequency_SAT:[2,12,24,12,12,9],traffic_SAT:[220,1176,2408,903,574,224],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[10,408,1568,597,401,114]}]->(WFHr),
+(BSPr)-[BSPr_BSYr_lo:TO{mode:'overground',line:'lo north london',distance:0.735695682830388,time:1,speed:44.14,frequency_MTT:[7,24,48,24,23,11],traffic_MTT:[655, 5828, 4718, 6955, 2654, 563],frequency_FRI:[7,24,48,24,23,11],traffic_FRI:[643,5476,4953,6356,2561,725],frequency_SAT:[7,24,48,24,24,11],traffic_SAT:[370,2358,5665,3987,2287,767],frequency_SUN:[0,7,48,24,21,7],traffic_SUN:[0,299,4364,2751,1284,262]}]->(BSYr),
+(BSPr)-[BSPr_KNRr_lo:TO{mode:'overground',line:'lo north london',distance:0.965662877021397,time:2,speed:28.97,frequency_MTT:[5,24,48,23,26,15],traffic_MTT:[841, 6985, 4937, 5346, 2439, 756],frequency_FRI:[5,24,48,23,26,15],traffic_FRI:[697,6425,5115,5247,2544,931],frequency_SAT:[6,24,48,24,24,17],traffic_SAT:[278,2476,6655,3458,2076,948],frequency_SUN:[0,2,48,24,23,9],traffic_SUN:[0,185,4557,2323,1317,390]}]->(KNRr),
+(BSYr)-[BSYr_BSPr_lo:TO{mode:'overground',line:'lo north london',distance:0.735695682830388,time:1,speed:44.14,frequency_MTT:[6,23,48,24,25,15],traffic_MTT:[890, 7180, 5021, 5426, 2507, 847],frequency_FRI:[6,23,48,24,25,15],traffic_FRI:[733,6630,5201,5294,2615,1029],frequency_SAT:[6,24,48,24,24,17],traffic_SAT:[289,2517,6634,3508,2128,1006],frequency_SUN:[0,2,48,24,23,9],traffic_SUN:[0,183,4638,2435,1368,413]}]->(BSPr),
+(BSYr)-[BSYr_WHDr_lo:TO{mode:'overground',line:'lo north london',distance:0.813065512990906,time:2,speed:24.39,frequency_MTT:[6,25,48,24,23,11],traffic_MTT:[654, 6330, 4634, 6237, 2519, 557],frequency_FRI:[6,25,48,24,23,11],traffic_FRI:[621,5910,4845,5775,2444,705],frequency_SAT:[7,24,48,24,24,11],traffic_SAT:[404,2382,5828,3840,2290,771],frequency_SUN:[0,7,48,24,21,7],traffic_SUN:[0,329,4608,2711,1308,270]}]->(WHDr),
+(CBHr)-[CBHr_BETr_lo:TO{mode:'overground',line:'lo west anglia',distance:0.910265361011488,time:2,speed:27.31,frequency_MTT:[10,31,48,28,25,17],traffic_MTT:[2154, 12933, 5514, 2941, 887, 328],frequency_FRI:[10,31,48,28,25,17],traffic_FRI:[2064,11204,5628,3020,1172,427],frequency_SAT:[9,24,48,24,24,18],traffic_SAT:[343,1762,5344,2029,1233,409],frequency_SUN:[0,20,48,24,24,16],traffic_SUN:[28,827,3999,1353,683,250]}]->(BETr),
+(CBHr)-[CBHr_LOFr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.02188269647449,time:2,speed:30.66,frequency_MTT:[10,28,48,29,25,22],traffic_MTT:[353, 1784, 4442, 10002, 5288, 1952],frequency_FRI:[10,28,48,29,25,22],traffic_FRI:[326,1573,4740,8590,4702,2579],frequency_SAT:[10,24,48,24,24,22],traffic_SAT:[151,642,3582,2887,2059,1622],frequency_SUN:[0,19,48,24,24,21],traffic_SUN:[0,301,3073,2518,1539,641]}]->(LOFr),
+(CHIr)-[CHIr_HIPr_lo:TO{mode:'overground',line:'lo west anglia',distance:2.84006538594257,time:4,speed:42.6,frequency_MTT:[8,12,24,12,12,6],traffic_MTT:[519, 1994, 776, 357, 91, 21],frequency_FRI:[8,12,24,12,12,6],traffic_FRI:[421,1740,805,435,144,37],frequency_SAT:[8,12,24,12,12,6],traffic_SAT:[72,352,1192,446,189,42],frequency_SUN:[2,12,24,12,12,5],traffic_SUN:[10,118,880,289,68,10]}]->(HIPr),
+(CHNr)-[CHNr_TEOr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.38157671186467,time:3,speed:27.63,frequency_MTT:[4,6,12,6,6,4],traffic_MTT:[71, 196, 150, 135, 54, 14],frequency_FRI:[4,6,12,6,6,4],traffic_FRI:[66,194,171,175,63,12],frequency_SAT:[3,6,12,6,6,4],traffic_SAT:[30,143,368,153,72,26],frequency_SUN:[0,5,12,6,6,4],traffic_SUN:[0,76,330,69,36,6]}]->(TEOr),
+(CIRr)-[CIRr_CMDr_lo:TO{mode:'overground',line:'lo north london',distance:1.53066139116757,time:6,speed:15.31,frequency_MTT:[7,24,49,24,24,13],traffic_MTT:[1266, 9763, 5860, 5074, 2351, 897],frequency_FRI:[7,24,49,24,24,13],traffic_FRI:[1111,9313,6129,4840,2514,1259],frequency_SAT:[8,24,48,24,24,15],traffic_SAT:[342,2790,7394,3491,2278,1384],frequency_SUN:[0,5,48,24,22,8],traffic_SUN:[0,394,6069,2548,1427,379]}]->(CMDr),
+(CIRr)-[CIRr_HBYu_lo:TO{mode:'overground',line:'lo north london',distance:0.964721403933291,time:3,speed:19.29,frequency_MTT:[6,24,47,25,23,13],traffic_MTT:[545, 4391, 5789, 8669, 4060, 1138],frequency_FRI:[6,24,47,25,23,13],traffic_FRI:[541,4238,6116,8149,3997,1446],frequency_SAT:[4,24,48,24,24,14],traffic_SAT:[212,1739,6658,4481,3042,1388],frequency_SUN:[0,4,48,24,22,9],traffic_SUN:[0,248,4722,3403,1959,471]}]->(HBYu),
+(CLJr)-[CLJr_IMWr_lo:TO{mode:'overground',line:'lo north london',distance:1.48035349095575,time:6,speed:14.8,frequency_MTT:[4,12,24,12,13,7],traffic_MTT:[723,5100,3647,3197,1552,416],frequency_FRI:[4,12,24,12,13,7],traffic_FRI:[612,4627,4017,3128,1657,542],frequency_SAT:[5,12,24,12,12,8],traffic_SAT:[146,1615,6199,2702,1601,606],frequency_SUN:[0,6,25,12,11,8],traffic_SUN:[0,414,4487,1871,965,290]}]->(IMWr),
+(CLJr)-[CLJr_WWRr_lo:TO{mode:'overground',line:'lo east london',distance:2.3027722287798,time:6,speed:23.03,frequency_MTT:[3,12,24,12,12,7],traffic_MTT:[232,2680,2587,3088,1821,422],frequency_FRI:[3,12,24,12,12,7],traffic_FRI:[201,2463,2963,2920,1849,635],frequency_SAT:[4,12,24,12,12,8],traffic_SAT:[67,876,3508,2428,1660,652],frequency_SUN:[0,10,24,12,12,6],traffic_SUN:[0,339,2184,1532,852,229]}]->(WWRr),
+(CLPr)-[CLPr_DMKr_lo:TO{mode:'overground',line:'lo east london',distance:3.01454682161057,time:5,speed:36.17,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[374, 3422, 2715, 3308, 1746, 491],frequency_FRI:[4,12,24,12,12,8],traffic_FRI:[299,2862,3076,2977,1831,730],frequency_SAT:[4,12,24,12,12,8],traffic_SAT:[88,916,3806,2422,1814,775],frequency_SUN:[0,11,24,12,12,6],traffic_SUN:[0,481,2638,1698,985,246]}]->(DMKr),
+(CLPr)-[CLPr_WWRr_lo:TO{mode:'overground',line:'lo east london',distance:0.671744931383655,time:2,speed:20.15,frequency_MTT:[2,12,24,12,12,11],traffic_MTT:[456, 3588, 2329, 2809, 1280, 427],frequency_FRI:[2,12,24,12,12,11],traffic_FRI:[380,2917,2638,2713,1329,787],frequency_SAT:[3,12,24,12,12,11],traffic_SAT:[152,1187,3696,1777,1177,927],frequency_SUN:[0,9,25,12,12,8],traffic_SUN:[0,454,2368,1107,635,201]}]->(WWRr),
+(CMDr)-[CMDr_CIRr_lo:TO{mode:'overground',line:'lo north london',distance:1.53066139116757,time:3,speed:30.61,frequency_MTT:[6,24,48,24,23,13],traffic_MTT:[548, 4542, 5493, 8179, 3783, 1068],frequency_FRI:[6,24,48,24,23,13],traffic_FRI:[546,4370,5806,7586,3723,1373],frequency_SAT:[5,24,48,24,24,13],traffic_SAT:[251,1765,6351,4291,2922,1259],frequency_SUN:[0,4,49,24,21,9],traffic_SUN:[0,238,4701,3352,1823,450]}]->(CIRr),
+(CMDr)-[CMDr_KTWr_lo:TO{mode:'overground',line:'lo north london',distance:0.764586248892881,time:2,speed:22.94,frequency_MTT:[7,24,48,24,24,14],traffic_MTT:[987, 7408, 4863, 5228, 2310, 877],frequency_FRI:[7,24,48,24,24,14],traffic_FRI:[838,7049,4982,4865,2377,1169],frequency_SAT:[8,24,48,24,24,15],traffic_SAT:[285,2367,6198,3148,2022,1213],frequency_SUN:[0,4,48,24,23,7],traffic_SUN:[0,255,4967,2330,1349,374]}]->(KTWr),
+(CNNr)-[CNNr_DLJr_lo:TO{mode:'overground',line:'lo east london',distance:1.21828661165418,time:2,speed:36.55,frequency_MTT:[12,24,48,24,24,17],traffic_MTT:[362, 4665, 3910, 4610, 2729, 1095],frequency_FRI:[12,24,48,24,24,36],traffic_FRI:[314,4073,4105,4283,2877,2121],frequency_SAT:[13,24,48,24,24,36],traffic_SAT:[145,947,5105,3168,2437,1969],frequency_SUN:[8,22,47,24,24,31],traffic_SUN:[88,720,5090,2753,1623,408]}]->(DLJr),
+(CNNr)-[CNNr_DLKr_lo:TO{mode:'overground',line:'lo north london',distance:1.14570373718922,time:3,speed:22.91,frequency_MTT:[5,23,49,24,24,13],traffic_MTT:[596, 5906, 7703, 10299, 6156, 2119],frequency_FRI:[5,23,49,24,24,13],traffic_FRI:[560,5640,8496,10065,6296,2726],frequency_SAT:[4,24,48,24,24,14],traffic_SAT:[190,2333,10595,6821,5274,2656],frequency_SUN:[0,4,48,24,22,9],traffic_SUN:[0,294,7397,5194,3372,1039]}]->(DLKr),
+(CNNr)-[CNNr_HBYu_lo:TO{mode:'overground',line:'lo east london',distance:0.851642767716228,time:2,speed:25.55,frequency_MTT:[7,24,48,24,24,20],traffic_MTT:[426, 3939, 3032, 3661, 1706, 665],frequency_FRI:[8,24,48,24,24,38],traffic_FRI:[362,3610,3287,3381,1730,1317],frequency_SAT:[9,24,48,24,24,14],traffic_SAT:[162,929,3660,2145,1344,1412],frequency_SUN:[8,19,47,24,24,33],traffic_SUN:[114,743,3777,1883,958,269]}]->(HBYu),
+(CPKr)-[CPKr_BSHr_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.9293889614361,time:2,speed:38.59,frequency_MTT:[3,12,24,12,12,9],traffic_MTT:[567,2683,1344,857,428,119],frequency_FRI:[3,12,24,12,12,9],traffic_FRI:[379,2270,1462,935,485,178],frequency_SAT:[2,12,24,12,12,9],traffic_SAT:[236,1174,2336,884,612,252],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[11,428,1635,662,447,126]}]->(BSHr),
+(CPKr)-[CPKr_HTEr_lo:TO{mode:'overground',line:'lo watford-euston',distance:2.42481712726801,time:3,speed:48.5,frequency_MTT:[6,12,24,12,12,6],traffic_MTT:[493, 1476, 1422, 1567, 476, 93],frequency_FRI:[6,12,24,12,12,6],traffic_FRI:[479,1434,1676,1557,561,149],frequency_SAT:[5,12,24,12,12,7],traffic_SAT:[237,677,2094,1428,829,236],frequency_SUN:[1,7,24,12,12,6],traffic_SUN:[45,348,1319,783,459,97]}]->(HTEr),
+(CPTr)-[CPTr_HACr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.45773976968082,time:4,speed:21.87,frequency_MTT:[6,13,24,12,12,7],traffic_MTT:[1420, 7637, 2424, 1257, 350, 87],frequency_FRI:[6,13,24,12,12,7],traffic_FRI:[1343,6711,2544,1366,527,138],frequency_SAT:[7,12,24,12,12,7],traffic_SAT:[274,1025,2966,1146,641,162],frequency_SUN:[1,12,24,12,12,6],traffic_SUN:[55,538,2335,687,259,74]}]->(HACr),
+(CPTr)-[CPTr_SJSr_lo:TO{mode:'overground',line:'lo west anglia',distance:2.72436117930871,time:3,speed:54.49,frequency_MTT:[3,12,24,12,12,13],traffic_MTT:[96, 955, 2128, 5101, 2350, 879],frequency_FRI:[3,12,24,12,12,13],traffic_FRI:[84,868,2381,4254,1999,1250],frequency_SAT:[3,12,24,12,12,13],traffic_SAT:[48,360,2045,1415,930,785],frequency_SUN:[0,9,24,12,12,13],traffic_SUN:[0,177,1714,1251,655,309]}]->(SJSr),
+(CRHr)-[CRHr_HRYr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:1.47104673236831,time:3,speed:29.42,frequency_MTT:[3,12,24,12,12,6],traffic_MTT:[102, 676, 1235, 2066, 825, 227],frequency_FRI:[3,12,24,12,12,6],traffic_FRI:[95,681,1297,1885,768,236],frequency_SAT:[3,12,24,12,12,6],traffic_SAT:[53,432,1759,968,634,312],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,90,1075,764,448,141]}]->(HRYr),
+(CRHr)-[CRHr_UHLr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:1.20969514591973,time:2,speed:36.29,frequency_MTT:[2,12,24,12,12,9],traffic_MTT:[202, 2037, 1019, 547, 277, 108],frequency_FRI:[2,12,24,12,12,9],traffic_FRI:[183,1907,1037,558,309,135],frequency_SAT:[1,12,24,12,12,9],traffic_SAT:[54,746,1469,652,396,195],frequency_SUN:[0,3,24,12,12,8],traffic_SUN:[0,64,1164,485,302,81]}]->(UHLr),
+(CWRu)-[CWRu_ROEr_lo:TO{mode:'overground',line:'lo east london',distance:0.353638736224966,time:2,speed:10.61,frequency_MTT:[17,48,96,48,48,34],traffic_MTT:[1583, 13423, 8527, 8683, 3891, 1625],frequency_FRI:[17,48,96,48,48,53],traffic_FRI:[1407,12152,9419,8721,4695,2869],frequency_SAT:[20,48,96,48,48,53],traffic_SAT:[482,2990,11662,6815,5056,3747],frequency_SUN:[8,25,92,48,48,43],traffic_SUN:[216,1875,10501,4858,2664,870]}]->(ROEr),
+(CWRu)-[CWRu_SQEr_lo:TO{mode:'overground',line:'lo east london',distance:0.554839906274865,time:2,speed:16.65,frequency_MTT:[16,48,96,48,48,37],traffic_MTT:[797, 9013, 11143, 18188, 11849, 5057],frequency_FRI:[18,48,96,48,48,54],traffic_FRI:[725,7690,11786,16383,10921,7439],frequency_SAT:[21,48,96,48,48,54],traffic_SAT:[404,3076,13917,9814,7759,6724],frequency_SUN:[9,28,89,48,48,43],traffic_SUN:[263,1780,11873,9184,5955,2072]}]->(SQEr),
+(CYPr)-[CYPr_SYDr_lo:TO{mode:'overground',line:'lo east london',distance:1.63273846445236,time:4,speed:24.49,frequency_MTT:[6,12,24,12,12,8],traffic_MTT:[399, 1905, 826, 584, 201, 60],frequency_FRI:[6,12,24,12,12,9],traffic_FRI:[327,1610,883,629,251,97],frequency_SAT:[6,12,24,12,12,9],traffic_SAT:[37,232,865,375,231,121],frequency_SUN:[1,6,20,12,12,5],traffic_SUN:[17,167,829,345,133,25]}]->(SYDr),
+(DLJr)-[DLJr_CNNr_lo:TO{mode:'overground',line:'lo east london',distance:1.21828661165418,time:3,speed:24.37,frequency_MTT:[7,24,48,24,24,20],traffic_MTT:[391, 3756, 3152, 4083, 2029, 850],frequency_FRI:[8,24,48,24,24,38],traffic_FRI:[334,3453,3408,3735,1982,1588],frequency_SAT:[11,24,48,24,24,38],traffic_SAT:[162,965,3892,2416,1611,1693],frequency_SUN:[8,19,48,24,24,32],traffic_SUN:[121,762,4200,2194,1097,304]}]->(CNNr),
+(DLJr)-[DLJr_DLKr_lo:TO{mode:'overground',line:'Out-of-Station',distance:0,time:0,speed:0,frequency_MTT:[0,0,0,0,0,0],traffic_MTT:[0, 0, 0, 0, 0, 0],frequency_FRI:[0,0,0,0,0,0],traffic_FRI:[0, 0, 0, 0, 0, 0],frequency_SAT:[0,0,0,0,0,0],traffic_SAT:[0, 0, 0, 0, 0, 0],frequency_SUN:[0,0,0,0,0,0],traffic_SUN:[0,0,0,0,0,0]}]->(DLKr),
+(DLJr)-[DLJr_HGGr_lo:TO{mode:'overground',line:'lo east london',distance:0.825354147496753,time:2,speed:24.76,frequency_MTT:[20,48,96,48,48,33],traffic_MTT:[556, 7235, 4878, 4871, 2848, 1365],frequency_FRI:[21,48,96,48,48,51],traffic_FRI:[483,6307,5267,4739,3160,2711],frequency_SAT:[24,48,96,48,48,51],traffic_SAT:[205,1350,7060,4020,2993,2774],frequency_SUN:[9,30,90,48,48,40],traffic_SUN:[128,946,6638,3204,1848,603]}]->(HGGr),
+(DLKr)-[DLKr_CNNr_lo:TO{mode:'overground',line:'lo north london',distance:1.14570373718922,time:2,speed:34.37,frequency_MTT:[8,24,48,24,25,12],traffic_MTT:[2065, 12922, 9142, 7713, 3536, 1295],frequency_FRI:[8,24,48,24,25,12],traffic_FRI:[1856,12348,10191,7819,4136,1879],frequency_SAT:[9,24,48,24,24,14],traffic_SAT:[752,4153,12633,6396,4178,2148],frequency_SUN:[0,5,48,24,23,7],traffic_SUN:[0,771,9787,4690,2636,532]}]->(CNNr),
+(DLKr)-[DLKr_DLJr_lo:TO{mode:'overground',line:'Out-of-Station',distance:0,time:0,speed:0,frequency_MTT:[0,0,0,0,0,0],traffic_MTT:[0, 0, 0, 0, 0, 0],frequency_FRI:[0,0,0,0,0,0],traffic_FRI:[0, 0, 0, 0, 0, 0],frequency_SAT:[0,0,0,0,0,0],traffic_SAT:[0, 0, 0, 0, 0, 0],frequency_SUN:[0,0,0,0,0,0],traffic_SUN:[0,0,0,0,0,0]}]->(DLJr),
+(DLKr)-[DLKr_HKCr_lo:TO{mode:'overground',line:'lo north london',distance:1.36753023560543,time:2,speed:41.03,frequency_MTT:[5,23,49,24,24,13],traffic_MTT:[661, 5735, 7541, 9639, 5441, 1892],frequency_FRI:[5,23,49,24,24,13],traffic_FRI:[623,5444,8278,9348,5507,2401],frequency_SAT:[3,24,48,24,24,15],traffic_SAT:[170,2145,10464,6371,4631,2505],frequency_SUN:[0,4,48,24,22,9],traffic_SUN:[0,296,7243,4727,2972,990]}]->(HKCr),
+(DMKr)-[DMKr_CLPr_lo:TO{mode:'overground',line:'lo east london',distance:3.01454682161057,time:4,speed:45.22,frequency_MTT:[2,12,24,12,12,11],traffic_MTT:[426, 3808, 2511, 3062, 1500, 485],frequency_FRI:[2,12,24,12,12,11],traffic_FRI:[361,3121,2808,2928,1568,845],frequency_SAT:[3,12,24,12,12,11],traffic_SAT:[167,1323,3756,2055,1459,1028],frequency_SUN:[0,10,24,12,12,8],traffic_SUN:[0,599,2826,1443,894,281]}]->(CLPr),
+(DMKr)-[DMKr_PMRr_lo:TO{mode:'overground',line:'lo east london',distance:1.40095583019969,time:2,speed:42.03,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[432, 2861, 2665, 3702, 1663, 447],frequency_FRI:[4,12,24,12,12,8],traffic_FRI:[361,2421,2986,3374,1796,698],frequency_SAT:[4,12,24,12,12,8],traffic_SAT:[117,879,3719,2371,1764,737],frequency_SUN:[0,10,24,12,12,7],traffic_SUN:[0,458,2720,1692,1001,274]}]->(PMRr),
+(EDRr)-[EDRr_BHKr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.92931051068657,time:3,speed:38.59,frequency_MTT:[2,11,12,11,7,5],traffic_MTT:[37, 912, 1070, 2172, 1145, 365],frequency_FRI:[2,11,12,11,7,5],traffic_FRI:[34,858,1025,1893,1020,418],frequency_SAT:[3,6,12,6,6,5],traffic_SAT:[29,305,1078,1020,598,386],frequency_SUN:[0,5,12,6,6,5],traffic_SUN:[0,102,775,549,370,136]}]->(BHKr),
+(EDRr)-[EDRr_SBUr_lo:TO{mode:'overground',line:'lo west anglia',distance:2.71265023266594,time:2,speed:81.38,frequency_MTT:[2,7,12,6,6,5],traffic_MTT:[348, 1243, 1239, 1655, 1019, 364],frequency_FRI:[2,7,12,6,6,5],traffic_FRI:[324,1164,1267,1601,988,414],frequency_SAT:[3,6,12,6,6,5],traffic_SAT:[72,320,923,697,512,333],frequency_SUN:[0,4,12,6,6,4],traffic_SUN:[0,160,778,520,414,147]}]->(SBUr),
+(EDRr)-[EDRr_SLVr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.21589233993342,time:2,speed:36.48,frequency_MTT:[7,18,24,16,13,7],traffic_MTT:[2119, 6862, 4442, 2609, 749, 139],frequency_FRI:[7,18,24,16,13,7],traffic_FRI:[1848,6353,4393,2612,900,182],frequency_SAT:[5,12,24,12,12,8],traffic_SAT:[548,2023,5153,1914,891,245],frequency_SUN:[0,10,24,12,12,7],traffic_SUN:[0,926,3648,1254,549,110]}]->(SLVr),
+(EMPr)-[EMPr_RMFr_lo:TO{mode:'overground',line:'lo romford–upminster',distance:2.64771287566114,time:5,speed:31.77,frequency_MTT:[2,6,12,6,6,0],traffic_MTT:[48, 252, 179, 109, 31, 1],frequency_FRI:[2,6,12,6,6,0],traffic_FRI:[45,234,177,99,28,1],frequency_SAT:[2,6,12,6,6,0],traffic_SAT:[8,60,213,76,31,1],frequency_SUN:[0,3,12,6,2,0],traffic_SUN:[0,46,146,39,9,0]}]->(RMFr),
+(EMPr)-[EMPr_UPMu_lo:TO{mode:'overground',line:'lo romford–upminster',distance:2.3871118110273,time:4,speed:35.81,frequency_MTT:[2,6,12,6,6,0],traffic_MTT:[74, 319, 130, 135, 41, 1],frequency_FRI:[2,6,12,6,6,0],traffic_FRI:[57,263,140,140,45,1],frequency_SAT:[2,6,12,6,6,0],traffic_SAT:[8,49,192,76,27,1],frequency_SUN:[0,3,12,6,2,0],traffic_SUN:[0,28,68,18,4,0]}]->(UPMu),
+(ENFr)-[ENFr_BHKr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.36235362977172,time:3,speed:27.25,frequency_MTT:[4,11,12,10,7,3],traffic_MTT:[511, 1779, 1079, 885, 167, 25],frequency_FRI:[4,11,12,10,7,3],traffic_FRI:[414,1574,1113,919,215,41],frequency_SAT:[2,6,12,6,6,4],traffic_SAT:[84,385,1576,537,217,57],frequency_SUN:[0,5,12,6,6,3],traffic_SUN:[0,177,882,354,110,23]}]->(BHKr),
+(EUSr)-[EUSr_SOHr_lo:TO{mode:'overground',line:'lo watford-euston',distance:3.45225156727971,time:5,speed:41.43,frequency_MTT:[6,12,24,12,12,7],traffic_MTT:[288, 888, 1060, 1887, 1008, 477],frequency_FRI:[6,12,24,12,12,7],traffic_FRI:[237,820,1128,1608,841,586],frequency_SAT:[5,12,24,12,12,8],traffic_SAT:[126,374,1422,1128,920,835],frequency_SUN:[1,8,24,12,12,7],traffic_SUN:[22,210,1290,1076,871,360]}]->(SOHr),
+(FNYr)-[FNYr_HDHr_lo:TO{mode:'overground',line:'lo north london',distance:1.32858511990854,time:2,speed:39.86,frequency_MTT:[6,25,47,24,23,12],traffic_MTT:[923, 7040, 5291, 6596, 2892, 670],frequency_FRI:[6,25,47,24,23,12],traffic_FRI:[905,6575,5583,6237,2851,855],frequency_SAT:[6,24,48,24,24,12],traffic_SAT:[429,2650,6983,4099,2618,965],frequency_SUN:[0,6,48,24,21,8],traffic_SUN:[0,333,5253,2929,1545,359]}]->(HDHr),
+(FNYr)-[FNYr_WHDr_lo:TO{mode:'overground',line:'lo north london',distance:0.638946635001751,time:2,speed:19.17,frequency_MTT:[6,24,48,24,24,15],traffic_MTT:[783, 7044, 5614, 6502, 2747, 956],frequency_FRI:[6,24,48,24,24,15],traffic_FRI:[644,6524,5797,6165,2838,1227],frequency_SAT:[6,24,48,24,24,17],traffic_SAT:[211,2498,7245,3849,2440,1341],frequency_SUN:[0,3,48,24,23,8],traffic_SUN:[0,238,5101,2848,1540,420]}]->(WHDr),
+(FOHr)-[FOHr_HPAr_lo:TO{mode:'overground',line:'lo east london',distance:1.30482828832166,time:2,speed:39.14,frequency_MTT:[11,24,48,24,24,16],traffic_MTT:[1843, 8205, 5007, 4165, 1506, 362],frequency_FRI:[11,24,48,24,24,17],traffic_FRI:[1643,7632,5395,4147,1796,598],frequency_SAT:[11,24,48,24,24,17],traffic_SAT:[407,1903,5833,2934,1682,642],frequency_SUN:[2,12,38,24,24,10],traffic_SUN:[133,1197,4397,1906,866,165]}]->(HPAr),
+(FOHr)-[FOHr_SYDr_lo:TO{mode:'overground',line:'lo east london',distance:1.34077154844852,time:3,speed:26.82,frequency_MTT:[9,24,48,24,24,19],traffic_MTT:[253, 3079, 2877, 4967, 3577, 1474],frequency_FRI:[9,24,48,24,24,19],traffic_FRI:[228,2711,3039,4514,3229,1718],frequency_SAT:[8,24,48,24,24,19],traffic_SAT:[81,1056,3427,2183,1790,1256],frequency_SUN:[0,12,39,24,24,14],traffic_SUN:[16,467,3011,2118,1470,537]}]->(SYDr),
+(GPOr)-[GPOr_HDHr_lo:TO{mode:'overground',line:'lo north london',distance:1.03593249583058,time:2,speed:31.08,frequency_MTT:[6,25,47,24,24,15],traffic_MTT:[953, 8443, 5780, 6021, 2639, 1010],frequency_FRI:[6,25,47,24,24,15],traffic_FRI:[794,7987,5886,5735,2718,1299],frequency_SAT:[7,24,48,24,24,16],traffic_SAT:[281,2850,7538,3712,2366,1380],frequency_SUN:[0,3,48,24,23,8],traffic_SUN:[0,239,5552,2620,1521,432]}]->(HDHr),
+(GPOr)-[GPOr_KTWr_lo:TO{mode:'overground',line:'lo north london',distance:1.01844604783368,time:2,speed:30.55,frequency_MTT:[5,25,48,24,22,13],traffic_MTT:[703, 5636, 5320, 6404, 2762, 632],frequency_FRI:[5,25,48,24,22,13],traffic_FRI:[695,5294,5621,6088,2770,853],frequency_SAT:[6,24,48,24,24,12],traffic_SAT:[337,2101,6261,3721,2414,871],frequency_SUN:[0,5,49,24,21,8],traffic_SUN:[0,279,4661,2856,1412,310]}]->(KTWr),
+(GPOr)-[GPOr_UHLr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:1.73928957265207,time:3,speed:34.79,frequency_MTT:[3,12,24,12,12,6],traffic_MTT:[49, 466, 859, 1479, 618, 136],frequency_FRI:[3,12,24,12,12,6],traffic_FRI:[42,440,864,1308,547,151],frequency_SAT:[3,12,24,12,12,6],traffic_SAT:[39,393,1456,872,538,213],frequency_SUN:[0,5,24,12,12,4],traffic_SUN:[0,57,801,564,288,76]}]->(UHLr),
+(GUNu)-[GUNu_KEWu_lo:TO{mode:'overground',line:'lo north london',distance:1.76089514419355,time:3,speed:35.22,frequency_MTT:[3,12,21,12,12,8],traffic_MTT:[155, 2110, 1490, 1661, 773, 207],frequency_FRI:[3,12,21,12,12,8],traffic_FRI:[134,1855,1649,1576,804,278],frequency_SAT:[3,12,24,12,11,10],traffic_SAT:[65,780,2799,1013,525,241],frequency_SUN:[0,3,24,12,12,6],traffic_SUN:[0,118,2244,691,393,102]}]->(KEWu),
+(GUNu)-[GUNu_SATr_lo:TO{mode:'overground',line:'lo north london',distance:0.960445230318223,time:3,speed:19.21,frequency_MTT:[4,12,22,12,12,6],traffic_MTT:[364, 2125, 1740, 3697, 1090, 234],frequency_FRI:[4,12,22,12,12,6],traffic_FRI:[291,1848,1921,3284,1042,335],frequency_SAT:[4,12,24,12,12,7],traffic_SAT:[69,585,2254,1940,976,363],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,108,1639,1444,554,125]}]->(SATr),
+(HACr)-[HACr_CPTr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.45773976968082,time:3,speed:29.15,frequency_MTT:[3,12,24,12,12,13],traffic_MTT:[71, 650, 2083, 5410, 2822, 976],frequency_FRI:[3,12,24,12,12,13],traffic_FRI:[64,575,2339,4530,2460,1347],frequency_SAT:[3,12,24,12,12,13],traffic_SAT:[37,239,1726,1466,1032,892],frequency_SUN:[0,9,24,12,12,13],traffic_SUN:[0,119,1500,1306,757,325]}]->(CPTr),
+(HACr)-[HACr_HKCr_lo:TO{mode:'overground',line:'Out-of-Station',distance:0,time:0,speed:0,frequency_MTT:[0,0,0,0,0,0],traffic_MTT:[0, 0, 0, 0, 0, 0],frequency_FRI:[0,0,0,0,0,0],traffic_FRI:[0, 0, 0, 0, 0, 0],frequency_SAT:[0,0,0,0,0,0],traffic_SAT:[0, 0, 0, 0, 0, 0],frequency_SUN:[0,0,0,0,0,0],traffic_SUN:[0,0,0,0,0,0]}]->(HKCr),
+(HACr)-[HACr_LOFr_lo:TO{mode:'overground',line:'lo west anglia',distance:0.872338216364156,time:2,speed:26.17,frequency_MTT:[11,31,48,28,25,16],traffic_MTT:[2337, 13054, 5965, 3308, 1024, 408],frequency_FRI:[11,31,48,28,25,16],traffic_FRI:[2228,11361,6019,3314,1311,522],frequency_SAT:[10,24,48,24,24,17],traffic_SAT:[430,2013,6090,2380,1438,537],frequency_SUN:[1,20,48,24,24,15],traffic_SUN:[56,893,4772,1664,823,282]}]->(LOFr),
+(HACr)-[HACr_RECr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.20099480544652,time:3,speed:24.02,frequency_MTT:[6,17,24,17,13,9],traffic_MTT:[295, 1699, 2784, 5048, 2549, 942],frequency_FRI:[6,17,24,17,13,9],traffic_FRI:[274,1566,2830,4441,2331,1176],frequency_SAT:[7,12,24,12,12,9],traffic_SAT:[146,619,2558,1826,1275,805],frequency_SUN:[0,10,24,12,12,8],traffic_SUN:[0,284,2056,1434,911,330]}]->(RECr),
+(HARu)-[HARu_SPKu_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.53132600141358,time:2,speed:45.94,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[514, 1828, 1947, 3101, 1703, 545],frequency_FRI:[4,12,24,12,12,8],traffic_FRI:[357,1619,2105,3016,1657,684],frequency_SAT:[3,12,24,12,12,8],traffic_SAT:[146,635,2353,1625,1229,753],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[8,296,1851,1361,1009,349]}]->(SPKu),
+(HARu)-[HARu_WJNu_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.00331795457073,time:2,speed:30.1,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[869, 2902, 2423, 1621, 613, 151],frequency_FRI:[4,12,24,12,12,8],traffic_FRI:[830,2786,2578,1625,748,255],frequency_SAT:[3,12,24,12,12,9],traffic_SAT:[488,1327,3063,1513,912,339],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[28,647,2253,918,568,120]}]->(WJNu),
+(HAWu)-[HAWu_HDLr_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.9551434899477,time:3,speed:39.1,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[529, 1818, 1235, 1771, 851, 259],frequency_FRI:[4,12,24,12,12,8],traffic_FRI:[338,1543,1311,1633,794,323],frequency_SAT:[3,12,24,12,12,8],traffic_SAT:[242,898,1859,973,729,412],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[8,370,1471,832,583,166]}]->(HDLr),
+(HAWu)-[HAWu_KETu_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.67829589655437,time:3,speed:33.57,frequency_MTT:[5,12,24,12,12,7],traffic_MTT:[672, 2079, 1638, 1498, 548, 130],frequency_FRI:[5,12,24,12,12,7],traffic_FRI:[636,1993,1801,1486,616,197],frequency_SAT:[4,12,24,12,12,8],traffic_SAT:[335,897,2361,1353,764,299],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[40,502,1640,771,514,148]}]->(KETu),
+(HBYu)-[HBYu_CIRr_lo:TO{mode:'overground',line:'lo north london',distance:0.964721403933291,time:1,speed:57.88,frequency_MTT:[7,24,49,24,24,13],traffic_MTT:[1448, 10878, 6149, 5310, 2416, 944],frequency_FRI:[7,24,49,24,24,13],traffic_FRI:[1266,10340,6393,5048,2597,1315],frequency_SAT:[8,25,48,24,24,14],traffic_SAT:[435,3015,7691,3674,2352,1412],frequency_SUN:[0,5,48,24,23,7],traffic_SUN:[0,403,6207,2654,1550,355]}]->(CIRr),
+(HBYu)-[HBYu_CNNr_lo:TO{mode:'overground',line:'lo east london',distance:0.851642767716228,time:1,speed:51.1,frequency_MTT:[12,24,48,24,24,17],traffic_MTT:[270, 3552, 3245, 3926, 2590, 1034],frequency_FRI:[12,24,48,24,24,36],traffic_FRI:[234,3047,3384,3593,2655,2010],frequency_SAT:[4,24,48,24,24,14],traffic_SAT:[120,753,4217,2972,2218,1882],frequency_SUN:[8,22,48,24,24,30],traffic_SUN:[83,594,4108,2338,1385,338]}]->(CNNr),
+(HDHr)-[HDHr_FNYr_lo:TO{mode:'overground',line:'lo north london',distance:1.32858511990854,time:2,speed:39.86,frequency_MTT:[6,24,48,24,24,15],traffic_MTT:[800, 7558, 5824, 6812, 2715, 1003],frequency_FRI:[6,24,48,24,24,15],traffic_FRI:[659,7071,6017,6412,2803,1298],frequency_SAT:[7,23,49,24,23,17],traffic_SAT:[272,2670,7516,3917,2397,1392],frequency_SUN:[0,3,48,24,23,8],traffic_SUN:[0,242,5256,2898,1571,436]}]->(FNYr),
+(HDHr)-[HDHr_GPOr_lo:TO{mode:'overground',line:'lo north london',distance:1.03593249583058,time:3,speed:20.72,frequency_MTT:[6,24,48,24,22,13],traffic_MTT:[827, 6182, 5431, 7191, 3209, 734],frequency_FRI:[6,24,48,24,22,13],traffic_FRI:[813,5772,5724,6758,3143,940],frequency_SAT:[6,24,48,24,24,12],traffic_SAT:[417,2441,6852,4240,2724,989],frequency_SUN:[0,6,48,24,21,8],traffic_SUN:[0,314,4927,3155,1625,368]}]->(GPOr),
+(HDLr)-[HDLr_HAWu_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.9551434899477,time:3,speed:39.1,frequency_MTT:[6,11,24,12,12,7],traffic_MTT:[636, 2016, 1502, 1425, 502, 107],frequency_FRI:[6,11,24,12,12,7],traffic_FRI:[615,1923,1682,1413,565,168],frequency_SAT:[4,12,24,12,12,8],traffic_SAT:[251,763,2175,1323,761,272],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[26,391,1394,742,474,114]}]->(HAWu),
+(HDLr)-[HDLr_HTEr_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.09027506291567,time:1,speed:32.81,frequency_MTT:[3,12,24,12,12,9],traffic_MTT:[426, 1825, 1197, 1514, 792, 236],frequency_FRI:[3,12,24,12,12,9],traffic_FRI:[280,1526,1277,1425,748,305],frequency_SAT:[2,12,24,12,12,9],traffic_SAT:[195,919,1841,924,700,387],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[8,350,1426,795,560,176]}]->(HTEr),
+(HGGr)-[HGGr_DLJr_lo:TO{mode:'overground',line:'lo east london',distance:0.825354147496753,time:2,speed:24.76,frequency_MTT:[13,48,96,48,48,38],traffic_MTT:[432, 3778, 3923, 5653, 3119, 1257],frequency_FRI:[14,48,96,48,48,56],traffic_FRI:[379,3506,4384,5308,3193,2271],frequency_SAT:[17,48,96,48,48,56],traffic_SAT:[200,1189,5170,3473,2684,2460],frequency_SUN:[8,23,91,48,48,46],traffic_SUN:[118,810,5306,3041,1714,569]}]->(DLJr),
+(HGGr)-[HGGr_HOXr_lo:TO{mode:'overground',line:'lo east london',distance:0.800283091262562,time:2,speed:24.01,frequency_MTT:[20,48,96,48,48,33],traffic_MTT:[682, 8122, 5014, 5042, 2678, 1290],frequency_FRI:[21,48,96,48,48,51],traffic_FRI:[597,7074,5454,4945,3062,2675],frequency_SAT:[24,48,96,48,48,51],traffic_SAT:[227,1510,7507,4128,2949,2814],frequency_SUN:[9,30,90,48,48,40],traffic_SUN:[140,1056,7028,3145,1779,603]}]->(HOXr),
+(HIPr)-[HIPr_CHIr_lo:TO{mode:'overground',line:'lo west anglia',distance:2.84006538594257,time:4,speed:42.6,frequency_MTT:[2,12,24,12,12,14],traffic_MTT:[10, 240, 606, 1544, 886, 261],frequency_FRI:[2,12,24,12,12,14],traffic_FRI:[12,222,652,1354,716,407],frequency_SAT:[2,12,24,12,12,14],traffic_SAT:[5,104,696,546,371,327],frequency_SUN:[0,8,24,12,12,14],traffic_SUN:[0,31,688,335,204,74]}]->(CHIr),
+(HIPr)-[HIPr_WSTr_lo:TO{mode:'overground',line:'lo west anglia',distance:2.4268422656824,time:2,speed:72.81,frequency_MTT:[7,13,24,12,12,6],traffic_MTT:[1078, 4984, 1777, 854, 205, 39],frequency_FRI:[7,13,24,12,12,6],traffic_FRI:[884,4347,1863,990,325,73],frequency_SAT:[8,12,24,12,12,6],traffic_SAT:[206,853,2561,919,381,91],frequency_SUN:[2,12,24,12,12,5],traffic_SUN:[35,354,1854,536,147,24]}]->(WSTr),
+(HKCr)-[HKCr_DLKr_lo:TO{mode:'overground',line:'lo north london',distance:1.36753023560543,time:2,speed:41.03,frequency_MTT:[8,24,48,24,25,12],traffic_MTT:[2041, 11975, 8709, 7386, 3344, 1063],frequency_FRI:[8,24,48,24,25,12],traffic_FRI:[1838,11413,9567,7415,3924,1642],frequency_SAT:[9,24,48,24,24,14],traffic_SAT:[692,3915,11709,6148,4216,2008],frequency_SUN:[0,6,48,24,22,7],traffic_SUN:[0,802,9260,4585,2419,440]}]->(DLKr),
+(HKCr)-[HKCr_HACr_lo:TO{mode:'overground',line:'Out-of-Station',distance:0,time:0,speed:0,frequency_MTT:[0,0,0,0,0,0],traffic_MTT:[0, 0, 0, 0, 0, 0],frequency_FRI:[0,0,0,0,0,0],traffic_FRI:[0, 0, 0, 0, 0, 0],frequency_SAT:[0,0,0,0,0,0],traffic_SAT:[0, 0, 0, 0, 0, 0],frequency_SUN:[0,0,0,0,0,0],traffic_SUN:[0,0,0,0,0,0]}]->(HACr),
+(HKCr)-[HKCr_HMNr_lo:TO{mode:'overground',line:'lo north london',distance:0.950272608173599,time:2,speed:28.51,frequency_MTT:[5,23,49,24,24,13],traffic_MTT:[623, 5459, 7365, 9228, 4699, 1579],frequency_FRI:[5,23,49,24,24,13],traffic_FRI:[587,5134,8045,8799,4699,2020],frequency_SAT:[3,24,48,24,24,15],traffic_SAT:[190,2101,10117,5626,3853,2123],frequency_SUN:[0,3,48,24,22,10],traffic_SUN:[0,273,7129,4097,2499,896]}]->(HMNr),
+(HKWr)-[HKWr_HMNr_lo:TO{mode:'overground',line:'lo north london',distance:1.27449052647228,time:3,speed:25.49,frequency_MTT:[9,24,48,24,24,12],traffic_MTT:[1608, 9180, 6832, 6018, 3140, 1001],frequency_FRI:[9,24,48,24,24,12],traffic_FRI:[1434,8529,7329,5858,3477,1455],frequency_SAT:[10,24,48,24,24,13],traffic_SAT:[591,2837,8444,5170,3714,1648],frequency_SUN:[0,6,48,24,22,7],traffic_SUN:[0,479,6788,4053,2136,394]}]->(HMNr),
+(HKWr)-[HKWr_SFDu_lo:TO{mode:'overground',line:'lo north london',distance:1.50265638997677,time:4,speed:22.54,frequency_MTT:[4,23,49,24,24,14],traffic_MTT:[623,5284,6663,8374,3540,1058],frequency_FRI:[4,23,49,24,24,14],traffic_FRI:[589,4913,7435,7924,3477,1442],frequency_SAT:[2,24,48,24,24,16],traffic_SAT:[166,1895,9223,4666,2657,1467],frequency_SUN:[0,3,48,24,22,10],traffic_SUN:[0,241,6344,3229,1754,569]}]->(SFDu),
+(HMNr)-[HMNr_HKCr_lo:TO{mode:'overground',line:'lo north london',distance:0.950272608173599,time:2,speed:28.51,frequency_MTT:[9,24,47,25,24,12],traffic_MTT:[1892, 10516, 7652, 6446, 3005, 951],frequency_FRI:[9,24,47,25,24,12],traffic_FRI:[1702,9912,8315,6429,3471,1428],frequency_SAT:[10,23,49,24,24,13],traffic_SAT:[667,3417,9970,5545,3835,1655],frequency_SUN:[0,6,48,24,22,7],traffic_SUN:[0,648,7937,4230,2278,388]}]->(HKCr),
+(HMNr)-[HMNr_HKWr_lo:TO{mode:'overground',line:'lo north london',distance:1.27449052647228,time:3,speed:25.49,frequency_MTT:[4,24,48,24,25,13],traffic_MTT:[653, 5624, 7063, 8640, 3932, 1224],frequency_FRI:[4,24,48,24,25,13],traffic_FRI:[615,5275,7796,8276,4008,1658],frequency_SAT:[3,24,48,24,24,15],traffic_SAT:[198,2093,9919,5047,3201,1686],frequency_SUN:[0,3,48,24,22,10],traffic_SUN:[0,251,6947,3395,1993,668]}]->(HKWr),
+(HOXr)-[HOXr_HGGr_lo:TO{mode:'overground',line:'lo east london',distance:0.800283091262562,time:2,speed:24.01,frequency_MTT:[13,48,96,48,48,38],traffic_MTT:[354, 3743, 4065, 5892, 3496, 1440],frequency_FRI:[14,48,96,48,48,56],traffic_FRI:[319,3478,4520,5558,3565,2516],frequency_SAT:[17,48,96,48,48,56],traffic_SAT:[194,1127,5324,3709,3002,2721],frequency_SUN:[8,24,91,48,48,45],traffic_SUN:[114,776,5435,3320,1908,655]}]->(HGGr),
+(HOXr)-[HOXr_SDCr_lo:TO{mode:'overground',line:'lo east london',distance:0.905812445316129,time:2,speed:27.17,frequency_MTT:[19,48,96,48,48,34],traffic_MTT:[717, 8294, 5489, 6096, 3038, 1450],frequency_FRI:[20,48,96,48,48,52],traffic_FRI:[626,7254,6038,5777,3327,2986],frequency_SAT:[23,48,96,48,48,52],traffic_SAT:[248,1587,8086,4403,3058,3088],frequency_SUN:[9,30,89,48,48,41],traffic_SUN:[145,1090,7213,3446,1907,684]}]->(SDCr),
+(HPAr)-[HPAr_BCYr_lo:TO{mode:'overground',line:'lo east london',distance:1.72248865276315,time:3,speed:34.45,frequency_MTT:[11,24,48,24,24,16],traffic_MTT:[2152, 9601, 5584, 4436, 1587, 378],frequency_FRI:[11,24,48,24,24,17],traffic_FRI:[1898,8990,6046,4502,1911,635],frequency_SAT:[11,24,48,24,24,17],traffic_SAT:[472,2296,6986,3387,1884,724],frequency_SUN:[1,12,39,24,24,10],traffic_SUN:[81,1306,5491,2145,947,181]}]->(BCYr),
+(HPAr)-[HPAr_FOHr_lo:TO{mode:'overground',line:'lo east london',distance:1.30482828832166,time:2,speed:39.14,frequency_MTT:[10,24,48,24,24,18],traffic_MTT:[280, 3357, 3619, 6683, 4681, 1908],frequency_FRI:[10,24,48,24,24,18],traffic_FRI:[251,2980,3880,5972,4191,2251],frequency_SAT:[9,24,48,24,24,18],traffic_SAT:[105,1199,4147,2861,2287,1609],frequency_SUN:[0,12,39,24,24,14],traffic_SUN:[16,511,3520,2625,1839,677]}]->(FOHr),
+(HRYr)-[HRYr_CRHr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:1.47104673236831,time:4,speed:22.07,frequency_MTT:[3,12,24,12,12,8],traffic_MTT:[325, 2109, 1076, 638, 300, 124],frequency_FRI:[3,12,24,12,12,8],traffic_FRI:[302,2016,1126,664,341,159],frequency_SAT:[2,12,24,12,12,8],traffic_SAT:[104,817,1547,734,411,214],frequency_SUN:[0,3,24,12,12,8],traffic_SUN:[0,69,1287,561,365,100]}]->(CRHr),
+(HRYr)-[HRYr_STOr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:1.8397406269989,time:4,speed:27.6,frequency_MTT:[3,12,23,13,11,7],traffic_MTT:[148, 812, 1245, 2193, 850, 278],frequency_FRI:[3,12,23,13,11,7],traffic_FRI:[143,820,1293,2019,796,289],frequency_SAT:[3,12,24,12,12,6],traffic_SAT:[76,488,1775,1048,664,347],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,138,1139,865,546,151]}]->(STOr),
+(HTEr)-[HTEr_CPKr_lo:TO{mode:'overground',line:'lo watford-euston',distance:2.42481712726801,time:3,speed:48.5,frequency_MTT:[3,12,24,12,12,9],traffic_MTT:[475, 2203, 1278, 1243, 648, 192],frequency_FRI:[3,12,24,12,12,9],traffic_FRI:[327,1901,1340,1205,647,268],frequency_SAT:[2,12,24,12,12,9],traffic_SAT:[208,1032,1996,892,660,340],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[9,383,1489,743,520,161]}]->(CPKr),
+(HTEr)-[HTEr_HDLr_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.09027506291567,time:2,speed:32.71,frequency_MTT:[6,12,24,12,12,6],traffic_MTT:[558, 1849, 1395, 1378, 435, 89],frequency_FRI:[6,12,24,12,12,6],traffic_FRI:[538,1773,1589,1372,512,148],frequency_SAT:[5,12,24,12,12,7],traffic_SAT:[253,713,2127,1328,773,238],frequency_SUN:[1,7,24,12,12,6],traffic_SUN:[49,377,1348,725,419,92]}]->(HDLr),
+(IMWr)-[IMWr_CLJr_lo:TO{mode:'overground',line:'lo north london',distance:1.48035349095575,time:6,speed:14.8,frequency_MTT:[3,12,24,12,12,10],traffic_MTT:[474, 2796, 3232, 4207, 2127, 650],frequency_FRI:[3,12,24,12,12,10],traffic_FRI:[452,2550,3470,3845,2139,839],frequency_SAT:[3,12,24,12,12,10],traffic_SAT:[195,1486,4566,3158,1985,903],frequency_SUN:[0,5,24,12,12,11],traffic_SUN:[0,316,3020,2199,1154,320]}]->(CLJr),
+(IMWr)-[IMWr_WBTu_lo:TO{mode:'overground',line:'lo north london',distance:1.6133447397928,time:3,speed:32.27,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[577, 4940, 4137, 4131, 1631, 522],frequency_FRI:[4,12,24,12,12,8],traffic_FRI:[480,4444,4582,3984,1748,653],frequency_SAT:[5,12,24,12,12,8],traffic_SAT:[159,1675,6635,2977,1662,639],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[0,436,4751,2032,1081,325]}]->(WBTu),
+(KBNr)-[KBNr_QPKu_lo:TO{mode:'overground',line:'lo watford-euston',distance:0.958179550407823,time:2,speed:28.75,frequency_MTT:[5,12,24,12,12,8],traffic_MTT:[222, 946, 1109, 1846, 1065, 517],frequency_FRI:[5,12,24,12,12,8],traffic_FRI:[190,860,1172,1615,878,619],frequency_SAT:[4,12,24,12,12,9],traffic_SAT:[83,336,1418,1088,884,851],frequency_SUN:[1,7,24,12,12,8],traffic_SUN:[25,224,1284,984,803,387]}]->(QPKu),
+(KBNr)-[KBNr_SOHr_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.03574397286941,time:2,speed:31.07,frequency_MTT:[5,12,24,12,12,7],traffic_MTT:[347, 1693, 1091, 807, 244, 59],frequency_FRI:[5,12,24,12,12,7],traffic_FRI:[270,1460,1138,784,315,101],frequency_SAT:[3,12,24,12,12,9],traffic_SAT:[208,608,1620,767,433,179],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[22,391,1223,570,285,71]}]->(SOHr),
+(KETu)-[KETu_HAWu_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.67829589655437,time:3,speed:33.57,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[619, 1762, 1377, 1686, 944, 289],frequency_FRI:[4,12,24,12,12,8],traffic_FRI:[429,1545,1470,1622,877,346],frequency_SAT:[3,12,24,12,12,8],traffic_SAT:[262,923,2047,1137,810,438],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[18,407,1491,913,633,170]}]->(HAWu),
+(KETu)-[KETu_SKTu_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.41809999067314,time:2,speed:42.54,frequency_MTT:[5,12,24,12,12,7],traffic_MTT:[794, 2127, 1693, 1487, 539, 127],frequency_FRI:[5,12,24,12,12,7],traffic_FRI:[751,2034,1839,1472,602,193],frequency_SAT:[4,12,24,12,12,8],traffic_SAT:[373,920,2291,1278,715,265],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[44,531,1714,776,507,141]}]->(SKTu),
+(KEWu)-[KEWu_GUNu_lo:TO{mode:'overground',line:'lo north london',distance:1.76089514419355,time:3,speed:35.22,frequency_MTT:[4,12,22,12,12,6],traffic_MTT:[254, 1737, 1356, 2144, 727, 167],frequency_FRI:[4,12,22,12,12,6],traffic_FRI:[195,1485,1487,2006,722,255],frequency_SAT:[4,12,24,12,12,7],traffic_SAT:[40,427,1826,1674,801,314],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,94,1422,1282,442,89]}]->(GUNu),
+(KEWu)-[KEWu_RMDu_lo:TO{mode:'overground',line:'lo north london',distance:1.93531053157401,time:4,speed:29.03,frequency_MTT:[3,12,21,12,12,8],traffic_MTT:[119, 2033, 1335, 1528, 697, 180],frequency_FRI:[3,12,21,12,12,8],traffic_FRI:[100,1759,1390,1431,722,255],frequency_SAT:[3,12,24,12,11,10],traffic_SAT:[58,724,2374,894,500,228],frequency_SUN:[0,3,24,12,12,6],traffic_SUN:[0,111,1901,634,356,93]}]->(RMDu),
+(KGNu)-[KGNu_QPKu_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.44611648975106,time:2,speed:43.38,frequency_MTT:[5,12,24,12,12,8],traffic_MTT:[802, 2255, 2292, 1323, 475, 123],frequency_FRI:[5,12,24,12,12,8],traffic_FRI:[728,2120,2441,1356,632,217],frequency_SAT:[3,12,24,12,12,9],traffic_SAT:[451,1190,3003,1402,818,302],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[30,656,2316,913,484,96]}]->(QPKu),
+(KGNu)-[KGNu_WJNu_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.36782092929863,time:2,speed:41.03,frequency_MTT:[5,12,24,12,12,8],traffic_MTT:[427, 1679, 1635, 2206, 1411, 552],frequency_FRI:[5,12,24,12,12,8],traffic_FRI:[333,1513,1746,2143,1348,688],frequency_SAT:[4,12,24,12,12,9],traffic_SAT:[121,539,2155,1582,1243,829],frequency_SUN:[1,7,24,12,12,8],traffic_SUN:[18,296,1746,1302,986,376]}]->(WJNu),
+(KNRr)-[KNRr_BSPr_lo:TO{mode:'overground',line:'lo north london',distance:0.965662877021397,time:2,speed:28.97,frequency_MTT:[7,24,49,23,24,10],traffic_MTT:[642, 5817, 4532, 6761, 2621, 574],frequency_FRI:[7,24,49,23,24,10],traffic_FRI:[633,5482,4781,6166,2552,740],frequency_SAT:[7,24,48,24,24,11],traffic_SAT:[366,2347,5498,3988,2283,768],frequency_SUN:[0,7,48,24,21,7],traffic_SUN:[0,284,4193,2784,1298,261]}]->(BSPr),
+(KNRr)-[KNRr_WJNu_lo:TO{mode:'overground',line:'lo north london',distance:1.72163756054338,time:4,speed:25.82,frequency_MTT:[5,24,47,24,25,16],traffic_MTT:[812, 7088, 4766, 4864, 2256, 651],frequency_FRI:[5,24,47,24,25,16],traffic_FRI:[670,6440,4919,4784,2362,818],frequency_SAT:[5,24,48,24,24,18],traffic_SAT:[289,2586,6492,3151,1829,842],frequency_SUN:[0,2,48,24,23,9],traffic_SUN:[0,195,4563,2155,1183,295]}]->(WJNu),
+(KTWr)-[KTWr_CMDr_lo:TO{mode:'overground',line:'lo north london',distance:0.764586248892881,time:2,speed:22.94,frequency_MTT:[5,24,48,25,22,13],traffic_MTT:[572, 4770, 5138, 6510, 2839, 748],frequency_FRI:[5,24,48,25,22,13],traffic_FRI:[575,4563,5387,6151,2823,964],frequency_SAT:[5,24,48,24,24,13],traffic_SAT:[247,1848,5841,3691,2476,984],frequency_SUN:[0,5,48,24,21,9],traffic_SUN:[0,242,4343,2795,1452,357]}]->(CMDr),
+(KTWr)-[KTWr_GPOr_lo:TO{mode:'overground',line:'lo north london',distance:1.01844604783368,time:2,speed:30.55,frequency_MTT:[7,24,48,24,24,14],traffic_MTT:[935, 7875, 5223, 5751, 2603, 996],frequency_FRI:[7,24,48,24,24,14],traffic_FRI:[791,7442,5335,5407,2651,1280],frequency_SAT:[7,24,48,24,24,16],traffic_SAT:[234,2480,6815,3449,2289,1369],frequency_SUN:[0,4,48,24,23,7],traffic_SUN:[0,269,5231,2428,1399,398]}]->(GPOr),
+(LEMr)-[LEMr_LERr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:1.33233585490237,time:3,speed:26.65,frequency_MTT:[2,12,24,12,12,7],traffic_MTT:[371, 1812, 2180, 3353, 1357, 357],frequency_FRI:[2,12,24,12,12,7],traffic_FRI:[363,1754,2341,3150,1357,423],frequency_SAT:[2,12,24,12,12,7],traffic_SAT:[149,815,2428,1547,960,408],frequency_SUN:[0,3,24,12,12,6],traffic_SUN:[0,230,1952,1261,861,291]}]->(LERr),
+(LEMr)-[LEMr_WMWr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:1.707687725846,time:3,speed:34.15,frequency_MTT:[3,12,24,12,12,8],traffic_MTT:[823, 4059, 2413, 1850, 770, 201],frequency_FRI:[3,12,24,12,12,8],traffic_FRI:[836,4035,2619,1943,956,303],frequency_SAT:[2,12,24,12,12,8],traffic_SAT:[298,1563,3097,1457,858,366],frequency_SUN:[0,4,24,12,12,7],traffic_SUN:[0,405,2690,1162,697,186]}]->(WMWr),
+(LERr)-[LERr_LEMr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:1.33233585490237,time:2,speed:39.97,frequency_MTT:[4,12,24,12,12,7],traffic_MTT:[1030, 3513, 2249, 1802, 690, 165],frequency_FRI:[4,12,24,12,12,7],traffic_FRI:[1070,3559,2468,1911,853,264],frequency_SAT:[3,12,24,12,12,7],traffic_SAT:[409,1425,2857,1344,773,298],frequency_SUN:[0,4,24,12,12,7],traffic_SUN:[0,377,2519,1141,693,185]}]->(LEMr),
+(LERr)-[LERr_WNPr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:1.80689989899281,time:2,speed:54.21,frequency_MTT:[2,12,24,12,11,8],traffic_MTT:[380, 1671, 1858, 2985, 1155, 348],frequency_FRI:[2,12,24,12,11,8],traffic_FRI:[369,1611,2012,2841,1169,408],frequency_SAT:[2,12,24,12,12,7],traffic_SAT:[151,758,2156,1354,849,355],frequency_SUN:[0,3,24,12,12,6],traffic_SUN:[0,225,1769,1117,772,261]}]->(WNPr),
+(LOFr)-[LOFr_CBHr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.02188269647449,time:2,speed:30.66,frequency_MTT:[10,32,48,27,26,16],traffic_MTT:[2261, 13303, 5862, 3135, 1045, 377],frequency_FRI:[10,32,48,27,26,16],traffic_FRI:[2155,11572,5947,3182,1335,488],frequency_SAT:[10,24,48,24,24,17],traffic_SAT:[426,1934,5765,2250,1322,488],frequency_SUN:[0,21,48,24,24,15],traffic_SUN:[46,886,4482,1517,758,259]}]->(CBHr),
+(LOFr)-[LOFr_HACr_lo:TO{mode:'overground',line:'lo west anglia',distance:0.872338216364156,time:2,speed:26.17,frequency_MTT:[10,28,48,29,25,22],traffic_MTT:[381, 1927, 4508, 9983, 5163, 1925],frequency_FRI:[10,28,48,29,25,22],traffic_FRI:[349,1719,4783,8579,4595,2542],frequency_SAT:[10,24,48,24,24,22],traffic_SAT:[161,727,3828,2986,2135,1653],frequency_SUN:[0,19,48,24,24,21],traffic_SUN:[0,334,3252,2580,1575,649]}]->(HACr),
+(LSTr)-[LSTr_BETr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.65420542013967,time:3,speed:33.08,frequency_MTT:[10,28,48,29,25,22],traffic_MTT:[272, 1367, 3660, 8971, 4805, 1809],frequency_FRI:[10,28,48,29,25,22],traffic_FRI:[245,1185,3963,7647,4214,2383],frequency_SAT:[10,24,48,24,24,22],traffic_SAT:[106,422,2634,2347,1700,1414],frequency_SUN:[0,19,48,24,24,21],traffic_SUN:[0,236,2251,2096,1307,554]}]->(BETr),
+(NWBu)-[NWBu_SKTu_lo:TO{mode:'overground',line:'lo watford-euston',distance:0.902657087435475,time:2,speed:27.08,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[531, 1696, 1530, 2224, 1231, 353],frequency_FRI:[4,12,24,12,12,8],traffic_FRI:[360,1496,1672,2161,1162,448],frequency_SAT:[3,12,24,12,12,8],traffic_SAT:[209,781,2050,1282,929,526],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[19,390,1597,1088,761,225]}]->(SKTu),
+(NWBu)-[NWBu_WEMu_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.25702127673226,time:2,speed:37.71,frequency_MTT:[5,12,24,12,12,7],traffic_MTT:[1026, 2515, 1938, 1471, 526, 123],frequency_FRI:[5,12,24,12,12,7],traffic_FRI:[972,2412,2083,1467,599,186],frequency_SAT:[4,12,24,12,12,8],traffic_SAT:[492,1120,2612,1347,729,265],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[52,605,1998,823,511,136]}]->(WEMu),
+(NWDr)-[NWDr_ANYr_lo:TO{mode:'overground',line:'lo east london',distance:1.80470579426002,time:3,speed:36.09,frequency_MTT:[6,12,24,12,12,7],traffic_MTT:[593, 1895, 1803, 2541, 840, 197],frequency_FRI:[6,12,24,12,12,7],traffic_FRI:[574,1809,1881,2292,910,283],frequency_SAT:[6,12,24,12,12,7],traffic_SAT:[179,655,2022,1276,740,226],frequency_SUN:[1,6,18,12,12,5],traffic_SUN:[42,402,1449,876,448,86]}]->(ANYr),
+(NWDr)-[NWDr_WCYr_lo:TO{mode:'overground',line:'lo east london',distance:2.81184794857984,time:10,speed:16.87,frequency_MTT:[4,12,24,12,12,10],traffic_MTT:[118, 2016, 1421, 1245, 710, 285],frequency_FRI:[4,12,24,12,12,10],traffic_FRI:[110,1765,1469,1180,700,372],frequency_SAT:[3,12,24,12,12,10],traffic_SAT:[33,634,1761,768,542,345],frequency_SUN:[0,6,19,12,12,9],traffic_SUN:[2,232,1258,647,457,187]}]->(WCYr),
+(NWXr)-[NWXr_SQEr_lo:TO{mode:'overground',line:'lo east london',distance:2.14762326694995,time:4,speed:32.21,frequency_MTT:[5,12,24,12,12,7],traffic_MTT:[309, 1412, 1063, 1093, 553, 252],frequency_FRI:[5,12,24,12,12,7],traffic_FRI:[247,1300,1091,1128,629,321],frequency_SAT:[5,12,24,12,12,7],traffic_SAT:[65,376,1207,652,508,331],frequency_SUN:[0,5,24,12,12,5],traffic_SUN:[0,181,1172,436,361,133]}]->(SQEr),
+(NXGr)-[NXGr_BCYr_lo:TO{mode:'overground',line:'lo east london',distance:1.18270449818994,time:2,speed:35.48,frequency_MTT:[10,24,48,24,24,18],traffic_MTT:[271, 3526, 4604, 9208, 6831, 2769],frequency_FRI:[10,24,48,24,24,18],traffic_FRI:[254,3162,5013,8205,5980,3248],frequency_SAT:[9,24,48,24,24,18],traffic_SAT:[104,1322,5340,4318,3541,2433],frequency_SUN:[0,12,40,24,24,13],traffic_SUN:[14,593,4668,4071,2764,987]}]->(BCYr),
+(NXGr)-[NXGr_SQEr_lo:TO{mode:'overground',line:'lo east london',distance:2.0701510778833,time:4,speed:31.05,frequency_MTT:[10,24,48,24,24,17],traffic_MTT:[2547, 12721, 8116, 6100, 2272, 565],frequency_FRI:[10,24,48,24,24,36],traffic_FRI:[2248,12133,8932,6311,2834,1260],frequency_SAT:[13,24,48,24,24,36],traffic_SAT:[667,3462,10860,5014,2898,1452],frequency_SUN:[8,12,38,24,24,29],traffic_SUN:[244,2254,8948,3351,1520,341]}]->(SQEr),
+(OLYu)-[OLYu_SPBr_lo:TO{mode:'overground',line:'lo north london',distance:0.965150887095332,time:2,speed:28.95,frequency_MTT:[4,12,23,12,13,8],traffic_MTT:[473, 4083, 4259, 5195, 1982, 499],frequency_FRI:[4,12,23,12,13,8],traffic_FRI:[409,3778,4695,4854,2012,712],frequency_SAT:[5,12,24,12,12,8],traffic_SAT:[149,1456,6908,3589,1763,667],frequency_SUN:[0,5,25,12,12,8],traffic_SUN:[0,316,4772,2183,1021,325]}]->(SPBr),
+(OLYu)-[OLYu_WBTu_lo:TO{mode:'overground',line:'lo north london',distance:1.58316095330258,time:3,speed:31.66,frequency_MTT:[4,12,24,12,12,9],traffic_MTT:[657, 4152, 3697, 4036, 2296, 615],frequency_FRI:[4,12,24,12,12,9],traffic_FRI:[624,3819,3968,3761,2360,854],frequency_SAT:[4,12,24,12,12,9],traffic_SAT:[311,1980,5169,3544,2176,862],frequency_SUN:[0,6,24,12,12,10],traffic_SUN:[0,423,3485,2567,1142,292]}]->(WBTu),
+(PMRr)-[PMRr_DMKr_lo:TO{mode:'overground',line:'lo east london',distance:1.40095583019969,time:3,speed:28.02,frequency_MTT:[2,12,24,12,12,11],traffic_MTT:[321, 3943, 2428, 2315, 1542, 614],frequency_FRI:[2,12,24,12,12,11],traffic_FRI:[260,3093,2617,2142,1559,996],frequency_SAT:[3,12,24,12,12,11],traffic_SAT:[152,1237,3595,2020,1541,1231],frequency_SUN:[0,10,24,12,12,8],traffic_SUN:[0,589,2905,1698,1064,361]}]->(DMKr),
+(PMRr)-[PMRr_QRPr_lo:TO{mode:'overground',line:'lo east london',distance:0.928112800112583,time:2,speed:27.84,frequency_MTT:[3,12,24,12,12,9],traffic_MTT:[440, 3803, 2931, 3650, 1632, 545],frequency_FRI:[3,12,24,12,12,9],traffic_FRI:[384,3281,3271,3363,1764,892],frequency_SAT:[3,12,24,12,12,9],traffic_SAT:[137,1075,4393,2773,1969,1046],frequency_SUN:[0,10,24,12,12,7],traffic_SUN:[0,615,3363,1893,1080,301]}]->(QRPr),
+(PNWr)-[PNWr_ANYr_lo:TO{mode:'overground',line:'lo east london',distance:0.696020062679787,time:2,speed:20.88,frequency_MTT:[5,12,24,12,12,9],traffic_MTT:[248, 2336, 1736, 2140, 1266, 488],frequency_FRI:[5,12,24,12,12,9],traffic_FRI:[219,2045,1789,1960,1221,590],frequency_SAT:[4,12,24,12,12,9],traffic_SAT:[75,754,2149,1137,812,536],frequency_SUN:[0,6,19,12,12,9],traffic_SUN:[4,278,1628,1033,769,319]}]->(ANYr),
+(PNWr)-[PNWr_SYDr_lo:TO{mode:'overground',line:'lo east london',distance:1.17195023582343,time:2,speed:35.16,frequency_MTT:[6,12,24,12,12,7],traffic_MTT:[884, 2608, 2201, 2660, 895, 213],frequency_FRI:[6,12,24,12,12,7],traffic_FRI:[833,2487,2264,2402,951,299],frequency_SAT:[6,12,24,12,12,7],traffic_SAT:[255,815,2612,1559,878,278],frequency_SUN:[1,6,18,12,12,5],traffic_SUN:[66,622,1992,1074,548,103]}]->(SYDr),
+(QPKu)-[QPKu_KBNr_lo:TO{mode:'overground',line:'lo watford-euston',distance:0.958179550407823,time:2,speed:28.75,frequency_MTT:[5,12,24,12,12,8],traffic_MTT:[688, 1803, 1024, 760, 227, 56],frequency_FRI:[5,12,24,12,12,8],traffic_FRI:[557,1508,1076,753,294,93],frequency_SAT:[3,12,24,12,12,9],traffic_SAT:[422,700,1547,728,407,163],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[22,396,1166,526,274,70]}]->(KBNr),
+(QPKu)-[QPKu_KGNu_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.44611648975106,time:2,speed:43.38,frequency_MTT:[5,12,24,12,12,8],traffic_MTT:[381, 1596, 1699, 2387, 1583, 634],frequency_FRI:[5,12,24,12,12,8],traffic_FRI:[310,1449,1822,2297,1475,776],frequency_SAT:[4,12,24,12,12,9],traffic_SAT:[116,534,2233,1710,1356,934],frequency_SUN:[1,7,24,12,12,8],traffic_SUN:[20,295,1851,1431,1102,433]}]->(KGNu),
+(QRPr)-[QRPr_PMRr_lo:TO{mode:'overground',line:'lo east london',distance:0.928112800112583,time:2,speed:27.84,frequency_MTT:[3,12,24,12,12,10],traffic_MTT:[356, 3573, 2599, 3030, 1951, 823],frequency_FRI:[3,12,24,12,12,10],traffic_FRI:[274,2718,2823,2805,2003,1296],frequency_SAT:[4,12,24,12,12,10],traffic_SAT:[135,1093,3926,2391,1926,1455],frequency_SUN:[0,10,24,12,12,8],traffic_SUN:[0,591,3421,2108,1323,455]}]->(PMRr),
+(QRPr)-[QRPr_SQEr_lo:TO{mode:'overground',line:'lo east london',distance:2.28750163422289,time:6,speed:22.88,frequency_MTT:[3,12,24,12,12,9],traffic_MTT:[649, 5014, 3506, 3992, 1584, 545],frequency_FRI:[3,12,24,12,12,9],traffic_FRI:[517,4196,4014,3768,1889,901],frequency_SAT:[3,12,24,12,12,9],traffic_SAT:[184,1318,5284,3122,2129,1054],frequency_SUN:[0,10,24,12,12,7],traffic_SUN:[0,751,3989,2086,1115,307]}]->(SQEr),
+(RECr)-[RECr_HACr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.20099480544652,time:3,speed:24.02,frequency_MTT:[5,19,24,15,14,8],traffic_MTT:[1149, 6108, 3593, 2095, 835, 301],frequency_FRI:[5,19,24,15,14,8],traffic_FRI:[1077,5249,3496,2001,962,355],frequency_SAT:[4,12,24,12,12,9],traffic_SAT:[240,1194,3508,1416,917,381],frequency_SUN:[0,9,24,12,12,8],traffic_SUN:[0,469,2842,1130,594,192]}]->(HACr),
+(RECr)-[RECr_SKWr_lo:TO{mode:'overground',line:'lo west anglia',distance:0.814537674786838,time:2,speed:24.44,frequency_MTT:[6,17,24,17,13,9],traffic_MTT:[330, 2063, 2844, 4893, 2385, 895],frequency_FRI:[6,17,24,17,13,9],traffic_FRI:[278,1640,2970,4454,2298,1136],frequency_SAT:[7,12,24,12,12,9],traffic_SAT:[162,732,2742,1861,1259,780],frequency_SUN:[0,10,24,12,12,8],traffic_SUN:[0,339,2206,1427,886,314]}]->(SKWr),
+(RMDu)-[RMDu_KEWu_lo:TO{mode:'overground',line:'lo north london',distance:1.93531053157401,time:3,speed:38.71,frequency_MTT:[5,12,21,12,12,6],traffic_MTT:[240, 1482, 1159, 1930, 707, 155],frequency_FRI:[5,12,21,12,12,6],traffic_FRI:[183,1286,1253,1724,670,208],frequency_SAT:[5,12,24,12,12,6],traffic_SAT:[46,399,1637,1378,611,240],frequency_SUN:[0,5,24,12,12,4],traffic_SUN:[0,96,1279,1039,393,75]}]->(KEWu),
+(RMFr)-[RMFr_EMPr_lo:TO{mode:'overground',line:'lo romford–upminster',distance:2.64771287566114,time:5,speed:31.77,frequency_MTT:[2,6,12,6,6,0],traffic_MTT:[41, 141, 149, 208, 78, 2],frequency_FRI:[2,6,12,6,6,0],traffic_FRI:[38,126,161,219,86,2],frequency_SAT:[2,6,12,6,6,0],traffic_SAT:[10,39,159,77,48,2],frequency_SUN:[0,3,12,6,2,0],traffic_SUN:[0,13,78,43,17,0]}]->(EMPr),
+(ROEr)-[ROEr_CWRu_lo:TO{mode:'overground',line:'lo east london',distance:0.353638736224966,time:2,speed:10.61,frequency_MTT:[16,48,96,48,48,37],traffic_MTT:[750, 7740, 7520, 11986, 7098, 2974],frequency_FRI:[18,48,96,48,48,54],traffic_FRI:[663,6707,7966,10798,6801,5571],frequency_SAT:[20,48,96,48,48,55],traffic_SAT:[358,2298,10637,6929,5073,5477],frequency_SUN:[8,28,89,48,48,44],traffic_SUN:[226,1418,9211,5798,3556,1319]}]->(CWRu),
+(ROEr)-[ROEr_WPEr_lo:TO{mode:'overground',line:'lo east london',distance:0.480150928797437,time:1,speed:28.81,frequency_MTT:[16,48,96,48,48,35],traffic_MTT:[1509, 14224, 8745, 8473, 3897, 1633],frequency_FRI:[16,48,96,48,48,54],traffic_FRI:[1338,12864,9650,8576,4782,2924],frequency_SAT:[19,48,96,48,48,54],traffic_SAT:[449,3000,11815,6800,5165,3837],frequency_SUN:[8,25,92,48,48,43],traffic_SUN:[220,1926,10741,4820,2628,847]}]->(WPEr),
+(SATr)-[SATr_ACCr_lo:TO{mode:'overground',line:'lo north london',distance:1.1208404781862,time:2,speed:33.63,frequency_MTT:[4,12,25,12,11,7],traffic_MTT:[442, 2410, 1894, 4131, 1195, 270],frequency_FRI:[4,12,25,12,11,7],traffic_FRI:[367,2160,2059,3745,1131,369],frequency_SAT:[4,12,24,12,12,7],traffic_SAT:[98,687,2584,2065,1025,373],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,147,1819,1441,631,147]}]->(ACCr),
+(SATr)-[SATr_GUNu_lo:TO{mode:'overground',line:'lo north london',distance:0.960445230318223,time:3,speed:19.21,frequency_MTT:[3,12,21,12,12,8],traffic_MTT:[257, 3471, 2019, 1798, 851, 258],frequency_FRI:[3,12,21,12,12,8],traffic_FRI:[223,3129,2130,1797,883,333],frequency_SAT:[3,12,24,12,12,9],traffic_SAT:[85,1060,3143,1230,664,319],frequency_SUN:[0,3,24,12,12,6],traffic_SUN:[0,139,2463,852,492,134]}]->(GUNu),
+(SBUr)-[SBUr_EDRr_lo:TO{mode:'overground',line:'lo west anglia',distance:2.71265023266594,time:3,speed:54.25,frequency_MTT:[3,7,12,6,6,4],traffic_MTT:[643, 2061, 1581, 856, 307, 65],frequency_FRI:[3,7,12,6,6,4],traffic_FRI:[556,2031,1552,838,343,76],frequency_SAT:[3,6,12,6,6,4],traffic_SAT:[158,620,1535,568,274,99],frequency_SUN:[0,5,12,6,6,4],traffic_SUN:[0,328,1263,388,197,46]}]->(EDRr),
+(SBUr)-[SBUr_TURr_lo:TO{mode:'overground',line:'lo west anglia',distance:2.68609107134557,time:3,speed:53.72,frequency_MTT:[2,7,12,6,6,5],traffic_MTT:[95, 712, 877, 1215, 742, 248],frequency_FRI:[2,7,12,6,6,5],traffic_FRI:[89,692,890,1173,741,275],frequency_SAT:[3,6,12,6,6,5],traffic_SAT:[23,174,605,443,351,231],frequency_SUN:[0,4,12,6,6,4],traffic_SUN:[0,114,521,344,263,95]}]->(TURr),
+(SDCr)-[SDCr_HOXr_lo:TO{mode:'overground',line:'lo east london',distance:0.905812445316129,time:2,speed:27.17,frequency_MTT:[14,48,96,48,48,37],traffic_MTT:[398, 5010, 4567, 6186, 3715, 1506],frequency_FRI:[15,48,96,48,48,55],traffic_FRI:[361,4588,5069,5924,3911,2634],frequency_SAT:[18,48,96,48,48,55],traffic_SAT:[215,1329,5896,4069,3410,2886],frequency_SUN:[8,25,91,48,48,44],traffic_SUN:[120,928,6478,3558,2028,691]}]->(HOXr),
+(SDCr)-[SDCr_WCLu_lo:TO{mode:'overground',line:'lo east london',distance:1.15957269509137,time:2,speed:34.79,frequency_MTT:[19,48,96,48,48,34],traffic_MTT:[754, 7593, 6413, 10922, 5682, 2549],frequency_FRI:[20,48,96,48,48,52],traffic_FRI:[673,6660,7024,9729,5585,5496],frequency_SAT:[23,48,96,48,48,52],traffic_SAT:[295,1603,9023,6087,4212,5368],frequency_SUN:[8,30,89,48,48,42],traffic_SUN:[163,1107,8266,5381,3011,1160]}]->(WCLu),
+(SDEr)-[SDEr_WCLu_lo:TO{mode:'overground',line:'lo east london',distance:0.931494222080645,time:2,speed:27.94,frequency_MTT:[15,48,96,48,48,36],traffic_MTT:[1311, 14344, 9270, 8981, 4139, 1588],frequency_FRI:[15,48,96,48,48,55],traffic_FRI:[1154,12999,10163,9052,5202,2959],frequency_SAT:[18,48,96,48,48,55],traffic_SAT:[400,2864,11761,6585,5335,3887],frequency_SUN:[7,25,92,48,48,44],traffic_SUN:[187,1873,11531,4721,2561,786]}]->(WCLu),
+(SDEr)-[SDEr_WPEr_lo:TO{mode:'overground',line:'lo east london',distance:0.770388811847541,time:2,speed:23.11,frequency_MTT:[17,48,96,48,48,36],traffic_MTT:[678, 7133, 7193, 12180, 7120, 2972],frequency_FRI:[18,48,96,48,48,54],traffic_FRI:[606,6194,7639,10923,6747,5660],frequency_SAT:[21,48,96,48,48,54],traffic_SAT:[340,2032,9996,6830,4896,5439],frequency_SUN:[8,29,89,48,48,43],traffic_SUN:[231,1344,8699,5821,3555,1299]}]->(WPEr),
+(SFDu)-[SFDu_HKWr_lo:TO{mode:'overground',line:'lo north london',distance:1.50265638997677,time:4,speed:22.54,frequency_MTT:[10,24,48,24,24,11],traffic_MTT:[1608, 8592, 6465, 5453, 2982, 906],frequency_FRI:[10,24,48,24,24,11],traffic_FRI:[1438,8044,6870,5414,3349,1273],frequency_SAT:[10,24,48,24,24,13],traffic_SAT:[559,2624,7697,4838,3533,1414],frequency_SUN:[0,7,48,24,22,6],traffic_SUN:[0,480,6394,3827,1903,290]}]->(HKWr),
+(SJSr)-[SJSr_CPTr_lo:TO{mode:'overground',line:'lo west anglia',distance:2.72436117930871,time:4,speed:40.87,frequency_MTT:[7,12,24,12,12,7],traffic_MTT:[1677, 6554, 2265, 1235, 505, 125],frequency_FRI:[7,12,24,12,12,7],traffic_FRI:[1563,5698,2405,1348,703,180],frequency_SAT:[7,12,24,12,12,7],traffic_SAT:[254,945,2818,1225,695,193],frequency_SUN:[1,12,24,12,12,6],traffic_SUN:[51,468,2229,750,324,75]}]->(CPTr),
+(SJSr)-[SJSr_WALu_lo:TO{mode:'overground',line:'lo west anglia',distance:0.933490056823186,time:2,speed:28,frequency_MTT:[2,12,24,12,12,14],traffic_MTT:[60, 959, 1764, 4241, 2243, 844],frequency_FRI:[2,12,24,12,12,14],traffic_FRI:[50,849,1991,3611,1868,1139],frequency_SAT:[2,12,24,12,12,14],traffic_SAT:[34,324,1827,1256,862,695],frequency_SUN:[0,8,24,12,12,14],traffic_SUN:[0,138,1538,1098,599,291]}]->(WALu),
+(SKTu)-[SKTu_KETu_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.41809999067314,time:2,speed:42.54,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[570, 1742, 1405, 1911, 1053, 313],frequency_FRI:[4,12,24,12,12,8],traffic_FRI:[387,1520,1494,1829,980,382],frequency_SAT:[3,12,24,12,12,8],traffic_SAT:[224,834,1985,1179,852,481],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[20,406,1534,985,690,198]}]->(KETu),
+(SKTu)-[SKTu_NWBu_lo:TO{mode:'overground',line:'lo watford-euston',distance:0.902657087435475,time:2,speed:27.08,frequency_MTT:[5,12,24,12,12,7],traffic_MTT:[904, 2332, 1779, 1437, 516, 125],frequency_FRI:[5,12,24,12,12,7],traffic_FRI:[854,2242,1914,1415,583,189],frequency_SAT:[4,12,24,12,12,8],traffic_SAT:[428,1023,2434,1297,710,263],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[48,564,1852,786,499,140]}]->(NWBu),
+(SKWr)-[SKWr_RECr_lo:TO{mode:'overground',line:'lo west anglia',distance:0.814537674786838,time:1,speed:48.87,frequency_MTT:[6,18,24,15,14,8],traffic_MTT:[1169, 5707, 3532, 2253, 971, 330],frequency_FRI:[6,18,24,15,14,8],traffic_FRI:[1121,5151,3417,2021,995,377],frequency_SAT:[4,12,24,12,12,9],traffic_SAT:[242,1182,3477,1449,979,421],frequency_SUN:[0,9,24,12,12,8],traffic_SUN:[0,460,2794,1194,662,213]}]->(RECr),
+(SKWr)-[SKWr_SMHr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.06052691081156,time:2,speed:31.82,frequency_MTT:[6,17,24,17,13,9],traffic_MTT:[360, 2377, 2922, 4870, 2287, 842],frequency_FRI:[6,17,24,17,13,9],traffic_FRI:[307,1977,3061,4465,2194,1078],frequency_SAT:[7,12,24,12,12,9],traffic_SAT:[177,833,2800,1839,1235,783],frequency_SUN:[0,10,24,12,12,8],traffic_SUN:[0,405,2265,1422,882,310]}]->(SMHr),
+(SLVr)-[SLVr_EDRr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.21589233993342,time:2,speed:36.48,frequency_MTT:[4,18,24,17,13,10],traffic_MTT:[399, 2516, 3174, 5310, 3313, 1115],frequency_FRI:[4,18,24,17,13,10],traffic_FRI:[369,2344,3212,4905,3087,1347],frequency_SAT:[6,12,24,12,12,10],traffic_SAT:[157,860,2836,2590,1683,1063],frequency_SUN:[0,9,24,12,12,9],traffic_SUN:[0,328,2119,1643,1240,466]}]->(EDRr),
+(SLVr)-[SLVr_WHLr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.10352015432038,time:2,speed:33.11,frequency_MTT:[6,18,24,17,12,8],traffic_MTT:[2349, 7839, 5335, 3474, 919, 224],frequency_FRI:[6,18,24,17,12,8],traffic_FRI:[2018,7227,5153,3419,1038,278],frequency_SAT:[4,12,24,12,12,9],traffic_SAT:[551,2330,5913,2250,1241,369],frequency_SUN:[0,9,24,12,12,8],traffic_SUN:[0,970,4285,1576,773,188]}]->(WHLr),
+(SMHr)-[SMHr_SKWr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.06052691081156,time:1,speed:32.81,frequency_MTT:[6,18,24,15,14,8],traffic_MTT:[1206, 5407, 3433, 2378, 1040, 350],frequency_FRI:[6,18,24,15,14,8],traffic_FRI:[1150,4935,3357,2153,1061,400],frequency_SAT:[4,12,24,12,12,9],traffic_SAT:[245,1198,3519,1532,1033,415],frequency_SUN:[0,9,24,12,12,8],traffic_SUN:[0,465,2771,1222,703,222]}]->(SKWr),
+(SMHr)-[SMHr_SVSu_lo:TO{mode:'overground',line:'lo west anglia',distance:0.87343591664596,time:2,speed:26.2,frequency_MTT:[6,16,24,17,13,10],traffic_MTT:[349, 2297, 2814, 4727, 2400, 923],frequency_FRI:[6,16,24,17,13,10],traffic_FRI:[292,1906,2929,4335,2260,1154],frequency_SAT:[6,12,24,12,12,10],traffic_SAT:[136,811,2745,1799,1246,829],frequency_SUN:[0,9,24,12,12,9],traffic_SUN:[0,353,2241,1402,926,349]}]->(SVSu),
+(SOHr)-[SOHr_EUSr_lo:TO{mode:'overground',line:'lo watford-euston',distance:3.45225156727971,time:9,speed:23.02,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[302, 1636, 1125, 832, 261, 68],frequency_FRI:[4,12,24,12,12,8],traffic_FRI:[233,1381,1165,806,334,112],frequency_SAT:[2,12,24,12,12,10],traffic_SAT:[164,596,1642,780,472,198],frequency_SUN:[0,5,24,12,12,9],traffic_SUN:[0,377,1272,583,307,87]}]->(EUSr),
+(SOHr)-[SOHr_KBNr_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.03574397286941,time:2,speed:31.07,frequency_MTT:[5,12,24,12,12,8],traffic_MTT:[256, 957, 1068, 1876, 1102, 532],frequency_FRI:[5,12,24,12,12,8],traffic_FRI:[213,892,1129,1632,894,632],frequency_SAT:[4,12,24,12,12,9],traffic_SAT:[113,374,1400,1119,915,874],frequency_SUN:[1,7,24,12,12,8],traffic_SUN:[23,214,1293,1022,861,400]}]->(KBNr),
+(SPBr)-[SPBr_OLYu_lo:TO{mode:'overground',line:'lo north london',distance:0.965150887095332,time:2,speed:28.95,frequency_MTT:[4,12,24,12,12,9],traffic_MTT:[677, 4893, 3982, 3495, 2124, 599],frequency_FRI:[4,12,24,12,12,9],traffic_FRI:[643,4426,4204,3350,2308,782],frequency_SAT:[4,12,24,12,12,9],traffic_SAT:[334,2097,5456,3286,2128,795],frequency_SUN:[0,6,24,12,12,10],traffic_SUN:[0,441,3733,2449,1125,276]}]->(OLYu),
+(SPBr)-[SPBr_WJNu_lo:TO{mode:'overground',line:'lo north london',distance:3.55681089946443,time:7,speed:30.49,frequency_MTT:[4,12,23,12,12,8],traffic_MTT:[363, 2004, 2646, 4244, 1639, 429],frequency_FRI:[4,12,23,12,12,8],traffic_FRI:[316,1886,2854,3708,1625,544],frequency_SAT:[5,12,24,12,12,8],traffic_SAT:[125,901,2977,2571,1473,456],frequency_SUN:[0,5,25,12,12,8],traffic_SUN:[0,163,2244,1841,782,150]}]->(WJNu),
+(SPKu)-[SPKu_HARu_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.53132600141358,time:3,speed:30.63,frequency_MTT:[5,12,24,12,12,7],traffic_MTT:[1138, 2874, 2320, 1540, 581, 137],frequency_FRI:[5,12,24,12,12,7],traffic_FRI:[1100,2787,2460,1550,715,236],frequency_SAT:[4,12,24,12,12,8],traffic_SAT:[587,1358,2942,1504,878,306],frequency_SUN:[0,7,23,12,13,7],traffic_SUN:[28,670,2148,925,584,115]}]->(HARu),
+(SPKu)-[SPKu_WEMu_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.69649840515113,time:3,speed:33.93,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[486, 1831, 1847, 2910, 1648, 525],frequency_FRI:[4,12,24,12,12,8],traffic_FRI:[340,1614,1997,2850,1609,654],frequency_SAT:[3,12,24,12,12,8],traffic_SAT:[136,655,2299,1549,1168,729],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[10,286,1762,1281,963,337]}]->(WEMu),
+(SQEr)-[SQEr_CWRu_lo:TO{mode:'overground',line:'lo east london',distance:0.554839906274865,time:2,speed:16.65,frequency_MTT:[17,48,96,48,48,34],traffic_MTT:[3811, 21790, 14332, 12134, 4834, 1556],frequency_FRI:[17,48,96,48,48,53],traffic_FRI:[3307,20068,15797,12283,5994,2865],frequency_SAT:[20,48,96,48,48,53],traffic_SAT:[1064,5871,19544,10058,6265,3318],frequency_SUN:[8,26,92,48,48,42],traffic_SUN:[317,3591,16110,6655,3369,904]}]->(CWRu),
+(SQEr)-[SQEr_NWXr_lo:TO{mode:'overground',line:'lo east london',distance:2.14762326694995,time:4,speed:32.21,frequency_MTT:[3,12,24,12,12,9],traffic_MTT:[49, 971, 1259, 1650, 784, 261],frequency_FRI:[3,12,24,12,12,9],traffic_FRI:[52,819,1220,1536,735,295],frequency_SAT:[3,12,24,12,12,9],traffic_SAT:[13,216,1283,807,550,302],frequency_SUN:[0,6,24,12,12,6],traffic_SUN:[0,119,1083,760,384,105]}]->(NWXr),
+(SQEr)-[SQEr_NXGr_lo:TO{mode:'overground',line:'lo east london',distance:2.0701510778833,time:4,speed:31.05,frequency_MTT:[9,24,48,24,24,19],traffic_MTT:[413, 4158, 6008, 10866, 7519, 3158],frequency_FRI:[11,24,48,24,24,36],traffic_FRI:[379,3748,6365,9678,6745,4623],frequency_SAT:[13,24,48,24,24,36],traffic_SAT:[244,1570,6693,5349,4297,3788],frequency_SUN:[9,11,40,24,24,31],traffic_SUN:[211,853,5714,5088,3541,1279]}]->(NXGr),
+(SQEr)-[SQEr_QRPr_lo:TO{mode:'overground',line:'lo east london',distance:2.28750163422289,time:6,speed:22.88,frequency_MTT:[3,12,24,12,12,10],traffic_MTT:[310, 3634, 2785, 3665, 2353, 1010],frequency_FRI:[3,12,24,12,12,10],traffic_FRI:[273,2850,3003,3301,2270,1565],frequency_SAT:[4,12,24,12,12,10],traffic_SAT:[108,1055,4366,2602,2178,1717],frequency_SUN:[0,10,25,12,12,7],traffic_SUN:[0,608,3814,2383,1477,472]}]->(QRPr),
+(STOr)-[STOr_BHRu_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:2.24908483617146,time:3,speed:44.98,frequency_MTT:[2,12,24,12,12,7],traffic_MTT:[155, 996, 1413, 2374, 1069, 311],frequency_FRI:[2,12,24,12,12,7],traffic_FRI:[149,988,1517,2265,1022,330],frequency_SAT:[2,12,24,12,12,7],traffic_SAT:[80,572,1898,1167,788,390],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,175,1374,1004,643,180]}]->(BHRu),
+(STOr)-[STOr_HRYr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:1.8397406269989,time:3,speed:36.79,frequency_MTT:[3,12,24,12,12,8],traffic_MTT:[344, 2294, 1221, 848, 406, 158],frequency_FRI:[3,12,24,12,12,8],traffic_FRI:[332,2247,1289,886,467,205],frequency_SAT:[2,12,24,12,12,8],traffic_SAT:[112,904,1727,841,492,259],frequency_SUN:[0,4,24,12,12,7],traffic_SUN:[0,134,1586,699,413,114]}]->(HRYr),
+(STOr)-[STOr_SVSu_lo:TO{mode:'overground',line:'Out-of-Station',distance:0,time:0,speed:0,frequency_MTT:[0,0,0,0,0,0],traffic_MTT:[0, 0, 0, 0, 0, 0],frequency_FRI:[0,0,0,0,0,0],traffic_FRI:[0, 0, 0, 0, 0, 0],frequency_SAT:[0,0,0,0,0,0],traffic_SAT:[0, 0, 0, 0, 0, 0],frequency_SUN:[0,0,0,0,0,0],traffic_SUN:[0,0,0,0,0,0]}]->(SVSu),
+(SVSu)-[SVSu_BCVr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.35356350188097,time:2,speed:40.61,frequency_MTT:[5,17,24,17,13,10],traffic_MTT:[577, 3251, 4537, 8177, 4678, 1721],frequency_FRI:[5,17,24,17,13,10],traffic_FRI:[531,2948,4565,7545,4420,2018],frequency_SAT:[6,12,24,12,12,10],traffic_SAT:[196,1218,4064,3504,2465,1636],frequency_SUN:[0,9,24,12,12,9],traffic_SUN:[0,456,3004,2450,1845,705]}]->(BCVr),
+(SVSu)-[SVSu_SMHr_lo:TO{mode:'overground',line:'lo west anglia',distance:0.87343591664596,time:2,speed:26.2,frequency_MTT:[6,18,24,16,13,8],traffic_MTT:[1236, 5298, 3335, 2354, 1032, 338],frequency_FRI:[6,18,24,16,13,8],traffic_FRI:[1176,4853,3268,2119,1042,389],frequency_SAT:[4,12,24,12,12,9],traffic_SAT:[241,1178,3409,1512,1005,394],frequency_SUN:[0,9,24,12,12,8],traffic_SUN:[0,469,2670,1202,675,215]}]->(SMHr),
+(SVSu)-[SVSu_STOr_lo:TO{mode:'overground',line:'Out-of-Station',distance:0,time:0,speed:0,frequency_MTT:[0,0,0,0,0,0],traffic_MTT:[0, 0, 0, 0, 0, 0],frequency_FRI:[0,0,0,0,0,0],traffic_FRI:[0, 0, 0, 0, 0, 0],frequency_SAT:[0,0,0,0,0,0],traffic_SAT:[0, 0, 0, 0, 0, 0],frequency_SUN:[0,0,0,0,0,0],traffic_SUN:[0,0,0,0,0,0]}]->(STOr),
+(SYDr)-[SYDr_CYPr_lo:TO{mode:'overground',line:'lo east london',distance:1.63273846445236,time:5,speed:19.59,frequency_MTT:[4,12,24,12,12,10],traffic_MTT:[15, 490, 537, 1322, 1116, 427],frequency_FRI:[4,12,24,12,12,10],traffic_FRI:[13,401,575,1181,946,497],frequency_SAT:[4,12,24,12,12,10],traffic_SAT:[3,136,680,440,416,267],frequency_SUN:[0,6,19,12,12,6],traffic_SUN:[0,59,750,533,379,108]}]->(CYPr),
+(SYDr)-[SYDr_FOHr_lo:TO{mode:'overground',line:'lo east london',distance:1.34077154844852,time:3,speed:26.82,frequency_MTT:[12,24,48,24,24,15],traffic_MTT:[1713, 6012, 3841, 3681, 1222, 288],frequency_FRI:[12,24,48,24,24,16],traffic_FRI:[1544,5527,4036,3529,1407,452],frequency_SAT:[12,24,48,24,24,16],traffic_SAT:[387,1465,4468,2337,1329,479],frequency_SUN:[2,12,38,24,24,10],traffic_SUN:[108,950,3388,1606,758,140]}]->(FOHr),
+(SYDr)-[SYDr_PNWr_lo:TO{mode:'overground',line:'lo east london',distance:1.17195023582343,time:2,speed:35.16,frequency_MTT:[5,12,24,12,12,9],traffic_MTT:[257, 2386, 1848, 2359, 1422, 570],frequency_FRI:[5,12,24,12,12,9],traffic_FRI:[228,2099,1911,2169,1371,677],frequency_SAT:[4,12,24,12,12,9],traffic_SAT:[75,830,2335,1247,946,618],frequency_SUN:[0,6,19,12,12,9],traffic_SUN:[8,332,1824,1157,824,348]}]->(PNWr),
+(TEOr)-[TEOr_CHNr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.38157671186467,time:5,speed:16.58,frequency_MTT:[2,7,12,6,6,5],traffic_MTT:[30, 127, 115, 179, 60, 19],frequency_FRI:[2,7,12,6,6,5],traffic_FRI:[23,108,127,167,58,27],frequency_SAT:[3,6,12,6,6,5],traffic_SAT:[8,56,204,114,70,48],frequency_SUN:[0,4,12,6,6,4],traffic_SUN:[0,39,202,83,73,30]}]->(CHNr),
+(TEOr)-[TEOr_TURr_lo:TO{mode:'overground',line:'lo west anglia',distance:2.36667910938284,time:2,speed:71,frequency_MTT:[4,6,12,6,6,4],traffic_MTT:[322, 738, 474, 268, 118, 24],frequency_FRI:[4,6,12,6,6,4],traffic_FRI:[304,752,485,296,119,23],frequency_SAT:[3,6,12,6,6,4],traffic_SAT:[72,263,621,238,116,45],frequency_SUN:[0,5,12,6,6,4],traffic_SUN:[0,151,515,131,73,12]}]->(TURr),
+(TURr)-[TURr_SBUr_lo:TO{mode:'overground',line:'lo west anglia',distance:2.68609107134557,time:3,speed:53.72,frequency_MTT:[4,6,12,6,6,4],traffic_MTT:[603, 1538, 1120, 519, 206, 42],frequency_FRI:[4,6,12,6,6,4],traffic_FRI:[555,1551,1098,535,208,43],frequency_SAT:[3,6,12,6,6,4],traffic_SAT:[111,451,1074,385,184,72],frequency_SUN:[0,5,12,6,6,4],traffic_SUN:[0,241,877,253,126,25]}]->(SBUr),
+(TURr)-[TURr_TEOr_lo:TO{mode:'overground',line:'lo west anglia',distance:2.36667910938284,time:2,speed:71,frequency_MTT:[2,7,12,6,6,5],traffic_MTT:[58, 281, 354, 631, 329, 102],frequency_FRI:[2,7,12,6,6,5],traffic_FRI:[53,270,373,611,327,118],frequency_SAT:[3,6,12,6,6,5],traffic_SAT:[9,96,340,243,182,144],frequency_SUN:[0,4,12,6,6,4],traffic_SUN:[0,60,318,177,149,54]}]->(TEOr),
+(UHLr)-[UHLr_CRHr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:1.20969514591973,time:3,speed:24.19,frequency_MTT:[3,12,24,12,12,6],traffic_MTT:[81, 588, 1154, 1995, 789, 194],frequency_FRI:[3,12,24,12,12,6],traffic_FRI:[70,583,1212,1811,725,206],frequency_SAT:[3,12,24,12,12,6],traffic_SAT:[50,435,1678,999,613,287],frequency_SUN:[0,5,24,12,12,4],traffic_SUN:[0,101,1047,704,384,105]}]->(CRHr),
+(UHLr)-[UHLr_GPOr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:1.73928957265207,time:7,speed:14.91,frequency_MTT:[2,12,24,12,12,9],traffic_MTT:[153, 1364, 715, 363, 162, 62],frequency_FRI:[2,12,24,12,12,9],traffic_FRI:[135,1214,704,389,183,80],frequency_SAT:[1,12,24,12,12,9],traffic_SAT:[44,472,1129,470,254,127],frequency_SUN:[0,3,24,12,12,8],traffic_SUN:[0,38,858,309,165,41]}]->(GPOr),
+(UPMu)-[UPMu_EMPr_lo:TO{mode:'overground',line:'lo romford–upminster',distance:2.3871118110273,time:4,speed:35.81,frequency_MTT:[2,6,12,6,6,0],traffic_MTT:[13, 119, 125, 182, 48, 1],frequency_FRI:[2,6,12,6,6,0],traffic_FRI:[12,119,132,157,38,1],frequency_SAT:[2,6,12,6,6,0],traffic_SAT:[2,35,149,63,37,2],frequency_SUN:[0,3,12,6,2,0],traffic_SUN:[0,11,64,38,13,0]}]->(EMPr),
+(WALu)-[WALu_SJSr_lo:TO{mode:'overground',line:'lo west anglia',distance:0.933490056823186,time:2,speed:28,frequency_MTT:[7,12,24,12,12,7],traffic_MTT:[1477, 5713, 1979, 1130, 474, 120],frequency_FRI:[7,12,24,12,12,7],traffic_FRI:[1387,4943,2095,1200,645,167],frequency_SAT:[7,12,24,12,12,7],traffic_SAT:[200,787,2446,1060,602,169],frequency_SUN:[1,12,24,12,12,6],traffic_SUN:[41,367,1884,663,288,70]}]->(SJSr),
+(WALu)-[WALu_WMWr_lo:TO{mode:'overground',line:'Out-of-Station',distance:0,time:0,speed:0,frequency_MTT:[0,0,0,0,0,0],traffic_MTT:[0, 0, 0, 0, 0, 0],frequency_FRI:[0,0,0,0,0,0],traffic_FRI:[0, 0, 0, 0, 0, 0],frequency_SAT:[0,0,0,0,0,0],traffic_SAT:[0, 0, 0, 0, 0, 0],frequency_SUN:[0,0,0,0,0,0],traffic_SUN:[0,0,0,0,0,0]}]->(WMWr),
+(WALu)-[WALu_WSTr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.27360639748703,time:2,speed:38.21,frequency_MTT:[2,12,24,12,12,14],traffic_MTT:[45, 855, 1779, 4439, 2511, 889],frequency_FRI:[2,12,24,12,12,14],traffic_FRI:[35,743,2107,3755,2025,1192],frequency_SAT:[2,12,24,12,12,14],traffic_SAT:[20,300,1852,1680,1090,927],frequency_SUN:[0,8,24,12,12,14],traffic_SUN:[0,100,1615,1333,772,292]}]->(WSTr),
+(WBTu)-[WBTu_IMWr_lo:TO{mode:'overground',line:'lo north london',distance:1.6133447397928,time:2,speed:48.4,frequency_MTT:[4,11,25,12,12,9],traffic_MTT:[544, 3604, 3570, 4073, 2382, 602],frequency_FRI:[4,11,25,12,12,9],traffic_FRI:[526,3290,3783,3793,2401,830],frequency_SAT:[3,12,24,12,12,10],traffic_SAT:[194,1621,4829,3281,2193,1026],frequency_SUN:[0,6,24,12,12,10],traffic_SUN:[0,399,3319,2374,1176,307]}]->(IMWr),
+(WBTu)-[WBTu_OLYu_lo:TO{mode:'overground',line:'lo north london',distance:1.58316095330258,time:3,speed:31.66,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[550, 5060, 4614, 4648, 1759, 511],frequency_FRI:[4,12,24,12,12,8],traffic_FRI:[466,4541,5052,4458,1907,659],frequency_SAT:[5,12,24,12,12,8],traffic_SAT:[151,1693,7556,3420,1793,670],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[0,423,5048,2052,1049,322]}]->(OLYu),
+(WCLu)-[WCLu_SDCr_lo:TO{mode:'overground',line:'lo east london',distance:1.15957269509137,time:2,speed:34.79,frequency_MTT:[15,48,96,48,48,36],traffic_MTT:[725, 10646, 7190, 7108, 3805, 1378],frequency_FRI:[16,48,96,48,48,54],traffic_FRI:[655,9486,8073,7363,4871,2807],frequency_SAT:[19,48,96,48,48,54],traffic_SAT:[294,2097,9853,5692,4865,3383],frequency_SUN:[8,25,91,48,48,44],traffic_SUN:[149,1435,10164,4224,2309,698]}]->(SDCr),
+(WCLu)-[WCLu_SDEr_lo:TO{mode:'overground',line:'lo east london',distance:0.931494222080645,time:2,speed:27.94,frequency_MTT:[18,48,96,48,48,35],traffic_MTT:[829, 7977, 7492, 12710, 7142, 3034],frequency_FRI:[19,48,96,48,48,53],traffic_FRI:[752,6883,8042,11385,6833,5915],frequency_SAT:[22,48,96,48,48,53],traffic_SAT:[365,2041,10370,7009,4933,5643],frequency_SUN:[8,29,89,48,48,43],traffic_SUN:[211,1346,9027,6117,3658,1364]}]->(SDEr),
+(WCYr)-[WCYr_NWDr_lo:TO{mode:'overground',line:'lo east london',distance:2.81184794857984,time:5,speed:33.74,frequency_MTT:[6,12,24,12,12,7],traffic_MTT:[335, 1318, 1523, 2344, 762, 175],frequency_FRI:[6,12,24,12,12,7],traffic_FRI:[339,1222,1545,2087,804,238],frequency_SAT:[6,12,24,12,12,7],traffic_SAT:[114,474,1684,1062,600,183],frequency_SUN:[1,6,19,12,12,4],traffic_SUN:[43,277,1151,642,311,54]}]->(NWDr),
+(WEMu)-[WEMu_NWBu_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.25702127673226,time:2,speed:37.71,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[522, 1696, 1608, 2448, 1382, 413],frequency_FRI:[4,12,24,12,12,8],traffic_FRI:[349,1498,1763,2371,1307,521],frequency_SAT:[3,12,24,12,12,8],traffic_SAT:[200,767,2141,1380,1017,591],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[19,385,1662,1180,829,257]}]->(NWBu),
+(WEMu)-[WEMu_SPKu_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.69649840515113,time:3,speed:33.93,frequency_MTT:[5,12,24,12,12,7],traffic_MTT:[1254, 2702, 2200, 1502, 555, 125],frequency_FRI:[5,12,24,12,12,7],traffic_FRI:[1214,2620,2338,1506,677,220],frequency_SAT:[4,12,24,12,12,8],traffic_SAT:[633,1271,2822,1475,833,288],frequency_SUN:[0,7,24,12,12,7],traffic_SUN:[55,669,2106,910,530,113]}]->(SPKu),
+(WFHr)-[WFHr_BSHr_lo:TO{mode:'overground',line:'lo watford-euston',distance:0.882350189400694,time:2,speed:26.47,frequency_MTT:[3,12,24,12,12,9],traffic_MTT:[302,929,1241,1662,550,108],frequency_FRI:[6,12,24,12,12,6],traffic_FRI:[281,893,1480,1591,619,166],frequency_SAT:[5,12,24,12,12,7],traffic_SAT:[184,584,1797,1431,919,246],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[8,307,991,468,287,77]}]->(BSHr),
+(WFHr)-[WFHr_WFJr_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.28552905749959,time:5,speed:15.43,frequency_MTT:[3,12,24,12,12,9],traffic_MTT:[188, 1370, 793, 438, 214, 47],frequency_FRI:[3,12,24,12,12,9],traffic_FRI:[214,1317,893,518,270,82],frequency_SAT:[2,12,24,12,12,9],traffic_SAT:[167,851,1209,671,404,97],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[8,307,991,468,287,77]}]->(WFJr),
+(WFJr)-[WFJr_WFHr_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.28552905749959,time:3,speed:25.71,frequency_MTT:[7,11,24,12,12,6],traffic_MTT:[215, 531, 446, 1037, 392, 63],frequency_FRI:[7,11,24,12,12,6],traffic_FRI:[203,533,615,1020,405,103],frequency_SAT:[5,12,24,12,12,7],traffic_SAT:[130,434,976,613,517,166],frequency_SUN:[1,7,24,12,12,6],traffic_SUN:[14,163,730,411,414,122]}]->(WFHr),
+(WGRr)-[WGRr_BKGu_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:2.75425310791032,time:5,speed:33.05,frequency_MTT:[1,12,24,12,12,8],traffic_MTT:[233, 1326, 1324, 1929, 876, 253],frequency_FRI:[1,12,24,12,12,8],traffic_FRI:[228,1294,1462,1890,896,306],frequency_SAT:[1,12,24,12,12,8],traffic_SAT:[87,571,1420,867,570,253],frequency_SUN:[0,3,24,12,12,6],traffic_SUN:[0,205,1340,788,552,178]}]->(BKGu),
+(WGRr)-[WGRr_WNPr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:1.29170110957146,time:3,speed:25.83,frequency_MTT:[4,12,24,12,12,7],traffic_MTT:[784, 2482, 1646, 1409, 533, 135],frequency_FRI:[4,12,24,12,12,7],traffic_FRI:[845,2651,1863,1543,681,209],frequency_SAT:[3,12,24,12,12,7],traffic_SAT:[318,1065,2083,1012,581,223],frequency_SUN:[0,5,24,12,12,6],traffic_SUN:[0,372,1971,892,529,128]}]->(WNPr),
+(WHDr)-[WHDr_BSYr_lo:TO{mode:'overground',line:'lo north london',distance:0.813065512990906,time:2,speed:24.39,frequency_MTT:[6,23,48,24,25,15],traffic_MTT:[738, 6343, 4997, 5654, 2553, 868],frequency_FRI:[6,23,48,24,25,15],traffic_FRI:[597,5875,5126,5422,2613,1067],frequency_SAT:[6,24,48,24,24,17],traffic_SAT:[227,2297,6359,3473,2191,1096],frequency_SUN:[0,2,48,24,23,9],traffic_SUN:[0,160,4550,2562,1418,422]}]->(BSYr),
+(WHDr)-[WHDr_FNYr_lo:TO{mode:'overground',line:'lo north london',distance:0.638946635001751,time:2,speed:19.17,frequency_MTT:[6,25,47,24,23,12],traffic_MTT:[906, 7024, 5209, 6344, 2824, 642],frequency_FRI:[6,25,47,24,23,12],traffic_FRI:[883,6571,5496,5925,2776,822],frequency_SAT:[6,24,48,24,24,12],traffic_SAT:[414,2674,6794,4023,2574,959],frequency_SUN:[0,6,49,24,21,7],traffic_SUN:[0,328,5276,2846,1414,325]}]->(FNYr),
+(WHLr)-[WHLr_BCVr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.23466844144941,time:2,speed:37.04,frequency_MTT:[6,18,24,16,13,8],traffic_MTT:[2631, 8644, 6021, 3990, 1144, 251],frequency_FRI:[6,18,24,16,13,8],traffic_FRI:[2293,7978,5857,3911,1307,337],frequency_SAT:[4,12,24,12,12,9],traffic_SAT:[624,2605,6518,2509,1379,416],frequency_SUN:[0,9,24,12,12,8],traffic_SUN:[0,1079,4858,1750,865,215]}]->(BCVr),
+(WHLr)-[WHLr_SLVr_lo:TO{mode:'overground',line:'lo west anglia',distance:1.10352015432038,time:2,speed:33.11,frequency_MTT:[5,17,24,17,13,10],traffic_MTT:[536, 2833, 3821, 6727, 3964, 1390],frequency_FRI:[5,17,24,17,13,10],traffic_FRI:[495,2600,3816,6221,3700,1638],frequency_SAT:[6,12,24,12,12,10],traffic_SAT:[173,1057,3380,3084,2055,1386],frequency_SUN:[0,9,24,12,12,9],traffic_SUN:[0,416,2524,2067,1548,583]}]->(SLVr),
+(WJNu)-[WJNu_ACCr_lo:TO{mode:'overground',line:'lo north london',distance:2.93863326891045,time:5,speed:35.26,frequency_MTT:[3,13,24,12,12,7],traffic_MTT:[255, 4392, 2460, 2615, 1318, 407],frequency_FRI:[3,13,24,12,12,7],traffic_FRI:[225,4031,2548,2503,1310,504],frequency_SAT:[4,12,24,12,12,8],traffic_SAT:[137,1272,3447,1642,905,507],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,159,2560,1210,753,218]}]->(ACCr),
+(WJNu)-[WJNu_HARu_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.00331795457073,time:2,speed:30.1,frequency_MTT:[5,12,24,12,12,7],traffic_MTT:[683, 1867, 2003, 3157, 1674, 532],frequency_FRI:[5,12,24,12,12,7],traffic_FRI:[487,1687,2137,3031,1627,676],frequency_SAT:[4,12,24,12,12,7],traffic_SAT:[176,653,2374,1674,1263,760],frequency_SUN:[1,7,24,12,11,7],traffic_SUN:[15,319,1912,1439,1022,350]}]->(HARu),
+(WJNu)-[WJNu_KGNu_lo:TO{mode:'overground',line:'lo watford-euston',distance:1.36782092929863,time:3,speed:27.36,frequency_MTT:[5,12,24,12,12,8],traffic_MTT:[759, 2007, 2108, 1299, 464, 120],frequency_FRI:[5,12,24,12,12,8],traffic_FRI:[697,1902,2229,1322,601,215],frequency_SAT:[3,12,24,12,12,9],traffic_SAT:[459,1102,2686,1294,754,284],frequency_SUN:[0,6,24,12,12,8],traffic_SUN:[30,635,2115,859,475,99]}]->(KGNu),
+(WJNu)-[WJNu_KNRr_lo:TO{mode:'overground',line:'lo north london',distance:1.72163756054338,time:3,speed:34.43,frequency_MTT:[8,23,49,24,23,10],traffic_MTT:[684, 5329, 4447, 7046, 2496, 584],frequency_FRI:[8,23,49,24,23,10],traffic_FRI:[671,4993,4722,6354,2473,745],frequency_SAT:[7,25,48,23,24,11],traffic_SAT:[242,1904,5351,4123,2446,811],frequency_SUN:[0,7,49,24,21,6],traffic_SUN:[0,258,3851,2760,1256,249]}]->(KNRr),
+(WJNu)-[WJNu_SPBr_lo:TO{mode:'overground',line:'lo north london',distance:3.55681089946443,time:7,speed:30.49,frequency_MTT:[5,12,23,12,12,9],traffic_MTT:[514, 4714, 3268, 2444, 1034, 287],frequency_FRI:[5,12,23,12,12,9],traffic_FRI:[493,4224,3356,2427,1219,361],frequency_SAT:[4,12,24,12,12,9],traffic_SAT:[220,1773,4442,1968,1132,342],frequency_SUN:[0,6,24,12,12,10],traffic_SUN:[0,258,3183,1313,686,152]}]->(SPBr),
+(WMWr)-[WMWr_BHRu_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:1.33232325842113,time:2,speed:39.97,frequency_MTT:[3,12,24,12,12,8],traffic_MTT:[609, 3402, 1957, 1483, 654, 206],frequency_FRI:[3,12,24,12,12,8],traffic_FRI:[590,3308,2117,1573,795,298],frequency_SAT:[2,12,24,12,12,8],traffic_SAT:[227,1370,2689,1312,781,364],frequency_SUN:[0,4,24,12,12,7],traffic_SUN:[0,271,2306,1069,626,157]}]->(BHRu),
+(WMWr)-[WMWr_LEMr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:1.707687725846,time:2,speed:51.23,frequency_MTT:[2,12,24,12,12,7],traffic_MTT:[313, 1777, 2236, 3707, 1561, 412],frequency_FRI:[2,12,24,12,12,7],traffic_FRI:[301,1726,2397,3455,1502,482],frequency_SAT:[2,12,24,12,12,7],traffic_SAT:[128,808,2626,1690,1048,465],frequency_SUN:[0,4,24,12,12,5],traffic_SUN:[0,274,2039,1370,895,259]}]->(LEMr),
+(WMWr)-[WMWr_WALu_lo:TO{mode:'overground',line:'Out-of-Station',distance:0,time:0,speed:0,frequency_MTT:[0,0,0,0,0,0],traffic_MTT:[0, 0, 0, 0, 0, 0],frequency_FRI:[0,0,0,0,0,0],traffic_FRI:[0, 0, 0, 0, 0, 0],frequency_SAT:[0,0,0,0,0,0],traffic_SAT:[0, 0, 0, 0, 0, 0],frequency_SUN:[0,0,0,0,0,0],traffic_SUN:[0,0,0,0,0,0]}]->(WALu),
+(WNPr)-[WNPr_LERr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:1.80689989899281,time:3,speed:36.14,frequency_MTT:[4,12,24,12,12,7],traffic_MTT:[927, 3067, 1960, 1643, 630, 147],frequency_FRI:[4,12,24,12,12,7],traffic_FRI:[985,3170,2185,1750,785,239],frequency_SAT:[3,12,24,12,12,7],traffic_SAT:[383,1300,2537,1222,693,259],frequency_SUN:[0,4,24,12,12,7],traffic_SUN:[0,340,2258,1050,637,170]}]->(LERr),
+(WNPr)-[WNPr_WGRr_lo:TO{mode:'overground',line:'lo gospel oak-barking',distance:1.29170110957146,time:3,speed:25.83,frequency_MTT:[1,12,24,12,12,8],traffic_MTT:[234, 1497, 1556, 2363, 1102, 310],frequency_FRI:[1,12,24,12,12,8],traffic_FRI:[227,1459,1693,2280,1121,362],frequency_SAT:[1,12,24,12,12,8],traffic_SAT:[91,647,1714,1089,726,325],frequency_SUN:[0,3,24,12,12,6],traffic_SUN:[0,220,1548,942,663,220]}]->(WGRr),
+(WPEr)-[WPEr_ROEr_lo:TO{mode:'overground',line:'lo east london',distance:0.480150928797437,time:1,speed:28.81,frequency_MTT:[17,48,96,48,48,36],traffic_MTT:[734, 7408, 7465, 12526, 7149, 2965],frequency_FRI:[18,48,96,48,48,54],traffic_FRI:[651,6468,7947,11237,6827,5651],frequency_SAT:[21,48,96,48,48,54],traffic_SAT:[371,2236,10631,7010,5035,5543],frequency_SUN:[8,29,88,48,48,44],traffic_SUN:[239,1465,9120,5895,3618,1349]}]->(ROEr),
+(WPEr)-[WPEr_SDEr_lo:TO{mode:'overground',line:'lo east london',distance:0.770388811847541,time:2,speed:23.11,frequency_MTT:[16,48,96,48,48,35],traffic_MTT:[1504, 14143, 8646, 8332, 3638, 1506],frequency_FRI:[16,48,96,48,48,54],traffic_FRI:[1330,12796,9514,8401,4578,2769],frequency_SAT:[19,48,96,48,48,54],traffic_SAT:[448,2967,11325,6367,4941,3677],frequency_SUN:[8,24,92,48,48,44],traffic_SUN:[220,1856,10573,4536,2504,823]}]->(SDEr),
+(WSTr)-[WSTr_HIPr_lo:TO{mode:'overground',line:'lo west anglia',distance:2.4268422656824,time:3,speed:48.54,frequency_MTT:[2,12,24,12,12,14],traffic_MTT:[30, 583, 1329, 3478, 1906, 598],frequency_FRI:[2,12,24,12,12,14],traffic_FRI:[29,515,1460,3019,1565,923],frequency_SAT:[2,12,24,12,12,14],traffic_SAT:[12,227,1357,1247,814,714],frequency_SUN:[0,8,24,12,12,14],traffic_SUN:[0,70,1232,861,512,188]}]->(HIPr),
+(WSTr)-[WSTr_WALu_lo:TO{mode:'overground',line:'lo west anglia',distance:1.27360639748703,time:1,speed:76.42,frequency_MTT:[7,12,24,12,12,7],traffic_MTT:[1394, 6108, 2435, 1412, 342, 80],frequency_FRI:[7,12,24,12,12,7],traffic_FRI:[1171,5281,2618,1443,511,123],frequency_SAT:[7,12,24,12,12,7],traffic_SAT:[250,1124,3463,1215,608,140],frequency_SUN:[1,12,24,12,12,6],traffic_SUN:[36,511,2587,761,266,51]}]->(WALu),
+(WWRr)-[WWRr_CLJr_lo:TO{mode:'overground',line:'lo east london',distance:2.3027722287798,time:9,speed:15.35,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[304, 3012, 2688, 3259, 1856, 481],frequency_FRI:[2,12,24,12,12,10],traffic_FRI:[368,2853,2506,2611,1230,676],frequency_SAT:[3,12,24,12,12,11],traffic_SAT:[142,1123,3506,1660,1061,841],frequency_SUN:[0,11,24,12,12,6],traffic_SUN:[13,422,2378,1608,895,242]}]->(CLJr),
+(WWRr)-[WWRr_CLPr_lo:TO{mode:'overground',line:'lo east london',distance:0.671744931383655,time:2,speed:20.15,frequency_MTT:[4,12,24,12,12,8],traffic_MTT:[304, 3012, 2688, 3259, 1856, 481],frequency_FRI:[4,12,24,12,12,8],traffic_FRI:[231,2521,3088,2967,1914,728],frequency_SAT:[4,12,24,12,12,8],traffic_SAT:[76,937,3690,2493,1725,681],frequency_SUN:[0,11,24,12,12,6],traffic_SUN:[13,422,2378,1608,895,242]}]->(CLPr)

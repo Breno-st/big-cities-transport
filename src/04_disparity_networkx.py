@@ -136,65 +136,54 @@ def edge_rank(df, G, kpi):
     - populate df with
 
     '''
-
-
-
-
-    # Combining two ranks: alpha and weight
-    combined_edges = sorted(G.edges(data=True), key=lambda x: (x[2]['alpha_ptile'], x[2][kpi]), reverse=True)
-
     # Getting ranks positions
-    alpha_sorted_edges = sorted(G.edges(data=True), key=lambda x: x[2]['alpha_ptile'], reverse=True) # should be the same as the combined
+    combined_edges = sorted(G.edges(data=True), key=lambda x: (x[2]['alpha_ptile'], x[2][kpi])) # alpha sorted
     kpi_sorted_edges = sorted(G.edges(data=True), key=lambda x: x[2][kpi], reverse=True)
 
-
-
-
-    df = pd.DataFrame(data, columns=columns, index=edges)
-
-
-    with open('temp.txt', 'w') as file:
-        for edge in combined_edges:
-            print(f"alpha: ({combined_edges.index(edge)+1}) {round(edge[2]['alpha_ptile'],3):.3f} | ({kpi_sorted_edges.index(edge)+1}) {kpi}: {round(edge[2][kpi],3):.3f}  | ({edge[0]} - {edge[1]}) ")
-            file.write(f"alpha: ({combined_edges.index(edge)+1}) {round(edge[2]['alpha_ptile'],3):.3f} | ({kpi_sorted_edges.index(edge)+1}) {kpi}: {round(edge[2][kpi],3):.3f}  | ({edge[0]} - {edge[1]}) \n")
+    # Printing ranks positions
+    for edge in combined_edges:
+        print(f"alpha: ({combined_edges.index(edge)+1}) {round(edge[2]['alpha_ptile'],3):.3f} | ({kpi_sorted_edges.index(edge)+1}) {kpi}: {round(edge[2][kpi],3):.3f}  | ({edge[0]} - {edge[1]}) ")
 
     # Store inside edge as attribute: 'pos_kpi'
     kpi_sorted_edges_ = [(x[0], x[1]) for x in kpi_sorted_edges]
-    alpha_sorted_edges_ = [(x[0], x[1]) for x in alpha_sorted_edges]
+    alpha_sorted_edges_ = [(x[0], x[1]) for x in combined_edges]
 
     for id0, id1 in G.edges():
-        edge = graph[id0][id1]
-        aux = kpi +'_pos'
-        edge[aux] = kpi_sorted_edges_.index((id0, id1))+1
-        edge['alpha_pos'] = alpha_sorted_edges_.index((id0, id1))+1
+        auxEdge = (id0, id1)
+        df.loc[df['edges'] == auxEdge,  (day, period)]= alpha_sorted_edges_.index(auxEdge)+1
 
 
-    for edge in
-
-
-    if edge not in df.index:
-        # If the edge doesn't exist, add a new row with NaN values
-        df.loc[edge] = [None] * len(columns)
-
-    # Fill the DataFrame with the value for the current column and edge
-    df.loc[edge, (day, period)] = value
-
-
+    print('pause')
 
 def rank_correlation_matrix(df):
     ''' Calculate Kendall & Spearman ranking metric '''
     # Get two lists for comparisson:
-    kpi_rank = [kpi_sorted_edges.index(edge)+1 for edge in combined_edges]
-    alpha_rank = [alpha_sorted_edges.index(edge)+1 for edge in combined_edges]
+    days_against_days_list = []
+    period_against_period_list = []
 
+    # Day perspective: comparing periods
+    for day in days:
+        for period1, period2 in period_against_period_list:
+            list1 = df[day][period1].to_list()
+            list2 = df[day][period2].to_list()
+            # Enter the two lists and store into Day Matrix 6x6
+            tau, p_value = kendalltau(list1, list2)
+            correlation = spearman_rank_correlation(list1, list2)
+            # Output Kendall ranking
+            print(f"Kendall Ranking Metric for {day}: {period1}x{period2} : tau: {tau} and P-value: {p_value}")
+            print(f"Spearman Rank Correlation for {day}: {period1}x{period2}: {correlation}")
 
-    # Enter the two lists
-    tau, p_value = kendalltau(kpi_rank, alpha_rank)
-    correlation = spearman_rank_correlation(kpi_rank, alpha_rank)
-
-    # Output Kendall ranking
-    print(f"Kendall Ranking Metric: tau: {tau} and P-value: {p_value}")
-    print(f"Spearman Rank Correlation: {correlation}")
+    # Period perspective: comparing day
+    for period in periods:
+        for day1, day2 in days_against_days_list:
+            list1 = df[day1][period].to_list()
+            list2 = df[day2][period].to_list()
+            # Enter the two lists and store into Period Matrix 4x4
+            tau, p_value = kendalltau(list1, list2)
+            correlation = spearman_rank_correlation(list1, list2)
+            # Output Kendall ranking
+            print(f"Kendall Ranking Metric for {period}: {day1}x{day2} : tau: {tau} and P-value: {p_value}")
+            print(f"Spearman Rank Correlation for {period}: {day1}x{day2}: {correlation}")
 
 def spearman_rank_correlation(rank_seq1, rank_seq2):
     """
@@ -239,7 +228,6 @@ def calc_centrality (graph, min_degree=1):
 
 
 #### PLOTS ####
-
 def draw_grid(G, node_att, edge_att, node_colors_kpi, edge_colors_kpi):
 
     pos = {}
@@ -316,20 +304,17 @@ if __name__ == "__main__":
     # od-kpi
 
     # Create a MultiIndex for columns: mode-kpi = dataframe | day-period = graph = 1 column
-
-
     for od in ods:
         for kpi in kpis:
-
             #### CREATE "MODE-KPI" DATAFRAME ###
-
+            basegraph = load_graph(f'{path}/{od}/{od}-basegraph.json')
             columns = pd.MultiIndex.from_product([days, periods], names=['Day', 'Period'])
             df = pd.DataFrame(columns=columns)
+            edges = [(x[0], x[1]) for x in basegraph.edges(data=True)]
+            df.insert(0, 'edges', edges)
 
-
-
-            #### GET GRAPH DATA ###
-            if kpi not in ['speed', 'distance', 'basegraph']:
+            #### GET GRAPH DAT-PERIOD DATA ###
+            if kpi in ['distress', 'distancetraffic', 'efficiency', 'loads', 'traffic']:
                 for day in days:
                     for period in periods:
                         auxp = period.replace(' ', '-')
@@ -344,28 +329,49 @@ if __name__ == "__main__":
 
                         #### POPULATE DATAFRAME WITH GRAPH-RANK DATA ####
                         edge_rank(df, graph, kpi)
-                        shutil.move('temp.txt', f'{path}/{od}/{db}_rank.txt', copy_function=shutil.copy2)
+                        # shutil.move('temp.txt', f'{path}/{od}/{db}_rank.txt', copy_function=shutil.copy2)
 
-                        #### PLOT ####
+                        #### PLOT #### HERE !!! Save plots!!
                         ' based on edges attributes [kpi], based on nodes attributes^[entries, exist, strength], how many graphs? '
                         alpha_edge = color_map(graph)
                         shutil.move('temp.png', f'{path}/{od}/alpha_{db}.png', copy_function=shutil.copy2)
 
                         kpi_edge = color_map(graph, kpi)
                         shutil.move('temp.png', f'{path}/{od}/{db}.png', copy_function=shutil.copy2)
-
                         # node_view(graph)
 
-
-
-            else:
+            elif kpi in ['speed', 'distance']:
                 db = od+'-'+kpi
 
-            #### APPLY RANK CORRELATION ALGORTIHMS ####
+                #### LOAD JSON DISPARITY  ####
+                graph = load_graph(f'{path}/{od}/{db}.json')
+
+                #### APPLY DISPARITY  ####
+                alpha_measures = disparity_filter(graph, kpi)
+
+                #### POPULATE DATAFRAME WITH GRAPH-RANK DATA ####
+                edge_rank(df, graph, kpi)
+                shutil.move('temp.txt', f'{path}/{od}/{db}_rank.txt', copy_function=shutil.copy2)
+
+                #### PLOT ####
+                ' based on edges attributes [kpi], based on nodes attributes^[entries, exist, strength], how many graphs? '
+                alpha_edge = color_map(graph)
+                shutil.move('temp.png', f'{path}/{od}/alpha_{db}.png', copy_function=shutil.copy2)
+
+                kpi_edge = color_map(graph, kpi)
+                shutil.move('temp.png', f'{path}/{od}/{db}.png', copy_function=shutil.copy2)
+                # node_view(graph)
+
+            df.to_csv("df.csv")
+
+            #### APPLY RANK CORRELATION ALGORTIHMS #### READY to Go
             rank_correlation_matrix(df)
 
             #### PLOT CORRELATIONS MATRIX ####
 
+
+            #### EFFICIENCY & DISTRESS COMPARISSON ####
+            rank_correlation_matrix(df)
 
 
 # # Run 5h/3, Bike 10h/4, Gym 5h (back, chest, leg, core, core)
@@ -382,7 +388,6 @@ if __name__ == "__main__":
 # # proj,lang, read,
 # # cook, clea, clot, mrkt
 
-
 # ## (23-Oct) Lundi:      5h: ----, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: legs, 21h: lang, 22h: read		>>> Colruyte, LINGI
 # ## (24-Oct) Mardi:      5h: ru16, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: core, 21h: proj, 22h: read		>>> Morning Run/Core
 # ## (25-Oct) Mecredi:    5h: bike, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: chst, 21h: ----, 22h: read		>>> Zena, Giulia, Candidates
@@ -391,12 +396,10 @@ if __name__ == "__main__":
 # ## (28-Oct) Samedi:     5h: bike, 8h: room, 12h: mrkt, 14h: proj, 18h: proj, 20h: ----, 21h: ----, 22h: ----   	>>>
 # ## (29-Oct) Dimache:    5h: bike, 8h: clot, 12h: cook, 14h: proj, 18h: ru24, 20h: ----, 21h: ----, 22h: ----		>>> Praty
 
-
 # ## (22-Oct) Dimache:    5h: ----, 8h: ----, 12h: ----, 14h: ----, 18h: ----, 20h: ----, 21h: ----, 22h:----		>>> 4h proj
 # ## (23-Oct) Dimache:    5h: ----, 8h: ----, 12h: ----, 14h: ----, 18h: ----, 20h: ----, 21h: ----, 22h:----		>>> 4h proj
 
 # ## TODO SHORT
-# ### 28 Oct: Praty Drive
 # ### 04 Nov: Farewell Lille
 # ### 11 Nov: Athens
 # ### 18 Nov: Farewell NE
@@ -404,7 +407,6 @@ if __name__ == "__main__":
 # ### 02 Dec: Farewell LU
 # ### 10 Dec: ??
 
-# ### Praty 100€, Lucas 150€, Ciani 160€, Fine 25€, Francois 52€ = 487 €
 
 # ### 01 Dec: Breda xxx€ normal   (RENT - fillup car)
 # ### 15 Dec: BE>IT  45€ remote   (5 days IT)
@@ -415,12 +417,61 @@ if __name__ == "__main__":
 # ### 30 Jan: BE>?? xxx€ --------------------------------------------------------------------
 # ### TOTAL:  1726€
 
-# ### NOV:    2300€ - 915€ - 487€ = 898€
 # ### DEP:    1700€
 # ### DEZ:    2500€
 # ### 13o:    3000€
 # ### JAN:    3000€
 # ### TOTAL: 11098€
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # ### UCL:   -4300€
 
