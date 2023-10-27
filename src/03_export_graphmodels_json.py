@@ -36,8 +36,8 @@ if __name__ == '__main__':
     # connect to neo4J and get graphs
 
     ods = [ 'overground', 'tube', 'dlr'] # ,
-    days = ['mtt', 'sun']
-    period = ['Total', 'Early', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
+    days = ['fri', 'sat', 'mtt', 'sun']
+    periods = ['Early', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
     kpis = ['distancetraffic', 'distress', 'efficiency', 'loads', 'traffic', 'basegraph', 'speed', 'distance']
 
 
@@ -46,7 +46,10 @@ if __name__ == '__main__':
         for kpi in kpis:
             if kpi not in ['speed', 'distance', 'basegraph']:
                 for day in days:
-                    db = od+'-'+day+'-'+kpi
+                    for period in periods:
+                        auxp = period.replace(' ', '-')
+                        auxk = kpi.replace('_', '')
+                        db = od+"-"+auxk+"-"+day.lower()+"-"+auxp.lower()
             else:
                 db = od+'-'+kpi
             with driver.session(database=db) as session:
