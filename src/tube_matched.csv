@@ -1,0 +1,1951 @@
+,Tube Line,From Station,To Station,Distance km
+0,Bakerloo,baker-street,regents-park,0.803591111
+1,Bakerloo,charing-cross,embankment,0.204870249
+2,Bakerloo,edgware-road-bakerloo,marylebone,0.525181323
+3,Bakerloo,embankment,waterloo,0.782531067
+4,Bakerloo,harlesden,willesden-junction,1.04118872
+5,Bakerloo,harrow-and-wealdstone,kenton,1.804055394
+6,Bakerloo,kensal-green,queens-park,1.440983449
+7,Bakerloo,kenton,south-kenton,1.261209207
+8,Bakerloo,kilburn-park,maida-vale,0.821922942
+9,Bakerloo,lambeth-north,elephant-and-castle,0.846443593
+10,Bakerloo,maida-vale,warwick-avenue,0.785412428
+11,Bakerloo,marylebone,baker-street,0.463196358
+12,Bakerloo,north-wembley,wembley-central,1.282676423
+13,Bakerloo,oxford-circus,piccadilly-circus,0.788114336
+14,Bakerloo,paddington,edgware-road-bakerloo,0.686010873
+15,Bakerloo,piccadilly-circus,charing-cross,0.63443872
+16,Bakerloo,queens-park,kilburn-park,0.755034683
+17,Bakerloo,regents-park,oxford-circus,1.004834627
+18,Bakerloo,south-kenton,north-wembley,1.004705007
+19,Bakerloo,stonebridge-park,harlesden,1.507727018
+20,Bakerloo,warwick-avenue,paddington,0.992496458
+21,Bakerloo,waterloo,lambeth-north,0.458548599
+22,Bakerloo,wembley-central,stonebridge-park,1.695930772
+23,Bakerloo,willesden-junction,kensal-green,1.341786633
+24,C2C,barking,dagenham-dock,4.679640325
+25,C2C,barking,upminster,11.99041478
+26,C2C,dagenham-dock,purfleet,8.0949958
+27,C2C,dagenham-dock,rainham,3.313134298
+28,C2C,fenchurch-street,limehouse,2.713055781
+29,C2C,fenchurch-street,stratford,6.166382363
+30,C2C,limehouse,west-ham,3.580841195
+31,C2C,liverpool-street,stratford,6.057002451
+32,C2C,ockendon,chafford-hundred,4.058022481
+33,C2C,stratford,barking,5.856492962
+34,C2C,upminster,ockendon,4.90318393
+35,C2C,west-ham,barking,5.366101406
+36,Central,bank,st-pauls,0.615943741
+37,Central,barkingside,fairlop,1.150435241
+38,Central,bethnal-green,liverpool-street,2.143279488
+39,Central,bond-street,marble-arch,0.620336837
+40,Central,buckhurst-hill,woodford,2.325581611
+41,Central,chancery-lane,holborn,0.562983767
+42,Central,chigwell,roding-valley,2.222867414
+43,Central,debden,loughton,2.016469628
+44,Central,east-acton,north-acton,1.132416787
+45,Central,epping,theydon-bois,2.46873547
+46,Central,fairlop,hainault,0.787602871
+47,Central,gants-hill,newbury-park,1.677267412
+48,Central,grange-hill,chigwell,1.213474317
+49,Central,greenford,northolt,1.707739391
+50,Central,hainault,grange-hill,1.189719716
+51,Central,hanger-lane,perivale,2.194643064
+52,Central,holborn,tottenham-court-road,0.788353854
+53,Central,holland-park,shepherds-bush,0.877697528
+54,Central,lancaster-gate,queensway,0.845358009
+55,Central,leyton,stratford,1.838191917
+56,Central,leytonstone,leyton,1.581139706
+57,Central,leytonstone,wanstead,1.530811018
+58,Central,liverpool-street,bank,0.664777988
+59,Central,loughton,buckhurst-hill,1.769519521
+60,Central,marble-arch,lancaster-gate,1.189597705
+61,Central,mile-end,bethnal-green,1.586546155
+62,Central,newbury-park,barkingside,1.142901994
+63,Central,north-acton,hanger-lane,2.417661257
+64,Central,north-acton,west-acton,1.579427076
+65,Central,northolt,south-ruislip,2.330808726
+66,Central,notting-hill-gate,holland-park,0.776952255
+67,Central,oxford-circus,bond-street,0.627934823
+68,Central,perivale,greenford,1.697999822
+69,Central,queensway,notting-hill-gate,0.60054856
+70,Central,redbridge,gants-hill,1.430369765
+71,Central,ruislip-gardens,west-ruislip,2.246790026
+72,Central,shepherds-bush,white-city,0.955342674
+73,Central,snaresbrook,leytonstone,1.618199064
+74,Central,south-ruislip,ruislip-gardens,0.782311353
+75,Central,south-woodford,snaresbrook,1.267584543
+76,Central,st-pauls,chancery-lane,1.076027236
+77,Central,stratford,mile-end,2.706038623
+78,Central,theydon-bois,debden,3.285475953
+79,Central,tottenham-court-road,oxford-circus,0.682100125
+80,Central,wanstead,redbridge,1.161318231
+81,Central,west-acton,ealing-broadway,1.512997253
+82,Central,white-city,east-acton,1.686028563
+83,Central,woodford,south-woodford,1.791170261
+84,Chiltern Railways,chalfont-and-latimer,amersham,3.210437766
+85,Chiltern Railways,chorleywood,chalfont-and-latimer,3.316034835
+86,Chiltern Railways,harrow-on-the-hill,rickmansworth,11.62232117
+87,Chiltern Railways,marylebone,harrow-on-the-hill,13.57210315
+88,Chiltern Railways,marylebone,wembley-stadium,9.206671009
+89,Chiltern Railways,northolt-park,south-ruislip,2.745392846
+90,Chiltern Railways,paddington,south-ruislip,16.12950287
+91,Chiltern Railways,rickmansworth,chorleywood,3.449862518
+92,Chiltern Railways,south-ruislip,west-ruislip,3.028503379
+93,Chiltern Railways,sudbury-and-harrow-road,sudbury-hill-harrow,1.416208662
+94,Chiltern Railways,sudbury-hill-harrow,northolt-park,1.660782947
+95,Chiltern Railways,wembley-stadium,sudbury-and-harrow-road,2.066541689
+96,Circle,aldgate,tower-hill,0.445399204
+97,Circle,baker-street,great-portland-street,0.898720234
+98,Circle,barbican,moorgate,0.634057561
+99,Circle,bayswater,paddington,0.917812423
+100,Circle,blackfriars,temple,0.745291063
+101,Circle,cannon-street,mansion-house,0.285036484
+102,Circle,edgware-road-circledistricthammersmith-and-city,baker-street,0.822385036
+103,Circle,embankment,westminster,0.682306039
+104,Circle,euston-square,kings-cross-st-pancras,0.677416528
+105,Circle,farringdon,barbican,0.492893338
+106,Circle,gloucester-road,high-street-kensington,0.888136408
+107,Circle,goldhawk-road,shepherds-bush-market,0.423089607
+108,Circle,great-portland-street,euston-square,0.915858804
+109,Circle,hammersmith-met,goldhawk-road,0.974837594
+110,Circle,high-street-kensington,notting-hill-gate,1.007852115
+111,Circle,kings-cross-st-pancras,farringdon,1.732182174
+112,Circle,ladbroke-grove,westbourne-park,0.769629357
+113,Circle,latimer-road,ladbroke-grove,0.619293112
+114,Circle,liverpool-street,aldgate,0.584203531
+115,Circle,mansion-house,blackfriars,0.611598836
+116,Circle,monument,cannon-street,0.292748474
+117,Circle,moorgate,liverpool-street,0.477652791
+118,Circle,notting-hill-gate,bayswater,0.633128265
+119,Circle,paddington,edgware-road-circledistricthammersmith-and-city,0.757733155
+120,Circle,royal-oak,paddington,0.961572658
+121,Circle,shepherds-bush-market,wood-lane,0.466507126
+122,Circle,sloane-square,south-kensington,1.222277516
+123,Circle,south-kensington,gloucester-road,0.667930868
+124,Circle,st-jamess-park,victoria,0.78044401
+125,Circle,temple,embankment,0.727908454
+126,Circle,tower-hill,monument,0.657282218
+127,Circle,victoria,sloane-square,0.980751024
+128,Circle,westbourne-park,royal-oak,0.88680127
+129,Circle,westminster,st-jamess-park,0.646139034
+130,Circle,wood-lane,latimer-road,0.681488387
+131,District,acton-town,ealing-common,0.928511805
+132,District,aldgate-east,tower-hill,0.580878906
+133,District,barking,east-ham,2.028332978
+134,District,barons-court,hammersmith-district,0.676689432
+135,District,bayswater,paddington,0.917812423
+136,District,becontree,upney,1.758589757
+137,District,blackfriars,temple,0.745291063
+138,District,bow-church,stepney-green,1.962590208
+139,District,bow-road,bow-church,0.274602512
+140,District,bromley-by-bow,bow-road,0.910835433
+141,District,cannon-street,mansion-house,0.285036484
+142,District,chiswick-park,acton-town,1.301416478
+143,District,dagenham-east,dagenham-heathway,1.298705909
+144,District,dagenham-heathway,becontree,1.450248178
+145,District,ealing-common,ealing-broadway,1.149476436
+146,District,earls-court,high-street-kensington,1.059753896
+147,District,earls-court,kensington-olympia,1.328220449
+148,District,earls-court,west-brompton,0.45596949
+149,District,earls-court,west-kensington,0.835054987
+150,District,east-ham,upton-park,1.209933694
+151,District,east-putney,southfields,1.586269369
+152,District,elm-park,dagenham-east,2.241620708
+153,District,embankment,westminster,0.682306039
+154,District,fulham-broadway,parsons-green,0.70503709
+155,District,gloucester-road,earls-court,0.823730732
+156,District,gunnersbury,kew-gardens,1.819936138
+157,District,hammersmith-district,ravenscourt-park,0.941601493
+158,District,high-street-kensington,notting-hill-gate,1.007852115
+159,District,hornchurch,elm-park,1.608011018
+160,District,kew-gardens,richmond,1.886339171
+161,District,mansion-house,blackfriars,0.611598836
+162,District,monument,cannon-street,0.292748474
+163,District,notting-hill-gate,bayswater,0.633128265
+164,District,paddington,edgware-road-circledistricthammersmith-and-city,0.757733155
+165,District,parsons-green,putney-bridge,0.974053988
+166,District,plaistow,west-ham,0.915532511
+167,District,putney-bridge,east-putney,1.005846269
+168,District,ravenscourt-park,stamford-brook,0.643849546
+169,District,sloane-square,south-kensington,1.222277516
+170,District,south-kensington,gloucester-road,0.667930868
+171,District,southfields,wimbledon-park,1.256201588
+172,District,st-jamess-park,victoria,0.78044401
+173,District,stamford-brook,turnham-green,0.647657975
+174,District,stepney-green,whitechapel,0.875150579
+175,District,temple,embankment,0.727908454
+176,District,tower-hill,monument,0.657282218
+177,District,turnham-green,chiswick-park,0.919395894
+178,District,turnham-green,gunnersbury,1.476224795
+179,District,upminster,upminster-bridge,1.171630855
+180,District,upminster-bridge,hornchurch,1.142857253
+181,District,upney,barking,1.437461714
+182,District,upton-park,plaistow,1.30296717
+183,District,victoria,sloane-square,0.980751024
+184,District,west-brompton,fulham-broadway,0.786173793
+185,District,west-ham,bromley-by-bow,1.245783934
+186,District,west-kensington,barons-court,0.500659187
+187,District,westminster,st-jamess-park,0.646139034
+188,District,whitechapel,aldgate-east,1.06529668
+189,District,wimbledon-park,wimbledon,1.585778014
+190,DLR,abbey-road,west-ham,0.396765348
+191,DLR,all-saints,poplar,0.454868744
+192,DLR,beckton-park,cyprus,0.62574921
+193,DLR,blackwall,east-india,0.349883977
+194,DLR,bow-church,devons-road,0.620287798
+195,DLR,canary-wharf,heron-quays,0.173488062
+196,DLR,canning-town,royal-victoria,0.856736689
+197,DLR,canning-town,west-silvertown,1.557102021
+198,DLR,crossharbour-and-london-arena,mudchute,0.512082673
+199,DLR,custom-house,prince-regent,0.534572529
+200,DLR,cutty-sark-for-maritime-greenwich,greenwich,0.571953512
+201,DLR,cyprus,gallions-reach,0.552199505
+202,DLR,deptford-bridge,elverson-road,0.769849565
+203,DLR,devons-road,langdon-park,0.422231216
+204,DLR,east-india,canning-town,0.937531084
+205,DLR,elverson-road,lewisham,0.493040885
+206,DLR,gallions-reach,beckton,0.925525426
+207,DLR,greenwich,deptford-bridge,0.603941344
+208,DLR,heron-quays,south-quay,0.370458275
+209,DLR,island-gardens,cutty-sark-for-maritime-greenwich,0.668032299
+210,DLR,king-george-v,woolwich-arsenal,1.430380286
+211,DLR,langdon-park,all-saints,0.952127257
+212,DLR,limehouse,shadwell,1.219340219
+213,DLR,london-city-airport,king-george-v,1.009882244
+214,DLR,mudchute,island-gardens,0.47884958
+215,DLR,pontoon-dock,london-city-airport,1.020448615
+216,DLR,poplar,blackwall,0.695624081
+217,DLR,poplar,west-india-quay,0.246667491
+218,DLR,poplar,westferry,0.666576978
+219,DLR,prince-regent,royal-albert,0.815919837
+220,DLR,pudding-mill-lane,bow-church,0.918520193
+221,DLR,royal-albert,beckton-park,0.669231639
+222,DLR,royal-victoria,custom-house,0.544134754
+223,DLR,shadwell,bank,2.232393013
+224,DLR,shadwell,tower-gateway,1.215004622
+225,DLR,south-quay,crossharbour-and-london-arena,0.609842695
+226,DLR,star-lane,canning-town,0.801334847
+227,DLR,stratford,pudding-mill-lane,1.029665703
+228,DLR,stratford,stratford-high-street,0.43533
+229,DLR,stratford-high-street,abbey-road,0.765234215
+230,DLR,stratford-international,stratford,0.490961169
+231,DLR,west-ham,star-lane,0.88452293
+232,DLR,west-india-quay,canary-wharf,0.362507983
+233,DLR,west-silvertown,pontoon-dock,0.770729361
+234,DLR,westferry,limehouse,0.951552509
+235,Elizabeth,acton-main-line,ealing-broadway,2.386247806
+236,Elizabeth,bond-street,paddington,1.816940475
+237,Elizabeth,brentwood,harold-wood,5.060587536
+238,Elizabeth,burnham,taplow,2.42200148
+239,Elizabeth,canary-wharf,custom-house,3.203347988
+240,Elizabeth,chadwell-heath,goodmayes,1.205241748
+241,Elizabeth,custom-house,woolwich,3.767435627
+242,Elizabeth,ealing-broadway,west-ealing,1.237894906
+243,Elizabeth,farringdon,tottenham-court-road,1.871332219
+244,Elizabeth,forest-gate,maryland,1.342922862
+245,Elizabeth,gidea-park,romford,1.776534462
+246,Elizabeth,goodmayes,seven-kings,1.092934843
+247,Elizabeth,hanwell,southall,2.898798276
+248,Elizabeth,harold-wood,gidea-park,2.322806283
+249,Elizabeth,hayes-and-harlington,heathrow-terminals-1-2-3,4.161724851
+250,Elizabeth,hayes-and-harlington,west-drayton,3.652323067
+251,Elizabeth,heathrow-terminals-1-2-3,heathrow-terminal-4,1.320539304
+252,Elizabeth,heathrow-terminals-1-2-3,heathrow-terminal-5,2.653272755
+253,Elizabeth,ilford,manor-park,1.73513955
+254,Elizabeth,iver,langley,2.425617905
+255,Elizabeth,langley,slough,3.470425799
+256,Elizabeth,liverpool-street,farringdon,1.590235322
+257,Elizabeth,maidenhead,twyford,10.85604955
+258,Elizabeth,manor-park,forest-gate,1.540561181
+259,Elizabeth,maryland,stratford,0.788278983
+260,Elizabeth,paddington,acton-main-line,6.366952754
+261,Elizabeth,romford,chadwell-heath,3.815062765
+262,Elizabeth,seven-kings,ilford,1.98560212
+263,Elizabeth,shenfield,brentwood,2.838862795
+264,Elizabeth,slough,burnham,4.01150481
+265,Elizabeth,southall,hayes-and-harlington,2.921049774
+266,Elizabeth,stratford,whitechapel,4.569845372
+267,Elizabeth,taplow,maidenhead,2.90906153
+268,Elizabeth,tottenham-court-road,bond-street,1.308606586
+269,Elizabeth,twyford,reading,7.750292015
+270,Elizabeth,west-drayton,iver,2.399179524
+271,Elizabeth,west-ealing,hanwell,1.274715
+272,Elizabeth,whitechapel,canary-wharf,3.289449482
+273,Elizabeth,whitechapel,liverpool-street,1.595515682
+274,Elizabeth,woolwich,abbey-wood,3.356775898
+275,Great Northern,alexandra-palace,bowes-park,0.999892065
+276,Great Northern,alexandra-palace,new-southgate,2.36529913
+277,Great Northern,bowes-park,palmers-green,1.441931139
+278,Great Northern,drayton-park,finsbury-park,1.285521637
+279,Great Northern,enfield-chase,gordon-hill,1.226952029
+280,Great Northern,essex-road,highbury-and-islington,0.842684847
+281,Great Northern,finsbury-park,harringay,1.415882735
+282,Great Northern,gordon-hill,crews-hill,2.483922881
+283,Great Northern,grange-park,enfield-chase,1.212424046
+284,Great Northern,harringay,hornsey,1.112165974
+285,Great Northern,highbury-and-islington,drayton-park,0.7414544
+286,Great Northern,hornsey,alexandra-palace,1.432053953
+287,Great Northern,kings-cross,finsbury-park,3.940553783
+288,Great Northern,moorgate,old-street,0.800504047
+289,Great Northern,new-barnet,hadley-wood,2.223710098
+290,Great Northern,new-southgate,oakleigh-park,3.073061723
+291,Great Northern,oakleigh-park,new-barnet,1.295352907
+292,Great Northern,old-street,essex-road,1.780144083
+293,Great Northern,palmers-green,winchmore-hill,1.799532721
+294,Great Northern,winchmore-hill,grange-park,1.003046014
+295,Great Western,acton-main-line,ealing-broadway,2.386247806
+296,Great Western,castle-bar-park,south-greenford,1.281746981
+297,Great Western,drayton-green,castle-bar-park,0.786152118
+298,Great Western,ealing-broadway,west-ealing,1.237894906
+299,Great Western,hanwell,southall,2.898798276
+300,Great Western,hayes-and-harlington,west-drayton,3.652323067
+301,Great Western,paddington,acton-main-line,6.366952754
+302,Great Western,south-greenford,greenford,1.087387701
+303,Great Western,southall,hayes-and-harlington,2.921049774
+304,Great Western,west-ealing,drayton-green,0.729982119
+305,Great Western,west-ealing,hanwell,1.274715
+306,Greater Anglia,angel-road,ponders-end,3.511248305
+307,Greater Anglia,brentwood,shenfield,2.838862795
+308,Greater Anglia,brimsdown,enfield-lock,1.74533184
+309,Greater Anglia,cheshunt,broxbourne,4.98928478
+310,Greater Anglia,edmonton-green,cheshunt,9.032634492
+311,Greater Anglia,enfield-lock,waltham-cross,1.607892385
+312,Greater Anglia,gidea-park,harold-wood,2.322806283
+313,Greater Anglia,hackney-downs,seven-sisters,3.906816076
+314,Greater Anglia,hackney-downs,tottenham-hale,4.329030966
+315,Greater Anglia,harold-wood,brentwood,5.060587536
+316,Greater Anglia,lea-bridge,tottenham-hale,2.878432879
+317,Greater Anglia,liverpool-street,hackney-downs,3.819844723
+318,Greater Anglia,liverpool-street,stratford,6.057002451
+319,Greater Anglia,northumberland-park,angel-road,1.215914381
+320,Greater Anglia,ponders-end,brimsdown,1.411940567
+321,Greater Anglia,romford,gidea-park,1.776534462
+322,Greater Anglia,seven-kings,romford,6.11247851
+323,Greater Anglia,seven-sisters,edmonton-green,4.704094212
+324,Greater Anglia,stratford,lea-bridge,3.589559055
+325,Greater Anglia,stratford,seven-kings,7.352193105
+326,Greater Anglia,tottenham-hale,northumberland-park,1.614386716
+327,Greater Anglia,waltham-cross,cheshunt,1.968103965
+328,Hammersmith and City,aldgate-east,whitechapel,1.06529668
+329,Hammersmith and City,baker-street,great-portland-street,0.898720234
+330,Hammersmith and City,barbican,moorgate,0.634057561
+331,Hammersmith and City,bow-road,bromley-by-bow,0.910835433
+332,Hammersmith and City,bromley-by-bow,west-ham,1.245783934
+333,Hammersmith and City,east-ham,barking,2.028332978
+334,Hammersmith and City,edgware-road-circledistricthammersmith-and-city,baker-street,0.822385036
+335,Hammersmith and City,euston-square,kings-cross-st-pancras,0.677416528
+336,Hammersmith and City,farringdon,barbican,0.492893338
+337,Hammersmith and City,goldhawk-road,shepherds-bush-market,0.423089607
+338,Hammersmith and City,great-portland-street,euston-square,0.915858804
+339,Hammersmith and City,hammersmith-met,goldhawk-road,0.974837594
+340,Hammersmith and City,kings-cross-st-pancras,farringdon,1.732182174
+341,Hammersmith and City,ladbroke-grove,westbourne-park,0.769629357
+342,Hammersmith and City,latimer-road,ladbroke-grove,0.619293112
+343,Hammersmith and City,liverpool-street,aldgate-east,0.698662288
+344,Hammersmith and City,mile-end,bow-road,0.606212115
+345,Hammersmith and City,moorgate,liverpool-street,0.477652791
+346,Hammersmith and City,paddington,edgware-road-circledistricthammersmith-and-city,0.757733155
+347,Hammersmith and City,plaistow,upton-park,1.30296717
+348,Hammersmith and City,royal-oak,paddington,0.961572658
+349,Hammersmith and City,shepherds-bush-market,wood-lane,0.466507126
+350,Hammersmith and City,stepney-green,mile-end,1.0831672
+351,Hammersmith and City,upton-park,east-ham,1.209933694
+352,Hammersmith and City,west-ham,plaistow,0.915532511
+353,Hammersmith and City,westbourne-park,royal-oak,0.88680127
+354,Hammersmith and City,whitechapel,stepney-green,0.875150579
+355,Hammersmith and City,wood-lane,latimer-road,0.681488387
+356,Heathrow Connect,ealing-broadway,west-ealing,1.237894906
+357,Heathrow Connect,hanwell,southall,2.898798276
+358,Heathrow Connect,hayes-and-harlington,heathrow-terminals-1-2-3,4.161724851
+359,Heathrow Connect,heathrow-terminals-1-2-3,heathrow-terminal-4,1.320539304
+360,Heathrow Connect,heathrow-terminals-1-2-3,heathrow-terminal-5,2.653272755
+361,Heathrow Connect,paddington,ealing-broadway,8.740760332
+362,Heathrow Connect,southall,hayes-and-harlington,2.921049774
+363,Heathrow Connect,west-ealing,hanwell,1.274715
+364,Heathrow Express,heathrow-terminals-1-2-3,heathrow-terminal-4,1.320539304
+365,Heathrow Express,heathrow-terminals-1-2-3,heathrow-terminal-5,2.653272755
+366,Heathrow Express,paddington,heathrow-terminals-1-2-3,19.77811649
+367,Jubilee,baker-street,bond-street,1.154163024
+368,Jubilee,bermondsey,canada-water,0.936684634
+369,Jubilee,bond-street,green-park,0.925582851
+370,Jubilee,canada-water,canary-wharf,2.251916791
+371,Jubilee,canary-wharf,north-greenwich,1.638422506
+372,Jubilee,canning-town,west-ham,1.643166357
+373,Jubilee,canons-park,queensbury,1.629470924
+374,Jubilee,dollis-hill,willesden-green,1.166638072
+375,Jubilee,finchley-road,swiss-cottage,0.545638457
+376,Jubilee,green-park,westminster,1.348790913
+377,Jubilee,kilburn,west-hampstead,0.936082778
+378,Jubilee,kingsbury,wembley-park,2.397863776
+379,Jubilee,london-bridge,bermondsey,1.676330531
+380,Jubilee,neasden,dollis-hill,0.841466589
+381,Jubilee,north-greenwich,canning-town,1.549253707
+382,Jubilee,queensbury,kingsbury,1.135313644
+383,Jubilee,southwark,london-bridge,1.373167169
+384,Jubilee,st-johns-wood,baker-street,1.763779534
+385,Jubilee,stanmore,canons-park,1.466322518
+386,Jubilee,swiss-cottage,st-johns-wood,0.916301134
+387,Jubilee,waterloo,southwark,0.522754223
+388,Jubilee,wembley-park,neasden,2.234385908
+389,Jubilee,west-ham,stratford,1.593327065
+390,Jubilee,west-hampstead,finchley-road,0.767286015
+391,Jubilee,westminster,waterloo,0.835906497
+392,Jubilee,willesden-green,kilburn,1.258803437
+393,London Midland,bushey,watford-junction,2.187520471
+394,London Midland,euston,wembley-central,11.57447592
+395,London Midland,harrow-and-wealdstone,bushey,6.843629632
+396,London Midland,wembley-central,harrow-and-wealdstone,5.232108434
+397,Metropolitan,aldgate,liverpool-street,0.584203531
+398,Metropolitan,baker-street,finchley-road,3.109853408
+399,Metropolitan,barbican,farringdon,0.492893338
+400,Metropolitan,chalfont-and-latimer,amersham,3.210437766
+401,Metropolitan,chalfont-and-latimer,chesham,5.425271431
+402,Metropolitan,chorleywood,chalfont-and-latimer,3.316034835
+403,Metropolitan,croxley,watford,2.051849902
+404,Metropolitan,eastcote,ruislip-manor,1.160280642
+405,Metropolitan,euston-square,great-portland-street,0.915858804
+406,Metropolitan,farringdon,kings-cross-st-pancras,1.732182174
+407,Metropolitan,finchley-road,wembley-park,7.093401465
+408,Metropolitan,great-portland-street,baker-street,0.898720234
+409,Metropolitan,harrow-on-the-hill,north-harrow,1.865108843
+410,Metropolitan,harrow-on-the-hill,west-harrow,1.165513022
+411,Metropolitan,hillingdon,uxbridge,2.050304589
+412,Metropolitan,ickenham,hillingdon,0.972329114
+413,Metropolitan,kings-cross-st-pancras,euston-square,0.677416528
+414,Metropolitan,liverpool-street,moorgate,0.477652791
+415,Metropolitan,moor-park,croxley,1.991710599
+416,Metropolitan,moor-park,rickmansworth,3.042847879
+417,Metropolitan,moorgate,barbican,0.634057561
+418,Metropolitan,north-harrow,pinner,1.545951164
+419,Metropolitan,northwick-park,harrow-on-the-hill,1.30332005
+420,Metropolitan,northwood,moor-park,2.174182939
+421,Metropolitan,northwood-hills,northwood,1.532318632
+422,Metropolitan,pinner,northwood-hills,2.155900339
+423,Metropolitan,preston-road,northwick-park,1.756609499
+424,Metropolitan,rickmansworth,chorleywood,3.449862518
+425,Metropolitan,ruislip,ickenham,1.889119735
+426,Metropolitan,ruislip-manor,ruislip,0.597191725
+427,Metropolitan,wembley-park,preston-road,1.461754663
+428,Metropolitan,west-harrow,eastcote,2.982412928
+429,Northern,angel,kings-cross-st-pancras,1.299619095
+430,Northern,archway,highgate,1.579624345
+431,Northern,balham,clapham-south,1.105149004
+432,Northern,bank,moorgate,0.566169689
+433,Northern,belsize-park,hampstead,1.200847665
+434,Northern,borough,london-bridge,0.695923807
+435,Northern,brent-cross,hendon-central,1.177216606
+436,Northern,burnt-oak,edgware,1.496637712
+437,Northern,camden-town,chalk-farm,0.908368489
+438,Northern,camden-town,kentish-town,1.125143317
+439,Northern,chalk-farm,belsize-park,0.976451539
+440,Northern,charing-cross,leicester-square,0.403836065
+441,Northern,clapham-common,clapham-north,0.677564122
+442,Northern,clapham-north,stockwell,0.942665634
+443,Northern,clapham-south,clapham-common,1.216450516
+444,Northern,colindale,burnt-oak,1.266727799
+445,Northern,colliers-wood,tooting-broadway,1.103148703
+446,Northern,east-finchley,finchley-central,2.480001309
+447,Northern,east-finchley,mill-hill-east,3.896194569
+448,Northern,elephant-and-castle,borough,0.734604547
+449,Northern,embankment,charing-cross,0.204870249
+450,Northern,euston,camden-town,1.408017849
+451,Northern,euston,mornington-crescent,0.737408451
+452,Northern,finchley-central,west-finchley,0.976195408
+453,Northern,golders-green,brent-cross,1.368770155
+454,Northern,goodge-street,warren-street,0.502376912
+455,Northern,hampstead,golders-green,2.095632599
+456,Northern,hendon-central,colindale,2.111878946
+457,Northern,highgate,east-finchley,1.63579796
+458,Northern,kennington,elephant-and-castle,0.853839352
+459,Northern,kennington,nine-elms,1.887327238
+460,Northern,kennington,waterloo,1.707952718
+461,Northern,kentish-town,tufnell-park,0.739831649
+462,Northern,kings-cross-st-pancras,euston,0.677416528
+463,Northern,leicester-square,tottenham-court-road,0.58212228
+464,Northern,london-bridge,bank,0.986688311
+465,Northern,moorgate,old-street,0.800504047
+466,Northern,morden,south-wimbledon,1.478961167
+467,Northern,mornington-crescent,camden-town,0.674382535
+468,Northern,nine-elms,battersea-power-station,0.936893791
+469,Northern,old-street,angel,1.489732525
+470,Northern,oval,kennington,0.9883608
+471,Northern,south-wimbledon,colliers-wood,1.078385712
+472,Northern,stockwell,oval,1.222619252
+473,Northern,tooting-bec,balham,0.950766197
+474,Northern,tooting-broadway,tooting-bec,1.159233924
+475,Northern,tottenham-court-road,goodge-street,0.552497315
+476,Northern,totteridge-and-whetstone,high-barnet,2.594838962
+477,Northern,tufnell-park,archway,1.022782021
+478,Northern,warren-street,euston,0.570301672
+479,Northern,waterloo,embankment,0.782531067
+480,Northern,west-finchley,woodside-park,0.987120036
+481,Northern,woodside-park,totteridge-and-whetstone,1.439252227
+482,Overground,acton-central,willesden-junction,2.940073906
+483,Overground,anerley,norwood-junction,1.866776598
+484,Overground,bethnal-green,cambridge-heath,0.555783021
+485,Overground,blackhorse-road,walthamstow-queens-road,1.187926423
+486,Overground,brockley,honor-oak-park,1.630102649
+487,Overground,brondesbury,west-hampstead,0.84666921
+488,Overground,brondesbury-park,brondesbury,0.761938922
+489,Overground,bruce-grove,white-hart-lane,1.226577178
+490,Overground,bush-hill-park,enfield-town,1.357212673
+491,Overground,bushey,carpenders-park,1.932179379
+492,Overground,caledonian-road-and-barnsbury,highbury-and-islington,0.848255489
+493,Overground,cambridge-heath,london-fields,0.963760029
+494,Overground,camden-road,caledonian-road-and-barnsbury,1.667777314
+495,Overground,canada-water,surrey-quays,0.590544341
+496,Overground,canonbury,dalston-junction,1.238137036
+497,Overground,canonbury,dalston-kingsland,1.131974828
+498,Overground,carpenders-park,hatch-end,2.343495895
+499,Overground,clapham-high-street,wandsworth-road,0.697871259
+500,Overground,clapton,st-james-street,2.71980202
+501,Overground,crouch-hill,harringay-green-lanes,1.459051014
+502,Overground,dalston-junction,haggerston,0.825148488
+503,Overground,dalston-kingsland,hackney-central,1.436069534
+504,Overground,denmark-hill,clapham-high-street,2.890032902
+505,Overground,edmonton-green,bush-hill-park,1.895318371
+506,Overground,edmonton-green,southbury,2.661601965
+507,Overground,emerson-park,upminster,2.444007562
+508,Overground,finchley-road-and-frognal,hampstead-heath,1.435837735
+509,Overground,forest-hill,sydenham,1.336678466
+510,Overground,gospel-oak,kentish-town-west,1.034126768
+511,Overground,gospel-oak,upper-holloway,1.786205822
+512,Overground,gunnersbury,south-acton,0.935145753
+513,Overground,hackney-central,homerton,1.183535331
+514,Overground,hackney-downs,clapton,1.401823658
+515,Overground,hackney-downs,rectory-road,1.217475735
+516,Overground,hackney-wick,stratford,1.502262812
+517,Overground,haggerston,hoxton,0.811212533
+518,Overground,hampstead-heath,gospel-oak,0.917677577
+519,Overground,harlesden,willesden-junction,1.04118872
+520,Overground,harringay-green-lanes,south-tottenham,1.857824417
+521,Overground,harrow-and-wealdstone,kenton,1.804055394
+522,Overground,hatch-end,headstone-lane,1.176071674
+523,Overground,headstone-lane,harrow-and-wealdstone,1.914159696
+524,Overground,highams-park,chingford,2.848380105
+525,Overground,highbury-and-islington,canonbury,0.817975592
+526,Overground,homerton,hackney-wick,0.977006884
+527,Overground,honor-oak-park,forest-hill,1.412651921
+528,Overground,hoxton,shoreditch-high-street,0.887578516
+529,Overground,imperial-wharf,clapham-junction,1.461392567
+530,Overground,kensal-green,queens-park,1.440983449
+531,Overground,kensal-rise,brondesbury-park,0.987108954
+532,Overground,kensington-olympia,west-brompton,1.55997417
+533,Overground,kentish-town-west,camden-road,0.738867635
+534,Overground,kenton,south-kenton,1.261209207
+535,Overground,kew-gardens,gunnersbury,1.819936138
+536,Overground,kilburn-high-road,south-hampstead,0.998128164
+537,Overground,leyton-midland-road,leytonstone-high-road,1.286627087
+538,Overground,leytonstone-high-road,wanstead-park,1.833893206
+539,Overground,liverpool-street,bethnal-green,2.143279488
+540,Overground,london-fields,hackney-downs,0.945558937
+541,Overground,new-cross-gate,brockley,1.176101602
+542,Overground,north-wembley,wembley-central,1.282676423
+543,Overground,norwood-junction,west-croydon,2.767045405
+544,Overground,peckham-rye,denmark-hill,1.462662778
+545,Overground,penge-west,anerley,0.691118651
+546,Overground,queens-park,kilburn-high-road,1.002268657
+547,Overground,queens-road-peckham,peckham-rye,1.023458268
+548,Overground,rectory-road,stoke-newington,0.708164633
+549,Overground,richmond,kew-gardens,1.886339171
+550,Overground,romford,emerson-park,2.642021138
+551,Overground,rotherhithe,canada-water,0.409361701
+552,Overground,seven-sisters,bruce-grove,1.193085123
+553,Overground,shadwell,wapping,0.777601642
+554,Overground,shepherds-bush,kensington-olympia,0.930153118
+555,Overground,shoreditch-high-street,whitechapel,1.296612962
+556,Overground,silver-street,edmonton-green,1.333398821
+557,Overground,south-acton,acton-central,1.11306117
+558,Overground,south-hampstead,euston,3.428865071
+559,Overground,south-kenton,north-wembley,1.004705007
+560,Overground,south-tottenham,blackhorse-road,2.306427807
+561,Overground,southbury,turkey-street,2.723070244
+562,Overground,st-james-street,walthamstow-central,0.928645658
+563,Overground,stamford-hill,seven-sisters,1.033219849
+564,Overground,stoke-newington,stamford-hill,1.131537832
+565,Overground,stonebridge-park,harlesden,1.507727018
+566,Overground,surrey-quays,new-cross,2.150210883
+567,Overground,surrey-quays,new-cross-gate,2.077628983
+568,Overground,surrey-quays,queens-road-peckham,2.218349213
+569,Overground,sydenham,crystal-palace,1.586497533
+570,Overground,sydenham,penge-west,1.1016536
+571,Overground,theobalds-grove,cheshunt,1.387387292
+572,Overground,turkey-street,theobalds-grove,2.356202308
+573,Overground,upper-holloway,crouch-hill,1.191588514
+574,Overground,walthamstow-central,wood-street,1.307794891
+575,Overground,walthamstow-queens-road,leyton-midland-road,1.739415796
+576,Overground,wandsworth-road,clapham-junction,2.263044155
+577,Overground,wanstead-park,woodgrange-park,1.293631246
+578,Overground,wapping,rotherhithe,0.365298643
+579,Overground,watford-high-street,bushey,0.925794878
+580,Overground,watford-junction,watford-high-street,1.286639834
+581,Overground,wembley-central,stonebridge-park,1.695930772
+582,Overground,west-brompton,imperial-wharf,1.635041644
+583,Overground,west-hampstead,finchley-road-and-frognal,0.594907291
+584,Overground,white-hart-lane,silver-street,1.141596499
+585,Overground,whitechapel,shadwell,0.93794967
+586,Overground,willesden-junction,kensal-green,1.341786633
+587,Overground,willesden-junction,kensal-rise,1.612635822
+588,Overground,willesden-junction,shepherds-bush,3.547180274
+589,Overground,wood-street,highams-park,2.415406321
+590,Overground,woodgrange-park,barking,2.723076842
+591,Piccadilly,acton-town,ealing-common,0.928511805
+592,Piccadilly,acton-town,south-ealing,1.858066494
+593,Piccadilly,alperton,sudbury-town,1.624534715
+594,Piccadilly,arnos-grove,bounds-green,1.238062225
+595,Piccadilly,arsenal,holloway-road,0.818525021
+596,Piccadilly,barons-court,hammersmith-district,0.676689432
+597,Piccadilly,boston-manor,osterley,2.491314008
+598,Piccadilly,bounds-green,wood-green,1.469520864
+599,Piccadilly,caledonian-road,kings-cross-st-pancras,1.991480278
+600,Piccadilly,cockfosters,oakwood,1.338698311
+601,Piccadilly,covent-garden,leicester-square,0.305872942
+602,Piccadilly,ealing-common,north-ealing,0.830021359
+603,Piccadilly,earls-court,barons-court,1.329856342
+604,Piccadilly,eastcote,ruislip-manor,1.160280642
+605,Piccadilly,finsbury-park,arsenal,0.678355652
+606,Piccadilly,gloucester-road,earls-court,0.823730732
+607,Piccadilly,green-park,hyde-park-corner,0.833560549
+608,Piccadilly,hammersmith-district,turnham-green,2.224434242
+609,Piccadilly,hatton-cross,heathrow-terminal-4,1.85391022
+610,Piccadilly,hatton-cross,heathrow-terminals-1-2-3,2.075412003
+611,Piccadilly,heathrow-terminals-1-2-3,heathrow-terminal-4,1.320539304
+612,Piccadilly,heathrow-terminals-1-2-3,heathrow-terminal-5,2.653272755
+613,Piccadilly,hillingdon,uxbridge,2.050304589
+614,Piccadilly,holborn,covent-garden,0.593418819
+615,Piccadilly,holloway-road,caledonian-road,0.664518109
+616,Piccadilly,hounslow-central,hounslow-west,1.38965608
+617,Piccadilly,hounslow-east,hounslow-central,0.80223767
+618,Piccadilly,hounslow-west,hatton-cross,2.706207133
+619,Piccadilly,hyde-park-corner,knightsbridge,0.583341567
+620,Piccadilly,ickenham,hillingdon,0.972329114
+621,Piccadilly,kings-cross-st-pancras,russell-square,0.81343294
+622,Piccadilly,knightsbridge,south-kensington,1.224433533
+623,Piccadilly,leicester-square,piccadilly-circus,0.418106212
+624,Piccadilly,manor-house,finsbury-park,0.979350855
+625,Piccadilly,north-ealing,park-royal,1.062533953
+626,Piccadilly,northfields,boston-manor,0.851973279
+627,Piccadilly,oakwood,southgate,1.72084569
+628,Piccadilly,osterley,hounslow-east,0.863766683
+629,Piccadilly,park-royal,alperton,1.890844095
+630,Piccadilly,piccadilly-circus,green-park,0.689169095
+631,Piccadilly,rayners-lane,eastcote,1.785504454
+632,Piccadilly,ruislip,ickenham,1.889119735
+633,Piccadilly,ruislip-manor,ruislip,0.597191725
+634,Piccadilly,russell-square,holborn,0.721811269
+635,Piccadilly,south-ealing,northfields,0.570218732
+636,Piccadilly,south-harrow,rayners-lane,1.782356437
+637,Piccadilly,south-harrow,sudbury-hill,1.347490217
+638,Piccadilly,south-kensington,gloucester-road,0.667930868
+639,Piccadilly,southgate,arnos-grove,1.851127573
+640,Piccadilly,sudbury-town,sudbury-hill,1.536026019
+641,Piccadilly,turnham-green,acton-town,1.989020902
+642,Piccadilly,turnpike-lane,manor-house,2.236154918
+643,Piccadilly,wood-green,turnpike-lane,0.915762639
+644,South Western,barnes,putney,1.891329837
+645,South Western,barnes-bridge,barnes,0.913281807
+646,South Western,berrylands,surbiton,1.805461546
+647,South Western,brentford,kew-bridge,1.464891261
+648,South Western,chessington-north,chessington-south,0.956095234
+649,South Western,chiswick,barnes-bridge,1.39115847
+650,South Western,clapham-junction,earlsfield,2.727544004
+651,South Western,earlsfield,wimbledon,2.707835766
+652,South Western,feltham,hounslow,3.705095941
+653,South Western,fulwell,hampton,2.552380249
+654,South Western,hampton-wick,teddington,1.746672407
+655,South Western,hounslow,isleworth,2.194863242
+656,South Western,isleworth,syon-lane,1.037276559
+657,South Western,kew-bridge,chiswick,1.827396256
+658,South Western,kingston,hampton-wick,0.859132873
+659,South Western,malden-manor,tolworth,1.547792672
+660,South Western,mortlake,barnes,1.747913785
+661,South Western,motspur-park,malden-manor,1.919294733
+662,South Western,motspur-park,worcester-park,1.63749851
+663,South Western,new-malden,berrylands,1.755311544
+664,South Western,new-malden,norbiton,2.152331219
+665,South Western,norbiton,kingston,1.178115065
+666,South Western,north-sheen,mortlake,1.364692534
+667,South Western,putney,wandsworth-town,1.988510333
+668,South Western,queenstown-road,clapham-junction,1.979616761
+669,South Western,raynes-park,motspur-park,1.697433413
+670,South Western,raynes-park,new-malden,1.936546447
+671,South Western,richmond,north-sheen,1.090591099
+672,South Western,st-margarets,richmond,1.624650393
+673,South Western,stoneleigh,ewell-west,1.597286092
+674,South Western,strawberry-hill,twickenham,1.386003791
+675,South Western,surbiton,thames-ditton,2.394859551
+676,South Western,syon-lane,brentford,1.349228294
+677,South Western,teddington,fulwell,1.56535245
+678,South Western,teddington,strawberry-hill,1.762718338
+679,South Western,thames-ditton,hampton-court,1.552607558
+680,South Western,tolworth,chessington-north,2.015310599
+681,South Western,twickenham,st-margarets,0.759350484
+682,South Western,twickenham,whitton,1.999238977
+683,South Western,vauxhall,queenstown-road,2.023020289
+684,South Western,wandsworth-town,clapham-junction,1.274420248
+685,South Western,waterloo,vauxhall,2.070338653
+686,South Western,whitton,feltham,3.619510859
+687,South Western,wimbledon,raynes-park,2.074709338
+688,South Western,worcester-park,stoneleigh,1.985231378
+689,Southeastern,abbey-wood,belvedere,2.203553378
+690,Southeastern,albany-park,bexley,1.60789917
+691,Southeastern,barnehurst,slade-green,2.075445301
+692,Southeastern,beckenham-junction,shortlands,2.062590006
+693,Southeastern,belvedere,erith,1.919787423
+694,Southeastern,bexley,crayford,2.26975747
+695,Southeastern,bexleyheath,barnehurst,1.916443801
+696,Southeastern,bickley,petts-wood,2.470436464
+697,Southeastern,bickley,st-mary-cray,4.41060388
+698,Southeastern,blackheath,charlton,2.851789178
+699,Southeastern,blackheath,kidbrooke,1.416061122
+700,Southeastern,brixton,herne-hill,1.279323955
+701,Southeastern,bromley-south,bickley,1.870249442
+702,Southeastern,cannon-street,london-bridge,0.799822117
+703,Southeastern,catford-bridge,lower-sydenham,2.285141705
+704,Southeastern,charing-cross,waterloo-east,1.179430518
+705,Southeastern,charlton,woolwich-dockyard,1.706907886
+706,Southeastern,chelsfield,knockholt,1.915888095
+707,Southeastern,chislehurst,petts-wood,2.228277247
+708,Southeastern,clock-house,elmers-end,1.292024048
+709,Southeastern,denmark-hill,peckham-rye,1.462662778
+710,Southeastern,deptford,greenwich,0.799186005
+711,Southeastern,eden-park,west-wickham,1.350585202
+712,Southeastern,elmers-end,eden-park,1.788187153
+713,Southeastern,elmstead-woods,chislehurst,1.574087715
+714,Southeastern,eltham,falconwood,1.854011315
+715,Southeastern,erith,slade-green,1.91284394
+716,Southeastern,falconwood,welling,1.732113464
+717,Southeastern,greenwich,maze-hill,1.391461032
+718,Southeastern,grove-park,elmstead-woods,2.111033133
+719,Southeastern,grove-park,sundridge-park,1.901548209
+720,Southeastern,herne-hill,west-dulwich,1.672107537
+721,Southeastern,hither-green,grove-park,2.939647952
+722,Southeastern,hither-green,lee,1.046234408
+723,Southeastern,kent-house,beckenham-junction,1.409331171
+724,Southeastern,kidbrooke,eltham,1.839663344
+725,Southeastern,ladywell,catford-bridge,1.336027996
+726,Southeastern,lee,mottingham,2.777299838
+727,Southeastern,lewisham,blackheath,1.440405886
+728,Southeastern,lewisham,hither-green,1.599265811
+729,Southeastern,lewisham,ladywell,1.075560759
+730,Southeastern,london-bridge,deptford,5.038062045
+731,Southeastern,london-bridge,new-cross,4.869854277
+732,Southeastern,lower-sydenham,new-beckenham,0.915853963
+733,Southeastern,maze-hill,westcombe-park,1.020835127
+734,Southeastern,mottingham,new-eltham,1.415108461
+735,Southeastern,new-beckenham,clock-house,0.982346366
+736,Southeastern,new-cross,st-johns,1.039019978
+737,Southeastern,new-eltham,sidcup,2.308464357
+738,Southeastern,nunhead,lewisham,2.864425612
+739,Southeastern,orpington,chelsfield,2.36734846
+740,Southeastern,peckham-rye,nunhead,1.175815506
+741,Southeastern,penge-east,kent-house,1.007083755
+742,Southeastern,petts-wood,orpington,1.957866446
+743,Southeastern,plumstead,abbey-wood,2.493776198
+744,Southeastern,shortlands,bromley-south,1.188852818
+745,Southeastern,sidcup,albany-park,1.6115291
+746,Southeastern,st-johns,lewisham,0.876522281
+747,Southeastern,sundridge-park,bromley-north,0.540653135
+748,Southeastern,sydenham-hill,penge-east,2.269352178
+749,Southeastern,victoria,brixton,4.263701305
+750,Southeastern,victoria,denmark-hill,4.826909813
+751,Southeastern,waterloo-east,london-bridge,1.603652578
+752,Southeastern,welling,bexleyheath,2.193188376
+753,Southeastern,west-dulwich,sydenham-hill,1.176424625
+754,Southeastern,west-wickham,hayes,1.823715019
+755,Southeastern,westcombe-park,charlton,0.949917869
+756,Southeastern,woolwich-arsenal,plumstead,1.046263299
+757,Southeastern,woolwich-dockyard,woolwich-arsenal,1.018661965
+758,Southern,anerley,norwood-junction,1.866776598
+759,Southern,balham,mitcham-eastfields,3.871725135
+760,Southern,balham,streatham-common,2.937247133
+761,Southern,balham,streatham-hill,1.811382552
+762,Southern,balham,tooting,2.653532374
+763,Southern,banstead,epsom-downs,1.902062058
+764,Southern,battersea-park,clapham-junction,2.106986184
+765,Southern,belmont,banstead,1.902266372
+766,Southern,birkbeck,beckenham-junction,2.263395083
+767,Southern,brockley,honor-oak-park,1.630102649
+768,Southern,carshalton,sutton,1.993920549
+769,Southern,carshalton-beeches,sutton,1.532793409
+770,Southern,cheam,ewell-east,2.210407757
+771,Southern,chipstead,kingswood,3.326365686
+772,Southern,clapham-junction,imperial-wharf,1.461392567
+773,Southern,clapham-junction,wandsworth-common,2.056641839
+774,Southern,coulsdon-town,woodmansterne,1.436118799
+775,Southern,crystal-palace,birkbeck,1.953113687
+776,Southern,crystal-palace,gipsy-hill,1.047582812
+777,Southern,east-croydon,south-croydon,1.442909905
+778,Southern,east-dulwich,peckham-rye,1.13755352
+779,Southern,forest-hill,sydenham,1.336678466
+780,Southern,gipsy-hill,west-norwood,1.539123315
+781,Southern,hackbridge,carshalton,1.36266708
+782,Southern,harrow-and-wealdstone,watford-junction,9.008547019
+783,Southern,haydons-road,wimbledon,1.321696634
+784,Southern,honor-oak-park,forest-hill,1.412651921
+785,Southern,imperial-wharf,west-brompton,1.635041644
+786,Southern,kenley,whyteleafe,2.147674025
+787,Southern,kensington-olympia,shepherds-bush,0.930153118
+788,Southern,kingswood,tadworth,1.757290861
+789,Southern,london-bridge,new-cross-gate,4.589308443
+790,Southern,mitcham-eastfields,mitcham-junction,1.722982034
+791,Southern,mitcham-junction,hackbridge,1.706615113
+792,Southern,morden-south,st-helier,0.71695993
+793,Southern,new-cross-gate,brockley,1.176101602
+794,Southern,norbury,thornton-heath,2.099113818
+795,Southern,north-dulwich,east-dulwich,0.94883565
+796,Southern,norwood-junction,east-croydon,2.630005376
+797,Southern,norwood-junction,west-croydon,2.767045405
+798,Southern,peckham-rye,queens-road-peckham,1.023458268
+799,Southern,penge-west,anerley,0.691118651
+800,Southern,purley,coulsdon-south,2.933011236
+801,Southern,purley,kenley,1.660525402
+802,Southern,purley,reedham,0.946914125
+803,Southern,purley-oaks,purley,1.484434568
+804,Southern,queens-road-peckham,south-bermondsey,1.50042951
+805,Southern,reedham,coulsdon-town,1.256298841
+806,Southern,riddlesdown,upper-warlingham,3.067560737
+807,Southern,sanderstead,riddlesdown,1.778042191
+808,Southern,selhurst,east-croydon,1.836987142
+809,Southern,selhurst,west-croydon,1.734724429
+810,Southern,shepherds-bush,wembley-central,7.5337229
+811,Southern,south-bermondsey,london-bridge,2.873622438
+812,Southern,south-croydon,purley-oaks,1.806837938
+813,Southern,south-croydon,sanderstead,1.615391569
+814,Southern,south-merton,morden-south,0.852832603
+815,Southern,st-helier,sutton-common,1.603585493
+816,Southern,streatham,mitcham-eastfields,2.456301276
+817,Southern,streatham,streatham-common,0.798787902
+818,Southern,streatham-common,norbury,1.247448522
+819,Southern,streatham-hill,west-norwood,1.878594545
+820,Southern,sutton,belmont,1.803435343
+821,Southern,sutton,cheam,1.653656182
+822,Southern,sutton-common,west-sutton,1.175570678
+823,Southern,sydenham,crystal-palace,1.586497533
+824,Southern,sydenham,penge-west,1.1016536
+825,Southern,tadworth,tattenham-corner,2.005030889
+826,Southern,thornton-heath,selhurst,1.01232143
+827,Southern,tooting,haydons-road,2.033352223
+828,Southern,tulse-hill,north-dulwich,2.022406278
+829,Southern,tulse-hill,streatham,2.442655952
+830,Southern,tulse-hill,streatham-hill,1.571172783
+831,Southern,victoria,battersea-park,2.144962599
+832,Southern,waddon,wallington,2.453064919
+833,Southern,wallington,carshalton-beeches,1.334951718
+834,Southern,wandsworth-common,balham,0.831460802
+835,Southern,wembley-central,harrow-and-wealdstone,5.232108434
+836,Southern,west-brompton,kensington-olympia,1.55997417
+837,Southern,west-croydon,waddon,1.637648911
+838,Southern,west-norwood,streatham-hill,1.878594545
+839,Southern,west-norwood,tulse-hill,0.961112747
+840,Southern,west-sutton,sutton,1.185245767
+841,Southern,whyteleafe,whyteleafe-south,0.779495091
+842,Southern,whyteleafe-south,caterham,2.375854822
+843,Southern,wimbledon,wimbledon-chase,1.386942647
+844,Southern,wimbledon-chase,south-merton,0.916848572
+845,Southern,woodmansterne,chipstead,1.51292653
+846,TfL Rail,acton-main-line,paddington,6.366952754
+847,TfL Rail,brentwood,shenfield,2.838862795
+848,TfL Rail,chadwell-heath,romford,3.815062765
+849,TfL Rail,ealing-broadway,acton-main-line,2.386247806
+850,TfL Rail,forest-gate,manor-park,1.540561181
+851,TfL Rail,gidea-park,harold-wood,2.322806283
+852,TfL Rail,goodmayes,chadwell-heath,1.205241748
+853,TfL Rail,hanwell,west-ealing,1.274715
+854,TfL Rail,harold-wood,brentwood,5.060587536
+855,TfL Rail,hayes-and-harlington,southall,2.921049774
+856,TfL Rail,heathrow-terminal-4,heathrow-terminals-1-2-3,1.320539304
+857,TfL Rail,heathrow-terminals-1-2-3,hayes-and-harlington,4.161724851
+858,TfL Rail,ilford,seven-kings,1.98560212
+859,TfL Rail,liverpool-street,stratford,6.057002451
+860,TfL Rail,manor-park,ilford,1.73513955
+861,TfL Rail,maryland,forest-gate,1.342922862
+862,TfL Rail,romford,gidea-park,1.776534462
+863,TfL Rail,seven-kings,goodmayes,1.092934843
+864,TfL Rail,southall,hanwell,2.898798276
+865,TfL Rail,stratford,maryland,0.788278983
+866,TfL Rail,west-ealing,ealing-broadway,1.237894906
+867,Thameslink,beckenham-hill,bellingham,1.062913085
+868,Thameslink,beckenham-junction,kent-house,1.409331171
+869,Thameslink,bellingham,catford,1.232322755
+870,Thameslink,bickley,bromley-south,1.870249442
+871,Thameslink,blackfriars,city-thameslink,0.264720402
+872,Thameslink,bromley-south,shortlands,1.188852818
+873,Thameslink,carshalton,sutton,1.993920549
+874,Thameslink,catford,crofton-park,1.398245612
+875,Thameslink,city-thameslink,farringdon,0.701507569
+876,Thameslink,cricklewood,hendon,3.008669726
+877,Thameslink,crofton-park,nunhead,1.73720576
+878,Thameslink,denmark-hill,elephant-and-castle,3.148663908
+879,Thameslink,east-croydon,purley,4.525559511
+880,Thameslink,elephant-and-castle,blackfriars,1.757443697
+881,Thameslink,farringdon,st-pancras,1.836375633
+882,Thameslink,hackbridge,carshalton,1.36266708
+883,Thameslink,haydons-road,tooting,2.033352223
+884,Thameslink,hendon,mill-hill-broadway,3.72493605
+885,Thameslink,herne-hill,loughborough-junction,1.411239178
+886,Thameslink,herne-hill,tulse-hill,1.588729632
+887,Thameslink,kent-house,penge-east,1.007083755
+888,Thameslink,kentish-town,west-hampstead-thameslink,3.604550943
+889,Thameslink,london-bridge,east-croydon,14.34975293
+890,Thameslink,loughborough-junction,elephant-and-castle,3.246914026
+891,Thameslink,mill-hill-broadway,elstree-and-borehamwood,4.916644829
+892,Thameslink,mitcham-eastfields,mitcham-junction,1.722982034
+893,Thameslink,mitcham-junction,hackbridge,1.706615113
+894,Thameslink,morden-south,south-merton,0.852832603
+895,Thameslink,nunhead,peckham-rye,1.175815506
+896,Thameslink,orpington,petts-wood,1.957866446
+897,Thameslink,peckham-rye,denmark-hill,1.462662778
+898,Thameslink,penge-east,sydenham-hill,2.269352178
+899,Thameslink,petts-wood,bickley,2.470436464
+900,Thameslink,purley,coulsdon-south,2.933011236
+901,Thameslink,ravensbourne,beckenham-hill,1.367775009
+902,Thameslink,shortlands,beckenham-junction,2.062590006
+903,Thameslink,shortlands,ravensbourne,1.139805408
+904,Thameslink,south-merton,wimbledon-chase,0.916848572
+905,Thameslink,st-helier,morden-south,0.71695993
+906,Thameslink,st-mary-cray,bickley,4.41060388
+907,Thameslink,st-pancras,kentish-town,2.398906632
+908,Thameslink,streatham,mitcham-eastfields,2.456301276
+909,Thameslink,sutton,west-sutton,1.185245767
+910,Thameslink,sutton-common,st-helier,1.603585493
+911,Thameslink,sydenham-hill,west-dulwich,1.176424625
+912,Thameslink,tooting,streatham,2.096204065
+913,Thameslink,tulse-hill,east-croydon,7.186875755
+914,Thameslink,tulse-hill,streatham,2.442655952
+915,Thameslink,west-dulwich,herne-hill,1.672107537
+916,Thameslink,west-hampstead-thameslink,cricklewood,1.761230186
+917,Thameslink,west-sutton,sutton-common,1.175570678
+918,Thameslink,wimbledon,haydons-road,1.321696634
+919,Thameslink,wimbledon-chase,wimbledon,1.386942647
+920,Tramlink,addington-village,fieldway,0.788107785
+921,Tramlink,addiscombe,blackhorse-lane,0.57988144
+922,Tramlink,ampere-way,waddon-marsh,0.700347956
+923,Tramlink,arena,elmers-end,0.971814568
+924,Tramlink,arena,harrington-road,0.934361035
+925,Tramlink,avenue-road,beckenham-road,0.518475574
+926,Tramlink,beckenham-road,beckenham-junction,1.237324956
+927,Tramlink,beddington-lane,therapia-lane,0.992884385
+928,Tramlink,belgrave-walk,mitcham,0.655138251
+929,Tramlink,birkbeck,avenue-road,0.575991772
+930,Tramlink,blackhorse-lane,woodside,0.445019075
+931,Tramlink,centrale,west-croydon,0.335419175
+932,Tramlink,church-street,centrale,0.231436323
+933,Tramlink,coombe-lane,gravel-hill,1.280494837
+934,Tramlink,dundonald-road,merton-park,0.618624377
+935,Tramlink,east-croydon,george-street,0.514199656
+936,Tramlink,east-croydon,lebanon-road,0.481816133
+937,Tramlink,fieldway,king-henrys-drive,0.724663454
+938,Tramlink,george-street,church-street,0.391887561
+939,Tramlink,gravel-hill,addington-village,0.750412449
+940,Tramlink,harrington-road,birkbeck,0.546808702
+941,Tramlink,king-henrys-drive,new-addington,0.367770871
+942,Tramlink,lebanon-road,sandilands,0.482747067
+943,Tramlink,lloyd-park,coombe-lane,1.555601695
+944,Tramlink,merton-park,morden-road,0.776832544
+945,Tramlink,mitcham,mitcham-junction,1.055434875
+946,Tramlink,mitcham-junction,beddington-lane,1.142954801
+947,Tramlink,morden-road,phipps-bridge,0.951454731
+948,Tramlink,phipps-bridge,belgrave-walk,0.376434298
+949,Tramlink,reeves-corner,centrale,0.181391064
+950,Tramlink,sandilands,addiscombe,0.628546212
+951,Tramlink,sandilands,lloyd-park,1.210184443
+952,Tramlink,therapia-lane,ampere-way,0.530446056
+953,Tramlink,waddon-marsh,wandle-park,0.52516129
+954,Tramlink,wandle-park,reeves-corner,0.520895761
+955,Tramlink,wellesley-road,east-croydon,0.394985658
+956,Tramlink,west-croydon,wellesley-road,0.47275437
+957,Tramlink,wimbledon,dundonald-road,0.416961434
+958,Tramlink,woodside,arena,0.69301276
+959,Victoria,blackhorse-road,tottenham-hale,1.442366223
+960,Victoria,euston,warren-street,0.570301672
+961,Victoria,finsbury-park,highbury-and-islington,2.021536023
+962,Victoria,green-park,victoria,1.154064603
+963,Victoria,highbury-and-islington,kings-cross-st-pancras,2.261570023
+964,Victoria,kings-cross-st-pancras,euston,0.677416528
+965,Victoria,oxford-circus,green-park,0.948162067
+966,Victoria,pimlico,vauxhall,0.77021211
+967,Victoria,seven-sisters,finsbury-park,3.110403849
+968,Victoria,stockwell,brixton,1.19529396
+969,Victoria,tottenham-hale,seven-sisters,0.992989646
+970,Victoria,vauxhall,stockwell,1.511653541
+971,Victoria,victoria,pimlico,1.069953158
+972,Victoria,walthamstow-central,blackhorse-road,1.394688117
+973,Victoria,warren-street,oxford-circus,1.055681205
+974,Waterloo and City,waterloo,bank,2.026784248
+975,Bakerloo,baker-street,regents-park,0.803591111
+976,Bakerloo,charing-cross,embankment,0.204870249
+977,Bakerloo,edgware-road-bakerloo,marylebone,0.525181323
+978,Bakerloo,embankment,waterloo,0.782531067
+979,Bakerloo,harlesden,willesden-junction,1.04118872
+980,Bakerloo,harrow-and-wealdstone,kenton,1.804055394
+981,Bakerloo,kensal-green,queens-park,1.440983449
+982,Bakerloo,kenton,south-kenton,1.261209207
+983,Bakerloo,kilburn-park,maida-vale,0.821922942
+984,Bakerloo,lambeth-north,elephant-and-castle,0.846443593
+985,Bakerloo,maida-vale,warwick-avenue,0.785412428
+986,Bakerloo,marylebone,baker-street,0.463196358
+987,Bakerloo,north-wembley,wembley-central,1.282676423
+988,Bakerloo,oxford-circus,piccadilly-circus,0.788114336
+989,Bakerloo,paddington,edgware-road-bakerloo,0.686010873
+990,Bakerloo,piccadilly-circus,charing-cross,0.63443872
+991,Bakerloo,queens-park,kilburn-park,0.755034683
+992,Bakerloo,regents-park,oxford-circus,1.004834627
+993,Bakerloo,south-kenton,north-wembley,1.004705007
+994,Bakerloo,stonebridge-park,harlesden,1.507727018
+995,Bakerloo,warwick-avenue,paddington,0.992496458
+996,Bakerloo,waterloo,lambeth-north,0.458548599
+997,Bakerloo,wembley-central,stonebridge-park,1.695930772
+998,Bakerloo,willesden-junction,kensal-green,1.341786633
+999,C2C,barking,dagenham-dock,4.679640325
+1000,C2C,barking,upminster,11.99041478
+1001,C2C,dagenham-dock,purfleet,8.0949958
+1002,C2C,dagenham-dock,rainham,3.313134298
+1003,C2C,fenchurch-street,limehouse,2.713055781
+1004,C2C,fenchurch-street,stratford,6.166382363
+1005,C2C,limehouse,west-ham,3.580841195
+1006,C2C,liverpool-street,stratford,6.057002451
+1007,C2C,ockendon,chafford-hundred,4.058022481
+1008,C2C,stratford,barking,5.856492962
+1009,C2C,upminster,ockendon,4.90318393
+1010,C2C,west-ham,barking,5.366101406
+1011,Central,bank,st-pauls,0.615943741
+1012,Central,barkingside,fairlop,1.150435241
+1013,Central,bethnal-green,liverpool-street,2.143279488
+1014,Central,bond-street,marble-arch,0.620336837
+1015,Central,buckhurst-hill,woodford,2.325581611
+1016,Central,chancery-lane,holborn,0.562983767
+1017,Central,chigwell,roding-valley,2.222867414
+1018,Central,debden,loughton,2.016469628
+1019,Central,east-acton,north-acton,1.132416787
+1020,Central,epping,theydon-bois,2.46873547
+1021,Central,fairlop,hainault,0.787602871
+1022,Central,gants-hill,newbury-park,1.677267412
+1023,Central,grange-hill,chigwell,1.213474317
+1024,Central,greenford,northolt,1.707739391
+1025,Central,hainault,grange-hill,1.189719716
+1026,Central,hanger-lane,perivale,2.194643064
+1027,Central,holborn,tottenham-court-road,0.788353854
+1028,Central,holland-park,shepherds-bush,0.877697528
+1029,Central,lancaster-gate,queensway,0.845358009
+1030,Central,leyton,stratford,1.838191917
+1031,Central,leytonstone,leyton,1.581139706
+1032,Central,leytonstone,wanstead,1.530811018
+1033,Central,liverpool-street,bank,0.664777988
+1034,Central,loughton,buckhurst-hill,1.769519521
+1035,Central,marble-arch,lancaster-gate,1.189597705
+1036,Central,mile-end,bethnal-green,1.586546155
+1037,Central,newbury-park,barkingside,1.142901994
+1038,Central,north-acton,hanger-lane,2.417661257
+1039,Central,north-acton,west-acton,1.579427076
+1040,Central,northolt,south-ruislip,2.330808726
+1041,Central,notting-hill-gate,holland-park,0.776952255
+1042,Central,oxford-circus,bond-street,0.627934823
+1043,Central,perivale,greenford,1.697999822
+1044,Central,queensway,notting-hill-gate,0.60054856
+1045,Central,redbridge,gants-hill,1.430369765
+1046,Central,ruislip-gardens,west-ruislip,2.246790026
+1047,Central,shepherds-bush,white-city,0.955342674
+1048,Central,snaresbrook,leytonstone,1.618199064
+1049,Central,south-ruislip,ruislip-gardens,0.782311353
+1050,Central,south-woodford,snaresbrook,1.267584543
+1051,Central,st-pauls,chancery-lane,1.076027236
+1052,Central,stratford,mile-end,2.706038623
+1053,Central,theydon-bois,debden,3.285475953
+1054,Central,tottenham-court-road,oxford-circus,0.682100125
+1055,Central,wanstead,redbridge,1.161318231
+1056,Central,west-acton,ealing-broadway,1.512997253
+1057,Central,white-city,east-acton,1.686028563
+1058,Central,woodford,south-woodford,1.791170261
+1059,Chiltern Railways,chalfont-and-latimer,amersham,3.210437766
+1060,Chiltern Railways,chorleywood,chalfont-and-latimer,3.316034835
+1061,Chiltern Railways,harrow-on-the-hill,rickmansworth,11.62232117
+1062,Chiltern Railways,marylebone,harrow-on-the-hill,13.57210315
+1063,Chiltern Railways,marylebone,wembley-stadium,9.206671009
+1064,Chiltern Railways,northolt-park,south-ruislip,2.745392846
+1065,Chiltern Railways,paddington,south-ruislip,16.12950287
+1066,Chiltern Railways,rickmansworth,chorleywood,3.449862518
+1067,Chiltern Railways,south-ruislip,west-ruislip,3.028503379
+1068,Chiltern Railways,sudbury-and-harrow-road,sudbury-hill-harrow,1.416208662
+1069,Chiltern Railways,sudbury-hill-harrow,northolt-park,1.660782947
+1070,Chiltern Railways,wembley-stadium,sudbury-and-harrow-road,2.066541689
+1071,Circle,aldgate,tower-hill,0.445399204
+1072,Circle,baker-street,great-portland-street,0.898720234
+1073,Circle,barbican,moorgate,0.634057561
+1074,Circle,bayswater,paddington,0.917812423
+1075,Circle,blackfriars,temple,0.745291063
+1076,Circle,cannon-street,mansion-house,0.285036484
+1077,Circle,edgware-road-circledistricthammersmith-and-city,baker-street,0.822385036
+1078,Circle,embankment,westminster,0.682306039
+1079,Circle,euston-square,kings-cross-st-pancras,0.677416528
+1080,Circle,farringdon,barbican,0.492893338
+1081,Circle,gloucester-road,high-street-kensington,0.888136408
+1082,Circle,goldhawk-road,shepherds-bush-market,0.423089607
+1083,Circle,great-portland-street,euston-square,0.915858804
+1084,Circle,hammersmith-met,goldhawk-road,0.974837594
+1085,Circle,high-street-kensington,notting-hill-gate,1.007852115
+1086,Circle,kings-cross-st-pancras,farringdon,1.732182174
+1087,Circle,ladbroke-grove,westbourne-park,0.769629357
+1088,Circle,latimer-road,ladbroke-grove,0.619293112
+1089,Circle,liverpool-street,aldgate,0.584203531
+1090,Circle,mansion-house,blackfriars,0.611598836
+1091,Circle,monument,cannon-street,0.292748474
+1092,Circle,moorgate,liverpool-street,0.477652791
+1093,Circle,notting-hill-gate,bayswater,0.633128265
+1094,Circle,paddington,edgware-road-circledistricthammersmith-and-city,0.757733155
+1095,Circle,royal-oak,paddington,0.961572658
+1096,Circle,shepherds-bush-market,wood-lane,0.466507126
+1097,Circle,sloane-square,south-kensington,1.222277516
+1098,Circle,south-kensington,gloucester-road,0.667930868
+1099,Circle,st-jamess-park,victoria,0.78044401
+1100,Circle,temple,embankment,0.727908454
+1101,Circle,tower-hill,monument,0.657282218
+1102,Circle,victoria,sloane-square,0.980751024
+1103,Circle,westbourne-park,royal-oak,0.88680127
+1104,Circle,westminster,st-jamess-park,0.646139034
+1105,Circle,wood-lane,latimer-road,0.681488387
+1106,District,acton-town,ealing-common,0.928511805
+1107,District,aldgate-east,tower-hill,0.580878906
+1108,District,barking,east-ham,2.028332978
+1109,District,barons-court,hammersmith-district,0.676689432
+1110,District,bayswater,paddington,0.917812423
+1111,District,becontree,upney,1.758589757
+1112,District,blackfriars,temple,0.745291063
+1113,District,bow-church,stepney-green,1.962590208
+1114,District,bow-road,bow-church,0.274602512
+1115,District,bromley-by-bow,bow-road,0.910835433
+1116,District,cannon-street,mansion-house,0.285036484
+1117,District,chiswick-park,acton-town,1.301416478
+1118,District,dagenham-east,dagenham-heathway,1.298705909
+1119,District,dagenham-heathway,becontree,1.450248178
+1120,District,ealing-common,ealing-broadway,1.149476436
+1121,District,earls-court,high-street-kensington,1.059753896
+1122,District,earls-court,kensington-olympia,1.328220449
+1123,District,earls-court,west-brompton,0.45596949
+1124,District,earls-court,west-kensington,0.835054987
+1125,District,east-ham,upton-park,1.209933694
+1126,District,east-putney,southfields,1.586269369
+1127,District,elm-park,dagenham-east,2.241620708
+1128,District,embankment,westminster,0.682306039
+1129,District,fulham-broadway,parsons-green,0.70503709
+1130,District,gloucester-road,earls-court,0.823730732
+1131,District,gunnersbury,kew-gardens,1.819936138
+1132,District,hammersmith-district,ravenscourt-park,0.941601493
+1133,District,high-street-kensington,notting-hill-gate,1.007852115
+1134,District,hornchurch,elm-park,1.608011018
+1135,District,kew-gardens,richmond,1.886339171
+1136,District,mansion-house,blackfriars,0.611598836
+1137,District,monument,cannon-street,0.292748474
+1138,District,notting-hill-gate,bayswater,0.633128265
+1139,District,paddington,edgware-road-circledistricthammersmith-and-city,0.757733155
+1140,District,parsons-green,putney-bridge,0.974053988
+1141,District,plaistow,west-ham,0.915532511
+1142,District,putney-bridge,east-putney,1.005846269
+1143,District,ravenscourt-park,stamford-brook,0.643849546
+1144,District,sloane-square,south-kensington,1.222277516
+1145,District,south-kensington,gloucester-road,0.667930868
+1146,District,southfields,wimbledon-park,1.256201588
+1147,District,st-jamess-park,victoria,0.78044401
+1148,District,stamford-brook,turnham-green,0.647657975
+1149,District,stepney-green,whitechapel,0.875150579
+1150,District,temple,embankment,0.727908454
+1151,District,tower-hill,monument,0.657282218
+1152,District,turnham-green,chiswick-park,0.919395894
+1153,District,turnham-green,gunnersbury,1.476224795
+1154,District,upminster,upminster-bridge,1.171630855
+1155,District,upminster-bridge,hornchurch,1.142857253
+1156,District,upney,barking,1.437461714
+1157,District,upton-park,plaistow,1.30296717
+1158,District,victoria,sloane-square,0.980751024
+1159,District,west-brompton,fulham-broadway,0.786173793
+1160,District,west-ham,bromley-by-bow,1.245783934
+1161,District,west-kensington,barons-court,0.500659187
+1162,District,westminster,st-jamess-park,0.646139034
+1163,District,whitechapel,aldgate-east,1.06529668
+1164,District,wimbledon-park,wimbledon,1.585778014
+1165,DLR,abbey-road,west-ham,0.396765348
+1166,DLR,all-saints,poplar,0.454868744
+1167,DLR,beckton-park,cyprus,0.62574921
+1168,DLR,blackwall,east-india,0.349883977
+1169,DLR,bow-church,devons-road,0.620287798
+1170,DLR,canary-wharf,heron-quays,0.173488062
+1171,DLR,canning-town,royal-victoria,0.856736689
+1172,DLR,canning-town,west-silvertown,1.557102021
+1173,DLR,crossharbour-and-london-arena,mudchute,0.512082673
+1174,DLR,custom-house,prince-regent,0.534572529
+1175,DLR,cutty-sark-for-maritime-greenwich,greenwich,0.571953512
+1176,DLR,cyprus,gallions-reach,0.552199505
+1177,DLR,deptford-bridge,elverson-road,0.769849565
+1178,DLR,devons-road,langdon-park,0.422231216
+1179,DLR,east-india,canning-town,0.937531084
+1180,DLR,elverson-road,lewisham,0.493040885
+1181,DLR,gallions-reach,beckton,0.925525426
+1182,DLR,greenwich,deptford-bridge,0.603941344
+1183,DLR,heron-quays,south-quay,0.370458275
+1184,DLR,island-gardens,cutty-sark-for-maritime-greenwich,0.668032299
+1185,DLR,king-george-v,woolwich-arsenal,1.430380286
+1186,DLR,langdon-park,all-saints,0.952127257
+1187,DLR,limehouse,shadwell,1.219340219
+1188,DLR,london-city-airport,king-george-v,1.009882244
+1189,DLR,mudchute,island-gardens,0.47884958
+1190,DLR,pontoon-dock,london-city-airport,1.020448615
+1191,DLR,poplar,blackwall,0.695624081
+1192,DLR,poplar,west-india-quay,0.246667491
+1193,DLR,poplar,westferry,0.666576978
+1194,DLR,prince-regent,royal-albert,0.815919837
+1195,DLR,pudding-mill-lane,bow-church,0.918520193
+1196,DLR,royal-albert,beckton-park,0.669231639
+1197,DLR,royal-victoria,custom-house,0.544134754
+1198,DLR,shadwell,bank,2.232393013
+1199,DLR,shadwell,tower-gateway,1.215004622
+1200,DLR,south-quay,crossharbour-and-london-arena,0.609842695
+1201,DLR,star-lane,canning-town,0.801334847
+1202,DLR,stratford,pudding-mill-lane,1.029665703
+1203,DLR,stratford,stratford-high-street,0.43533
+1204,DLR,stratford-high-street,abbey-road,0.765234215
+1205,DLR,stratford-international,stratford,0.490961169
+1206,DLR,west-ham,star-lane,0.88452293
+1207,DLR,west-india-quay,canary-wharf,0.362507983
+1208,DLR,west-silvertown,pontoon-dock,0.770729361
+1209,DLR,westferry,limehouse,0.951552509
+1210,Elizabeth,acton-main-line,ealing-broadway,2.386247806
+1211,Elizabeth,bond-street,paddington,1.816940475
+1212,Elizabeth,brentwood,harold-wood,5.060587536
+1213,Elizabeth,burnham,taplow,2.42200148
+1214,Elizabeth,canary-wharf,custom-house,3.203347988
+1215,Elizabeth,chadwell-heath,goodmayes,1.205241748
+1216,Elizabeth,custom-house,woolwich,3.767435627
+1217,Elizabeth,ealing-broadway,west-ealing,1.237894906
+1218,Elizabeth,farringdon,tottenham-court-road,1.871332219
+1219,Elizabeth,forest-gate,maryland,1.342922862
+1220,Elizabeth,gidea-park,romford,1.776534462
+1221,Elizabeth,goodmayes,seven-kings,1.092934843
+1222,Elizabeth,hanwell,southall,2.898798276
+1223,Elizabeth,harold-wood,gidea-park,2.322806283
+1224,Elizabeth,hayes-and-harlington,heathrow-terminals-1-2-3,4.161724851
+1225,Elizabeth,hayes-and-harlington,west-drayton,3.652323067
+1226,Elizabeth,heathrow-terminals-1-2-3,heathrow-terminal-4,1.320539304
+1227,Elizabeth,heathrow-terminals-1-2-3,heathrow-terminal-5,2.653272755
+1228,Elizabeth,ilford,manor-park,1.73513955
+1229,Elizabeth,iver,langley,2.425617905
+1230,Elizabeth,langley,slough,3.470425799
+1231,Elizabeth,liverpool-street,farringdon,1.590235322
+1232,Elizabeth,maidenhead,twyford,10.85604955
+1233,Elizabeth,manor-park,forest-gate,1.540561181
+1234,Elizabeth,maryland,stratford,0.788278983
+1235,Elizabeth,paddington,acton-main-line,6.366952754
+1236,Elizabeth,romford,chadwell-heath,3.815062765
+1237,Elizabeth,seven-kings,ilford,1.98560212
+1238,Elizabeth,shenfield,brentwood,2.838862795
+1239,Elizabeth,slough,burnham,4.01150481
+1240,Elizabeth,southall,hayes-and-harlington,2.921049774
+1241,Elizabeth,stratford,whitechapel,4.569845372
+1242,Elizabeth,taplow,maidenhead,2.90906153
+1243,Elizabeth,tottenham-court-road,bond-street,1.308606586
+1244,Elizabeth,twyford,reading,7.750292015
+1245,Elizabeth,west-drayton,iver,2.399179524
+1246,Elizabeth,west-ealing,hanwell,1.274715
+1247,Elizabeth,whitechapel,canary-wharf,3.289449482
+1248,Elizabeth,whitechapel,liverpool-street,1.595515682
+1249,Elizabeth,woolwich,abbey-wood,3.356775898
+1250,Great Northern,alexandra-palace,bowes-park,0.999892065
+1251,Great Northern,alexandra-palace,new-southgate,2.36529913
+1252,Great Northern,bowes-park,palmers-green,1.441931139
+1253,Great Northern,drayton-park,finsbury-park,1.285521637
+1254,Great Northern,enfield-chase,gordon-hill,1.226952029
+1255,Great Northern,essex-road,highbury-and-islington,0.842684847
+1256,Great Northern,finsbury-park,harringay,1.415882735
+1257,Great Northern,gordon-hill,crews-hill,2.483922881
+1258,Great Northern,grange-park,enfield-chase,1.212424046
+1259,Great Northern,harringay,hornsey,1.112165974
+1260,Great Northern,highbury-and-islington,drayton-park,0.7414544
+1261,Great Northern,hornsey,alexandra-palace,1.432053953
+1262,Great Northern,kings-cross,finsbury-park,3.940553783
+1263,Great Northern,moorgate,old-street,0.800504047
+1264,Great Northern,new-barnet,hadley-wood,2.223710098
+1265,Great Northern,new-southgate,oakleigh-park,3.073061723
+1266,Great Northern,oakleigh-park,new-barnet,1.295352907
+1267,Great Northern,old-street,essex-road,1.780144083
+1268,Great Northern,palmers-green,winchmore-hill,1.799532721
+1269,Great Northern,winchmore-hill,grange-park,1.003046014
+1270,Great Western,acton-main-line,ealing-broadway,2.386247806
+1271,Great Western,castle-bar-park,south-greenford,1.281746981
+1272,Great Western,drayton-green,castle-bar-park,0.786152118
+1273,Great Western,ealing-broadway,west-ealing,1.237894906
+1274,Great Western,hanwell,southall,2.898798276
+1275,Great Western,hayes-and-harlington,west-drayton,3.652323067
+1276,Great Western,paddington,acton-main-line,6.366952754
+1277,Great Western,south-greenford,greenford,1.087387701
+1278,Great Western,southall,hayes-and-harlington,2.921049774
+1279,Great Western,west-ealing,drayton-green,0.729982119
+1280,Great Western,west-ealing,hanwell,1.274715
+1281,Greater Anglia,angel-road,ponders-end,3.511248305
+1282,Greater Anglia,brentwood,shenfield,2.838862795
+1283,Greater Anglia,brimsdown,enfield-lock,1.74533184
+1284,Greater Anglia,cheshunt,broxbourne,4.98928478
+1285,Greater Anglia,edmonton-green,cheshunt,9.032634492
+1286,Greater Anglia,enfield-lock,waltham-cross,1.607892385
+1287,Greater Anglia,gidea-park,harold-wood,2.322806283
+1288,Greater Anglia,hackney-downs,seven-sisters,3.906816076
+1289,Greater Anglia,hackney-downs,tottenham-hale,4.329030966
+1290,Greater Anglia,harold-wood,brentwood,5.060587536
+1291,Greater Anglia,lea-bridge,tottenham-hale,2.878432879
+1292,Greater Anglia,liverpool-street,hackney-downs,3.819844723
+1293,Greater Anglia,liverpool-street,stratford,6.057002451
+1294,Greater Anglia,northumberland-park,angel-road,1.215914381
+1295,Greater Anglia,ponders-end,brimsdown,1.411940567
+1296,Greater Anglia,romford,gidea-park,1.776534462
+1297,Greater Anglia,seven-kings,romford,6.11247851
+1298,Greater Anglia,seven-sisters,edmonton-green,4.704094212
+1299,Greater Anglia,stratford,lea-bridge,3.589559055
+1300,Greater Anglia,stratford,seven-kings,7.352193105
+1301,Greater Anglia,tottenham-hale,northumberland-park,1.614386716
+1302,Greater Anglia,waltham-cross,cheshunt,1.968103965
+1303,Hammersmith and City,aldgate-east,whitechapel,1.06529668
+1304,Hammersmith and City,baker-street,great-portland-street,0.898720234
+1305,Hammersmith and City,barbican,moorgate,0.634057561
+1306,Hammersmith and City,bow-road,bromley-by-bow,0.910835433
+1307,Hammersmith and City,bromley-by-bow,west-ham,1.245783934
+1308,Hammersmith and City,east-ham,barking,2.028332978
+1309,Hammersmith and City,edgware-road-circledistricthammersmith-and-city,baker-street,0.822385036
+1310,Hammersmith and City,euston-square,kings-cross-st-pancras,0.677416528
+1311,Hammersmith and City,farringdon,barbican,0.492893338
+1312,Hammersmith and City,goldhawk-road,shepherds-bush-market,0.423089607
+1313,Hammersmith and City,great-portland-street,euston-square,0.915858804
+1314,Hammersmith and City,hammersmith-met,goldhawk-road,0.974837594
+1315,Hammersmith and City,kings-cross-st-pancras,farringdon,1.732182174
+1316,Hammersmith and City,ladbroke-grove,westbourne-park,0.769629357
+1317,Hammersmith and City,latimer-road,ladbroke-grove,0.619293112
+1318,Hammersmith and City,liverpool-street,aldgate-east,0.698662288
+1319,Hammersmith and City,mile-end,bow-road,0.606212115
+1320,Hammersmith and City,moorgate,liverpool-street,0.477652791
+1321,Hammersmith and City,paddington,edgware-road-circledistricthammersmith-and-city,0.757733155
+1322,Hammersmith and City,plaistow,upton-park,1.30296717
+1323,Hammersmith and City,royal-oak,paddington,0.961572658
+1324,Hammersmith and City,shepherds-bush-market,wood-lane,0.466507126
+1325,Hammersmith and City,stepney-green,mile-end,1.0831672
+1326,Hammersmith and City,upton-park,east-ham,1.209933694
+1327,Hammersmith and City,west-ham,plaistow,0.915532511
+1328,Hammersmith and City,westbourne-park,royal-oak,0.88680127
+1329,Hammersmith and City,whitechapel,stepney-green,0.875150579
+1330,Hammersmith and City,wood-lane,latimer-road,0.681488387
+1331,Heathrow Connect,ealing-broadway,west-ealing,1.237894906
+1332,Heathrow Connect,hanwell,southall,2.898798276
+1333,Heathrow Connect,hayes-and-harlington,heathrow-terminals-1-2-3,4.161724851
+1334,Heathrow Connect,heathrow-terminals-1-2-3,heathrow-terminal-4,1.320539304
+1335,Heathrow Connect,heathrow-terminals-1-2-3,heathrow-terminal-5,2.653272755
+1336,Heathrow Connect,paddington,ealing-broadway,8.740760332
+1337,Heathrow Connect,southall,hayes-and-harlington,2.921049774
+1338,Heathrow Connect,west-ealing,hanwell,1.274715
+1339,Heathrow Express,heathrow-terminals-1-2-3,heathrow-terminal-4,1.320539304
+1340,Heathrow Express,heathrow-terminals-1-2-3,heathrow-terminal-5,2.653272755
+1341,Heathrow Express,paddington,heathrow-terminals-1-2-3,19.77811649
+1342,Jubilee,baker-street,bond-street,1.154163024
+1343,Jubilee,bermondsey,canada-water,0.936684634
+1344,Jubilee,bond-street,green-park,0.925582851
+1345,Jubilee,canada-water,canary-wharf,2.251916791
+1346,Jubilee,canary-wharf,north-greenwich,1.638422506
+1347,Jubilee,canning-town,west-ham,1.643166357
+1348,Jubilee,canons-park,queensbury,1.629470924
+1349,Jubilee,dollis-hill,willesden-green,1.166638072
+1350,Jubilee,finchley-road,swiss-cottage,0.545638457
+1351,Jubilee,green-park,westminster,1.348790913
+1352,Jubilee,kilburn,west-hampstead,0.936082778
+1353,Jubilee,kingsbury,wembley-park,2.397863776
+1354,Jubilee,london-bridge,bermondsey,1.676330531
+1355,Jubilee,neasden,dollis-hill,0.841466589
+1356,Jubilee,north-greenwich,canning-town,1.549253707
+1357,Jubilee,queensbury,kingsbury,1.135313644
+1358,Jubilee,southwark,london-bridge,1.373167169
+1359,Jubilee,st-johns-wood,baker-street,1.763779534
+1360,Jubilee,stanmore,canons-park,1.466322518
+1361,Jubilee,swiss-cottage,st-johns-wood,0.916301134
+1362,Jubilee,waterloo,southwark,0.522754223
+1363,Jubilee,wembley-park,neasden,2.234385908
+1364,Jubilee,west-ham,stratford,1.593327065
+1365,Jubilee,west-hampstead,finchley-road,0.767286015
+1366,Jubilee,westminster,waterloo,0.835906497
+1367,Jubilee,willesden-green,kilburn,1.258803437
+1368,London Midland,bushey,watford-junction,2.187520471
+1369,London Midland,euston,wembley-central,11.57447592
+1370,London Midland,harrow-and-wealdstone,bushey,6.843629632
+1371,London Midland,wembley-central,harrow-and-wealdstone,5.232108434
+1372,Metropolitan,aldgate,liverpool-street,0.584203531
+1373,Metropolitan,baker-street,finchley-road,3.109853408
+1374,Metropolitan,barbican,farringdon,0.492893338
+1375,Metropolitan,chalfont-and-latimer,amersham,3.210437766
+1376,Metropolitan,chalfont-and-latimer,chesham,5.425271431
+1377,Metropolitan,chorleywood,chalfont-and-latimer,3.316034835
+1378,Metropolitan,croxley,watford,2.051849902
+1379,Metropolitan,eastcote,ruislip-manor,1.160280642
+1380,Metropolitan,euston-square,great-portland-street,0.915858804
+1381,Metropolitan,farringdon,kings-cross-st-pancras,1.732182174
+1382,Metropolitan,finchley-road,wembley-park,7.093401465
+1383,Metropolitan,great-portland-street,baker-street,0.898720234
+1384,Metropolitan,harrow-on-the-hill,north-harrow,1.865108843
+1385,Metropolitan,harrow-on-the-hill,west-harrow,1.165513022
+1386,Metropolitan,hillingdon,uxbridge,2.050304589
+1387,Metropolitan,ickenham,hillingdon,0.972329114
+1388,Metropolitan,kings-cross-st-pancras,euston-square,0.677416528
+1389,Metropolitan,liverpool-street,moorgate,0.477652791
+1390,Metropolitan,moor-park,croxley,1.991710599
+1391,Metropolitan,moor-park,rickmansworth,3.042847879
+1392,Metropolitan,moorgate,barbican,0.634057561
+1393,Metropolitan,north-harrow,pinner,1.545951164
+1394,Metropolitan,northwick-park,harrow-on-the-hill,1.30332005
+1395,Metropolitan,northwood,moor-park,2.174182939
+1396,Metropolitan,northwood-hills,northwood,1.532318632
+1397,Metropolitan,pinner,northwood-hills,2.155900339
+1398,Metropolitan,preston-road,northwick-park,1.756609499
+1399,Metropolitan,rickmansworth,chorleywood,3.449862518
+1400,Metropolitan,ruislip,ickenham,1.889119735
+1401,Metropolitan,ruislip-manor,ruislip,0.597191725
+1402,Metropolitan,wembley-park,preston-road,1.461754663
+1403,Metropolitan,west-harrow,eastcote,2.982412928
+1404,Northern,angel,kings-cross-st-pancras,1.299619095
+1405,Northern,archway,highgate,1.579624345
+1406,Northern,balham,clapham-south,1.105149004
+1407,Northern,bank,moorgate,0.566169689
+1408,Northern,belsize-park,hampstead,1.200847665
+1409,Northern,borough,london-bridge,0.695923807
+1410,Northern,brent-cross,hendon-central,1.177216606
+1411,Northern,burnt-oak,edgware,1.496637712
+1412,Northern,camden-town,chalk-farm,0.908368489
+1413,Northern,camden-town,kentish-town,1.125143317
+1414,Northern,chalk-farm,belsize-park,0.976451539
+1415,Northern,charing-cross,leicester-square,0.403836065
+1416,Northern,clapham-common,clapham-north,0.677564122
+1417,Northern,clapham-north,stockwell,0.942665634
+1418,Northern,clapham-south,clapham-common,1.216450516
+1419,Northern,colindale,burnt-oak,1.266727799
+1420,Northern,colliers-wood,tooting-broadway,1.103148703
+1421,Northern,east-finchley,finchley-central,2.480001309
+1422,Northern,east-finchley,mill-hill-east,3.896194569
+1423,Northern,elephant-and-castle,borough,0.734604547
+1424,Northern,embankment,charing-cross,0.204870249
+1425,Northern,euston,camden-town,1.408017849
+1426,Northern,euston,mornington-crescent,0.737408451
+1427,Northern,finchley-central,west-finchley,0.976195408
+1428,Northern,golders-green,brent-cross,1.368770155
+1429,Northern,goodge-street,warren-street,0.502376912
+1430,Northern,hampstead,golders-green,2.095632599
+1431,Northern,hendon-central,colindale,2.111878946
+1432,Northern,highgate,east-finchley,1.63579796
+1433,Northern,kennington,elephant-and-castle,0.853839352
+1434,Northern,kennington,nine-elms,1.887327238
+1435,Northern,kennington,waterloo,1.707952718
+1436,Northern,kentish-town,tufnell-park,0.739831649
+1437,Northern,kings-cross-st-pancras,euston,0.677416528
+1438,Northern,leicester-square,tottenham-court-road,0.58212228
+1439,Northern,london-bridge,bank,0.986688311
+1440,Northern,moorgate,old-street,0.800504047
+1441,Northern,morden,south-wimbledon,1.478961167
+1442,Northern,mornington-crescent,camden-town,0.674382535
+1443,Northern,nine-elms,battersea-power-station,0.936893791
+1444,Northern,old-street,angel,1.489732525
+1445,Northern,oval,kennington,0.9883608
+1446,Northern,south-wimbledon,colliers-wood,1.078385712
+1447,Northern,stockwell,oval,1.222619252
+1448,Northern,tooting-bec,balham,0.950766197
+1449,Northern,tooting-broadway,tooting-bec,1.159233924
+1450,Northern,tottenham-court-road,goodge-street,0.552497315
+1451,Northern,totteridge-and-whetstone,high-barnet,2.594838962
+1452,Northern,tufnell-park,archway,1.022782021
+1453,Northern,warren-street,euston,0.570301672
+1454,Northern,waterloo,embankment,0.782531067
+1455,Northern,west-finchley,woodside-park,0.987120036
+1456,Northern,woodside-park,totteridge-and-whetstone,1.439252227
+1457,Overground,acton-central,willesden-junction,2.940073906
+1458,Overground,anerley,norwood-junction,1.866776598
+1459,Overground,bethnal-green,cambridge-heath,0.555783021
+1460,Overground,blackhorse-road,walthamstow-queens-road,1.187926423
+1461,Overground,brockley,honor-oak-park,1.630102649
+1462,Overground,brondesbury,west-hampstead,0.84666921
+1463,Overground,brondesbury-park,brondesbury,0.761938922
+1464,Overground,bruce-grove,white-hart-lane,1.226577178
+1465,Overground,bush-hill-park,enfield-town,1.357212673
+1466,Overground,bushey,carpenders-park,1.932179379
+1467,Overground,caledonian-road-and-barnsbury,highbury-and-islington,0.848255489
+1468,Overground,cambridge-heath,london-fields,0.963760029
+1469,Overground,camden-road,caledonian-road-and-barnsbury,1.667777314
+1470,Overground,canada-water,surrey-quays,0.590544341
+1471,Overground,canonbury,dalston-junction,1.238137036
+1472,Overground,canonbury,dalston-kingsland,1.131974828
+1473,Overground,carpenders-park,hatch-end,2.343495895
+1474,Overground,clapham-high-street,wandsworth-road,0.697871259
+1475,Overground,clapton,st-james-street,2.71980202
+1476,Overground,crouch-hill,harringay-green-lanes,1.459051014
+1477,Overground,dalston-junction,haggerston,0.825148488
+1478,Overground,dalston-kingsland,hackney-central,1.436069534
+1479,Overground,denmark-hill,clapham-high-street,2.890032902
+1480,Overground,edmonton-green,bush-hill-park,1.895318371
+1481,Overground,edmonton-green,southbury,2.661601965
+1482,Overground,emerson-park,upminster,2.444007562
+1483,Overground,finchley-road-and-frognal,hampstead-heath,1.435837735
+1484,Overground,forest-hill,sydenham,1.336678466
+1485,Overground,gospel-oak,kentish-town-west,1.034126768
+1486,Overground,gospel-oak,upper-holloway,1.786205822
+1487,Overground,gunnersbury,south-acton,0.935145753
+1488,Overground,hackney-central,homerton,1.183535331
+1489,Overground,hackney-downs,clapton,1.401823658
+1490,Overground,hackney-downs,rectory-road,1.217475735
+1491,Overground,hackney-wick,stratford,1.502262812
+1492,Overground,haggerston,hoxton,0.811212533
+1493,Overground,hampstead-heath,gospel-oak,0.917677577
+1494,Overground,harlesden,willesden-junction,1.04118872
+1495,Overground,harringay-green-lanes,south-tottenham,1.857824417
+1496,Overground,harrow-and-wealdstone,kenton,1.804055394
+1497,Overground,hatch-end,headstone-lane,1.176071674
+1498,Overground,headstone-lane,harrow-and-wealdstone,1.914159696
+1499,Overground,highams-park,chingford,2.848380105
+1500,Overground,highbury-and-islington,canonbury,0.817975592
+1501,Overground,homerton,hackney-wick,0.977006884
+1502,Overground,honor-oak-park,forest-hill,1.412651921
+1503,Overground,hoxton,shoreditch-high-street,0.887578516
+1504,Overground,imperial-wharf,clapham-junction,1.461392567
+1505,Overground,kensal-green,queens-park,1.440983449
+1506,Overground,kensal-rise,brondesbury-park,0.987108954
+1507,Overground,kensington-olympia,west-brompton,1.55997417
+1508,Overground,kentish-town-west,camden-road,0.738867635
+1509,Overground,kenton,south-kenton,1.261209207
+1510,Overground,kew-gardens,gunnersbury,1.819936138
+1511,Overground,kilburn-high-road,south-hampstead,0.998128164
+1512,Overground,leyton-midland-road,leytonstone-high-road,1.286627087
+1513,Overground,leytonstone-high-road,wanstead-park,1.833893206
+1514,Overground,liverpool-street,bethnal-green,2.143279488
+1515,Overground,london-fields,hackney-downs,0.945558937
+1516,Overground,new-cross-gate,brockley,1.176101602
+1517,Overground,north-wembley,wembley-central,1.282676423
+1518,Overground,norwood-junction,west-croydon,2.767045405
+1519,Overground,peckham-rye,denmark-hill,1.462662778
+1520,Overground,penge-west,anerley,0.691118651
+1521,Overground,queens-park,kilburn-high-road,1.002268657
+1522,Overground,queens-road-peckham,peckham-rye,1.023458268
+1523,Overground,rectory-road,stoke-newington,0.708164633
+1524,Overground,richmond,kew-gardens,1.886339171
+1525,Overground,romford,emerson-park,2.642021138
+1526,Overground,rotherhithe,canada-water,0.409361701
+1527,Overground,seven-sisters,bruce-grove,1.193085123
+1528,Overground,shadwell,wapping,0.777601642
+1529,Overground,shepherds-bush,kensington-olympia,0.930153118
+1530,Overground,shoreditch-high-street,whitechapel,1.296612962
+1531,Overground,silver-street,edmonton-green,1.333398821
+1532,Overground,south-acton,acton-central,1.11306117
+1533,Overground,south-hampstead,euston,3.428865071
+1534,Overground,south-kenton,north-wembley,1.004705007
+1535,Overground,south-tottenham,blackhorse-road,2.306427807
+1536,Overground,southbury,turkey-street,2.723070244
+1537,Overground,st-james-street,walthamstow-central,0.928645658
+1538,Overground,stamford-hill,seven-sisters,1.033219849
+1539,Overground,stoke-newington,stamford-hill,1.131537832
+1540,Overground,stonebridge-park,harlesden,1.507727018
+1541,Overground,surrey-quays,new-cross,2.150210883
+1542,Overground,surrey-quays,new-cross-gate,2.077628983
+1543,Overground,surrey-quays,queens-road-peckham,2.218349213
+1544,Overground,sydenham,crystal-palace,1.586497533
+1545,Overground,sydenham,penge-west,1.1016536
+1546,Overground,theobalds-grove,cheshunt,1.387387292
+1547,Overground,turkey-street,theobalds-grove,2.356202308
+1548,Overground,upper-holloway,crouch-hill,1.191588514
+1549,Overground,walthamstow-central,wood-street,1.307794891
+1550,Overground,walthamstow-queens-road,leyton-midland-road,1.739415796
+1551,Overground,wandsworth-road,clapham-junction,2.263044155
+1552,Overground,wanstead-park,woodgrange-park,1.293631246
+1553,Overground,wapping,rotherhithe,0.365298643
+1554,Overground,watford-high-street,bushey,0.925794878
+1555,Overground,watford-junction,watford-high-street,1.286639834
+1556,Overground,wembley-central,stonebridge-park,1.695930772
+1557,Overground,west-brompton,imperial-wharf,1.635041644
+1558,Overground,west-hampstead,finchley-road-and-frognal,0.594907291
+1559,Overground,white-hart-lane,silver-street,1.141596499
+1560,Overground,whitechapel,shadwell,0.93794967
+1561,Overground,willesden-junction,kensal-green,1.341786633
+1562,Overground,willesden-junction,kensal-rise,1.612635822
+1563,Overground,willesden-junction,shepherds-bush,3.547180274
+1564,Overground,wood-street,highams-park,2.415406321
+1565,Overground,woodgrange-park,barking,2.723076842
+1566,Piccadilly,acton-town,ealing-common,0.928511805
+1567,Piccadilly,acton-town,south-ealing,1.858066494
+1568,Piccadilly,alperton,sudbury-town,1.624534715
+1569,Piccadilly,arnos-grove,bounds-green,1.238062225
+1570,Piccadilly,arsenal,holloway-road,0.818525021
+1571,Piccadilly,barons-court,hammersmith-district,0.676689432
+1572,Piccadilly,boston-manor,osterley,2.491314008
+1573,Piccadilly,bounds-green,wood-green,1.469520864
+1574,Piccadilly,caledonian-road,kings-cross-st-pancras,1.991480278
+1575,Piccadilly,cockfosters,oakwood,1.338698311
+1576,Piccadilly,covent-garden,leicester-square,0.305872942
+1577,Piccadilly,ealing-common,north-ealing,0.830021359
+1578,Piccadilly,earls-court,barons-court,1.329856342
+1579,Piccadilly,eastcote,ruislip-manor,1.160280642
+1580,Piccadilly,finsbury-park,arsenal,0.678355652
+1581,Piccadilly,gloucester-road,earls-court,0.823730732
+1582,Piccadilly,green-park,hyde-park-corner,0.833560549
+1583,Piccadilly,hammersmith-district,turnham-green,2.224434242
+1584,Piccadilly,hatton-cross,heathrow-terminal-4,1.85391022
+1585,Piccadilly,hatton-cross,heathrow-terminals-1-2-3,2.075412003
+1586,Piccadilly,heathrow-terminals-1-2-3,heathrow-terminal-4,1.320539304
+1587,Piccadilly,heathrow-terminals-1-2-3,heathrow-terminal-5,2.653272755
+1588,Piccadilly,hillingdon,uxbridge,2.050304589
+1589,Piccadilly,holborn,covent-garden,0.593418819
+1590,Piccadilly,holloway-road,caledonian-road,0.664518109
+1591,Piccadilly,hounslow-central,hounslow-west,1.38965608
+1592,Piccadilly,hounslow-east,hounslow-central,0.80223767
+1593,Piccadilly,hounslow-west,hatton-cross,2.706207133
+1594,Piccadilly,hyde-park-corner,knightsbridge,0.583341567
+1595,Piccadilly,ickenham,hillingdon,0.972329114
+1596,Piccadilly,kings-cross-st-pancras,russell-square,0.81343294
+1597,Piccadilly,knightsbridge,south-kensington,1.224433533
+1598,Piccadilly,leicester-square,piccadilly-circus,0.418106212
+1599,Piccadilly,manor-house,finsbury-park,0.979350855
+1600,Piccadilly,north-ealing,park-royal,1.062533953
+1601,Piccadilly,northfields,boston-manor,0.851973279
+1602,Piccadilly,oakwood,southgate,1.72084569
+1603,Piccadilly,osterley,hounslow-east,0.863766683
+1604,Piccadilly,park-royal,alperton,1.890844095
+1605,Piccadilly,piccadilly-circus,green-park,0.689169095
+1606,Piccadilly,rayners-lane,eastcote,1.785504454
+1607,Piccadilly,ruislip,ickenham,1.889119735
+1608,Piccadilly,ruislip-manor,ruislip,0.597191725
+1609,Piccadilly,russell-square,holborn,0.721811269
+1610,Piccadilly,south-ealing,northfields,0.570218732
+1611,Piccadilly,south-harrow,rayners-lane,1.782356437
+1612,Piccadilly,south-harrow,sudbury-hill,1.347490217
+1613,Piccadilly,south-kensington,gloucester-road,0.667930868
+1614,Piccadilly,southgate,arnos-grove,1.851127573
+1615,Piccadilly,sudbury-town,sudbury-hill,1.536026019
+1616,Piccadilly,turnham-green,acton-town,1.989020902
+1617,Piccadilly,turnpike-lane,manor-house,2.236154918
+1618,Piccadilly,wood-green,turnpike-lane,0.915762639
+1619,South Western,barnes,putney,1.891329837
+1620,South Western,barnes-bridge,barnes,0.913281807
+1621,South Western,berrylands,surbiton,1.805461546
+1622,South Western,brentford,kew-bridge,1.464891261
+1623,South Western,chessington-north,chessington-south,0.956095234
+1624,South Western,chiswick,barnes-bridge,1.39115847
+1625,South Western,clapham-junction,earlsfield,2.727544004
+1626,South Western,earlsfield,wimbledon,2.707835766
+1627,South Western,feltham,hounslow,3.705095941
+1628,South Western,fulwell,hampton,2.552380249
+1629,South Western,hampton-wick,teddington,1.746672407
+1630,South Western,hounslow,isleworth,2.194863242
+1631,South Western,isleworth,syon-lane,1.037276559
+1632,South Western,kew-bridge,chiswick,1.827396256
+1633,South Western,kingston,hampton-wick,0.859132873
+1634,South Western,malden-manor,tolworth,1.547792672
+1635,South Western,mortlake,barnes,1.747913785
+1636,South Western,motspur-park,malden-manor,1.919294733
+1637,South Western,motspur-park,worcester-park,1.63749851
+1638,South Western,new-malden,berrylands,1.755311544
+1639,South Western,new-malden,norbiton,2.152331219
+1640,South Western,norbiton,kingston,1.178115065
+1641,South Western,north-sheen,mortlake,1.364692534
+1642,South Western,putney,wandsworth-town,1.988510333
+1643,South Western,queenstown-road,clapham-junction,1.979616761
+1644,South Western,raynes-park,motspur-park,1.697433413
+1645,South Western,raynes-park,new-malden,1.936546447
+1646,South Western,richmond,north-sheen,1.090591099
+1647,South Western,st-margarets,richmond,1.624650393
+1648,South Western,stoneleigh,ewell-west,1.597286092
+1649,South Western,strawberry-hill,twickenham,1.386003791
+1650,South Western,surbiton,thames-ditton,2.394859551
+1651,South Western,syon-lane,brentford,1.349228294
+1652,South Western,teddington,fulwell,1.56535245
+1653,South Western,teddington,strawberry-hill,1.762718338
+1654,South Western,thames-ditton,hampton-court,1.552607558
+1655,South Western,tolworth,chessington-north,2.015310599
+1656,South Western,twickenham,st-margarets,0.759350484
+1657,South Western,twickenham,whitton,1.999238977
+1658,South Western,vauxhall,queenstown-road,2.023020289
+1659,South Western,wandsworth-town,clapham-junction,1.274420248
+1660,South Western,waterloo,vauxhall,2.070338653
+1661,South Western,whitton,feltham,3.619510859
+1662,South Western,wimbledon,raynes-park,2.074709338
+1663,South Western,worcester-park,stoneleigh,1.985231378
+1664,Southeastern,abbey-wood,belvedere,2.203553378
+1665,Southeastern,albany-park,bexley,1.60789917
+1666,Southeastern,barnehurst,slade-green,2.075445301
+1667,Southeastern,beckenham-junction,shortlands,2.062590006
+1668,Southeastern,belvedere,erith,1.919787423
+1669,Southeastern,bexley,crayford,2.26975747
+1670,Southeastern,bexleyheath,barnehurst,1.916443801
+1671,Southeastern,bickley,petts-wood,2.470436464
+1672,Southeastern,bickley,st-mary-cray,4.41060388
+1673,Southeastern,blackheath,charlton,2.851789178
+1674,Southeastern,blackheath,kidbrooke,1.416061122
+1675,Southeastern,brixton,herne-hill,1.279323955
+1676,Southeastern,bromley-south,bickley,1.870249442
+1677,Southeastern,cannon-street,london-bridge,0.799822117
+1678,Southeastern,catford-bridge,lower-sydenham,2.285141705
+1679,Southeastern,charing-cross,waterloo-east,1.179430518
+1680,Southeastern,charlton,woolwich-dockyard,1.706907886
+1681,Southeastern,chelsfield,knockholt,1.915888095
+1682,Southeastern,chislehurst,petts-wood,2.228277247
+1683,Southeastern,clock-house,elmers-end,1.292024048
+1684,Southeastern,denmark-hill,peckham-rye,1.462662778
+1685,Southeastern,deptford,greenwich,0.799186005
+1686,Southeastern,eden-park,west-wickham,1.350585202
+1687,Southeastern,elmers-end,eden-park,1.788187153
+1688,Southeastern,elmstead-woods,chislehurst,1.574087715
+1689,Southeastern,eltham,falconwood,1.854011315
+1690,Southeastern,erith,slade-green,1.91284394
+1691,Southeastern,falconwood,welling,1.732113464
+1692,Southeastern,greenwich,maze-hill,1.391461032
+1693,Southeastern,grove-park,elmstead-woods,2.111033133
+1694,Southeastern,grove-park,sundridge-park,1.901548209
+1695,Southeastern,herne-hill,west-dulwich,1.672107537
+1696,Southeastern,hither-green,grove-park,2.939647952
+1697,Southeastern,hither-green,lee,1.046234408
+1698,Southeastern,kent-house,beckenham-junction,1.409331171
+1699,Southeastern,kidbrooke,eltham,1.839663344
+1700,Southeastern,ladywell,catford-bridge,1.336027996
+1701,Southeastern,lee,mottingham,2.777299838
+1702,Southeastern,lewisham,blackheath,1.440405886
+1703,Southeastern,lewisham,hither-green,1.599265811
+1704,Southeastern,lewisham,ladywell,1.075560759
+1705,Southeastern,london-bridge,deptford,5.038062045
+1706,Southeastern,london-bridge,new-cross,4.869854277
+1707,Southeastern,lower-sydenham,new-beckenham,0.915853963
+1708,Southeastern,maze-hill,westcombe-park,1.020835127
+1709,Southeastern,mottingham,new-eltham,1.415108461
+1710,Southeastern,new-beckenham,clock-house,0.982346366
+1711,Southeastern,new-cross,st-johns,1.039019978
+1712,Southeastern,new-eltham,sidcup,2.308464357
+1713,Southeastern,nunhead,lewisham,2.864425612
+1714,Southeastern,orpington,chelsfield,2.36734846
+1715,Southeastern,peckham-rye,nunhead,1.175815506
+1716,Southeastern,penge-east,kent-house,1.007083755
+1717,Southeastern,petts-wood,orpington,1.957866446
+1718,Southeastern,plumstead,abbey-wood,2.493776198
+1719,Southeastern,shortlands,bromley-south,1.188852818
+1720,Southeastern,sidcup,albany-park,1.6115291
+1721,Southeastern,st-johns,lewisham,0.876522281
+1722,Southeastern,sundridge-park,bromley-north,0.540653135
+1723,Southeastern,sydenham-hill,penge-east,2.269352178
+1724,Southeastern,victoria,brixton,4.263701305
+1725,Southeastern,victoria,denmark-hill,4.826909813
+1726,Southeastern,waterloo-east,london-bridge,1.603652578
+1727,Southeastern,welling,bexleyheath,2.193188376
+1728,Southeastern,west-dulwich,sydenham-hill,1.176424625
+1729,Southeastern,west-wickham,hayes,1.823715019
+1730,Southeastern,westcombe-park,charlton,0.949917869
+1731,Southeastern,woolwich-arsenal,plumstead,1.046263299
+1732,Southeastern,woolwich-dockyard,woolwich-arsenal,1.018661965
+1733,Southern,anerley,norwood-junction,1.866776598
+1734,Southern,balham,mitcham-eastfields,3.871725135
+1735,Southern,balham,streatham-common,2.937247133
+1736,Southern,balham,streatham-hill,1.811382552
+1737,Southern,balham,tooting,2.653532374
+1738,Southern,banstead,epsom-downs,1.902062058
+1739,Southern,battersea-park,clapham-junction,2.106986184
+1740,Southern,belmont,banstead,1.902266372
+1741,Southern,birkbeck,beckenham-junction,2.263395083
+1742,Southern,brockley,honor-oak-park,1.630102649
+1743,Southern,carshalton,sutton,1.993920549
+1744,Southern,carshalton-beeches,sutton,1.532793409
+1745,Southern,cheam,ewell-east,2.210407757
+1746,Southern,chipstead,kingswood,3.326365686
+1747,Southern,clapham-junction,imperial-wharf,1.461392567
+1748,Southern,clapham-junction,wandsworth-common,2.056641839
+1749,Southern,coulsdon-town,woodmansterne,1.436118799
+1750,Southern,crystal-palace,birkbeck,1.953113687
+1751,Southern,crystal-palace,gipsy-hill,1.047582812
+1752,Southern,east-croydon,south-croydon,1.442909905
+1753,Southern,east-dulwich,peckham-rye,1.13755352
+1754,Southern,forest-hill,sydenham,1.336678466
+1755,Southern,gipsy-hill,west-norwood,1.539123315
+1756,Southern,hackbridge,carshalton,1.36266708
+1757,Southern,harrow-and-wealdstone,watford-junction,9.008547019
+1758,Southern,haydons-road,wimbledon,1.321696634
+1759,Southern,honor-oak-park,forest-hill,1.412651921
+1760,Southern,imperial-wharf,west-brompton,1.635041644
+1761,Southern,kenley,whyteleafe,2.147674025
+1762,Southern,kensington-olympia,shepherds-bush,0.930153118
+1763,Southern,kingswood,tadworth,1.757290861
+1764,Southern,london-bridge,new-cross-gate,4.589308443
+1765,Southern,mitcham-eastfields,mitcham-junction,1.722982034
+1766,Southern,mitcham-junction,hackbridge,1.706615113
+1767,Southern,morden-south,st-helier,0.71695993
+1768,Southern,new-cross-gate,brockley,1.176101602
+1769,Southern,norbury,thornton-heath,2.099113818
+1770,Southern,north-dulwich,east-dulwich,0.94883565
+1771,Southern,norwood-junction,east-croydon,2.630005376
+1772,Southern,norwood-junction,west-croydon,2.767045405
+1773,Southern,peckham-rye,queens-road-peckham,1.023458268
+1774,Southern,penge-west,anerley,0.691118651
+1775,Southern,purley,coulsdon-south,2.933011236
+1776,Southern,purley,kenley,1.660525402
+1777,Southern,purley,reedham,0.946914125
+1778,Southern,purley-oaks,purley,1.484434568
+1779,Southern,queens-road-peckham,south-bermondsey,1.50042951
+1780,Southern,reedham,coulsdon-town,1.256298841
+1781,Southern,riddlesdown,upper-warlingham,3.067560737
+1782,Southern,sanderstead,riddlesdown,1.778042191
+1783,Southern,selhurst,east-croydon,1.836987142
+1784,Southern,selhurst,west-croydon,1.734724429
+1785,Southern,shepherds-bush,wembley-central,7.5337229
+1786,Southern,south-bermondsey,london-bridge,2.873622438
+1787,Southern,south-croydon,purley-oaks,1.806837938
+1788,Southern,south-croydon,sanderstead,1.615391569
+1789,Southern,south-merton,morden-south,0.852832603
+1790,Southern,st-helier,sutton-common,1.603585493
+1791,Southern,streatham,mitcham-eastfields,2.456301276
+1792,Southern,streatham,streatham-common,0.798787902
+1793,Southern,streatham-common,norbury,1.247448522
+1794,Southern,streatham-hill,west-norwood,1.878594545
+1795,Southern,sutton,belmont,1.803435343
+1796,Southern,sutton,cheam,1.653656182
+1797,Southern,sutton-common,west-sutton,1.175570678
+1798,Southern,sydenham,crystal-palace,1.586497533
+1799,Southern,sydenham,penge-west,1.1016536
+1800,Southern,tadworth,tattenham-corner,2.005030889
+1801,Southern,thornton-heath,selhurst,1.01232143
+1802,Southern,tooting,haydons-road,2.033352223
+1803,Southern,tulse-hill,north-dulwich,2.022406278
+1804,Southern,tulse-hill,streatham,2.442655952
+1805,Southern,tulse-hill,streatham-hill,1.571172783
+1806,Southern,victoria,battersea-park,2.144962599
+1807,Southern,waddon,wallington,2.453064919
+1808,Southern,wallington,carshalton-beeches,1.334951718
+1809,Southern,wandsworth-common,balham,0.831460802
+1810,Southern,wembley-central,harrow-and-wealdstone,5.232108434
+1811,Southern,west-brompton,kensington-olympia,1.55997417
+1812,Southern,west-croydon,waddon,1.637648911
+1813,Southern,west-norwood,streatham-hill,1.878594545
+1814,Southern,west-norwood,tulse-hill,0.961112747
+1815,Southern,west-sutton,sutton,1.185245767
+1816,Southern,whyteleafe,whyteleafe-south,0.779495091
+1817,Southern,whyteleafe-south,caterham,2.375854822
+1818,Southern,wimbledon,wimbledon-chase,1.386942647
+1819,Southern,wimbledon-chase,south-merton,0.916848572
+1820,Southern,woodmansterne,chipstead,1.51292653
+1821,TfL Rail,acton-main-line,paddington,6.366952754
+1822,TfL Rail,brentwood,shenfield,2.838862795
+1823,TfL Rail,chadwell-heath,romford,3.815062765
+1824,TfL Rail,ealing-broadway,acton-main-line,2.386247806
+1825,TfL Rail,forest-gate,manor-park,1.540561181
+1826,TfL Rail,gidea-park,harold-wood,2.322806283
+1827,TfL Rail,goodmayes,chadwell-heath,1.205241748
+1828,TfL Rail,hanwell,west-ealing,1.274715
+1829,TfL Rail,harold-wood,brentwood,5.060587536
+1830,TfL Rail,hayes-and-harlington,southall,2.921049774
+1831,TfL Rail,heathrow-terminal-4,heathrow-terminals-1-2-3,1.320539304
+1832,TfL Rail,heathrow-terminals-1-2-3,hayes-and-harlington,4.161724851
+1833,TfL Rail,ilford,seven-kings,1.98560212
+1834,TfL Rail,liverpool-street,stratford,6.057002451
+1835,TfL Rail,manor-park,ilford,1.73513955
+1836,TfL Rail,maryland,forest-gate,1.342922862
+1837,TfL Rail,romford,gidea-park,1.776534462
+1838,TfL Rail,seven-kings,goodmayes,1.092934843
+1839,TfL Rail,southall,hanwell,2.898798276
+1840,TfL Rail,stratford,maryland,0.788278983
+1841,TfL Rail,west-ealing,ealing-broadway,1.237894906
+1842,Thameslink,beckenham-hill,bellingham,1.062913085
+1843,Thameslink,beckenham-junction,kent-house,1.409331171
+1844,Thameslink,bellingham,catford,1.232322755
+1845,Thameslink,bickley,bromley-south,1.870249442
+1846,Thameslink,blackfriars,city-thameslink,0.264720402
+1847,Thameslink,bromley-south,shortlands,1.188852818
+1848,Thameslink,carshalton,sutton,1.993920549
+1849,Thameslink,catford,crofton-park,1.398245612
+1850,Thameslink,city-thameslink,farringdon,0.701507569
+1851,Thameslink,cricklewood,hendon,3.008669726
+1852,Thameslink,crofton-park,nunhead,1.73720576
+1853,Thameslink,denmark-hill,elephant-and-castle,3.148663908
+1854,Thameslink,east-croydon,purley,4.525559511
+1855,Thameslink,elephant-and-castle,blackfriars,1.757443697
+1856,Thameslink,farringdon,st-pancras,1.836375633
+1857,Thameslink,hackbridge,carshalton,1.36266708
+1858,Thameslink,haydons-road,tooting,2.033352223
+1859,Thameslink,hendon,mill-hill-broadway,3.72493605
+1860,Thameslink,herne-hill,loughborough-junction,1.411239178
+1861,Thameslink,herne-hill,tulse-hill,1.588729632
+1862,Thameslink,kent-house,penge-east,1.007083755
+1863,Thameslink,kentish-town,west-hampstead-thameslink,3.604550943
+1864,Thameslink,london-bridge,east-croydon,14.34975293
+1865,Thameslink,loughborough-junction,elephant-and-castle,3.246914026
+1866,Thameslink,mill-hill-broadway,elstree-and-borehamwood,4.916644829
+1867,Thameslink,mitcham-eastfields,mitcham-junction,1.722982034
+1868,Thameslink,mitcham-junction,hackbridge,1.706615113
+1869,Thameslink,morden-south,south-merton,0.852832603
+1870,Thameslink,nunhead,peckham-rye,1.175815506
+1871,Thameslink,orpington,petts-wood,1.957866446
+1872,Thameslink,peckham-rye,denmark-hill,1.462662778
+1873,Thameslink,penge-east,sydenham-hill,2.269352178
+1874,Thameslink,petts-wood,bickley,2.470436464
+1875,Thameslink,purley,coulsdon-south,2.933011236
+1876,Thameslink,ravensbourne,beckenham-hill,1.367775009
+1877,Thameslink,shortlands,beckenham-junction,2.062590006
+1878,Thameslink,shortlands,ravensbourne,1.139805408
+1879,Thameslink,south-merton,wimbledon-chase,0.916848572
+1880,Thameslink,st-helier,morden-south,0.71695993
+1881,Thameslink,st-mary-cray,bickley,4.41060388
+1882,Thameslink,st-pancras,kentish-town,2.398906632
+1883,Thameslink,streatham,mitcham-eastfields,2.456301276
+1884,Thameslink,sutton,west-sutton,1.185245767
+1885,Thameslink,sutton-common,st-helier,1.603585493
+1886,Thameslink,sydenham-hill,west-dulwich,1.176424625
+1887,Thameslink,tooting,streatham,2.096204065
+1888,Thameslink,tulse-hill,east-croydon,7.186875755
+1889,Thameslink,tulse-hill,streatham,2.442655952
+1890,Thameslink,west-dulwich,herne-hill,1.672107537
+1891,Thameslink,west-hampstead-thameslink,cricklewood,1.761230186
+1892,Thameslink,west-sutton,sutton-common,1.175570678
+1893,Thameslink,wimbledon,haydons-road,1.321696634
+1894,Thameslink,wimbledon-chase,wimbledon,1.386942647
+1895,Tramlink,addington-village,fieldway,0.788107785
+1896,Tramlink,addiscombe,blackhorse-lane,0.57988144
+1897,Tramlink,ampere-way,waddon-marsh,0.700347956
+1898,Tramlink,arena,elmers-end,0.971814568
+1899,Tramlink,arena,harrington-road,0.934361035
+1900,Tramlink,avenue-road,beckenham-road,0.518475574
+1901,Tramlink,beckenham-road,beckenham-junction,1.237324956
+1902,Tramlink,beddington-lane,therapia-lane,0.992884385
+1903,Tramlink,belgrave-walk,mitcham,0.655138251
+1904,Tramlink,birkbeck,avenue-road,0.575991772
+1905,Tramlink,blackhorse-lane,woodside,0.445019075
+1906,Tramlink,centrale,west-croydon,0.335419175
+1907,Tramlink,church-street,centrale,0.231436323
+1908,Tramlink,coombe-lane,gravel-hill,1.280494837
+1909,Tramlink,dundonald-road,merton-park,0.618624377
+1910,Tramlink,east-croydon,george-street,0.514199656
+1911,Tramlink,east-croydon,lebanon-road,0.481816133
+1912,Tramlink,fieldway,king-henrys-drive,0.724663454
+1913,Tramlink,george-street,church-street,0.391887561
+1914,Tramlink,gravel-hill,addington-village,0.750412449
+1915,Tramlink,harrington-road,birkbeck,0.546808702
+1916,Tramlink,king-henrys-drive,new-addington,0.367770871
+1917,Tramlink,lebanon-road,sandilands,0.482747067
+1918,Tramlink,lloyd-park,coombe-lane,1.555601695
+1919,Tramlink,merton-park,morden-road,0.776832544
+1920,Tramlink,mitcham,mitcham-junction,1.055434875
+1921,Tramlink,mitcham-junction,beddington-lane,1.142954801
+1922,Tramlink,morden-road,phipps-bridge,0.951454731
+1923,Tramlink,phipps-bridge,belgrave-walk,0.376434298
+1924,Tramlink,reeves-corner,centrale,0.181391064
+1925,Tramlink,sandilands,addiscombe,0.628546212
+1926,Tramlink,sandilands,lloyd-park,1.210184443
+1927,Tramlink,therapia-lane,ampere-way,0.530446056
+1928,Tramlink,waddon-marsh,wandle-park,0.52516129
+1929,Tramlink,wandle-park,reeves-corner,0.520895761
+1930,Tramlink,wellesley-road,east-croydon,0.394985658
+1931,Tramlink,west-croydon,wellesley-road,0.47275437
+1932,Tramlink,wimbledon,dundonald-road,0.416961434
+1933,Tramlink,woodside,arena,0.69301276
+1934,Victoria,blackhorse-road,tottenham-hale,1.442366223
+1935,Victoria,euston,warren-street,0.570301672
+1936,Victoria,finsbury-park,highbury-and-islington,2.021536023
+1937,Victoria,green-park,victoria,1.154064603
+1938,Victoria,highbury-and-islington,kings-cross-st-pancras,2.261570023
+1939,Victoria,kings-cross-st-pancras,euston,0.677416528
+1940,Victoria,oxford-circus,green-park,0.948162067
+1941,Victoria,pimlico,vauxhall,0.77021211
+1942,Victoria,seven-sisters,finsbury-park,3.110403849
+1943,Victoria,stockwell,brixton,1.19529396
+1944,Victoria,tottenham-hale,seven-sisters,0.992989646
+1945,Victoria,vauxhall,stockwell,1.511653541
+1946,Victoria,victoria,pimlico,1.069953158
+1947,Victoria,walthamstow-central,blackhorse-road,1.394688117
+1948,Victoria,warren-street,oxford-circus,1.055681205
+1949,Waterloo and City,waterloo,bank,2.026784248
