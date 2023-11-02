@@ -109,9 +109,8 @@ def spearman_rank_correlation(rank_seq1, rank_seq2):
     return r
 
 #### PLOTS ####
-
-
-
+def heat_map():
+    pass
 
 if __name__ == "__main__":
 
@@ -119,12 +118,54 @@ if __name__ == "__main__":
     global days
     global periods
 
+    #### Defining variables  ####
+    ods = [ 'tube'] # 'overground', 'dlr', 'tube'
+    days = ['fri', 'sat', 'mtt', 'sun']
+    periods = ['Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
+    kpis = ['efficiencies', 'distress']# 'distress' review distress graphs 'distance', 'speed', 'traffic', 'traffic_distances', 'loads',
+    path = "C:/buildbr/big-cities-transport"
 
-# #### APPLY RANK CORRELATION ALGORTIHMS #### READY to Go
-            # rank_correlation_matrix(df)
+    for od in ods:
+        for kpi in kpis:
+            # Loadind file "od_mode" to calclulate shortest paths:
+            dick = load_pickle(f'{path}/04.Disparity/{od}/{od}-{kpi}.pickle')
 
-            # #### PLOT CORRELATIONS MATRIX ####
+            if kpi in ['speed', 'distance']:
+                pass
+                ### Compare Alpha and KPI Rank
 
 
-            # #### EFFICIENCY & DISTRESS COMPARISSON ####
-            # rank_correlation_matrix(df)
+
+                ### plot
+
+            else:
+                pass
+                ### Compare diff periods within a day, resulting in 3 correlation matrix 23/10
+
+
+
+                ### Compare same period through out days, resultion table periods (6) x days (3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # #### APPLY RANK CORRELATION ALGORTIHMS #### READY to Go
+    rank_correlation_matrix(df)
+
+    # #### PLOT CORRELATIONS MATRIX ####
+
+
+    # #### EFFICIENCY & DISTRESS COMPARISSON ####
+    # rank_correlation_matrix(df)
