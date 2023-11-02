@@ -27,7 +27,10 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-
+#images
+tube/img/
+dlr/img/
+overground/img/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template

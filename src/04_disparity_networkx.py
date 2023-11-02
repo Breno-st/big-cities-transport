@@ -208,7 +208,7 @@ def plot_edges(title, G, color, od, kpi, dim=None):
     values = [G.edges[edge][kpi] for edge in G.edges()]
     edge_colors = [cmap(value) for value in values]  if kpi != "alpha" else [reversed_cmap(value) for value in values]
     # Defining size
-    fig = plt.figure(figsize=(16, 8))
+    fig = plt.figure(figsize=(16, 8)) # DLR (8,8)
     if dim:
         plt.xlim(dim[0])
         plt.ylim(dim[1])
@@ -237,7 +237,7 @@ def plot_edges(title, G, color, od, kpi, dim=None):
     plt.title(title)
     plt.tight_layout()
     # Save the plot to a file
-    plt.savefig(f'{path}/04.Disparity/{od}/{title}.png')
+    plt.savefig(f'{path}/04.Disparity/{od}/img/{title}.png')
     return plt.xlim(), plt.ylim()
 
 def create_dataframe(columns, edges):
@@ -277,8 +277,6 @@ def populate_dictionaire(G, cols):
     return dictionaries
 
 
-
-
 if __name__ == "__main__":
 
     global path
@@ -286,14 +284,15 @@ if __name__ == "__main__":
     global periods
 
     #### Defining variables  ####
-    ods = [ 'tube'] # 'overground', 'dlr', 'tube'
+    ods = [ 'overground'] # 'overground', 'dlr', 'tube'
     days = ['fri', 'sat', 'mtt', 'sun']
     periods = ['Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
-    kpis = ['efficiencies', 'distress']# 'distress' review distress graphs 'distance', 'speed', 'traffic', 'traffic_distances', 'loads',
+    kpis = ['distance', 'speed', 'traffic', 'traffic_distances', 'loads','efficiencies', 'distress']# 'distress' review distress graphs 'distance', 'speed', 'traffic', 'traffic_distances', 'loads','efficiencies', 'distress'
     path = "C:/buildbr/big-cities-transport"
 
 
     # Interact through variables hierarchically
+
     for od in ods:
         for kpi in kpis:
             #### Extract graph edges from BaseGraph  ###
@@ -312,8 +311,8 @@ if __name__ == "__main__":
                 #### RANK EDGES  ####
                 rank_edge(graph, kpi)  # add: kpi_rank*, alpha_rank* into graph
                 #### PLOTs kpi #####
-                # based on edges attributes: kpi, alpha_ptile, cutted by alpha
-                plot_disparities(graph, od, kpi)
+                # # based on edges attributes: kpi, alpha_ptile, cutted by alpha
+                # plot_disparities(graph, od, kpi)
                 #### POPULATE DICT ####
                 kpi_dic = populate_dictionaire(graph, cols) # add: alpha**, alpha_rank**, kpi**, kpi_rank** into graph
                 #### EXPORT DICTIONARY ####
@@ -339,8 +338,8 @@ if __name__ == "__main__":
                         rank_edge(graph, kpi)  # add: weight_rank*, alpha_rank into graph
                         #### POPULATE DICT ####
                         kpi_dic[day][period] = populate_dictionaire(graph, cols)
-                        #### PLOTs kpi (Greens), alpha (Reds), ptiles (Reds)####
-                        plot_disparities(graph, od, kpi, day, period)
+                        # #### PLOTs kpi (Greens), alpha (Reds), ptiles (Reds)####
+                        # plot_disparities(graph, od, kpi, day, period)
                 #### EXPORT DICTIONARY ####
                 dict_to_pickle(kpi_dic, f'{path}/04.Disparity/{od}/{od}-{kpi}.pickle')
                 #### CREATE DATAFRAME ####
@@ -354,91 +353,6 @@ if __name__ == "__main__":
             df.to_csv(f'{path}/04.Disparity/{od}/{od}-{kpi}.csv')
 
 
-
-
-
-# # Run 5h/3, Bike 10h/4, Gym 5h (back, chest, leg, core, core)
-# # 23-sep week:45   12-12-21 free
-# # 30-sep week:52   16-12-24 free
-# # 07-oct week:58   14-14-30 speed
-# # 14-oct week:68   16-16-10-26 transition
-# # 21-oct week:74   16-16-12-30 transition
-# # 28-oct week:82   16-8-16-8-10-24 transition
-# # 04-nov week:97   14-8-14-8-21-28 volume
-# # 11-nov-week:98   10-10
-
-# # run, bike, gym: 4/4/5
-# # proj,lang, read,
-# # cook, clea, clot, mrkt
-
-# ## (23-Oct) Lundi:      5h: ----, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: legs, 21h: lang, 22h: read		>>> Colruyte, LINGI
-# ## (24-Oct) Mardi:      5h: ru16, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: core, 21h: proj, 22h: read		>>> Morning Run/Core
-# ## (25-Oct) Mecredi:    5h: bike, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: chst, 21h: ----, 22h: read		>>> Zena, Giulia, Candidates
-# ## (26-Oct) Jeudi:      5h: ru12, 8h: Work, 12h:lunch, 14h: Work, 18h: cook, 20h: proj, 21h: proj, 22h: read		>>> Pay Lucas, Praty, Gong
-# ## (27-Oct) Vendredi:   5h: bike, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: back, 21h: ----, 22h: read		>>>
-# ## (28-Oct) Samedi:     5h: bike, 8h: room, 12h: mrkt, 14h: proj, 18h: proj, 20h: ----, 21h: ----, 22h: ----   	>>>
-# ## (29-Oct) Dimache:    5h: bike, 8h: clot, 12h: cook, 14h: proj, 18h: ru24, 20h: ----, 21h: ----, 22h: ----		>>> Praty
-
-# ## (22-Oct) Dimache:    5h: ----, 8h: ----, 12h: ----, 14h: ----, 18h: ----, 20h: ----, 21h: ----, 22h:----		>>> 4h proj
-# ## (23-Oct) Dimache:    5h: ----, 8h: ----, 12h: ----, 14h: ----, 18h: ----, 20h: ----, 21h: ----, 22h:----		>>> 4h proj
-
-# ## TODO SHORT
-# ### 04 Nov: Farewell Lille
-# ### 11 Nov: Athens
-# ### 18 Nov: Farewell NE
-# ### 25 Nov: Farewell ML
-# ### 02 Dec: Farewell LU
-# ### 10 Dec: ??
-
-
-# ### 01 Dec: Breda xxx€ normal   (RENT - fillup car)
-# ### 15 Dec: BE>IT  45€ remote   (5 days IT)
-# ### 20 Dec: IT>SP 464€ unpaid   (23 days BR)
-# ### 12 Jan: SP>PT 680€ holidays (5 days PT)
-# ### 17 Jan: PT>BE  62€ holidays (13 days HAL) Exam, thesis, resignation (give back the car and unpaid leaves), domiciliation, Basic-fit
-# ### 30 Jan: BE>BE 375€ holidays (7 days HAL)
-# ### 30 Jan: BE>?? xxx€ --------------------------------------------------------------------
-# ### TOTAL:  1726€
-
-# ### DEP:    1700€
-# ### DEZ:    2500€
-# ### 13o:    3000€
-# ### JAN:    3000€
-# ### TOTAL: 11098€
-
-
-# ### UCL:   -4300€
-
-# ### Bal:    6798€
-
-# ## TODO PLAN
-# ## UCL pay, My Trip, Camila Trip, Laptop,
-
-# ## TODO Thesis:
-
-#4h### Check Alpha and Ranking order for significance
-#4h### Compare diff periods within a day, resulting in 3 correlation matrix 23/10
-#4h### Compare same period through out days, resultion table periods (6) x days (3)
-#4h### Cut off the most interesting graphs comparissons by 30/10
-#8h### Write Results part 5 06/11
-#8h### Write Modeling KPIs part 4 13/11
-#4h### Write Methodology Distress part 2
-#4h### Write Methodology Disparity part 2 20/11
-#4h### Write Data Collections part
-#4h### Write Conclusion part 7  by 27/11
-#8h### Generate all results vizualizations by 04/12
-#4h### Write Following Steps part 6
-#4h### Re-Write Introduction part 1  11/12
-#68###
-
-# ### Create code for GloSS
-# ### Improve data visualisations
-# ### Turn big-citis-transpot into App:
-# ### Connect and improve codes to build an app (example 2)
-# ### Example 2: Application Development (Databases, Django)
-
-
-# ### Desing Finance Application
 
 
 
