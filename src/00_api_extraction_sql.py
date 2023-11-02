@@ -277,7 +277,7 @@ if __name__ == '__main__':
     client = Client(token)
     api_token = { app_id: token.app_id, app_key: token.app_key }
 
-    path = r'/home/soaresbr/data_projects/big-cities-transport/1.BaseGraph/API'
+    path = r'/home/soaresbr/data_projects/big-cities-transport/01.BaseGraph/API'
 
     unique_modes = modes()
     unique_lines = lines()

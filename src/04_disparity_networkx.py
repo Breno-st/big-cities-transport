@@ -1,38 +1,34 @@
-from networkx.readwrite import json_graph
-import cProfile
-import json
-import pstats
-import random
+
+import pickle
 import sys
-from matplotlib.transforms import Affine2D
-import matplotlib.pyplot as plt
-from matplotlib.offsetbox import OffsetImage, AnnotationBbox
-from PIL import Image
-import folium
-from folium.plugins import MiniMap
-import mplleaflet
-from mpl_toolkits.basemap import Basemap
-from matplotlib.colors import ListedColormap
 
-import folium
-from math import sin, cos, sqrt, atan2, radians
-from folium import plugins
-
-from scipy.stats import percentileofscore
-from traceback import format_exception
-import networkx as nx
 import numpy as np
 import pandas as pd
+from scipy.stats import percentileofscore
+from traceback import format_exception
 
-from neo4j import GraphDatabase
 import networkx as nx
+from networkx.readwrite import json_graph
+import json
+
 import matplotlib.pyplot as plt
-from scipy.stats import kendalltau
-import shutil
-import math
+import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
+import matplotlib.image as mpimg
 
 
-#### INPUT FOR DISPARITY FUNCTIONS ####
+### PICKLE FUNCTIONS ###
+def dict_to_pickle(dict, savename):
+    with open(savename, 'wb') as handle:
+        pickle.dump(dict, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+def load_pickle(filename):
+    with open(filename, 'rb') as handle:
+        loadedfile = pickle.load(handle)
+    return loadedfile
+
+
+#### GRAPH IMPORTING FUNCTIONS ####
 def load_data_to_networkx(tx):
     ''' Get data from Neo4J and save in .json file'''
     G = nx.DiGraph()
@@ -62,35 +58,6 @@ def load_graph (graph_path):
         data = json.load(f)
         graph = json_graph.node_link_graph(data, directed=True)
         return graph
-
-def cut_graph (graph_original, min_alpha_ptile=0.5, min_degree=2):
-    """
-    apply the disparity filter to cut the given graph
-    """
-    graph = graph_original.copy()
-    filtered_set = set([])
-
-    for id0, id1 in graph.edges():
-        edge = graph[id0][id1]
-
-        if edge["alpha_ptile"] > min_alpha_ptile:
-            filtered_set.add((id0, id1))
-
-    for id0, id1 in filtered_set:
-        graph.remove_edge(id0, id1)
-
-    filtered_set = set([])
-
-    for node_id in graph.nodes():
-        node = graph.nodes[node_id]
-
-        if graph.degree(node_id) < min_degree:
-            filtered_set.add(node_id)
-
-    for node_id in filtered_set:
-        graph.remove_node(node_id)
-
-    return graph
 
 
 #### DISPARITY FUNCTIONS ####
@@ -172,6 +139,116 @@ def report_error (cause_string, logger=None, fatal=False):
 
     pass
 
+def cut_graph (graph_original, min_alpha_ptile=0.5, min_degree=1):
+    """
+    apply the disparity filter to cut the given graph
+    """
+    graph = graph_original.copy()
+    filtered_set = set([])
+
+    for id0, id1 in graph.edges():
+        edge = graph[id0][id1]
+
+        if edge["alpha_ptile"] > min_alpha_ptile:
+            filtered_set.add((id0, id1))
+
+    for id0, id1 in filtered_set:
+        graph.remove_edge(id0, id1)
+
+    filtered_set = set([])
+
+    for node_id in graph.nodes():
+        node = graph.nodes[node_id]
+
+        if graph.degree(node_id) < min_degree:
+            filtered_set.add(node_id)
+
+    for node_id in filtered_set:
+        graph.remove_node(node_id)
+
+    return graph
+
+def calc_centrality (graph, min_degree=1):
+    """
+    to conserve compute costs, ignore centrality for nodes below `min_degree`
+    """
+    sub_graph = graph.copy()
+    sub_graph.remove_nodes_from([ n for n, d in list(graph.degree) if d < min_degree ])
+
+    centrality = nx.betweenness_centrality(sub_graph, weight="weight")
+    #centrality = nx.closeness_centrality(sub_graph, distance="distance")
+
+    return centrality
+
+
+#### PLOTS ####
+def plot_disparities(G, od, kpi, day=None, period=None):
+
+    # full alpha
+    title = f'{od.upper()} {kpi.title()} Alpha Ranked Edges {day.upper()} {period.title()}' if day else f'{od.upper()} {kpi.title()} Alpha ranked edges'
+    dim = plot_edges(title, G, "Reds", od, "alpha")
+    # full kpi
+    title = f'{od.upper()} {kpi.title()} Ranked Edges {day.upper()} {period.title()}' if day else f'{od.upper()} {kpi.title()} ranked edges'
+    plot_edges(title, G, "Greys", od, kpi)
+
+    cuts = [0.25, 0.5, 0.75]
+    for cut in cuts:
+       title = f'{od.upper()} {kpi.title()} {round(cut*100)}th percentile {day.upper()} {period.title()}' if day else f'{od.upper()} {kpi.title()} {round(cut*100)}th percentile edges'
+       G_ptile = cut_graph(G, cut)
+       plot_edges(title, G_ptile, "Reds", od, "alpha", dim)
+
+def plot_edges(title, G, color, od, kpi, dim=None):
+
+    pos = {}
+    for node in G.nodes():
+        pos[node] = (G.nodes[node]['long'], G.nodes[node]['lat'])
+    # Defining colors
+    cmap = plt.get_cmap(color)
+    reversed_cmap = ListedColormap(cmap(np.linspace(1, 0, 256)))
+    values = [G.edges[edge][kpi] for edge in G.edges()]
+    edge_colors = [cmap(value) for value in values]  if kpi != "alpha" else [reversed_cmap(value) for value in values]
+    # Defining size
+    fig = plt.figure(figsize=(16, 8))
+    if dim:
+        plt.xlim(dim[0])
+        plt.ylim(dim[1])
+    # Draw Nodes
+    nx.draw_networkx_nodes(G, pos, node_size=10, node_color='dimgrey')
+    # Draw Nodes Label
+    nx.draw_networkx_labels(G, pos, font_size= 10, verticalalignment='bottom', horizontalalignment='left', font_color='dimgrey')
+    # Draw Edges
+    curved_edges = [edge for edge in G.edges() if reversed(edge) in G.edges()]
+    straight_edges = list(set(G.edges()) - set(curved_edges))
+    nx.draw_networkx_edges(G, pos, edgelist=straight_edges, edge_color=edge_colors, arrowsize=6,  node_size = 10, width=0.8, connectionstyle=f'arc3, rad = 0.10')
+    nx.draw_networkx_edges(G, pos, edgelist=curved_edges, edge_color=edge_colors, arrowsize=6,  node_size = 10, width=0.8, connectionstyle=f'arc3, rad = 0.10')
+    # Create a colorbar
+    norm = plt.Normalize(vmin=0, vmax=1)
+    sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm) if kpi != "alpha" else plt.cm.ScalarMappable(cmap=reversed_cmap, norm=norm)
+    sm.set_array([])
+    cbar = plt.colorbar(sm, orientation='vertical')
+    cbar.set_label(f'{kpi.title()} values')  # Set a label for the colorbar
+    # Finally, plotting
+    map_image = mpimg.imread(f"{path}/04.Disparity/{od}/google_map.png")
+    # Display the map image as the background
+    west, east = plt.xlim()[0], plt.xlim()[1]
+    south, north = plt.ylim()[0], plt.ylim()[1]
+    plt.imshow(map_image, extent=[west, east, south, north], aspect='auto', alpha=0.3)
+    # Show the plot
+    plt.title(title)
+    plt.tight_layout()
+    # Save the plot to a file
+    plt.savefig(f'{path}/04.Disparity/{od}/{title}.png')
+    return plt.xlim(), plt.ylim()
+
+def create_dataframe(columns, edges):
+    data = {edge: [None] * len(columns) for edge in edges}
+    return pd.DataFrame(columns=columns, data=data)
+
+def node_view(G):
+    G.nodes.strengh
+    G.nodes.degree
+    G.nodes.centrality
+
 
 #### RANK FUNCTIONS ####
 def rank_edge(G, kpi):
@@ -190,157 +267,31 @@ def rank_edge(G, kpi):
         edge["alpha_rnk"] = alpha_edges_rnk.index((id0, id1))+1
         edge[f'{kpi}_rnk'] = kpi_edges_rnk.index((id0, id1))+1
 
-def populate_single_period(G, cols):
+def populate_dictionaire(G, cols):
     # Create dictionaries for each column
     dictionaries = {name: {} for name in cols}
     for edge in G.edges(data=True):
         for col in cols:
             dictionaries[col][str(edge[:2])] = edge[2][col]
 
-    return pd.DataFrame.from_dict(dictionaries, orient='index').transpose()
-
-def populate_multi_periods(df, G, kpi, day, period):
-    pass
-
-def rank_correlation_matrix(df):
-    ''' Calculate Kendall & Spearman ranking metric '''
-    # Get two lists for comparisson:
-    days_against_days_list = []
-    period_against_period_list = []
-
-    # Day perspective: comparing periods
-    for day in days:
-        for period1, period2 in period_against_period_list:
-            list1 = df[day][period1].to_list()
-            list2 = df[day][period2].to_list()
-            # Enter the two lists and store into Day Matrix 6x6
-            tau, p_value = kendalltau(list1, list2)
-            correlation = spearman_rank_correlation(list1, list2)
-            # Output Kendall ranking
-            print(f"Kendall Ranking Metric for {day}: {period1}x{period2} : tau: {tau} and P-value: {p_value}")
-            print(f"Spearman Rank Correlation for {day}: {period1}x{period2}: {correlation}")
-
-    # Period perspective: comparing day
-    for period in periods:
-        for day1, day2 in days_against_days_list:
-            list1 = df[day1][period].to_list()
-            list2 = df[day2][period].to_list()
-            # Enter the two lists and store into Period Matrix 4x4
-            tau, p_value = kendalltau(list1, list2)
-            correlation = spearman_rank_correlation(list1, list2)
-            # Output Kendall ranking
-            print(f"Kendall Ranking Metric for {period}: {day1}x{day2} : tau: {tau} and P-value: {p_value}")
-            print(f"Spearman Rank Correlation for {period}: {day1}x{day2}: {correlation}")
-
-def spearman_rank_correlation(rank_seq1, rank_seq2):
-    """
-    Calculate the Spearman Rank Correlation Coefficient between two rank sequences.
-
-    Parameters:
-    rank_seq1 (list): The first rank sequence.
-    rank_seq2 (list): The second rank sequence.
-
-    Returns:
-    float: The Spearman Rank Correlation Coefficient, ranging from -1 to 1.
-    """
-    if len(rank_seq1) != len(rank_seq2):
-        raise ValueError("Both rank sequences must have the same length")
-
-    n = len(rank_seq1)
-
-    # Calculate the rank differences squared
-    d_squared = [(rank_seq1[i] - rank_seq2[i]) ** 2 for i in range(n)]
-
-    # Calculate the Spearman Rank Correlation Coefficient
-    r = 1 - (6 * sum(d_squared)) / (n * (n ** 2 - 1))
-
-    return r
-
-def calc_centrality (graph, min_degree=1):
-    """
-    to conserve compute costs, ignore centrality for nodes below `min_degree`
-    """
-    sub_graph = graph.copy()
-    sub_graph.remove_nodes_from([ n for n, d in list(graph.degree) if d < min_degree ])
-
-    centrality = nx.betweenness_centrality(sub_graph, weight="weight")
-    #centrality = nx.closeness_centrality(sub_graph, distance="distance")
-
-    return centrality
+    return dictionaries
 
 
-#### PLOTS ####
-def plot_disparities(G, od, kpi, day=None, period=None):
-
-    cuts = [0.25, 0.5, 0.75]
-    title = f'{od} {kpi} {day} {period} disparity ranked edges' if day else f'{od} {kpi} disparity ranked edges'
-    dim = plot_edges(title, G, "Reds", "alpha")
-    title = f'{od} {kpi} {day} {period} ranked edges' if day else f'{od} {kpi} ranked edges'
-    plot_edges(title, G, "Greens", kpi)
-
-    cuts = [0.25, 0.5, 0.75]
-    for cut in cuts:
-       title = f'{od} {kpi} {round(cut*100)}th percentile edges {day} {period}' if day else f'{od} {kpi} {round(cut*100)}th percentile edges'
-       G_ptile = cut_graph(G, cut, min_degree=2)
-       plot_edges(title, G_ptile, "Reds", "alpha", dim)
-
-def plot_edges(title, G, color, kpi, dim=None):
-
-    pos = {}
-    for node in G.nodes():
-        pos[node] = (G.nodes[node]['long'], G.nodes[node]['lat'])
-
-    # Defining colors
-    cmap = plt.get_cmap(color)
-    reversed_cmap = ListedColormap(cmap(np.linspace(1, 0, 256)))
-    values = [G.edges[edge][kpi] for edge in G.edges()]
-    edge_colors = [cmap(value) for value in values]  if kpi != "alpha" else [reversed_cmap(value) for value in values]
-    # Defining size
-    fig = plt.figure(figsize=(16, 8))
-    if dim:
-        plt.xlim(dim[0])
-        plt.ylim(dim[1])
-    # Draw Nodes
-    nx.draw_networkx_nodes(G, pos, node_size=20, node_color='dimgrey')
-    # Draw Nodes Label
-    nx.draw_networkx_labels(G, pos, font_size= 10, verticalalignment='bottom', horizontalalignment='left', font_color='dimgrey')
-    # Draw Edges
-    curved_edges = [edge for edge in G.edges() if reversed(edge) in G.edges()]
-    straight_edges = list(set(G.edges()) - set(curved_edges))
-    nx.draw_networkx_edges(G, pos, edgelist=straight_edges)
-    nx.draw_networkx_edges(G, pos, edgelist=curved_edges, edge_color=edge_colors, arrowsize=6,  node_size = 20, width=0.8, connectionstyle=f'arc3, rad = 0.10')
-    # Create a colorbar
-    norm = plt.Normalize(vmin=0, vmax=1)
-    sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm) if kpi != "alpha" else plt.cm.ScalarMappable(cmap=reversed_cmap, norm=norm)
-    sm.set_array([])
-    cbar = plt.colorbar(sm, orientation='vertical')
-    cbar.set_label('Edges values')  # Set a label for the colorbar
-    # Show the plot
-    plt.title(title)
-    plt.tight_layout()
-    # Save the plot to a file
-    plt.savefig(f'{title}.png')
-    return plt.xlim(), plt.ylim()
-
-def create_dataframe(columns, edges):
-    data = {edge: [None] * len(columns) for edge in edges}
-    return pd.DataFrame(columns=columns, data=data)
-
-def node_view(G):
-    G.nodes.strengh
-    G.nodes.degree
-    G.nodes.centrality
 
 
 if __name__ == "__main__":
 
     global path
+    global days
+    global periods
+
     #### Defining variables  ####
-    ods = [ 'dlr'] # 'overground', 'dlr', 'tube'
+    ods = [ 'tube'] # 'overground', 'dlr', 'tube'
     days = ['fri', 'sat', 'mtt', 'sun']
     periods = ['Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
-    kpis = ['distance', 'speed', 'traffic', 'traffic_distances', 'loads', 'efficiencies', 'distress']# 'distress' review distress graphs
+    kpis = ['efficiencies', 'distress']# 'distress' review distress graphs 'distance', 'speed', 'traffic', 'traffic_distances', 'loads',
     path = "C:/buildbr/big-cities-transport"
+
 
     # Interact through variables hierarchically
     for od in ods:
@@ -348,6 +299,7 @@ if __name__ == "__main__":
             #### Extract graph edges from BaseGraph  ###
             basegraph = load_graph(f'{path}/03.GraphModels/{od}/{od}-basegraph.json')
             edges = [(x[0], x[1]) for x in basegraph.edges(data=True)]
+            cols = ['alpha', 'alpha_rnk', f'{kpi}', f'{kpi}_rnk']
 
             #### Two type ov variables: Time-Independent & Time-Dependent ###
             if kpi in ['speed', 'distance']:
@@ -362,16 +314,19 @@ if __name__ == "__main__":
                 #### PLOTs kpi #####
                 # based on edges attributes: kpi, alpha_ptile, cutted by alpha
                 plot_disparities(graph, od, kpi)
-                #### CRATE DATAFRAME ####
-                cols = ['alpha', 'alpha_rnk', f'{kpi}', f'{kpi}_rnk']
-                df = populate_single_period(graph, cols) # add: alpha**, alpha_rank**, kpi**, kpi_rank** into graph
-                #### APLY RANK CORRELATION ####
-                rank_correlation_matrix(df)
+                #### POPULATE DICT ####
+                kpi_dic = populate_dictionaire(graph, cols) # add: alpha**, alpha_rank**, kpi**, kpi_rank** into graph
+                #### EXPORT DICTIONARY ####
+                dict_to_pickle(kpi_dic, f'{path}/04.Disparity/{od}/{od}-{kpi}.pickle')
+                #### CREATE DATAFRAME ####
+                df = pd.DataFrame.from_dict(kpi_dic, orient='index').transpose()
 
             else: # loop through day and periods
                 kpi_dic = {}
                 for day in days:
+                    kpi_dic[day]={}
                     for period in periods:
+                        kpi_dic[day][period]={}
                         # create name
                         auxk = kpi.replace('_', '')
                         auxp = period.replace(' ', '-')
@@ -381,32 +336,25 @@ if __name__ == "__main__":
                         #### APPLY DISPARITY  ####
                         disparity_filter(graph, kpi) # add: alpha_ptile, alpha into graph
                         #### RANK EDGES BASED ON KPI AND ALPHA ####
-                        rank_edge(graph)  # add: weight_rank*, alpha_rank into graph
-                        #### PLOTs kpi (Greens), alpha (Reds), ptiles (Reds)#### #TODO
+                        rank_edge(graph, kpi)  # add: weight_rank*, alpha_rank into graph
+                        #### POPULATE DICT ####
+                        kpi_dic[day][period] = populate_dictionaire(graph, cols)
+                        #### PLOTs kpi (Greens), alpha (Reds), ptiles (Reds)####
                         plot_disparities(graph, od, kpi, day, period)
+                #### EXPORT DICTIONARY ####
+                dict_to_pickle(kpi_dic, f'{path}/04.Disparity/{od}/{od}-{kpi}.pickle')
+                #### CREATE DATAFRAME ####
+                mux = pd.MultiIndex.from_product([days, periods, cols])
+                df = pd.DataFrame(columns=mux)
+                for col1, data1 in kpi_dic.items():
+                    for col2, data2 in data1.items():
+                        for col3, data3 in data2.items():
+                            df[col1, col2, col3] = pd.Series(data3)
 
-                        shutil.move('temp.png', f'{path}/04.Disparity/{od}/alpha_{db}.png', copy_function=shutil.copy2)
-
-                        # based on nodes attributes^[entries, exist, strength]
-
-                #### CRATE DATAFRAME ####
-                df = populate_multi_periods(kpi_dic) #TODO
-                #### APLY RANK CORRELATION ####
-                rank_correlation_matrix(df) #TODO
-
-
-
-            df.to_csv(f'{path}/04.Disparity/{od}/{db}.csv')
+            df.to_csv(f'{path}/04.Disparity/{od}/{od}-{kpi}.csv')
 
 
-            # #### APPLY RANK CORRELATION ALGORTIHMS #### READY to Go
-            # rank_correlation_matrix(df)
 
-            # #### PLOT CORRELATIONS MATRIX ####
-
-
-            # #### EFFICIENCY & DISTRESS COMPARISSON ####
-            # rank_correlation_matrix(df)
 
 
 # # Run 5h/3, Bike 10h/4, Gym 5h (back, chest, leg, core, core)
