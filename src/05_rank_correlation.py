@@ -1,10 +1,12 @@
 
+
 from scipy.stats import kendalltau
 import pandas as pd
 import plotly.graph_objs as go
 import pickle
+import numpy as np
 
-import matplotlib.pyplot as plt
+import plotly.graph_objs as go
 
 
 ### PICKLE FUNCTIONS ###
@@ -19,65 +21,6 @@ def load_pickle(filename):
 
 
 #### CORRELATION FUNCTIONS ####
-def rank_correlation_matrix(df):
-    ''' Calculate Kendall & Spearman ranking metric '''
-    # Get two lists for comparisson:
-    days_against_days_list = []
-    period_against_period_list = []
-
-    # Day perspective: comparing periods
-    for day in days:
-        for period1, period2 in period_against_period_list:
-            list1 = df[day][period1].to_list()
-            list2 = df[day][period2].to_list()
-            # Enter the two lists and store into Day Matrix 6x6
-            tau, p_value = kendalltau(list1, list2)
-            correlation = spearman_rank_correlation(list1, list2)
-            # Output Kendall ranking
-            print(f"Kendall Ranking Metric for {day}: {period1}x{period2} : tau: {tau} and P-value: {p_value}")
-            print(f"Spearman Rank Correlation for {day}: {period1}x{period2}: {correlation}")
-
-    # Period perspective: comparing day
-    for period in periods:
-        for day1, day2 in days_against_days_list:
-            list1 = df[day1][period].to_list()
-            list2 = df[day2][period].to_list()
-            # Enter the two lists and store into Period Matrix 4x4
-            tau, p_value = kendalltau(list1, list2)
-            correlation = spearman_rank_correlation(list1, list2)
-            # Output Kendall ranking
-            print(f"Kendall Ranking Metric for {period}: {day1}x{day2} : tau: {tau} and P-value: {p_value}")
-            print(f"Spearman Rank Correlation for {period}: {day1}x{day2}: {correlation}")
-
-def rank_correlation_matrix(df):
-    ''' Calculate Kendall & Spearman ranking metric '''
-    # Get two lists for comparisson:
-    days_against_days_list = []
-    period_against_period_list = []
-
-    # Day perspective: comparing periods
-    for day in days:
-        for period1, period2 in period_against_period_list:
-            list1 = df[day][period1].to_list()
-            list2 = df[day][period2].to_list()
-            # Enter the two lists and store into Day Matrix 6x6
-            tau, p_value = kendalltau(list1, list2)
-            correlation = spearman_rank_correlation(list1, list2)
-            # Output Kendall ranking
-            print(f"Kendall Ranking Metric for {day}: {period1}x{period2} : tau: {tau} and P-value: {p_value}")
-            print(f"Spearman Rank Correlation for {day}: {period1}x{period2}: {correlation}")
-
-    # Period perspective: comparing day
-    for period in periods:
-        for day1, day2 in days_against_days_list:
-            list1 = df[day1][period].to_list()
-            list2 = df[day2][period].to_list()
-            # Enter the two lists and store into Period Matrix 4x4
-            tau, p_value = kendalltau(list1, list2)
-            correlation = spearman_rank_correlation(list1, list2)
-            # Output Kendall ranking
-            print(f"Kendall Ranking Metric for {period}: {day1}x{day2} : tau: {tau} and P-value: {p_value}")
-            print(f"Spearman Rank Correlation for {period}: {day1}x{day2}: {correlation}")
 
 def spearman_rank_correlation(rank_seq1, rank_seq2):
     """
@@ -103,14 +46,48 @@ def spearman_rank_correlation(rank_seq1, rank_seq2):
 
     return r
 
-#### PLOTS ####
-def heat_map(data):
 
-    X         = [label for label in data]
-    N         = data.shape[1]
-    corr      = (data.corr()).values
-    # Display the correlation in cells
-    hovertext = [[f'corr({X[i]}, {X[j]})= {corr[i][j]:.2f}' for j in range(N)] for i in range(N)]
+def period_rank_correlation_matrix(od, kpi):
+    ''' Calculate Kendall & Spearman ranking metric '''
+
+    df = pd.read_csv(f'{path}/04.Disparity/{od}/{od}-{kpi}.csv', header=[0, 1,2], index_col=[0])
+
+    for day in days:
+
+        sp_matrix = [[0] * len(periods) for _ in range(len(periods))]
+        kd_matrix = [[0] * len(periods) for _ in range(len(periods))]
+        sp_matrix_alpha = [[0] * len(periods) for _ in range(len(periods))]
+        kd_matrix_alpha = [[0] * len(periods) for _ in range(len(periods))]
+
+        for i, period1 in enumerate(periods):
+            for j, period2 in enumerate(periods):
+
+                list1 = df.loc[:, (day, period1, f'{kpi}_rnk')].values
+                list2 = df.loc[:, (day, period2, f'{kpi}_rnk')].values
+
+                list3 = df.loc[:, (day, period1, f'alpha_rnk')].values
+                list4 = df.loc[:, (day, period2, f'alpha_rnk')].values
+
+                sp_matrix[i][j] = spearman_rank_correlation(list1, list2)
+                sp_matrix_alpha[i][j] = spearman_rank_correlation(list3, list4)
+                kd_matrix[i][j], p_value = kendalltau(list1, list2)
+                kd_matrix_alpha[i][j], p_value = kendalltau(list3, list4)
+
+        title_alpha_sp = f'Alpha {kpi.title()} Ranks Correlation across {days_[day]} (Spearman)'
+        title_alpha_kd = f'Alpha {kpi.title()} Ranks Correlation across {days_[day]} (Kendall)'
+        title_sp = f'{kpi.title()} Ranks Correlation across {days_[day]} (Spearman)'
+        title_kd = f'{kpi.title()} Ranks Correlation across {days_[day]} (Kendall)'
+
+        heat_map(sp_matrix, od, title_sp)
+        heat_map(sp_matrix_alpha, od, title_alpha_sp)
+        heat_map(kd_matrix, od, title_kd)
+        heat_map(kd_matrix_alpha, od, title_alpha_kd)
+
+
+#### PLOTS ####
+def heat_map(data, od, title):
+
+    data = np.array(data)
 
     sns_colorscale = [[0.0, '#3f7f93'],
     [0.071, '#5890a1'],
@@ -128,7 +105,12 @@ def heat_map(data):
     [0.929, '#de535e'],
     [1.0, '#d93a46']]
 
-    heat = go.Heatmap(z=data.corr(),
+    X         = [period for period in periods]
+    N         = data.shape[1]
+
+    hovertext = [[f'corr({X[i]}, {X[j]})= {data[i][j]:.2f}' for j in range(N)] for i in range(N)]
+
+    heat = go.Heatmap(z=data,
                     x=X,
                     y=X,
                     zmin=-1,
@@ -141,53 +123,38 @@ def heat_map(data):
                     hoverinfo='text'
                     )
 
-    title = 'Correlation Matrix'
-
     layout = go.Layout(title_text=title, title_x=0.5,
                     width=600, height=600,
                     xaxis_showgrid=False,
                     yaxis_showgrid=False,
-                    yaxis_autorange='reversed')
+                    yaxis_autorange='reversed'
+                    ,xaxis_side='top'
+                    )
 
     fig=go.Figure(data=[heat], layout=layout)
-    fig.show()
-    plt.savefig(f'{path}/04.Disparity/{od}/img/{title}.png')
+    fig.write_image(f'{path}/05.Rankings/{od}/img/{title}.png')
 
 if __name__ == "__main__":
 
     global path
     global days
+    global days_
     global periods
 
     #### Defining variables  ####
     ods = [ 'tube'] # 'overground', 'dlr', 'tube'
     days = ['fri', 'sat', 'mtt', 'sun']
+    days_ = {'fri': 'Friday', 'sat':'Saturday', 'mtt':'Mon-Thu', 'sun': 'Sunday'}
     periods = ['Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
-    kpis = ['efficiencies', 'distress']# 'distress' review distress graphs 'distance', 'speed', 'traffic', 'traffic_distances', 'loads',
+    kpis = ['traffic']# 'distress' review distress graphs 'distance', 'speed', 'traffic', 'traffic_distances', 'loads',
     path = "C:/buildbr/big-cities-transport"
 
     for od in ods:
         for kpi in kpis:
             # Loadind file "od_mode" to calclulate shortest paths:
-            dict = load_pickle(f'{path}/04.Disparity/{od}/{od}-{kpi}.pickle')
+            period_rank_correlation_matrix(od, kpi)
 
-            if kpi in ['speed', 'distance']:
-                pass
-                ### Compare Alpha and KPI Rank
-                ### Compare same period through out days, resultion table periods (6) x days (3)
-                data_acrross_kpi = rank_correlation_matrix(dict)
-                # #### PLOT CORRELATIONS MATRIX ####
-                heat_map(data_acrross_kpi)
-            else:
-                ### Compare diff periods within a day, resulting in 3 correlation matrix 23/10
-                for period in periods:
-                    data_acrross_day = rank_correlation_matrix(dict, days)
-                    heat_map(data_acrross_day)
 
-                ### Compare same period through out days, resultion table periods (6) x days (3)
-                for day in days:
-                    data_acrross_periods = rank_correlation_matrix(dict, periods)
-                    heat_map(data_acrross_periods)
 
     # #### EFFICIENCY & DISTRESS COMPARISSON ####
     # rank_correlation_matrix(df)
@@ -219,7 +186,6 @@ if __name__ == "__main__":
 # ## UCL pay, My Trip, Camila Trip, Laptop,
 
 # ## TODO SHORT
-# ### 04 Nov: Farewell Lille
 # ### 11 Nov: Athens
 # ### 18 Nov: Farewell NE
 # ### 25 Nov: Farewell ML
@@ -229,8 +195,8 @@ if __name__ == "__main__":
 # ### 01 Dec: Breda xxx€ normal   (RENT - fillup car)
 # ### 15 Dec: BE>IT  45€ remote   (5 days IT)
 # ### 20 Dec: IT>SP 464€ unpaid   (23 days BR)
-# ### 12 Jan: SP>PT 680€ holidays (5 days PT)
-# ### 17 Jan: PT>BE  62€ holidays (13 days HAL) Exam, thesis, resignation (give back the car and unpaid leaves), domiciliation, Basic-fit
+# ### 09 Jan: SP>BE 680€ holidays (5 days PT) Exam 11/01
+# ### 17 Jan: PT>BE  62€ holidays (13 days HAL) thesis, resignation (give back the car and unpaid leaves), domiciliation, Basic-fit
 # ### 30 Jan: BE>BE 375€ holidays (7 days HAL)
 # ### 30 Jan: BE>?? xxx€ --------------------------------------------------------------------
 # ### TOTAL:  1726€

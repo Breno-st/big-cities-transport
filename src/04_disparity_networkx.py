@@ -1,21 +1,19 @@
 
-import pickle
 import sys
+import json
+import pickle
 
 import numpy as np
 import pandas as pd
-from scipy.stats import percentileofscore
-from traceback import format_exception
-
 import networkx as nx
 from networkx.readwrite import json_graph
-import json
 
-import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
-import matplotlib.image as mpimg
 
+from scipy.stats import percentileofscore
+from traceback import format_exception
 
 ### PICKLE FUNCTIONS ###
 def dict_to_pickle(dict, savename):
@@ -26,7 +24,6 @@ def load_pickle(filename):
     with open(filename, 'rb') as handle:
         loadedfile = pickle.load(handle)
     return loadedfile
-
 
 #### GRAPH IMPORTING FUNCTIONS ####
 def load_data_to_networkx(tx):
@@ -58,7 +55,6 @@ def load_graph (graph_path):
         data = json.load(f)
         graph = json_graph.node_link_graph(data, directed=True)
         return graph
-
 
 #### DISPARITY FUNCTIONS ####
 def disparity_filter (graph, kpi):
@@ -180,7 +176,6 @@ def calc_centrality (graph, min_degree=1):
 
     return centrality
 
-
 #### PLOTS ####
 def plot_disparities(G, od, kpi, day=None, period=None):
 
@@ -249,7 +244,6 @@ def node_view(G):
     G.nodes.degree
     G.nodes.centrality
 
-
 #### RANK FUNCTIONS ####
 def rank_edge(G, kpi):
     '''Add rank values into G'''
@@ -275,7 +269,6 @@ def populate_dictionaire(G, cols):
             dictionaries[col][str(edge[:2])] = edge[2][col]
 
     return dictionaries
-
 
 if __name__ == "__main__":
 
@@ -351,8 +344,3 @@ if __name__ == "__main__":
                             df[col1, col2, col3] = pd.Series(data3)
 
             df.to_csv(f'{path}/04.Disparity/{od}/{od}-{kpi}.csv')
-
-
-
-
-
