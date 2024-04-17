@@ -1,12 +1,8 @@
-
-
 from scipy.stats import kendalltau
 import pandas as pd
 import plotly.graph_objs as go
 import pickle
 import numpy as np
-
-import plotly.graph_objs as go
 
 
 ### PICKLE FUNCTIONS ###
@@ -21,71 +17,90 @@ def load_pickle(filename):
 
 
 #### CORRELATION FUNCTIONS ####
+def period_rank_correlation_matrix(df):
+    ''' Calculate Kendall ranking metric '''
 
-def spearman_rank_correlation(rank_seq1, rank_seq2):
-    """
-    Calculate the Spearman Rank Correlation Coefficient between two rank sequences.
-
-    Parameters:
-    rank_seq1 (list): The first rank sequence.
-    rank_seq2 (list): The second rank sequence.
-
-    Returns:
-    float: The Spearman Rank Correlation Coefficient, ranging from -1 to 1.
-    """
-    if len(rank_seq1) != len(rank_seq2):
-        raise ValueError("Both rank sequences must have the same length")
-
-    n = len(rank_seq1)
-
-    # Calculate the rank differences squared
-    d_squared = [(rank_seq1[i] - rank_seq2[i]) ** 2 for i in range(n)]
-
-    # Calculate the Spearman Rank Correlation Coefficient
-    r = 1 - (6 * sum(d_squared)) / (n * (n ** 2 - 1))
-
-    return r
+    for day in days:
+        # Build matrixex
+        kd_matrix_kpi = [[0] * len(periods) for _ in range(len(periods))]
+        kd_matrix_alpha = [[0] * len(periods) for _ in range(len(periods))]
+        kd_matrix_method = [[0] * len(periods) for _ in range(len(periods))]
 
 
-def period_rank_correlation_matrix(od, kpi):
-    ''' Calculate Kendall & Spearman ranking metric '''
+        # Populate the matrix
+        for i, period1 in enumerate(periods):
+            for j, period2 in enumerate(periods):
 
-    df = pd.read_csv(f'{path}/04.Disparity/{od}/{od}-{kpi}.csv', header=[0, 1,2], index_col=[0])
+                list1 = df.loc[:, (day, period1, f'{kpi}_rnk')].values # kpi 1
+                list2 = df.loc[:, (day, period2, f'{kpi}_rnk')].values # kpi 2
+
+                list3 = df.loc[:, (day, period1, f'alpha_rnk')].values # alpha 1
+                list4 = df.loc[:, (day, period2, f'alpha_rnk')].values # alpha 2
+
+                kd_matrix_kpi[i][j], p_value = kendalltau(list1, list2) # kpi 1 x kpi 2 (period)
+                kd_matrix_alpha[i][j], p_value = kendalltau(list3, list4) # alpha 1 x alpha 2 (periods)
+                kd_matrix_method[i][j], p_value = kendalltau(list3, list1) # alpha 1 x kpi 2 (method)
+
+
+        title_method_kd = f'{od.upper()} ALP & THR {kpi.title()} Ranks Correlation across {days_[day]}'
+        title_alpha_kd = f'{od.upper()} ALP {kpi.title()} Ranks Correlation across {days_[day]}'
+        title_kd = f'{od.upper()} THR {kpi.title()} Ranks Correlation across {days_[day]}'
+
+        # Plot the matrix
+        heat_map(kd_matrix_kpi, od, title_kd, periods)
+        heat_map(kd_matrix_alpha, od, title_alpha_kd, periods)
+        heat_map(kd_matrix_method, od, title_method_kd, periods)
+
+
+def day_rank_correlation_matrix(df):
+    ''' Calculate Kendall ranking metric '''
+
+    for period in periods:
+
+        kd_matrix = [[0] * len(days) for _ in range(len(days))]
+        kd_matrix_alpha = [[0] * len(days) for _ in range(len(days))]
+
+        for i, day1 in enumerate(days):
+            for j, day2 in enumerate(days):
+
+                list1 = df.loc[:, (day1, period, f'{kpi}_rnk')].values
+                list2 = df.loc[:, (day2, period, f'{kpi}_rnk')].values
+
+                list3 = df.loc[:, (day1, period, f'alpha_rnk')].values
+                list4 = df.loc[:, (day2, period, f'alpha_rnk')].values
+
+                kd_matrix[i][j], p_value = kendalltau(list1, list2)
+                kd_matrix_alpha[i][j], p_value = kendalltau(list3, list4)
+
+        title_alpha_kd = f'{od.upper()} ALP {kpi.title()} Ranks Correlation across {period}'
+        title_kd = f'{od.upper()} THR {kpi.title()} Ranks Correlation across {period}'
+
+        heat_map(kd_matrix, od, title_kd, days)
+        heat_map(kd_matrix_alpha, od, title_alpha_kd, days)
+
+def kpis_rank_correlation_matrix(df1, df2):
+    ''' Calculate Kendall ranking metric '''
 
     for day in days:
 
-        sp_matrix = [[0] * len(periods) for _ in range(len(periods))]
-        kd_matrix = [[0] * len(periods) for _ in range(len(periods))]
-        sp_matrix_alpha = [[0] * len(periods) for _ in range(len(periods))]
-        kd_matrix_alpha = [[0] * len(periods) for _ in range(len(periods))]
+        kd_matrix_kpis = [[0] * len(periods) for _ in range(len(periods))]
 
         for i, period1 in enumerate(periods):
             for j, period2 in enumerate(periods):
 
-                list1 = df.loc[:, (day, period1, f'{kpi}_rnk')].values
-                list2 = df.loc[:, (day, period2, f'{kpi}_rnk')].values
 
-                list3 = df.loc[:, (day, period1, f'alpha_rnk')].values
-                list4 = df.loc[:, (day, period2, f'alpha_rnk')].values
+                list3 = df1.loc[:, (day, period1, f'alpha_rnk')].values
+                list4 = df2.loc[:, (day, period2, f'alpha_rnk')].values
 
-                sp_matrix[i][j] = spearman_rank_correlation(list1, list2)
-                sp_matrix_alpha[i][j] = spearman_rank_correlation(list3, list4)
-                kd_matrix[i][j], p_value = kendalltau(list1, list2)
-                kd_matrix_alpha[i][j], p_value = kendalltau(list3, list4)
 
-        title_alpha_sp = f'Alpha {kpi.title()} Ranks Correlation across {days_[day]} (Spearman)'
-        title_alpha_kd = f'Alpha {kpi.title()} Ranks Correlation across {days_[day]} (Kendall)'
-        title_sp = f'{kpi.title()} Ranks Correlation across {days_[day]} (Spearman)'
-        title_kd = f'{kpi.title()} Ranks Correlation across {days_[day]} (Kendall)'
+                kd_matrix_kpis[i][j], p_value = kendalltau(list3, list4)
 
-        heat_map(sp_matrix, od, title_sp)
-        heat_map(sp_matrix_alpha, od, title_alpha_sp)
-        heat_map(kd_matrix, od, title_kd)
-        heat_map(kd_matrix_alpha, od, title_alpha_kd)
+        title_kpis_kd = f'{od.upper()} ALP Eff & Robust Correlation across {days_[day]}'
 
+        heat_map(kd_matrix_kpis, od, title_kpis_kd, periods)
 
 #### PLOTS ####
-def heat_map(data, od, title):
+def heat_map(data, od, title, array):
 
     data = np.array(data)
 
@@ -105,7 +120,7 @@ def heat_map(data, od, title):
     [0.929, '#de535e'],
     [1.0, '#d93a46']]
 
-    X         = [period for period in periods]
+    X         = [col.title() for col in array]
     N         = data.shape[1]
 
     hovertext = [[f'corr({X[i]}, {X[j]})= {data[i][j]:.2f}' for j in range(N)] for i in range(N)]
@@ -140,102 +155,44 @@ if __name__ == "__main__":
     global days
     global days_
     global periods
+    global od
 
     #### Defining variables  ####
-    ods = [ 'tube'] # 'overground', 'dlr', 'tube'
-    days = ['fri', 'sat', 'mtt', 'sun']
+    ods = ['dlr', 'overground', 'tube'] # 'overground', 'dlr', 'tube'
+    days = ['mtt', 'fri', 'sat', 'sun']
     days_ = {'fri': 'Friday', 'sat':'Saturday', 'mtt':'Mon-Thu', 'sun': 'Sunday'}
     periods = ['Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
-    kpis = ['traffic']# 'distress' review distress graphs 'distance', 'speed', 'traffic', 'traffic_distances', 'loads',
-    path = "C:/buildbr/big-cities-transport"
+    kpis = ['distress'] # 'distress',  'traffic', # 'distance', 'speed',
+    path = "/mnt/c/buildbr/big-cities-transport"
 
     for od in ods:
         for kpi in kpis:
-            # Loadind file "od_mode" to calclulate shortest paths:
-            period_rank_correlation_matrix(od, kpi)
+
+            df = pd.read_csv(f'{path}/04.Disparity/02.Output/{kpi}/ranks/rank-{od}-{kpi}.csv', header=[0, 1,2], index_col=[0])
+
+            if kpi in ['speed', 'distance']:
+
+                list_thr = df.loc[:, (f'{kpi}_rnk')].values
+                list_alp = df.loc[:, (f'alpha_rnk')].values
+
+                coef = kendalltau(list_thr, list_alp)
+
+                print(f'the corf relation values for {kpi} in {od}: {coef}')
+
+            else:
+
+                # Rank 6 by 6: period against period
+                period_rank_correlation_matrix(df)
+
+                # Rank 4 by 4: day against day HERE!!
+                day_rank_correlation_matrix(df)
+
+        # Rank 6 by 6: kpi against kpi
+
+        df1 = pd.read_csv(f'{path}/04.Disparity/02.Output/efficiencies/ranks/rank-{od}-efficiencies.csv', header=[0, 1,2], index_col=[0])
+        df2 = pd.read_csv(f'{path}/04.Disparity/02.Output/distress/ranks/rank-{od}-distress.csv', header=[0, 1,2], index_col=[0])
+        kpis_rank_correlation_matrix(df1, df2)
 
 
 
-    # #### EFFICIENCY & DISTRESS COMPARISSON ####
-    # rank_correlation_matrix(df)
 
-
-## Run 5h/3, Bike 10h/4, Gym 5h (back, chest, leg, core, core)
-## week:1   12-12-21 free
-## week:2   16-12-24 free
-## week:3   14-14-30 speed
-## week:4   16-16-10-26 transition
-## week:5   16-16-12-30 transition
-## week:6   16-8-16-8-10-24 transition
-## week:7   14-8-14-8-21-28 volume
-## week:8   10-10
-
-# # run, bike, gym: 4/4/5
-# # proj,lang, read,
-# # cook, clea, clot, mrkt
-
-# ## Lundi:      5h: ----, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: legs, 21h: lang, 22h: read		>>>
-# ## Mardi:      5h: ru16, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: core, 21h: proj, 22h: read		>>>
-# ## Mecredi:    5h: bike, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: chst, 21h: ----, 22h: read		>>>
-# ## Jeudi:      5h: ru12, 8h: Work, 12h:lunch, 14h: Work, 18h: cook, 20h: proj, 21h: proj, 22h: read		>>>
-# ## Vendredi:   5h: bike, 8h: work, 12h: work, 14h: work, 18h: ----, 20h: back, 21h: ----, 22h: read		>>>
-# ## Samedi:     5h: bike, 8h: room, 12h: mrkt, 14h: proj, 18h: proj, 20h: ----, 21h: ----, 22h: ----   	>>>
-# ## Dimache:    5h: bike, 8h: clot, 12h: cook, 14h: proj, 18h: ru24, 20h: ----, 21h: ----, 22h: ----		>>>
-
-# ## TODO PLAN
-# ## UCL pay, My Trip, Camila Trip, Laptop,
-
-# ## TODO SHORT
-# ### 11 Nov: Athens
-# ### 18 Nov: Farewell NE
-# ### 25 Nov: Farewell ML
-# ### 02 Dec: Farewell LU
-# ### 10 Dec: ??
-
-# ### 01 Dec: Breda xxx€ normal   (RENT - fillup car)
-# ### 15 Dec: BE>IT  45€ remote   (5 days IT)
-# ### 20 Dec: IT>SP 464€ unpaid   (23 days BR)
-# ### 09 Jan: SP>BE 680€ holidays (5 days PT) Exam 11/01
-# ### 17 Jan: PT>BE  62€ holidays (13 days HAL) thesis, resignation (give back the car and unpaid leaves), domiciliation, Basic-fit
-# ### 30 Jan: BE>BE 375€ holidays (7 days HAL)
-# ### 30 Jan: BE>?? xxx€ --------------------------------------------------------------------
-# ### TOTAL:  1726€
-
-# ### DEP:    1700€
-# ### DEZ:    2500€
-# ### 13o:    3000€
-# ### JAN:    3000€
-# ### TOTAL: 11098€
-
-# ### UCL:   -4300€
-
-# ### Bal:    6798€
-
-
-# ## TODO Code before writting:
-#4h### Compare diff periods within a day, resulting in 3 correlation matrix 23/10
-#4h### Compare same period through out days, resultion table periods (6) x days (3)
-
-# ## TODO Writting:
-#8h### Write Results part 5 06/11
-#8h### Write Modeling KPIs part 4 13/11
-#4h### Write Methodology Distress part 2
-#4h### Write Methodology Disparity part 2 20/11
-#4h### Write Data Collections part
-#4h### Write Conclusion part 7  by 27/11
-#8h### Generate all results vizualizations by 04/12
-#4h### Write Following Steps part 6
-#4h### Re-Write Introduction part 1  11/12
-#68###
-
-# ## TODO Code while writting:
-
-# ### Genrate edge graph plots
-# ### Create statistic plots data
-# ### Create edge graph plots
-# ### Turn big-citis-transpot into App:
-# ### Connect and improve codes to build an app (example 2)
-# ### Example 2: Application Development (Databases, Django)
-# ### Create code for GloSS
-
-# ### Desing Finance Application

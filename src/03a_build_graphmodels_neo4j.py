@@ -11,7 +11,7 @@ def load_pickle(filename):
     with open(filename, 'rb') as handle:
         loadedfile = pickle.load(handle)
     return loadedfile
-    
+
 
 #### NEO4J BASEGRAPH FUNCTIONS ####
 

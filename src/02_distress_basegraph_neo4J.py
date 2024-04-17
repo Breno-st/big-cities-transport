@@ -77,9 +77,9 @@ def shortest_path(passenger, db):
     with driver.session(database=db+'-basegraph') as session:
 
         # Handling graph-projection exist
-        result = session.run("CALL gds.graph.exists('"+db+"')")
+        # result = session.run("CALL gds.graph.exists('"+db+"')")
 
-        session.run("CALL gds.graph.drop('"+db+"') YIELD graphName")
+        # session.run("CALL gds.graph.drop('"+db+"') YIELD graphName")
         graphprojection = "CALL gds.graph.project('"+db+"', '"+db+"Station', 'TO', {relationshipProperties: 'time'})"
         results = session.run(graphprojection)
 
@@ -99,8 +99,9 @@ def shortest_path(passenger, db):
             via = records[0][4] # list of sequential nodes
             segments = list(zip(via[:-1], via[1:])) # list of sequential pair of nodes
             o_d = str(via[0])+"_"+str(via[-1]) # key values
-            # transverse O_D dictionary into Segments' dictionary
 
+
+            # transverse O_D dictionary into Segments' dictionary
             for segment in segments:
                 if segment not in segments_ods_shortest_paths[mode].keys():
                     segments_ods_shortest_paths[mode][segment] = {}
@@ -180,56 +181,56 @@ if __name__ == '__main__':
     global periods
     csv.field_size_limit(50000000)
 
-    modes = ['overground'] #'overground', 'dlr', 'tube'
+    modes = ['dlr', 'overground'] #'overground', 'dlr', 'tube'
     days = [ 'SUN', 'FRI', 'SAT', 'MTT']
     periods = ['Early', 'Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late', 'Night', 'Total'] # ['Total', 'Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
     periods_seq = {1:'Early', 2: 'Morning', 3:'AM Peak', 4:'Midday', 5:'PM Peak', 6:'Evening', 7:'Late', 8:'Night', 9:'Total'}
 
     # input a csv with all origin and destiny => OD has two columns s.t. key is start_end
-    path = "C:/buildbr/big-cities-transport/02.Distress/01.Input/"
+    path = "C:/buildbr/big-cities-transport/02.Distress/01.Input/" # it only connect via Windows
 
     for mode in modes:
 
-    # 1.Import file "od_mode" to calclulate shortest paths:
-        df = pd.read_csv(path+'od_'+mode+'.csv',delimiter=';')
-        df['o_d'] = df.apply (lambda row: row['Mode']+'_'+row['naptanid_o']+'_'+row['naptanid_d'], axis=1)
-        df.set_index(['o_d'], inplace=True) # set o_d index
-        df = df.drop(['Mode', 'name_o', 'name_d', 'naptanid_o', 'naptanid_d'], axis=1) # set o_d index
+    # # 1.Import file "od_mode" to calclulate shortest paths:
+    #     df = pd.read_csv(path+'od_'+mode+'.csv',delimiter=';')
+    #     df['o_d'] = df.apply (lambda row: row['Mode']+'_'+row['naptanid_o']+'_'+row['naptanid_d'], axis=1)
+    #     df.set_index(['o_d'], inplace=True) # set o_d index
+    #     df = df.drop(['Mode', 'name_o', 'name_d', 'naptanid_o', 'naptanid_d'], axis=1) # set o_d index
 
-        od_dict = {}
-        for index, row in df.iterrows():
-            row_data = {}
-            for column in df.columns:
-                if column != 'index_col':
-                    row_data[column] = row[column]
-            od_dict[index] = row_data
+    #     od_dict = {}
+    #     for index, row in df.iterrows():
+    #         row_data = {}
+    #         for column in df.columns:
+    #             if column != 'index_col':
+    #                 row_data[column] = row[column]
+    #         od_dict[index] = row_data
 
-        # Call SorthestPath on imported file "od_mode":
-        segments_ods_shortest_paths = shortest_path(od_dict, mode) # [mode][segment][o_d]['time'/'dtime']
-        dict_to_pickle(segments_ods_shortest_paths, f'shortest_paths_{mode}_segments_od.pickle')
+    #     # Call SorthestPath on imported file "od_mode":
+    #     segments_ods_shortest_paths = shortest_path(od_dict, mode) # [mode][segment][o_d]['time'/'dtime']
+    #     dict_to_pickle(segments_ods_shortest_paths, f'shortest_paths_{mode}_segments_od.pickle')
 
-    # 1*.Loadind file "od_mode" to calclulate shortest paths:
-        segments_ods_shortest_paths = load_pickle(f'shortest_paths_{mode}_segments_od.pickle')
+    # # 1*.Loadind file "od_mode" to calclulate shortest paths:
+    #     segments_ods_shortest_paths = load_pickle(f'shortest_paths_{mode}_segments_od.pickle')
 
-    # 2.Adding OD traffic information into SorthestPath dictionary: NEW
-        with open(path+'od_'+mode+'_traf.csv', mode='r') as file: #200K times
-            lines = file.readlines()
-            for line in lines[2:]:
-                cols = line.strip().split(';')
-                day, od = cols[0].split('-')[0], cols[0].split('-')[1]
-                for segment in segments_ods_shortest_paths[mode]:  #600 times
-                    if segments_ods_shortest_paths[mode][segment].get(od) is not None:
-                        segments_ods_shortest_paths[mode][segment][od][day] = {} #days exist only for there
-                        for i in periods_seq:
-                            aux = cols[i].replace(',', '')
-                            segments_ods_shortest_paths[mode][segment][od][day][periods_seq[i]] = float(aux)
+    # # 2.Adding OD traffic information into SorthestPath dictionary: NEW
+    #     with open(path+'od_'+mode+'_traf.csv', mode='r') as file: #200K times
+    #         lines = file.readlines()
+    #         for line in lines[2:]:
+    #             cols = line.strip().split(';')
+    #             day, od = cols[0].split('-')[0], cols[0].split('-')[1]
+    #             for segment in segments_ods_shortest_paths[mode]:  #600 times
+    #                 if segments_ods_shortest_paths[mode][segment].get(od) is not None:
+    #                     segments_ods_shortest_paths[mode][segment][od][day] = {} #days exist only for there
+    #                     for i in periods_seq:
+    #                         aux = cols[i].replace(',', '')
+    #                         segments_ods_shortest_paths[mode][segment][od][day][periods_seq[i]] = float(aux)
 
-        dict_to_pickle(segments_ods_shortest_paths, f'shortest_paths_{mode}_segments_od_traffic.pickle') # shortest_paths_ods_segments__traf
+    #     dict_to_pickle(segments_ods_shortest_paths, f'shortest_paths_{mode}_segments_od_traffic.pickle') # shortest_paths_ods_segments__traf
 
     # 2*.Loading OD traffic information
         segments_ods_shortest_paths = load_pickle(f'shortest_paths_{mode}_segments_od_traffic.pickle')
 
-    # 3.Normalizing OD traffic information
+    # 3.N
         percentage_dict(segments_ods_shortest_paths[mode]) # Norm based on the total od_traf of the edge
         segments_ods_shortest_paths_norm = segments_ods_shortest_paths
         dict_to_pickle(segments_ods_shortest_paths_norm, f'shortest_paths_{mode}_segments_od_traffic_norm.pickle')

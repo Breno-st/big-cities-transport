@@ -59,7 +59,7 @@ def get_stop_points_by_id(naptanid, lineid, direction):
     response = send_request(endpoints['stoptid'].format(naptanid, lineid, direction))
     data = response.json()
     return data
-
+#
 def get_time_by_id(origin, destiny, mode):
     response = send_request(endpoints['time'].format(origin, destiny, mode))
     data = response.json()
@@ -279,9 +279,9 @@ if __name__ == '__main__':
 
     path = r'/home/soaresbr/data_projects/big-cities-transport/01.BaseGraph/API'
 
-    unique_modes = modes()
-    unique_lines = lines()
-    # routes()
+    # unique_modes = modes()
+    # uniqued_lines = lines()
+    routes_ = routes()
     # coordenates()
     df_route_seq = routes_seq()
     od_intervalid()
