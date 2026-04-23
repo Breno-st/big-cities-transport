@@ -1,0 +1,11 @@
+{
+  "python.analysis.stubPath": "file:////Users/brenotiburcio/build/big-cities-transport/.stubs/pyspark34",
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingModuleSource": "none"
+  },
+  "synapse.artifactFilter": {
+    "artifactTypes": [
+      "SynapseNotebook"
+    ]
+  }
+}
