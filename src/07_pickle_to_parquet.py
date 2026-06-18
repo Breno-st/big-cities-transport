@@ -31,7 +31,6 @@ def unpickle_ranks_to_dataframe(pickle_path, od, kpi):
                     "dest_station_id": dest,
                     "day": day,
                     "period": period,
-                    "kpi": kpi,
                     "mode": od,
                     "weight": cols_dict.get(kpi, {}).get(edge_str),
                     "weight_rnk": cols_dict.get(f"{kpi}_rnk", {}).get(edge_str),
@@ -43,9 +42,10 @@ def unpickle_ranks_to_dataframe(pickle_path, od, kpi):
 
 # Usage
 if __name__ == "__main__":
-    path = Path("/mnt/c/buildbr/big-cities-transport/04.Disparity/01.Input")
-    ods = ['tube', 'dlr', 'overground']
-    kpis = ['distress']
+    path = Path("/Users/brenotiburcio/build/big-cities-transport/04.Disparity/01.Input")
+    ods = ['tube', 'dlr', 'overground'] # 
+    kpis = ['traffic', 'efficiencies', 'distress']
+
 
     for od in ods:
         for kpi in kpis:
