@@ -13,6 +13,7 @@ dependencies:
   - networkx=3.5=py313hca03da5_0
   - openssl=3.0.18=h9b4081a_0
   - pip=25.2=pyhc872135_1
+  - pyodbc
   - python=3.13.5=h2eb94d5_100_cp313
   - python_abi=3.13=1_cp313
   - readline=8.3=h0b18652_0
