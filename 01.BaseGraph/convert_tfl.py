@@ -294,6 +294,74 @@ def main():
             'properties': {'name': name, 'colour': colour, 'mode': 'tfl'},
         })
 
+    # ── Detect shared-track overlaps and assign side-by-side offsets ─────────
+    # In OSM, multiple route relations that share the same physical way have
+    # IDENTICAL coordinate sequences in those sections.  Using near-zero buffer
+    # (floating-point safety only) finds only truly shared ways, not nearby-but-
+    # separate tunnels which are typically 10-50 m apart.
+    OVERLAP_TOL = 0.000005  # ≈ 0.5 m — float safety only; true shared track = 0 m
+    MIN_SHARED  = 0.01      # ≈ 1 km minimum — ignore station-area brush-bys
+    LINE_W_NET  = {9: 1.5, 12: 3.5, 14: 6.0}  # must match Mapbox layer paint
+
+    line_shapes = {f['properties']['name']: shape(f['geometry']) for f in out_features}
+    name_list   = sorted(line_shapes)
+
+    # Direct-pair detection — no union-find transivity.
+    # A line's overlap group = lines it DIRECTLY shares track with (>MIN_SHARED).
+    direct_partners: dict = defaultdict(set)
+    print("\nShared-track overlaps (exact geometry, ≥1 km):")
+    for i, n1 in enumerate(name_list):
+        g1 = line_shapes[n1]
+        for n2 in name_list[i + 1:]:
+            g2 = line_shapes[n2]
+            inter = g1.intersection(g2.buffer(OVERLAP_TOL))
+            if not inter.is_empty and inter.length > MIN_SHARED:
+                direct_partners[n1].add(n2)
+                direct_partners[n2].add(n1)
+                print(f"  {n1:35s} ∩ {n2:35s}  {inter.length:.4f}°")
+
+    # Union-find on the significant pairs → coherent groups where all members
+    # are ranked against the SAME set, not each line's own "direct partners" set.
+    parent2: dict = {n: n for n in name_list}
+
+    def uf2_find(x: str) -> str:
+        while parent2[x] != x:
+            parent2[x] = parent2[parent2[x]]
+            x = parent2[x]
+        return x
+
+    def uf2_union(x: str, y: str) -> None:
+        parent2[uf2_find(x)] = uf2_find(y)
+
+    for n1, partners in direct_partners.items():
+        for n2 in partners:
+            uf2_union(n1, n2)
+
+    groups_map: dict = defaultdict(list)
+    for n in name_list:
+        groups_map[uf2_find(n)].append(n)
+
+    line_offset_mult: dict = {}
+    for members in groups_map.values():
+        cnt = len(members)
+        # Sort by centroid latitude DESC: most-northern line → most-negative offset
+        members_sorted = sorted(members, key=lambda m: -line_shapes[m].centroid.y)
+        for rank, name in enumerate(members_sorted):
+            line_offset_mult[name] = rank - (cnt - 1) / 2
+
+    print("\nOffset assignments:")
+    for n in name_list:
+        m   = line_offset_mult.get(n, 0.0)
+        grp = sorted(groups_map[uf2_find(n)])
+        tag = f"(group: {', '.join(grp)})" if len(grp) > 1 else "(standalone)"
+        print(f"  {n:35s}  mult={m:+.1f}  {tag}")
+
+    for feat in out_features:
+        name = feat['properties']['name']
+        mult = line_offset_mult.get(name, 0.0)
+        for z, w in LINE_W_NET.items():
+            feat['properties'][f'off{z}'] = round(mult * w, 3)
+
     result = {'type': 'FeatureCollection', 'features': out_features}
     dst = BASE / 'tfl_lines.geojson'
     with open(dst, 'w', encoding='utf-8') as f:
