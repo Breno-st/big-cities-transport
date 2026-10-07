@@ -3,7 +3,8 @@ import pickle
 import pandas as pd
 from pathlib import Path
 
-PERIODS = ['Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
+PERIODS  = ['Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
+DAY_TYPES = ['mtt', 'fri', 'sat', 'sun']
 
 def extract_stations_and_activity(basegraph_path, mode):
     with open(basegraph_path, 'r') as f:
@@ -32,16 +33,21 @@ def extract_stations_and_activity(basegraph_path, mode):
         entries = node.get('entries', [])
         exits = node.get('exits', [])
 
-        for i, period in enumerate(PERIODS):
-            if i < len(entries):
-                activity_rows.append({
-                    'naptanid': naptanid,
-                    'period': period,
-                    'mode': mode,
-                    'entries': entries[i],
-                    'exits': exits[i],
-                    'time_granularity': 'period',
-                })
+        # NUMBAT station counts are not broken down by day type in the source data;
+        # the same counts are replicated across all 4 day types so warehouse_load.sql
+        # can join Fact_StationActivity to Dim_Time for any day filter.
+        for day in DAY_TYPES:
+            for i, period in enumerate(PERIODS):
+                if i < len(entries):
+                    activity_rows.append({
+                        'naptanid':        naptanid,
+                        'day':             day,
+                        'period':          period,
+                        'mode':            mode,
+                        'entries':         entries[i],
+                        'exits':           exits[i],
+                        'time_granularity': 'period',
+                    })
 
     return stations, activity_rows, basegraph_id_to_naptanid
 
