@@ -1,0 +1,217 @@
+\chapter{Efficiency and Robustness Analysis} \label{section: indicators}
+
+The efficiency and robustness indicators conveyed by this study aim to address the different concerns of the network, thus a low correlation is expected. It is observed that the correlation between the two indicators tends to decrease as the network size increases. Naturally, it is expected mainly because the ranking ordering possibilities are bigger for networks with more edges. However, the main reason is explained by analyzing the indicators separately.
+
+\section{Efficiency}
+
+\qquad Having compared the elements of infrastructure (distance), operation (speed), and traffic for each network, we will now explore how the aggregated indicator behaves throughout the periods and days for each network independently. The disparity methodology will solely play the role of ranking the edges. The objective is to understand how efficiency varies within each network, reflecting the challenges and opportunities in managing resources to provide a consistent and optimal service globally. The heatmaps below display how the efficiency ranks vary across the day for the three transport systems.
+
+\begin{figure}[H]
+    \centering        
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/DLR Efficiencies Mon-Thu ALP Correlation.png}        
+        \label{fig:image1}        
+    \end{minipage}       
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/OG Efficiencies Mon-Thu ALP Correlation.png}        
+        \label{fig:image2}        
+    \end{minipage}    
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/TUBE Efficiencies Mon-Thu ALP Correlation.png}        
+        \label{fig:image3}        
+    \end{minipage} 
+    \caption{Traffic ranks heatmap across the periods.}
+    \label{fig:effic_corr_periods}
+\end{figure}
+
+\qquad The Heatmap figures for comparing traffic periods of DLR, Overground, and Tube systems concerning all days are shown in Appendix A, Sections \ref{section:eff_corr_periods}.
+
+\qquad The Tube system exhibits the strongest inverse correlation for weekdays. This correlation can be attributed to the time overlap with working days, leading to the fair assumption that the Tube is primarily used by commuters traveling from home to work and vice versa. Consequently, inbound and outbound edges are deemed most "efficient" during the morning and evening periods, respectively. Below are plots comparing the morning and evening period backbone efficiencies for the Tube system.
+
+\begin{figure}[H]
+    \centering 
+    \begin{minipage}[b]{1.1\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/EdgesTimeVariant/TUBE Efficiencies ALP 25th Percentile MTT Morning.png}        
+        \label{fig:image3}        
+    \end{minipage}   
+    \begin{minipage}[b]{1.1\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/EdgesTimeVariant/TUBE Efficiencies ALP 25th Percentile MTT Evening.png}        
+        \label{fig:image4}        
+    \end{minipage}        
+    \caption{Tube efficiency 25th percentile backbone comparison.}
+    \label{fig:tube_effic_corr_periods}
+\end{figure}
+
+\qquad The edges presumed to be the most efficient within the Tube system are evenly distributed across the London metropolitan area, suggesting no regional discrepancy in usage or the service provided. And similarly to the traffic analysis, there is a strong correlation across the days
+
+\begin{figure}[H]
+    \centering        
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/TUBE Efficiencies Morning ALP Correlation.png}        
+        \label{fig:image1}        
+    \end{minipage}       
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/TUBE Efficiencies Midday ALP Correlation.png}        
+        \label{fig:image2}        
+    \end{minipage}    
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/TUBE Efficiencies Evening ALP Correlation.png}        
+        \label{fig:image3}        
+    \end{minipage} 
+    \caption{Tube efficiencies ranks heatmap across the days.}
+    \label{fig:tube_effic_corr_days}
+\end{figure}
+
+\qquad The Heatmap figures for comparing traffic days of DLR, Overground, and Tube systems concerning all days are shown in Appendix A, Sections \ref{fig:eff_corr_days}.
+
+\qquad The disparity in edge efficiency ranks varies across days and periods, reflecting the dynamic nature of traffic within the transportation systems. This dynamic traffic pattern influences the utility of the systems, requiring operational adjustments to align with traffic dynamics and ensure optimal service provision relative to infrastructure capacity.
+
+\qquad The backbone map covering the entire London metropolitan area suggests that operational guidelines, such as train speed and frequency, are proportionate to traffic volume. This implies that Transport for London (TFL) management does not prioritize allocating more trains of higher speeds to certain areas at the expense of others. However, this is only a preliminary analysis and further investigation is warranted, considering various granularities such as aggregation by time, areas, and more suitable indicators.
+
+
+\section{Robustness}
+
+\qquad The Robustness indicator, derived from the shortest-path algorithm, was utilized to weigh the edges. In determining the optimal path, the algorithm prioritizes time over distance. It's important to note that the model assumes a uniform speed value for each edge, resulting in no variation in the replacement path in case of disruption. However, the Edit distance incorporates traffic variations. As it is displayed below, the tube system presents a less strong correlation across the periods due to its strongest traffic variation.
+
+\qquad Initially, the comparison will focus on how the two backbone extraction methodologies rank the edges' robustness.
+
+\begin{figure}[H]
+    \centering        
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/DLR Distress Mon-Thu THR Correlation.png}        
+        \label{fig:image1}        
+    \end{minipage}%       
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/DLR Distress Mon-Thu ALP Correlation.png}        
+        \label{fig:image2}        
+    \end{minipage}%    
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/DLR Distress Mon-Thu ALP & THR Correlation.png}        
+        \label{fig:image3}        
+    \end{minipage}       
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/OG Distress Mon-Thu THR Correlation.png} 
+        \label{fig:image4}        
+    \end{minipage}%       
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/OG Distress Mon-Thu ALP Correlation.png}        
+        \label{fig:image5}        
+    \end{minipage}%    
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/OG Distress Mon-Thu ALP & THR Correlation.png}     
+        \label{fig:image6}        
+    \end{minipage} 
+    \centering        
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/TUBE Distress Mon-Thu THR Correlation.png} 
+        \label{fig:image7}        
+    \end{minipage}%       
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/TUBE Distress Mon-Thu ALP Correlation.png}        
+        \label{fig:image8}        
+    \end{minipage}%
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/TUBE Distress Mon-Thu ALP & THR Correlation.png}
+        \label{fig:image9}        
+    \end{minipage} 
+    \caption{Distress ranks heatmap across the methods.}
+    \label{fig:distress_corr_methods}
+\end{figure}
+
+\qquad The Heatmap figures for comparing distress periods\footnote[1]{The Late period must not be considered for DLR and Overground systems, see section \ref{detail:distresslate}} of DLR, Overground, and Tube systems concerning all days are shown in Appendix A, Sections \ref{section:dist_corr_period}.
+
+\qquad Different from the Traffic model, It's challenging to discern a clear advantage between the backbone extraction methodologies for the Robustness model. Unlike with traffic, where the disparity method could capture traffic inversion indicated by negative correlation, there isn't a significant contrast between period ranks for robustness. This could be attributed to the fact that the indicators consider network structure, whereas the disparity filtering may not contribute much structural information.
+
+\qquad Therefore, at this point, it's not possible to imply a superior grasp of the indicator, but rather that both methodologies offer different perspectives on edge robustness evaluation. The third column shows a moderate positive correlation between their evaluations. 
+
+\qquad Considering the Tube system, the image below illustrates the rank correlation comparison across periods.
+
+\begin{figure}[H]
+    \centering        
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/TUBE Distress Morning ALP Correlation.png}        
+        \label{fig:image1}        
+    \end{minipage}       
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/TUBE Distress Midday ALP Correlation.png}        
+        \label{fig:image2}        
+    \end{minipage}    
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/TUBE Distress Evening ALP Correlation.png}        
+        \label{fig:image3}        
+    \end{minipage} 
+    \caption{Tube distress ranks heatmap across the periods.}
+    \label{fig:tube_distress_corr_days}
+\end{figure}
+
+
+\qquad The Heatmap figures for comparing distress days of DLR, Overground, and Tube systems concerning all days are shown in Appendix A, Sections \ref{section:dist_corr_day}.
+
+\begin{figure}[H]
+    \centering 
+    \begin{minipage}[b]{1.1\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/EdgesTimeVariant/TUBE Distress ALP 25th Percentile MTT Morning.png}        
+        \label{fig:image3}        
+    \end{minipage}   
+    \begin{minipage}[b]{1.1\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/EdgesTimeVariant/TUBE Distress ALP 25th Percentile MTT Evening.png}        
+        \label{fig:image4}        
+    \end{minipage}        
+    \caption{Tube efficiency 25th percentile backbone comparison.}
+    \label{fig:tube_effic_corr_periods}
+\end{figure}
+
+\qquad Although the robustness backbone shows some similarity to the efficiency backbone, a noticeable disconnection exists between the stations. The most vulnerable edges are those with less redundancy, which, following the nature of a transport network, are located in peripheral areas. The network ramification increases in central locations, enhancing the edges' robustness. Another significant difference is the invariance of the edge's direction. The distress indicator, based on the shortest path algorithm, embeds the network structure but undermines traffic variation.
+
+On the other hand, the efficiency indicator is heavily driven by traffic, which attributes the network structure aspect of the backbone to the disparity filtering methodology.
+
+\section{Efficiency and Robustness Comparison}\label{section:eff_rob}
+
+\qquad The heatmaps below compare the ranking from the distress and efficiency models for each transport system.
+
+\begin{figure}[H]
+    \centering        
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/DLR ALP Eff & Robust Mon-Thu Correlation.png}    
+        \label{fig:image1}        
+    \end{minipage}       
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/OG ALP Eff & Robust Mon-Thu Correlation.png}     
+        \label{fig:image2}        
+    \end{minipage}    
+    \begin{minipage}[b]{0.32\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/HeatMaps/TUBE ALP Eff & Robust Mon-Thu Correlation.png}  
+        \label{fig:image3}        
+    \end{minipage} 
+    \caption{Efficiencies and distress ranks heatmap across systems from Monday to Thursday.}
+    \label{fig:eff_distress_corr_day}
+\end{figure}
+
+\qquad The Heatmap figures for comparing efficiencies and distress rankings for DLR, Overground, and Tube systems across all days are shown in Appendix A, Sections \ref{section:eff_dist_corr_period}.
+
+\qquad While the Overground and Tube systems exhibit a low negative correlation, the DLR system shows a low positive correlation. This can be attributed to the fact that the DLR system has a significantly lower number of edges and presents a clear central core through which most journeys pass. The comparison of the 25th percentile backbones further emphasizes this positive similarity.
+
+\begin{figure}[H]
+    \centering    
+    \begin{minipage}[b]{0.48\textwidth}        
+        \includegraphics[width=\textwidth]{Pictures/results/EdgesTimeVariant/DLR Eff. ALP 25_ile MTT Midday.png}        
+        \label{fig:image1}        
+    \end{minipage}    
+    \hfill
+    \begin{minipage}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{Pictures/results/EdgesTimeVariant/DLR Distress ALP 25_ile MTT Midday.png}        
+        \label{fig:image2}        
+    \end{minipage}
+    \caption{Relevance comparison for edges speed.}
+    \label{fig:entire_figure}
+\end{figure}
+
+\qquad The Heatmap figures for comparing efficiencies backbones of Overground, and Tube systems across all days are shown in Appendix A, Sections \ref{section:eff_dist_period}.
+
+\qquad In comparing robustness and efficiency models, it becomes evident that they offer orthogonal perspectives of the network. Both methods come with their own set of assumptions and limitations, which are crucial to consider during analysis. What's interesting is how these two perspectives complement each other. Each extraction method and indicator aims to measure different aspects of the transport network, such as equality, efficiency, resource allocation, and resilience against failures.
+
+\qquad Although it's possible to merge the information to create a single rank, that's not the intention here. Instead, the goal is to highlight the diverse approaches available for specific management practices, ultimately contributing to the overall optimization of network management. However, certain edges can still be pinpointed that hold significance in the daily lives of London users, shedding light on both robustness and efficiency scenarios.
+
+\qquad Of course, there's always room for improvement to achieve a deeper and more realistic analysis. This could entail refining indicators with more complex metrics, enhancing modeling by incorporating additional data and processing power or adjusting methodologies, such as fine-tuning disparity filtering to better suit transportation-specific needs.
+
+\qquad The complete ranks can be found in Appendix B, section \ref{sectio:model_ranks}, provided in CSV format for easy reference.
