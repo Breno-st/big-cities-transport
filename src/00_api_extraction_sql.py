@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import requests, http.client, urllib.request, urllib.parse, urllib.error, base64
 import numpy as np
@@ -258,9 +259,8 @@ if __name__ == '__main__':
     global df_route_seq
 
     # Credentials TFL
-    app_id = 'ae744e0a05c74ef5b2bbfac2a7ea5f06'
-    app_key = '00024e328b23438496db36a939fe090b'
-
+    app_id = 'b9d7be78324f4c1aa0165009d688599c'
+    app_key = os.environ['TFL_APP_KEY']  # set in .env (gitignored)
     # API TFL (https://github.com/dhilmathy/TfL-python-api)
     base_url = 'https://api.tfl.gov.uk/'
     endpoints = {'stopPointByline': 'Line/{0}/Route/Sequence/all',
