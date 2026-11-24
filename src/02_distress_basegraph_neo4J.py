@@ -5,6 +5,7 @@
 from stringprep import b1_set
 import pandas as pd
 from neo4j import GraphDatabase
+from config import secret  # credentials come from the gitignored .env
 import pickle
 import csv
 
@@ -73,7 +74,7 @@ def shortest_path(passenger, db):
     '''
     segments_ods_shortest_paths ={}
 
-    driver = GraphDatabase.driver("bolt://localhost:7687", auth=('neo4j', "TFLbst1608."))
+    driver = GraphDatabase.driver("bolt://localhost:7687", auth=(secret('NEO4J_USER'), secret('NEO4J_PASSWORD')))
     with driver.session(database=db+'-basegraph') as session:
 
         # Handling graph-projection exist

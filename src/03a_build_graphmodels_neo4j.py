@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import pickle
 from neo4j import GraphDatabase, basic_auth
+from config import secret  # credentials come from the gitignored .env
 
 
 #### PICKLE FUNCTIONS ####
@@ -180,7 +181,7 @@ def minmax_dict(kpi):
 
 def create_db(db):
     create_db_cypher = "CREATE DATABASE `"+db+"`"
-    driver = GraphDatabase.driver("bolt://localhost:7687", auth=("neo4j", "TFLbst1608."))
+    driver = GraphDatabase.driver("bolt://localhost:7687", auth=(secret('NEO4J_USER'), secret('NEO4J_PASSWORD')))
     with driver.session() as session:
         result = session.run(create_db_cypher)
     session.close()
@@ -192,7 +193,7 @@ def generate_nodes(db, mode):
     create_nodes_cypher = open(path+mode+'_nodes.txt', 'r')
     with open(path+mode+'_nodes.txt', 'r') as file:
         create_nodes_cypher = file.read().rstrip()
-    driver = GraphDatabase.driver("bolt://localhost:7687/", auth=('neo4j', "TFLbst1608."))
+    driver = GraphDatabase.driver("bolt://localhost:7687/", auth=(secret('NEO4J_USER'), secret('NEO4J_PASSWORD')))
     with driver.session(database=db) as session:
         result = session.run(create_nodes_cypher)
     session.close()
@@ -203,7 +204,7 @@ def generate_edges(db, kpi, dict):
     ''' Generate relation to pre-existing nodes graph database '''
 
     # Initiate session with all nodes
-    driver = GraphDatabase.driver("bolt://localhost:7687/", auth=('neo4j', "TFLbst1608."))
+    driver = GraphDatabase.driver("bolt://localhost:7687/", auth=(secret('NEO4J_USER'), secret('NEO4J_PASSWORD')))
     with driver.session(database=db) as session:
         id_pairs = list(dict.keys())
         for id_pair in id_pairs:
@@ -238,7 +239,7 @@ if __name__ == '__main__':
 
     # Connect to base-graph
     for mode in ods:
-        driver = GraphDatabase.driver("bolt://localhost:7687", auth=('neo4j', "TFLbst1608."))
+        driver = GraphDatabase.driver("bolt://localhost:7687", auth=(secret('NEO4J_USER'), secret('NEO4J_PASSWORD')))
         with driver.session(database=mode+'-basegraph') as session:
             # get all directed pairs:
             pairs = _directed_pairs()
