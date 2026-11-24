@@ -1,4 +1,5 @@
 from neo4j import GraphDatabase
+from config import secret  # credentials come from the gitignored .env
 import networkx as nx
 from networkx.readwrite import json_graph
 import json
@@ -39,7 +40,7 @@ if __name__ == '__main__':
     periods = ['Morning', 'AM Peak', 'Midday', 'PM Peak', 'Evening', 'Late']
     kpis = ['trafficdistances', 'distress', 'efficiencies', 'loads', 'traffic', 'basegraph', 'speed', 'distance']
 
-    driver = GraphDatabase.driver("bolt://localhost:7687/", auth=('neo4j', "TFLbst1608."))
+    driver = GraphDatabase.driver("bolt://localhost:7687/", auth=(secret('NEO4J_USER'), secret('NEO4J_PASSWORD')))
     for od in ods:
         for kpi in kpis:
             if kpi not in ['speed', 'distance', 'basegraph']:
